@@ -2,16 +2,16 @@ markdown:         rdiscount
 pygments:         true
 paginate:         6
 
-title:            PIZn's GitHub Blog
-url:              http://pizn.github.com/blog
-feed:             /blog/atom.xml
+title:            BeiYuu's Blog
+url:              http://beiyuu.com
+feed:             /atom.xml
 author:
-    name:         PIZn
-    email:        pizner@gmail.com
-    twitter:      twitter.com/piznlin
-description:      "PIZn's another blog. Just to write down some note about work, such css, javascript and html."
+    name:         BeiYuu
+    email:        dewreg@gmail.com
+    twitter:      twitter.com/beiyuu
+description:      "BeiYuu\'s Blog"
 
 copyright:
-    - Design by <a href="http://www.pizn.net" rel="friend" title="pizn" target="_blank">PIZn</a>
-    - "&copy; Copyright 2011, PIZn. All Rights Reserved."
+    - Design by <a href="http://beiyuu.com" rel="friend" title="pizn" target="_blank">BeiYuu</a>
+    - "&copy; Copyright 2011, BeiYuu. All Rights Reserved."
 
