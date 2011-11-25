@@ -1,0 +1,17 @@
+markdown:         rdiscount
+pygments:         true
+paginate:         6
+
+title:            PIZn's GitHub Blog
+url:              http://pizn.github.com/blog
+feed:             /blog/atom.xml
+author:
+    name:         PIZn
+    email:        pizner@gmail.com
+    twitter:      twitter.com/piznlin
+description:      "PIZn's another blog. Just to write down some note about work, such css, javascript and html."
+
+copyright:
+    - Design by <a href="http://www.pizn.net" rel="friend" title="pizn" target="_blank">PIZn</a>
+    - "&copy; Copyright 2011, PIZn. All Rights Reserved."
+

@@ -1,0 +1,30 @@
+---
+layout:           default
+titlef:           index
+---
+<header id="prefile">
+    <h2>I'm PIZn.</h2>
+    <p>Phosphorus,Iodine & Zinc.<g:plusone size="small"></g:plusone></p>
+</header>
+<article id="post-list">
+    <h3>My GitHub Posts List</h3>
+    <ul class="posts">
+        {% for post in paginator.posts  %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/blog{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% if paginator.total_pages > 1 %}
+        <nav id="pagination">
+            <span class="pages">Pages:&nbsp;</span>
+            <div class="paginator-list">
+                {% for page in (1..paginator.total_pages) %}
+                    {% if page == paginator.page %}
+                        <span class="num">{{ page }}</span>
+                    {% else %}
+                        <a class="num" href="/blog/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </nav>
+    {% endif %}
+</article>

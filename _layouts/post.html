@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="entry">
+  {{ content }}
+  <nav id="pagination">
+    {% if page.previous %}
+      <a class="prev" href="/blog{{ page.previous.url }}" rel="bookmark">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a>
+    {% endif %}
+    {% if page.next %}
+    <a class="next" href="/blog{{ page.next.url }}" rel="bookmark">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>
+    {% endif %}
+  </nav>
+</article><!-- .entry -->
+<section>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'piznblog';
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] ||
+              document.getElementsByTagName('body')[0]).appendChild(dsq);
+             })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>

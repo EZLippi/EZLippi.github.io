@@ -1,0 +1,559 @@
+/**
+ *
+ * Author:           PIZn
+ * Contact:          pizner@gmail.com
+ * This style sheet for viloet theme.
+ *
+ */
+
+/* 重置浏览器CSS */
+/* 防止用户自定义背景颜色对网页的影响 */
+html{
+  color:#000;background:#fff;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  margin:0;padding:0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
+    display:block;
+  }
+
+  /* 要注意表单元素并不继续父级 font 的问题 */
+  body,button,input,select,textarea{
+    font:12px/1.5 tahoma,arial,\5b8b\4f53;
+  }
+  input,select,textarea{
+  font-size:100%;
+}
+
+  /* 去掉各Table  cell 的边距并让其边重合 */
+  table{
+    border-collapse:collapse;border-spacing:0;
+  }
+
+  /* IE bug fixed: th 不继承 text-align*/
+  th{
+  text-align:inherit;
+}
+
+/* 去除默认边框 */
+fieldset,img,a img{
+  border:0;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{
+  display:block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym{
+  border:0;font-variant:normal;
+}
+
+/* 一致的 del 样式 */
+del {
+  text-decoration:line-through;
+}
+
+address,caption,cite,code,dfn,em,th,var {
+  font-style:normal;
+    font-weight:500;
+  }
+
+  /* 去掉列表前的标识, li 会继承 */
+  ol,ul {
+  list-style:none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th {
+  text-align:left;
+}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:500;
+}
+
+q:before,q:after {
+  content:'';
+}
+
+/* 统一上标和下标 */
+sup {
+  vertical-align:text-top;
+}
+sub {
+  vertical-align:text-bottom;
+}
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+  text-decoration:underline;
+}
+
+/* 默认显示下划线，保持页面简洁 */
+ins,a {
+  text-decoration:none;
+}
+
+/* 清理浮动 */
+.fn-clear:after {
+  visibility:hidden;
+  display:block;
+  font-size:0;
+  content:" ";
+  clear:both;
+  height:0;
+}
+.fn-clear {
+  zoom:1; /* for IE6 IE7 */
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {
+  display:none;
+}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left,.fn-right {
+  display:inline;
+}
+.fn-left {
+  float:left;
+}
+.fn-right {
+  float:right;
+}
+
+/**
+ *
+ * default
+ *
+ */
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+a {
+  color: #004d8d;
+}
+a:hover {
+  color: #fefefe;
+  background: #800888;
+}
+
+/**
+ *
+ * layout
+ *
+ */
+#head {
+  width: 100%;
+  height: 30px;
+  background: #800888;
+  background: -moz-linear-gradient(top, #57025d 0%, #800888 30%, #800888 100%);
+  background: -webkit-gradient(linear, top, top, color-stop(0%,#57025d), color-stop(30%, #800888), color-stop(100%,#800888));
+  background: -webkit-linear-gradient(top, #57025d 0%, #800888 30%, #800888 100%);
+  background: -o-linear-gradient(top, #57025d 0%, #800888 30%, #800888 100%);
+  background: -ms-linear-gradient(top, #57025d 0%, #800888 30%, #800888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57025d', endColorstr='#800888',GradientType=2 );
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57025d', endColorstr='#800888',GradientType=2 );
+  background: linear-gradient(top, #57025d 0%, #800888 30%, #800888 100%)
+}
+#header {
+  width: 780px;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+#content {
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  background: #fff url(../images/bg.jpg) no-repeat -60px -10px;
+}
+#contenter {
+  width: 760px;
+  padding: 20px 10px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  background-color:#fff;
+}
+#foot {
+  width: 100%;
+  height: 120px;
+}
+#footer {
+  width: 760px;
+  padding: 0 10px;
+  height: 120px;
+  margin: 0 auto;
+  text-align: center;
+}
+/**
+ *
+ * header
+ *
+ */
+#header h1 {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  color: #fff;
+}
+#header h1 a {
+  display: inline-block;
+  padding: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+#header h1 a:hover {
+  text-decoration: none;
+  background: #ac60b1;
+  background: -moz-linear-gradient(top, #57025d 0%, #a933b1 30%, #a933b1 100%);
+  background: -webkit-gradient(linear, top, top, color-stop(0%,#57025d), color-stop(30%, #a933b1), color-stop(100%,#a933b1));
+  background: -webkit-linear-gradient(top, #57025d 0%, #a933b1 30%, #a933b1 100%);
+  background: -o-linear-gradient(top, #57025d 0%, #a933b1 30%, #ac60b1 100%);
+  background: -ms-linear-gradient(top, #57025d 0%, #a933b1 30%, #a933b1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57025d', endColorstr='#a933b1',GradientType=2 );
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57025d', endColorstr='#a933b1',GradientType=2 );
+  background: linear-gradient(top, #57025d 0%, #a933b1 30%, #a933b1 100%)
+}
+
+/**
+ *
+ * contenter
+ *
+ */
+#prefile {
+  height: 200px;
+  background: url(../images/prefile.gif) no-repeat right 0;
+}
+#prefile h2 {
+  float: left;
+  width: 560px;
+  font-size: 32px;
+  color: #353535;
+  text-align: left;
+}
+#prefile p {
+  float: left;
+  width: 560px;
+  font-size: 18px;
+  color: #898989;
+  text-align: left;
+}
+#post-list {
+  width: 560px;
+  height: auto;
+  text-align: left;
+}
+#post-list h3 {
+  display: inline-block;
+  margin: 0 0 1.2em 0;
+  line-height: 32px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #5c9137;
+  border-bottom: 1px solid #e9e9e9;
+}
+#post-list li {
+  margin: 0.8em 0;
+  line-height: 18px;
+}
+#post-list li span {
+  font-family: Monaco,"Courier New",monospace;
+  color: #686868;
+}
+#post-list li a {
+  padding: 1px 5px;
+  line-height: 16px;
+  -moz-border-radius: 3px 3px;
+  -webkit-border-raidus: 3px 3px;
+  -o-border-radius: 3px 3px;
+  border-radius: 3px 3px;
+  font-size: 14px;
+}
+#post-list li a:hover {
+  text-decoration: none;
+}
+#contenter .entry {
+  text-align: left;
+}
+
+/**
+ *
+ * footer
+ *
+ */
+#footer h4 {
+  margin: 0 0 1.2em 0;
+  line-height: 32px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #5c9137;
+  border-bottom: 1px solid #e9e9e9;
+  text-align: left;
+}
+#footer a {
+  display: block;
+  float: left;
+  margin: 0 20px 0 0;
+  padding: 0 10px;
+  line-height: 24px;
+  font-size: 14px;
+  background: #800888;
+  color: #fff;
+  -moz-border-radius: 3px 3px;
+  -webkit-border-raidus: 3px 3px;
+  -o-border-radius: 3px 3px;
+  border-radius: 3px 3px;
+}
+#footer a:hover {
+  text-decoration: none;
+  background: #a933b1;
+}
+
+
+/**
+ *
+ *  entry
+ *
+ */
+.entry {
+  font-family: helvetica,arial,freesans,clean,sans-serif;
+  color: #353535;
+}
+.entry h1,
+.entry h2,
+.entry h3,
+.entry h4,
+.entry h5,
+.entry h6 {
+  margin: 0;
+  padding: 0;
+  color: #5c9137;
+}
+.entry h1 {
+  font-size: 32px;
+  line-height: normal;
+  margin: 30px 0 0;
+  padding: 10px 0 0;
+}
+.entry h2 {
+  border-top: 3px solid #e5e5e5;
+  font-size: 22px;
+  line-height: normal;
+  margin: 22px 0 0;
+  padding: 7px 0 0;
+}
+.entry h3 {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 26px 0 0;
+}
+.entry h4 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 18px 0 4px;
+  text-transform: uppercase;
+}
+.entry h5 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 14px 0 0;
+  text-transform: uppercase;
+}
+.entry h6 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+  padding: 18px 0 0;
+}
+.entry > h2:first-child, .entry > h1:first-child, .entry > h1:first-child + h2 {
+  border: 0 none;
+  margin: 12px 0 0;
+  padding: 10px 0 0;
+  color: #383838;
+}
+.entry p {
+  font-size: 14px;
+  margin: 1.5em 0;
+  line-height: 1.8em;
+  text-indent: 28px;
+}
+.entry a {
+  font-family: "Times New Roman", Times, serif;
+  padding: 1px 5px;
+  text-decoration: none;
+  -moz-border-radius: 3px 3px;
+  -webkit-border-radius: 3px 3px;
+  -o-border-radius: 3px 3px;
+  border-radius: 3px 3px;
+}
+.entry .back-home {
+  text-indent: 0;
+}
+.entry > p:first-child {
+  margin: 1em 0;
+  text-indent: 0;
+}
+.entry ul,
+.entry ol {
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+}
+.entry ul li,
+.entry ol li {
+  font-size: 14px;
+  color: #555;
+  margin: 0.5em 0;
+}
+.entry ul li {
+  list-style-type: square;
+}
+.entry ol li {
+  list-style-type: decimal;
+}
+.entry > ul,
+.entry > ol {
+  margin-left: 2.5em;
+  margin-top: 1.5em;
+}
+.entry dl {
+  margin: 0;
+  padding: 20px 0 0;
+}
+.entry dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  margin: 0;
+  padding: 20px 0 0;
+}
+.entry dl dd {
+  font-size: 14px;
+  margin: 0;
+  padding: 3px 0 0;
+}
+.entry blockquote {
+  border-left: 4px solid #e5e5e5;
+  color: #555;
+  margin: 1em 0;
+  padding-left: 0.8em;
+}
+.entry table {
+  border-collapse: collapse;
+  margin: 20px 0 0;
+  padding: 0;
+  border-top: 2px solid #a5a5a5;
+  border-bottom: 2px solid #a5a5a5;
+}
+.entry * tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.entry * tr:nth-child(2n) {
+  background: #f8f8f8;
+}
+.entry * tr th,
+.entry * tr td {
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 5px 12px;
+  text-align: left;
+  color: #555;
+}
+.entry * tr th:first-child,
+.entry * tr td:first-child {
+  border-left: none;
+}
+.entry * tr th:last-child,
+.entry * tr td:last-child {
+  border-right: none;
+}
+.entry * tr th {
+  font-weight: 700;
+}
+.entry em {
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+}
+.entry pre {
+  background: #f8f8f8;
+  border: 1px solid #c5c5c5;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  font-size: 12px;
+  line-height: 18px;
+  overflow: auto;
+  padding: 6px 10px;
+}
+.entry > pre {
+  margin: 20px 0 0;
+}
+.entry pre code {
+  background-color: transparent;
+  border: medium none;
+}
+.entry .wp-caption {
+  background: #f8f8f8;
+  margin-bottom: 1.6em;
+  padding: 6px 6px;
+  max-width: 96%;
+  text-align: center;
+}
+.entry .alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.6em;
+  margin-top: 1.6em;
+}
+.entry .aligncenter {
+   clear: both;
+    display: block;
+     margin-left: auto;
+      margin-right: auto;
+    }
+    .entry .alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.6em;
+  }
+  .entry .wp-caption img {
+  border: 2px solid #a5a5a5;
+  display: block;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.entry img[class*="align"],
+.entry img[class*="wp-image-"] {
+  border: 1px solid #c5c5c5;
+  padding: 2px 2px;
+  height: auto;
+  background: #d5d5d5;
+}
+.entry a:hover img {
+  border-color: #a5a5a5;
+}
+.entry .wp-caption-text {
+  margin-bottom: 0.5em;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  color: #555;
+}
+

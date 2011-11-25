@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    **
+    *
+    * Author:         PIZn
+    * Contact:        pizner@gmail.com
+    * Theme Name:     Violet
+    * Version:        1.5
+    * PS:             为什么你会看到这里呢？
+    *
+    **
+  -->
+  <meta charset="utf-8" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="generator" content="Jekyll" />
+  <meta name="author" content="{{ site.author.name }}" />
+  <meta name="description" content="{{ site.description }}" />
+  <link rel="stylesheet" href="/blog/css/default.css" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
+  <link rel="shortcut icon" href=/blog/favicon.ico" type="image/x-icon" />
+  <script src="/blog/js/html5.js" type="text/javascript"></script>
+</head>
+<body>
+  <header id="head">
+    <section id="header">
+      <nav class="nav">
+        <a href="/blog/" title="Home" rel="nofollow">Home</a>
+        <a href="/blog/archives.html" rel="bookmark" title="Archives">Archives</a>
+        <a href="/blog/ChangeLog.html" rel="bookmark" title="ChangeLog">ChangeLog</a>
+        <a href="{{ site.feed }}" rel="feed" target="_blank">Feed</a>
+      </nav><!-- .nav -->
+    </section><!-- #header -->
+  </header><!-- #head -->
+  <section id="content">
+    <article id="contenter">
+      {{ content }}
+    </article><!-- #contenter -->
+  </section><!-- #content -->
+  <footer id="foot">
+    <section id="footer">
+      <h4>Contact Me</h4>
+      <div class="my-link">
+        <a href="http://www.pizn.net" target="_blank" title="pizn's blog" rel="friend">PIZn&nbsp;&raquo;</a>
+        <a href="http://www.github.com/pizn" target="_blank" title="pizn's github" rel="nofollow">GitHub&nbsp;&raquo;</a>
+        <a href="http://www.twitter.com/piznlin" target="_blank" title="pizn' twitter" rel="nofollow">Twitter&nbsp;&raquo;</a>
+        <a href="http://www.weibo.com/pizner" target="_blank" title="pizn' weibo" rel="nofollow">新浪微博&nbsp;&raquo;</a>
+      </div>
+      <div class="copyright">
+        {% for line in site.copyright %}
+            <p>{{ line }}</p>
+        {% endfor %}
+      </div>
+    </section><!-- #footer -->
+  </footer><!-- #foot -->
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19946273-5']);
+      _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+   })();
+  </script>
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+</body>
+</html>
