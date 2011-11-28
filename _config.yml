@@ -1,4 +1,10 @@
 auto:	          true
+
+
+source:		  .
+destination:	  ./_site
+
+
 markdown:         rdiscount
 pygments:         true
 paginate:         6
