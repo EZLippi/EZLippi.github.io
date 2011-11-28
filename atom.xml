@@ -17,9 +17,9 @@ layout: nil
    {% for post in site.posts limit:10 %}
    <entry>
      <title>{{ post.title }}</title>
-     <link href="http://pizn.github.com/blog{{ post.url }}"/>
+     <link href="http://beiyuu.com/{{ post.url }}"/>
      <updated>{{ post.date | date_to_xmlschema }}</updated>
-     <id>http://pizn.github.com/blog{{ post.id }}</id>
+     <id>http://beiyuu.com/{{ post.id }}</id>
      <content type="html">{{ post.content | xml_escape }}</content>
    </entry>
    {% endfor %}

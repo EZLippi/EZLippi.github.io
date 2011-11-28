@@ -10,7 +10,7 @@ titlef:           index
     <h3>My GitHub Posts List</h3>
     <ul class="posts">
         {% for post in paginator.posts  %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/blog{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
     {% if paginator.total_pages > 1 %}
@@ -21,7 +21,7 @@ titlef:           index
                     {% if page == paginator.page %}
                         <span class="num">{{ page }}</span>
                     {% else %}
-                        <a class="num" href="/blog/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
+                        <a class="num" href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
                     {% endif %}
                 {% endfor %}
             </div>
