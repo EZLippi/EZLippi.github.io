@@ -174,7 +174,7 @@ a:hover {
   width: 100%;
   min-height: 500px;
   height: auto;
-  background: #fff url(../images/bg.jpg) no-repeat -60px -10px;
+  /*background: #fff url(../images/bg.jpg) no-repeat -60px -10px;*/
 }
 #contenter {
   width: 760px;
@@ -231,7 +231,7 @@ a:hover {
  */
 #prefile {
   height: 200px;
-  background: url(../images/prefile.gif) no-repeat right 0;
+  /*background: url(../images/prefile.gif) no-repeat right 0;*/
 }
 #prefile h2 {
   float: left;
