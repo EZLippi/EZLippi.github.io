@@ -11,7 +11,7 @@ titlef:           index
     <ul class="posts">
         {% for post in paginator.posts  %}
         {{ post.url }}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
     {% if paginator.total_pages > 1 %}
