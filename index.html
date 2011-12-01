@@ -10,6 +10,7 @@ titlef:           index
     <h3>My GitHub Posts List</h3>
     <ul class="posts">
         {% for post in paginator.posts  %}
+        {{ post.url }}
         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
