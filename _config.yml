@@ -3,6 +3,7 @@ auto:	          true
 markdown:         rdiscount
 pygments:         true
 paginate:         6
+permalink:        /:title
 
 title:            BeiYuu's Blog
 url:              http://beiyuu.com
