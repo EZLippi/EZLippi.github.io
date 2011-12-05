@@ -87,6 +87,7 @@ pre code{border:none;padding:0;}
 .category span{color:#777;font-style:italic;font-size:14px;}
 
 /***************contact style*************/
+#disqus {font-size:12px;}
 #footer h3 {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #footer .my-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}
 #footer .copyright {margin-top:15px;font-size:10px;font-color:#ccc;text-align:center}
