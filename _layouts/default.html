@@ -65,15 +65,13 @@
                 if (!/*@cc_on!@*/0) { //if not IE
                     //Firefox2、Firefox3、Safari3.1+、Opera9.6+ support js.onload
                     js.onload = function () {
-                        window.readyFunction();
-                        window.readyFunctionStatus = true;
+                        callback();
                     }
                 } else {
                     //IE6、IE7 support js.onreadystatechange
                     js.onreadystatechange = function () {
                         if (js.readyState == 'loaded' || js.readyState == 'complete') {
-                            window.readyFunction();
-                            window.readyFunctionStatus = true;
+                            callback();
                         }
                     }
                 }
@@ -81,7 +79,7 @@
             }
 
             if(!window.jQuery){
-                include_js('http://beiyuu.com/js/jquery-1.7.1.min.js');
+                include_js('http://beiyuu.com/js/jquery-1.7.1.min.js',window.readyFunction);
             }else{
                 window.readyFunction();
             }
