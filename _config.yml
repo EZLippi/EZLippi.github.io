@@ -10,10 +10,9 @@ url:              http://beiyuu.com
 feed:             /atom.xml
 author:
     name:         BeiYuu
-    email:        dewreg@gmail.com
     twitter:      twitter.com/beiyuu
 description:      "BeiYuu\'s Blog"
 
 copyright:
-    - Design by <a href="http://beiyuu.com" rel="friend" title="BeiYuu" target="_blank">BeiYuu</a> "&copy; Copyright 2011, BeiYuu. All Rights Reserved."
+    - Design by <a href="http://beiyuu.com" rel="friend" title="BeiYuu" target="_blank">BeiYuu</a> &copy; Copyright 2011, BeiYuu. All Rights Reserved.
 
