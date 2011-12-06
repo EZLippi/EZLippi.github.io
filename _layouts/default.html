@@ -66,12 +66,14 @@
                     //Firefox2、Firefox3、Safari3.1+、Opera9.6+ support js.onload
                     js.onload = function () {
                         window.readyFunction();
+                        window.readyFunctionStatus = true;
                     }
                 } else {
                     //IE6、IE7 support js.onreadystatechange
                     js.onreadystatechange = function () {
                         if (js.readyState == 'loaded' || js.readyState == 'complete') {
                             window.readyFunction();
+                            window.readyFunctionStatus = true;
                         }
                     }
                 }
