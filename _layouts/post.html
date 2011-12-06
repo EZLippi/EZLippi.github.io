@@ -14,9 +14,7 @@ layout: default
             $('#disqus_container .comment').on('click',function(){
                 var disqus_shortname = 'beiyuu';
                 var that = this;
-                BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){
-                    setTimeout(function(){$(that).remove()},2000)
-                });
+                BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
             })
         });
     };
