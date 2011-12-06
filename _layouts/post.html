@@ -9,16 +9,14 @@ layout: default
     <div id="disqus_thread"></div>
 </div> 
 <script type="text/javascript">
-    window.readyFunction = function(){
+    BYB.readyFunction = function(){
         $(document).ready(function(){
             $('#disqus_container .comment').on('click',function(){
                 var disqus_shortname = 'beiyuu';
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-                $(this).remove();
+                var that = this;
+                BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){
+                    setTimeout(function(){$(that).remove()},2000)
+                });
             })
         });
     };
