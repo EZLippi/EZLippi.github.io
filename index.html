@@ -54,56 +54,37 @@
             </div>
         </div><!-- #footer -->
     </div><!-- #foot -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-        BYB.readyFunction = function(){
-            var images = ['https://lh6.googleusercontent.com/-2Brx3m5Bi90/TpdnwNgehKI/AAAAAAAAByA/TIFc2UqMHKM/s1600/DSC_2111.jpg',
-            'https://lh6.googleusercontent.com/-2Brx3m5Bi90/TpdnwNgehKI/AAAAAAAAByA/TIFc2UqMHKM/s1600/DSC_2111.jpg',
-            'https://lh6.googleusercontent.com/-_nmiqYJ4FEg/TnD5Wr6Dm9I/AAAAAAAANvY/NXGmiU_-_nU/s1600/IMG_5505.jpg',
-            'https://lh4.googleusercontent.com/-2CCP9cI2mek/TiNdVcyvYJI/AAAAAAAAIPw/FuR9njKEYiI/s1600/DSCF0956b.JPG',
-            'https://lh6.googleusercontent.com/--74uzsnlJSs/TZ9zjwQLPLI/AAAAAAAAAHA/VSIvF_tKGwk/s1600/brug2.jpg'];
-
             $(document).ready(function(){
-                var img = document.createElement('img');
+                var images = ['https://lh6.googleusercontent.com/-2Brx3m5Bi90/TpdnwNgehKI/AAAAAAAAByA/TIFc2UqMHKM/s1600/DSC_2111.jpg',
+                    'https://lh6.googleusercontent.com/-2Brx3m5Bi90/TpdnwNgehKI/AAAAAAAAByA/TIFc2UqMHKM/s1600/DSC_2111.jpg',
+                    'https://lh6.googleusercontent.com/-_nmiqYJ4FEg/TnD5Wr6Dm9I/AAAAAAAANvY/NXGmiU_-_nU/s1600/IMG_5505.jpg',
+                    'https://lh4.googleusercontent.com/-2CCP9cI2mek/TiNdVcyvYJI/AAAAAAAAIPw/FuR9njKEYiI/s1600/DSCF0956b.JPG',
+                'https://lh6.googleusercontent.com/--74uzsnlJSs/TZ9zjwQLPLI/AAAAAAAAAHA/VSIvF_tKGwk/s1600/brug2.jpg'];
+
+
+                var img = new Image(),imgWidth,imgHeight,winWidth,winHeight;
                 img.src = images[parseInt(Math.random()*10,10)%5];
-                img.style.position = 'fixed';
-                img.style.top = 0;
-                img.style.z-index = -2;
-                img.style.display = 'none';
-                img.onload = fucntion(){
-                    $('body').append(img).show().animate({opacity:1},300)
-                }
-            });
-        };
-
-        BYB.includeScript = function(file,callback){
-            var _doc = document.getElementsByTagName('head')[0];
-            var js = document.createElement('script');
-            js.setAttribute('type', 'text/javascript');
-            js.setAttribute('src', file);
-            _doc.appendChild(js);
-
-            if (!/*@cc_on!@*/0) { //if not IE
-                //Firefox2、Firefox3、Safari3.1+、Opera9.6+ support js.onload
-                js.onload = function () {
-                    callback();
-                }
-            } else {
-                //IE6、IE7 support js.onreadystatechange
-                js.onreadystatechange = function () {
-                    if (js.readyState == 'loaded' || js.readyState == 'complete') {
-                        callback();
+                img.id = 'bgImage'
+                $(img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
+                $('body').append(img);
+                if(img.complete){
+                    resizeWindow();
+                    $('img').animate({opacity:'toggle'},500);
+                }else{
+                    img.onload = function(){
+                        resizeWindow();
+                        $('img').animate({opacity:'toggle'},500);
                     }
                 }
-            }
-            return false;
-        }
 
-        if(!window.jQuery){
-            BYB.includeScript('http://beiyuu.com/js/jquery-1.7.1.min.js',BYB.readyFunction);
-        }else{
-            BYB.readyFunction();
-        }
+                resizeWindow = function(){
+                    winWidth = $('body').width();
+                    $('#bgImage').css({'width':winWidth});
+                }
+                $(window).on('resize',resizeWindow);
+            });
     </script>
 </body>
 </html>
