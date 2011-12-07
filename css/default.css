@@ -68,6 +68,9 @@ pre code{border:none;padding:0;}
 #content {width:650px;margin:0 auto;}
 #footer {width:650px;margin:0 auto;}
 
+/*****************mycard style*********/
+#mycard {width:500px;height:300px;background-color:#fff;position:absolute;top:38.2%;left:40%;margin-left:-250px;margin-top:-150px;}
+
 /***************header style************/
 #head .logo {font-size:35px;font-weight:bold;margin-top:18px;}
 #head .logo a{color:#999;}

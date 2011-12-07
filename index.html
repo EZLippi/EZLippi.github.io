@@ -9,51 +9,13 @@
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="{{ site.author.name }}" />
     <meta name="description" content="{{ site.description }}" />
-    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <script type="text/javascript">
-        var BYB = {}
-    </script>
 </head>
 <body>
-    <div id="head">
-        <div class='logo left'>
-            <a href="/" title="Home">BeiYuu.com</a>
-        </div>
-        <div id="header">
-            <div class="nav right">
-                <a href="/blog" title="Thoughts On Something">Blog</a>
-                <a href="/project" title="Projects Ongoing">Project</a>
-                <a href="/about" title="About BeiYuu" >About</a>
-                <a href="{{ site.feed }}" rel="feed" title="Subscribes The Feed" target="_blank">Feed</a>
-            </div><!-- .nav -->
-        </div><!-- #header -->
-    </div><!-- #head -->
-    <div id="content">
-        <div id="contenter">
-              {{ content }}
-        </div><!-- #contenter --> 
-    </div><!-- #content --> 
-    <div id="foot">
-        <div id="footer">
-            <h3>More About Me</h3>
-            <div class="my-link">
-                <a href="" title="邮箱" target="_blank" onclick="alert('BeiYuu 在 Gmail，你懂得！');return false;">eMail&gt;&gt;</a>
-                <a href="http://www.douban.com/people/beiyuu" title="我的书影音" target="_blank">豆瓣&gt;&gt;</a>
-                <a href="http://weibo.com/beiyuu" title="我的闲言碎语" target="_blank">新浪微薄&gt;&gt;</a>
-                <a href="http://www.github.com/beiyuu" title="我的代码" target="_blank">Github&gt;&gt;</a>
-                <a href="http://twitter.com/#!/BeiYuu" title="又一处的闲言碎语" target="_blank">Twitter&gt;&gt;</a>
-                <a href="http://www.zhihu.com/people/beiyuu" title="我回答的问题" target="_blank">知乎&gt;&gt;</a>
-                <a href="http://www.markzhi.com/13989" title="我收集的图片" target="_blank">Markzhi&gt;&gt;</a>
-            </div>
-            <div class="copyright right">
-                {% for line in site.copyright %}
-                <p>{{ line }}</p>
-                {% endfor %}
-            </div>
-        </div><!-- #footer -->
-    </div><!-- #foot -->
+    <div id="mycard">
+    </div>
     <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
             $(document).ready(function(){
@@ -62,7 +24,6 @@
                     'https://lh6.googleusercontent.com/-_nmiqYJ4FEg/TnD5Wr6Dm9I/AAAAAAAANvY/NXGmiU_-_nU/s1600/IMG_5505.jpg',
                     'https://lh4.googleusercontent.com/-2CCP9cI2mek/TiNdVcyvYJI/AAAAAAAAIPw/FuR9njKEYiI/s1600/DSCF0956b.JPG',
                 'https://lh6.googleusercontent.com/--74uzsnlJSs/TZ9zjwQLPLI/AAAAAAAAAHA/VSIvF_tKGwk/s1600/brug2.jpg'];
-
 
                 var img = new Image(),imgWidth,imgHeight,winWidth,winHeight;
                 img.src = images[parseInt(Math.random()*10,10)%5];
@@ -73,12 +34,14 @@
                     imgHeight = img.height;
                     imgWidth = img.width;
                     resizeWindow();
+                    $('#mycard').css({'opacity':0.6,'background-color':'#555','border-radius':'3px'});
                     $('img').animate({opacity:'toggle'},500);
                 }else{
                     img.onload = function(){
                         imgHeight = img.height;
                         imgWidth = img.width;
                         resizeWindow();
+                        $('#mycard').css({'opacity':0.6,'background-color':'#555','border-radius':'3px'});
                         $('img').animate({opacity:'toggle'},500);
                     }
                 }
