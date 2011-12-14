@@ -69,7 +69,22 @@ pre code{border:none;padding:0;}
 #footer {width:650px;margin:0 auto;}
 
 /*****************mycard style*********/
-#mycard {width:500px;height:300px;background-color:#fff;position:absolute;top:38.2%;left:40%;margin-left:-250px;margin-top:-150px;}
+#mycard {width:514px;background-color:#555;position:absolute;top:38.2%;left:40%;margin-left:-250px;margin-top:-100px;opacity:0.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";filter:alpha(opacity=80);}
+#mycard .link{width:165px;height:100px;margin:2px;background-color:#d6b301;float:left;text-align:center;line-height:100px;border:1px solid #555;position:relative;overflow:hidden;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";filter:alpha(opacity=80);}
+#mycard .link-hover{width:163px;height:98px;border:2px solid #333}
+#mycard .link a.link-icon{display:block}
+#mycard .link a.link-info{position:absolute;bottom:0;line-height:normal;color:#fff;background-color:#000;height:0;width:100%;}
+#mycard .link a.link-info:hover {text-decoration:none}
+#mycard .link img{margin-top:20px}
+#mycard .name{background-color:#3B5997}
+#mycard .name .link-icon{color:#fff;font-size:38px;font-weight:bold}
+#mycard .name a.link-icon:hover {text-decoration:none}
+#mycard .blog{background-color:#D6B301}
+#mycard .project{background-color:#55B00D}
+#mycard .wiki{background-color:#00B5E2}
+#mycard .about{background-color:#E75F21}
+#mycard .rss{margin-bottom:0;background-color:#fff}
+
 
 /***************header style************/
 #head .logo {font-size:35px;font-weight:bold;margin-top:18px;}

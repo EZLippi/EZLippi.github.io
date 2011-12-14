@@ -9,14 +9,37 @@
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="{{ site.author.name }}" />
     <meta name="description" content="{{ site.description }}" />
-    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <div id="mycard">
+    <div id="mycard" class="clearfix">
+        <div class="link name">
+            <a href="/" class="link-icon">BeiYuu</a>
+        </div>
+        <div class="link blog">
+            <a href="/" class="link-icon"><img src="images/blog.png" alt="BeiYuu" /></a>
+            <a href="/" class="link-info hide"><span>Blog</span></a>
+        </div>
+        <div class="link project">
+            <a href="/" class="link-icon"><img src="images/project.png" alt="BeiYuu" /></a>
+            <a href="/" class="link-info hide"><span>Project</span></a>
+        </div>
+        <div class="link wiki">
+            <a href="/" class="link-icon"><img src="images/wiki.png" alt="BeiYuu" /></a>
+            <a href="/" class="link-info hide"><span>Wiki</span></a>
+        </div>
+        <div class="link about">
+            <a href="/" class="link-icon"><img src="images/about.png" alt="BeiYuu" /></a>
+            <a href="/" class="link-info hide"><span>About Me</span></a>
+        </div>
+        <div class="link rss">
+            <a href="/" class="link-icon"><img src="images/rss.png" alt="BeiYuu" /></a>
+            <a href="/" class="link-info hide"><span>Rss</span></a>
+        </div>
     </div>
-    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
             $(document).ready(function(){
                 var images = ['http://ww2.sinaimg.cn/large/8b8af2c8gw1dnukekmn9qj.jpg',
@@ -26,27 +49,15 @@
                 'http://ww4.sinaimg.cn/large/8b8af2c8gw1dnukdtqx9dj.jpg'];
 
                 var img = new Image(),imgWidth,imgHeight,winWidth,winHeight;
-                img.src = images[parseInt(Math.random()*10,10)%5];
-                img.id = 'bgImage'
-                $(img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
-                $('body').append(img);
-                if(img.complete){
+                var imgComplete = function(){
                     imgHeight = img.height;
                     imgWidth = img.width;
                     resizeWindow();
-                    $('#mycard').css({'opacity':0.6,'background-color':'#555','border-radius':'3px'});
-                    $('img').animate({opacity:'toggle'},500);
-                }else{
-                    img.onload = function(){
-                        imgHeight = img.height;
-                        imgWidth = img.width;
-                        resizeWindow();
-                        $('#mycard').css({'opacity':0.6,'background-color':'#555','border-radius':'3px'});
-                        $('img').animate({opacity:'toggle'},500);
-                    }
+                    //$('#mycard').css({'opacity':0.8});
+                    $(img).animate({opacity:'toggle'},500);
                 }
 
-                resizeWindow = function(){
+                var resizeWindow = function(){
                     var _width,_height;
                     winHeight = $(document).height();
                     winWidth = $(document).width();
@@ -58,7 +69,29 @@
                         $('#bgImage').css({'width':winWidth,'height':_height,'left':0});
                     }
                 }
+
+                img.src = images[parseInt(Math.random()*10,10)%5];
+                img.id = 'bgImage'
+                $(img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
+                $('body').append(img);
+                if(img.complete){
+                    imgComplete()
+                }else{
+                    img.onload = imgComplete;
+                }
+
                 $(window).on('resize',resizeWindow);
+
+                $('.link').on('mouseenter',function(){
+                    if(!$(this).hasClass('name')){
+                        $(this).addClass('link-hover');
+                        $(this).children('.link-info').removeClass('hide').animate({height:'23px'},'fast');
+                    }
+                });
+                $('.link').on('mouseleave',function(){
+                    $(this).removeClass('link-hover');
+                    $(this).children('.link-info').stop().animate({height:'0'});
+                });
             });
     </script>
 </body>
