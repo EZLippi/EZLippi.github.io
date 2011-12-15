@@ -7,8 +7,8 @@ layout: page
         <li>
             <h2>
             	<a href="{{ post.url }}">{{ post.title }}</a>
-                <span>{{ post.description }}</span>
             </h2>
+            <span>{{ post.description }}</span>
         </li>
     {% endfor %}
     </ul>
