@@ -4,7 +4,6 @@ title:          安装 node.js
 description:    Nodejs的安装使用介绍文章,非常不错的一个后端程序
 ---
 #{{ page.title }}
-2011-11-24 By PIZn @杭州
 
 今天开始折腾 Node.js. 第一步，如何安装。
 
