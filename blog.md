@@ -4,7 +4,7 @@ title: Blog
 ---
 <div class="category">
     <ul>
-    {% for post in site.posts%}
+    {% for post in site.categories.blog%}
         <li>
             <h2>
             	<a href="{{ post.url }}">{{ post.title }}</a>
