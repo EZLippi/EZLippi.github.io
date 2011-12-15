@@ -65,7 +65,7 @@ pre code{border:none;padding:0;}
 /************layout style*****************/
 #head {width:100%;height:60px;background:url('/images/head-bg.png') 0 -31px;margin-bottom:50px;}
 #header {width:650px;margin:0 auto;}
-#content {width:650px;margin:0 auto;}
+#content {width:650px;margin:0 auto;min-height:500px;height:auto !important;height:500px;}
 #footer {width:650px;margin:0 auto;}
 
 /*****************mycard style*********/
