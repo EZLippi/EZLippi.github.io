@@ -53,7 +53,7 @@ body .hide{display:none;}
 body {font-family: "微软雅黑","Times New Roman", Times, serif;font-size:16px;}
 a {color:#4A75B5;text-decoration:none;outline:none;}
 a:hover {text-decoration:underline}
-h1,h1 a {font-size:30px;font-weight:bold;margin-bottom:30px;}
+h1,h1 a {font-size:30px;font-weight:bold;margin-bottom:30px;color:#000}
 h1 a:hover {text-decoration:none;}
 h2 {font-size:22px;font-weight:bold;margin-bottom:13px;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:10px;}
@@ -97,6 +97,7 @@ pre code{border:none;padding:0;}
 
 /****************entry style**************/
 #content .entry{margin-bottom:50px;}
+.entry ul{margin-bottom:20px;}
 
 /***************category style**************/
 .category h2{font-size:19px;}
