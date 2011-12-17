@@ -98,6 +98,7 @@ pre code{border:none;padding:0;}
 /****************entry style**************/
 #content .entry{margin-bottom:50px;}
 .entry ul{margin-bottom:20px;}
+.entry ul li{margin-bottom:10px;list-style:disc}
 .entry blockquote{margin-left:30px;font-size:14px;font-style:italic}
 
 /***************category style**************/
