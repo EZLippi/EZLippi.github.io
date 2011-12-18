@@ -16,11 +16,11 @@ layout: page
                 var disqus_shortname = 'beiyuu';
                 var that = this;
                 BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
-            })
+            });
             $('.entry a').each(function(index,element){
                 var href = $(this).attr('href');
                 if(href.indexOf('#') > -1){
-                }elseif ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
+                }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
                     $(this).attr('target','_blank');
                 }else{
                     $(this).attr('target','_blank');
