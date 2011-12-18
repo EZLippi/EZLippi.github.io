@@ -12,11 +12,21 @@ layout: page
     BYB.readyFunction = function(){
         $(document).ready(function(){
             $('#disqus_container .comment').on('click',function(){
-		$(this).html('加载中...');
+                $(this).html('加载中...');
                 var disqus_shortname = 'beiyuu';
                 var that = this;
                 BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
             })
+            $('.entry a').each(function(index,element){
+                var href = $(this).attr('href');
+                if(href.indexOf('#')){
+                }elseif (href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')){
+                    $(this).attr('target','_blank');
+                }else{
+                    $(this).attr('target','_blank');
+                    $(this).after('<img src="/images/external_link.git" />');
+                }
+            });
         });
     };
 </script>
