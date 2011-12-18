@@ -1,0 +1,36 @@
+---
+layout:           default
+---
+<div id="head">
+    <div class='logo left'>
+        <a href="/" title="Home">BeiYuu.com</a>
+    </div>
+    <div id="header">
+        <div class="nav right">
+            <a href="/blog" title="Thoughts On Something">Blog</a>
+            <a href="/project" title="Projects Ongoing">Project</a>
+            <a href="/about" title="About BeiYuu" >About</a>
+            <a href="{{ site.feed }}" rel="feed" title="Subscribes The Feed" target="_blank">RSS</a>
+        </div><!-- .nav -->
+    </div><!-- #header -->
+</div><!-- #head -->
+<div id="content">
+    {{ content }}
+</div><!-- #content --> 
+<div id="footer">
+    <h3>More About Me</h3>
+    <div class="my-link">
+        <a href="" title="邮箱" target="_blank" onclick="alert('BeiYuu 在 Gmail，你懂得！');return false;">eMail&gt;&gt;</a>
+        <a href="http://www.douban.com/people/beiyuu" title="我的书影音" target="_blank">豆瓣&gt;&gt;</a>
+        <a href="http://weibo.com/beiyuu" title="我的闲言碎语" target="_blank">新浪微博&gt;&gt;</a>
+        <a href="http://www.github.com/beiyuu" title="我的代码" target="_blank">Github&gt;&gt;</a>
+        <a href="http://twitter.com/#!/BeiYuu" title="又一处的闲言碎语" target="_blank">Twitter&gt;&gt;</a>
+        <a href="http://www.zhihu.com/people/beiyuu" title="我回答的问题" target="_blank">知乎&gt;&gt;</a>
+        <a href="http://www.markzhi.com/13989" title="我收集的图片" target="_blank">Markzhi&gt;&gt;</a>
+    </div>
+    <div class="copyright right">
+        {% for line in site.copyright %}
+        <p>{{ line }}</p>
+        {% endfor %}
+    </div>
+</div><!-- #footer -->

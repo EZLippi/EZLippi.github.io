@@ -1,0 +1,17 @@
+auto:	          true
+
+markdown:         rdiscount
+pygments:         true
+paginate:         6
+permalink:        /:title
+
+title:            I'm BeiYuu
+url:              http://beiyuu.com
+feed:             /atom.xml
+author:
+    name:         BeiYuu
+    twitter:      twitter.com/beiyuu
+description:      "BeiYuu\'s Blog"
+
+copyright:
+    - Design by <a href="http://beiyuu.com" rel="friend" title="BeiYuu" target="_blank">BeiYuu</a> &copy; Copyright 2011

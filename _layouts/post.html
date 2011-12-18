@@ -1,0 +1,22 @@
+---
+layout: page
+---
+<div class="entry">
+    {{ content }}
+</div><!-- .entry -->
+<div id="disqus_container"> 
+    <a href="#" class="comment" onclick="return false;">点击查看评论</a>
+    <div id="disqus_thread"></div>
+</div> 
+<script type="text/javascript">
+    BYB.readyFunction = function(){
+        $(document).ready(function(){
+            $('#disqus_container .comment').on('click',function(){
+		$(this).html('加载中...');
+                var disqus_shortname = 'beiyuu';
+                var that = this;
+                BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
+            })
+        });
+    };
+</script>
