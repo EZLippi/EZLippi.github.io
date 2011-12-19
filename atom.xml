@@ -25,4 +25,3 @@ layout: nil
    {% endfor %}
  
 </feed>
-
