@@ -24,7 +24,7 @@ title: Wiki
     <h2>其他</h2>
     <ul>
     	<li>推荐阅读</li>
-    	<li>
+    	<li>推荐的
             <ul>
                 <li><a href="#">一</a></li>
                 <li>二</li>
