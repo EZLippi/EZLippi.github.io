@@ -108,6 +108,9 @@ pre code{border:none;padding:0;}
 .category li{display:inline-block;display:-moz-inline-stack;*display:inline;width:230px;margin-bottom:30px;zoom:1;padding:10px 45px;vertical-align:middle;text-align:center;}
 .category span{color:#777;font-style:italic;font-size:14px;display:block;text-align:left}
 
+/***************Wiki Style*****************/
+.wiki ul{margin-left:30px;margin-bottom:20px;}
+.wiki ul li{margin-bottom:5px;;list-style:disc;}
 /***************contact style*************/
 #disqus_container {font-size:12px;}
 #disqus_container a.comment{font-size:14px;}
