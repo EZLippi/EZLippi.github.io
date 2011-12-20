@@ -76,7 +76,7 @@ pre code{border:none;padding:0;}
 #mycard div{width:165px;height:100px;margin:2px;background-color:#d6b301;float:left;text-align:center;line-height:100px;border:1px solid #555;position:relative;overflow:hidden;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";filter:alpha(opacity=80);}
 #mycard .link-hover{width:163px;height:98px;border:2px solid #333}
 #mycard a.link-icon{display:block;height:100%;padding-top:30px;}
-#mycard .link-icon span{width:48px;height:48px;display:block;margin-left:68px;background-image:url(/images/index.png)}
+#mycard .link-icon span{width:48px;height:48px;display:block;margin-left:68px;background-image:url(/images/index.png) no-repeat;}
 #mycard a.link-info{position:absolute;bottom:0;left:0;line-height:normal;color:#fff;background-color:#000;height:0;width:100%;}
 #mycard a.link-info:hover {text-decoration:none}
 #mycard img{margin-top:20px}
