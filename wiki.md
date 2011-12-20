@@ -23,7 +23,7 @@ title: Wiki
     </ul>
     <h2>其他</h2>
     <ul>
-    	<li>推荐阅读</li>
+    	<li><a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt">Proxy Switchy!等使用的GFW List</a></li>
     	<li>推荐的
             <ul>
                 <li><a href="#">一</a></li>

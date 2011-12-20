@@ -73,26 +73,26 @@ pre code{border:none;padding:0;}
 
 /*****************mycard style*********/
 #mycard {width:514px;background-color:#555;position:absolute;top:38.2%;left:40%;margin-left:-250px;margin-top:-100px;opacity:0.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";filter:alpha(opacity=80);}
-#mycard div{width:165px;height:100px;margin:2px;background-color:#d6b301;float:left;text-align:center;line-height:100px;border:1px solid #555;position:relative;overflow:hidden;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";filter:alpha(opacity=80);}
+#mycard .link{width:165px;height:100px;margin:2px;background-color:#d6b301;float:left;text-align:center;line-height:100px;border:1px solid #555;position:relative;overflow:hidden;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";filter:alpha(opacity=80);}
 #mycard .link-hover{width:163px;height:98px;border:2px solid #333}
-#mycard a.link-icon{display:block;height:100%;padding-top:30px;}
-#mycard .link-icon span{width:48px;height:48px;display:block;margin-left:68px;background-image:url(/images/index.png)}
-#mycard a.link-info{position:absolute;bottom:0;left:0;line-height:normal;color:#fff;background-color:#000;height:0;width:100%;}
-#mycard a.link-info:hover {text-decoration:none}
-#mycard img{margin-top:20px}
+#mycard .link a.link-icon{display:block;height:100%}
+#mycard .link .link-icon span{width:48px;height:48px;display:block;margin-top:30px;margin-left:68px;background-image:url(../images/index.png)}
+#mycard .link a.link-info{position:absolute;bottom:0;left:0;line-height:normal;color:#fff;background-color:#000;height:0;width:100%;}
+#mycard .link a.link-info:hover {text-decoration:none}
+#mycard .link img{margin-top:20px}
 #mycard .name{background-color:#3B5997}
-#mycard .name .link-icon{color:#fff;font-size:38px;font-weight:bold;padding-top:0}
+#mycard .name .link-icon{color:#fff;font-size:38px;font-weight:bold}
 #mycard .name a.link-icon:hover {text-decoration:none}
 #mycard .blog{background-color:#D6B301}
 #mycard .blog .link-icon span {background-position:-76px -15px;}
 #mycard .project{background-color:#55B00D}
 #mycard .project .link-icon span {background-position:-10px -15px;}
 #mycard .wiki{background-color:#00B5E2}
-#mycard .wiki .link-icon span {background-position:-10px -75px;}
+#mycard .wiki .link-icon span {background-position:-10px -15px;}
 #mycard .about{background-color:#E75F21}
-#mycard .about .link-icon span {background-position:-150px -15px;}
+#mycard .about .link-icon span {background-position:-10px -15px;}
 #mycard .rss{margin-bottom:0;background-color:#fff}
-#mycard .rss .link-icon span {background-position:-76px -75px;}
+#mycard .rss .link-icon span {background-position:-10px -15px;}
 
 
 /***************header style************/
