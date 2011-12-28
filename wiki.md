@@ -5,7 +5,7 @@ title: Wiki
 <div class="wiki">
     <h2>前端技术</h2>
     <ul>
-    	<li><a href="#">JS技术</a></li>
+    	<li><a href=://github.com/addyosmani/backbone-fundamentals">Backbone.js基础</a></li>
     	<li>CSS备忘</li>
     	<li>HTML技巧</li>
     </ul>
