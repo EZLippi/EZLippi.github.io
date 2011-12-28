@@ -26,7 +26,6 @@ title: Wiki
     	<li><a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt">Proxy Switchy!等使用的GFW List</a></li>
         <li><a href="http://speckyboy.com/2011/12/12/top-50-web-development-design-and-application-icon-sets-from-2011/">2011年50个最佳图标设计集合</a></li>
 	<li>我的两段吉他即兴：<a href="http://www.tudou.com/programs/view/1txOUWlIxJw/">Spanish风格</a>&nbsp;|&nbsp;<a href="http://www.tudou.com/programs/view/4qiVvUDWqjg/">C调即兴</a></li>
-	<li><a href="#">一</a></li>
     	<li>推荐的
             <ul>
                 <li><a href="#">一</a></li>
