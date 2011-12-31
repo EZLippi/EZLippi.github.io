@@ -2,7 +2,7 @@
 layout: page
 title: About BeiYuu
 ---
-# I'm [BeiYuu][]
+# [BeiYuu][]
 
 您好，我是[BeiYuu][]，欢迎光临我的博客，我是一名前端开发攻城师，目前就职于[豆瓣网][]。
 
