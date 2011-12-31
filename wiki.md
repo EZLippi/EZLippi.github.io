@@ -5,7 +5,7 @@ title: Wiki
 <div class="wiki">
     <h2>前端技术</h2>
 	<ul>
-        <li><a href="http://aliceui.com/category/solutions/" title="Alice出品的浏览器兼容解决方案">浏览器兼容解决方案</a> | <a href="http://aliceui.com/w3c-docs/" title="对HTML5/CSS3的标准文档研究">W3C 标准文档</a></li>
+        <li><a href="http://aliceui.com/category/solutions/" title="Alice出品的浏览器兼容解决方案">浏览器兼容解决方案(AliceUI)</a> | <a href="http://aliceui.com/w3c-docs/" title="AliceUI出品对HTML5/CSS3的标准文档研究">W3C 标准文档(AliceUi)</a></li>
         <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="汤姆大叔的深入理解Javascript系列">深入理解Javascript系列</a></li>
 		<li><a href="http://github.com/addyosmani/backbone-fundamentals" title="Backbone.js基础介绍">Backbone.js基础</a></li>
 		<li><a href="http://www.cnblogs.com/rubylouvre/archive/2010/01/05/1639541.html" title="Javscript Bind函数">Javscript Bind函数</a></li>
