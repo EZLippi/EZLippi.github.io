@@ -26,7 +26,9 @@ title: Wiki
             <li>OAuth在线测试：<a href="http://term.ie/oauth/example/index.php">服务端</a> | <a href="http://term.ie/oauth/example/client.php">客户端</a></li>
         </ul>
         <li>国内开源镜像站：<a href="http://mirrors.sohu.com/">Sohu.com</a> | <a href="http://mirrors.163.com/">163.com</a></li>
+        <li>在线IDE：<a href="http://www.coderun.com/ide/" title="Online IDE">CodeRun</a> | <a href="http://jsfiddle.net/" title="Online Editor for the Web">jsFiddle</a> | <a href="http://jsbin.com/" title="JavaScript Collaborative Debugging">JS Bin</a> | <a href="http://code.wanz.im/">小可&lt;Little Code /&gt;</a></li>
     </ul>
+
     <h2>系统相关</h2>
     <ul>
         <li><a href="http://xbeta.info/win-run.htm" title="最绿色最高效，用win+r启动常用程序和文档">用win+r启动程序和文档</a></li>
@@ -44,6 +46,7 @@ title: Wiki
         </ul>
 </li>
     </ul>
+
     <h2>其他</h2>
     <ul>
     	<li><a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt">Proxy Switchy!等使用的GFW List</a></li>
