@@ -16,23 +16,26 @@ title: Wiki
     <ul>
         <li><a href="http://markdown.tw/">MarkDown语法</a></li>
         <li><a href="http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine" title="DlHightLight代码高亮组件">DlHightLight代码高亮组件</a></li>
-    	<li>OAuth
-            <ul>
-                <li><a href="http://oauth.net/">OAuth</a></li>
-                <li><a href="http://www.rollingcode.org/blog/f/oauth-core-1.0-final-cn.html">OAuth核心</a></li>
-                <li><a href="http://code.google.com/apis/accounts/docs/OAuth.html">OAtuh for Web Application</a></li>
-                <li><a href="https://github.com/mattn/vim-oauth">Vim-oauth</a></li>
-                <li><a href="https://github.com/mattn/webapi-vim">webapi-vim</a></li>
-                <li>OAuth在线测试<a href="http://term.ie/oauth/example/index.php">服务端</a><a href="http://term.ie/oauth/example/client.php">客户端</a></li>
-            </ul>
-        </li>
+    	<li>OAuth</li>
+        <ul>
+            <li><a href="http://oauth.net/">OAuth</a></li>
+            <li><a href="http://www.rollingcode.org/blog/f/oauth-core-1.0-final-cn.html">OAuth核心</a></li>
+            <li><a href="http://code.google.com/apis/accounts/docs/OAuth.html">OAtuh for Web Application</a></li>
+            <li><a href="https://github.com/mattn/vim-oauth">Vim-oauth</a></li>
+            <li><a href="https://github.com/mattn/webapi-vim">webapi-vim</a></li>
+            <li>OAuth在线测试<a href="http://term.ie/oauth/example/index.php">服务端</a><a href="http://term.ie/oauth/example/client.php">客户端</a></li>
+        </ul>
     </ul>
     <h2>系统相关</h2>
     <ul>
         <li><a href="http://xbeta.info/win-run.htm" title="最绿色最高效，用win+r启动常用程序和文档">用win+r启动程序和文档</a></li>
-        <li><a href="http://wiki.ubuntu.org.cn/Ubuntu%E6%A1%8C%E9%9D%A2%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97" title="Ubuntu桌面入门指南">Ubuntu桌面入门指南</a></li>
-        <li><a href="http://wiki.ubuntu.org.cn/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%8C%87%E5%BC%95" title="Ubuntu新手入门指引">Ubuntu新手入门指引</a></li>
+        <li><a href="http://wiki.ubuntu.org.cn/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%8C%87%E5%BC%95" title="Ubuntu新手入门指引">Ubuntu新手入门指引</a> | <a href="http://wiki.ubuntu.org.cn/Ubuntu%E6%A1%8C%E9%9D%A2%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97" title="Ubuntu桌面入门指南">Ubuntu桌面入门指南</a></li>
         <li>终端(Terminal)：<a href="http://www.zsh.org/">zsh</a> | <a href="http://zsh.sourceforge.net/">zsh.sf.net</a> | <a href="http://linuxtoy.org/archives/zsh.html">终极Shell——Zsh</a> | <a href="http://sofish.de/1685">把 Mac 上的 bash 换成 zsh</a> | <a href="http://leeiio.me/bash-to-zsh-for-mac/">zsh – 给你的Mac不同体验的Terminal！</a> | <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh@github</a>
+        <li>网络监控：</li>
+        <ul>
+            <li><a href="http://www.fiddler2.com/fiddler2/">Fiddler 2</a> | <a href="http://www.httpwatch.com/">HttpWatch</a></li>
+            <li><a href="http://www.charlesproxy.com/">Charles</a></li>
+        </ul>
 </li>
     </ul>
     <h2>其他</h2>

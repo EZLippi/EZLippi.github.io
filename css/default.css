@@ -119,8 +119,7 @@ pre code{border:none;padding:0;}
 /***************Wiki Style*****************/
 .wiki ul{margin-left:30px;margin-bottom:20px;list-style:disc}
 .wiki ul li{margin-bottom:5px;}
-.wiki li ul{margin-top:10px;margin-bottom:10px;}
-.wiki ul ul{list-style:circle;}
+.wiki ul ul{list-style:circle;margin-top:10px;margin-bottom:10px;}
 /***************contact style*************/
 #disqus_container {font-size:12px;}
 #disqus_container a.comment{font-size:14px;}
