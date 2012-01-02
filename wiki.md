@@ -23,7 +23,7 @@ title: Wiki
             <li><a href="http://code.google.com/apis/accounts/docs/OAuth.html">OAtuh for Web Application</a></li>
             <li><a href="https://github.com/mattn/vim-oauth">Vim-oauth</a></li>
             <li><a href="https://github.com/mattn/webapi-vim">webapi-vim</a></li>
-            <li>OAuth在线测试<a href="http://term.ie/oauth/example/index.php">服务端</a><a href="http://term.ie/oauth/example/client.php">客户端</a></li>
+            <li>OAuth在线测试<a href="http://term.ie/oauth/example/index.php">服务端</a> | <a href="http://term.ie/oauth/example/client.php">客户端</a></li>
         </ul>
     </ul>
     <h2>系统相关</h2>
