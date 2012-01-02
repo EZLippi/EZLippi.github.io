@@ -55,3 +55,19 @@ title: Wiki
         <li>我的两段吉他即兴：<a href="http://www.tudou.com/programs/view/1txOUWlIxJw/">Spanish风格</a>&nbsp;|&nbsp;<a href="http://www.tudou.com/programs/view/4qiVvUDWqjg/">C调即兴</a></li>
     </ul>
 </div>
+<script type="text/javascript">
+ BYB.readyFunction = function(){
+        $(document).ready(function(){
+            $('.entry a').each(function(index,element){
+                var href = $(this).attr('href');
+                if(href.indexOf('#') > -1){
+                }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
+                    $(this).attr('target','_blank');
+                }else{
+                    $(this).attr('target','_blank');
+                    $(this).addClass('external');
+                }
+            });
+        });
+    };
+</script>
