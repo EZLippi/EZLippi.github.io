@@ -58,7 +58,7 @@ title: Wiki
 <script type="text/javascript">
  BYB.readyFunction = function(){
         $(document).ready(function(){
-            $('.entry a').each(function(index,element){
+            $('#content a').each(function(index,element){
                 var href = $(this).attr('href');
                 if(href.indexOf('#') > -1){
                 }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
