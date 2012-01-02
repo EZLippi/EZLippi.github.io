@@ -23,7 +23,7 @@ title: Wiki
             <li><a href="http://code.google.com/apis/accounts/docs/OAuth.html">OAtuh for Web Application</a></li>
             <li><a href="https://github.com/mattn/vim-oauth">Vim-oauth</a></li>
             <li><a href="https://github.com/mattn/webapi-vim">webapi-vim</a></li>
-            <li>OAuth在线测试<a href="http://term.ie/oauth/example/index.php">服务端</a> | <a href="http://term.ie/oauth/example/client.php">客户端</a></li>
+            <li>OAuth在线测试：<a href="http://term.ie/oauth/example/index.php">服务端</a> | <a href="http://term.ie/oauth/example/client.php">客户端</a></li>
         </ul>
     </ul>
     <h2>系统相关</h2>
@@ -32,6 +32,14 @@ title: Wiki
         <li><a href="http://wiki.ubuntu.org.cn/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E6%8C%87%E5%BC%95" title="Ubuntu新手入门指引">Ubuntu新手入门指引</a> | <a href="http://wiki.ubuntu.org.cn/Ubuntu%E6%A1%8C%E9%9D%A2%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97" title="Ubuntu桌面入门指南">Ubuntu桌面入门指南</a></li>
         <li>终端(Terminal)：<a href="http://www.zsh.org/">zsh</a> | <a href="http://zsh.sourceforge.net/">zsh.sf.net</a> | <a href="http://linuxtoy.org/archives/zsh.html">终极Shell——Zsh</a> | <a href="http://sofish.de/1685">把 Mac 上的 bash 换成 zsh</a> | <a href="http://leeiio.me/bash-to-zsh-for-mac/">zsh – 给你的Mac不同体验的Terminal！</a> | <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh@github</a>
         <li>网络监控：<a href="http://www.fiddler2.com/fiddler2/">Fiddler 2</a> | <a href="http://www.httpwatch.com/">HttpWatch</a> | <a href="http://www.charlesproxy.com/">Charles</a></li>
+        <li>远程控制：</li>
+        <ul>
+        	<li>SecureCRT：<a href="http://www.vandyke.com/products/securecrt/index.html">SecureCRT</a> | <a href="http://www.cnblogs.com/ztf2008/archive/2009/09/11/1564979.html">SecureCRT 常用命令</a></li>
+        	<li>PuTTY：<a href="http://www.putty.org/">PuTTY</a> | <a href="http://code.google.com/p/puttycn/">PuTTY 中文版</a> | <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY: A Free Telnet/SSH Client</a> | <a href="http://chaifeng.com/blog/2007/06/putty_200611.html">PuTTY 中文教程</a> | <a href="https://docs.google.com/View?docid=ajbgz6fp3pjh_2dwwwwt">@google docs</a> | <a href="http://blog.csdn.net/niuniuchou/archive/2010/03/16/5387250.aspx">转</a> | <a href="http://zh.wikipedia.org/wiki/PuTTY">@wikipedia</a></li>
+        	<li></li>
+        	<li></li>
+        	<li></li>
+        </ul>
 </li>
     </ul>
     <h2>其他</h2>
