@@ -129,8 +129,9 @@ title: Wiki
             <li><a href="http://jiachen.blogbus.com/logs/29596111.html">图形绘制</a></li>
             <li><a href="http://jiachen.blogbus.com/logs/32827552.html">图片应用</a></li>
         </ul>
-        <li>Canvas Games：</li><a href="http://henrikfalck.com/unrealsoccer/">Unreal Soccer</a> |
+        <li>Canvas Games：</li>
         <ul>
+            <li><a href="http://henrikfalck.com/unrealsoccer/">Unreal Soccer</a></li>
             <li><a href="http://www.benjoffe.com/code/demos/canvascape/">Canvascape</a></li>
             <li><a href="http://dave-webster.com/projects/index.php?page=incs/plasma_demo1">Plasma demo using the HTML Canvas element</a></li>
             <li><a href="http://www.student.kuleuven.be/~m0216922/CG/plasma.html">Lodes Computer Graphics Tutorial</a></li>
