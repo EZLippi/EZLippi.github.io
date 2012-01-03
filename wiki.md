@@ -79,13 +79,13 @@ title: Wiki
         </ul>
         <li>字体：</li>
         <ul>
-        	<li><a href="http://zh.wikipedia.org/wiki/%E8%A1%AC%E7%BA%BF%E4%BD%93">什么是衬线体</li>
+        	<li><a href="http://zh.wikipedia.org/wiki/%E8%A1%AC%E7%BA%BF%E4%BD%93">什么是衬线体</a></li>
         	<li><a href="http://wenq.org/">文泉驿</a> - 开源字体。开彼源兮，斯流永继。</li>
         	<li><a href="http://www.cnbeta.com/articles/102609.htm">让代码更美:10大编程字体</a></li>
         	<li><a href="http://www.typeisbeautiful.com/">Type is Beautiful</a> - 字体排版</li>
             <li><a href="http://code.google.com/webfonts">Google Font Directory</a></li>
             <li><a href="http://www.network-science.de/ascii/" title="字符图案生成器">ASCII Generator</a></li>
-            <li>假文填充：<a href="http://zh.wikipedia.org/zh-cn/Lorem_ipsum">Lorem ipsum</a> | <a href="http://more.handlino.com/" title="一用就爱上的中文假文生成器">中文假文MoreText.js</a> <a href="http://github.com/c9s/more.vim" title="MoreText的vim插件">MoreText的Vim插件</a> | <a href="http://www.richyli.com/tool/loremipsum/">亂數假文產生器 Chinese Lorem Ipsum</a> | </li>
+            <li>假文填充：<a href="http://zh.wikipedia.org/zh-cn/Lorem_ipsum">Lorem ipsum</a> | <a href="http://more.handlino.com/" title="一用就爱上的中文假文生成器">中文假文MoreText.js</a> <a href="http://github.com/c9s/more.vim" title="MoreText的vim插件">MoreText的Vim插件</a> | <a href="http://www.richyli.com/tool/loremipsum/">亂數假文產生器 Chinese Lorem Ipsum</a></li>
         </ul>
         <li>表格：</li>
         <ul>
