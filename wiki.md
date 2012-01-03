@@ -53,7 +53,28 @@ title: Wiki
             <li><a href="http://www.open.collab.net/scdocs/ddUsingSVN_command-line.html.zh-cn">SVN 命令行</a></li>
         </ul>
         <li>Mercurial相关：</li>
+        <ul>
+            <li><a href="http://mercurial.selenic.com/">Mercurial</a> | <a href="http://mercurial.selenic.com/wiki/ChineseTutorial">Mercurial 使用教程</a></li>
+            <li><a href="http://hginit.com/">Hg Init: a Mercurial tutorial</a></li>
+            <li><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> <a href="http://hgbook.red-bean.com/read/">read</a></li>
+            <li><a href="http://leeiio.me/googlecode-converting-svn-to-hg/">在Google Code上用 Mercurial 取代 Subversion 管理你的项目</a></li>
+            <li><a href="http://www.cn-cuckoo.com/2010/03/20/distributed-version-control-is-here-to-stay-baby-1436.html">乔尔谈软件终结篇：分布式版本控制系统的时代到来了</a> - 讲到了分布式版本控制的精髓：管理变更，而不是管理版本。</li>
+            <li><a href="http://stevelosh.com/blog/2010/08/a-git-users-guide-to-mercurial-queues/">A Git User’s Guide to Mercurial Queues</a></li>
+            <li>Mercurial托管服务：<a href="http://bitbucket.org/">Mercurial hosting - bitbucket.org</a> | <a href="http://www.fogcreek.com/kiln/">KilnHg</a></li>
+        </ul>
         <li>Git相关：</li>
+        <ul>
+            <li><a href="http://git-scm.com/">Git</a> - the Fast Version Control System. </li>
+            <li>最详细Git介绍：<a href="http://progit.org/">Pro Git</a> (<a href="http://progit.org/book/">book</a>, <a href="http://progit.org/book/zh/">中文版</a>)</li>
+            <li><a href="http://help.github.com/">Git官方帮助文档</a></li>
+            <li>简明教程：<a href="http://blog.csdn.net/chinalinuxzend/archive/2008/11/14/3292896.aspx">git 之五分钟教程</a> | <a href="http://wangcong.org/blog/?p=283">进一步学习 Git</a> | <a href="http://www.ibm.com/developerworks/cn/linux/l-git/">使用 Git 管理源代码</a> | <a href="http://www.elias.cn/Develop/GitMini">分布式版本控制工具Git简明笔记</a> | <a href="http://labs.chinamobile.com/mblog/225_2822">译文:GIT日常命令20来条</a></li>
+            <li><a href="http://blog.leezhong.com/translate/2010/10/30/a-successful-git-branch.html">Git开发管理之道</a></li>
+            <li>Git讨论：<a href="http://zh-cn.whygitisbetterthanx.com/">Why Git is Better than X</a> | <a href="http://www.ibm.com/developerworks/cn/web/wa-git/">Git 改变了分布式 Web 开发规则</a> | <a href="http://www.joomlagate.com/article/joomla-review/why-subversion-will-be-replaced-by-git-for-version-control/">为什么说 Git 将取代 SVN 做软件版本控制？</a></li>
+            <li><a href="http://rubynroll.javaeye.com/blog/203133">SVN+GIT=鱼与熊掌兼得</a></li>
+            <li>面向 Subversion 用户的 Git：<a href="http://www.ibm.com/developerworks/cn/linux/l-git-subversion-1/">一: 入门指南</a> | <a href="http://www.ibm.com/developerworks/cn/linux/l-git-subversion-2/">面向 Subversion 用户的 Git，第 2 部分: 实施控制</a></li>
+            <li><a href="http://www.jeffkit.info/2010/12/885/">Git的推广心得</a> | <a href="http://www.jeffkit.info/2010/12/860/">你为神马不用git-flow呢?</a> | <a href="http://www.jeffkit.info/2010/12/842/">开始实践git-flow</a></li>
+            <li><a href="http://github.com/">github</a> | <a href="http://jekyllrb.com/">jekyll</a> | <a href="https://github.com/mojombo/jekyll">codes</a> | <a href="https://github.com/mojombo/mojombo.github.com">demos</a> | <a href="https://github.com/blog/272-github-pages">GitHub Pages</a> | <a href="http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/">Publishing a Blog with GitHub Pages and Jekyll</a></li>
+        </ul>
     </ul>
 
     <h2>系统相关</h2>
