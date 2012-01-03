@@ -38,6 +38,8 @@ title: Wiki
             <li><a href="http://panweizeng.com/archives/522">sed和awk的简单使用 - 潘魏增</a></li>
             <li>参考书籍：<a href="http://cm.bell-labs.com/cm/cs/awkbook/">The AWK Programming Language</a> | <a href="http://oreilly.com/catalog/9780596000707/">Effective awk Programming, Third Edition</a> | <a href="http://oreilly.com/catalog/9781565922259">sed &amp; awk, Second Edition</a> | <a href="http://oreilly.com/catalog/9780596003524">sed and awk Pocket Reference, Second Edition</a></li>
         </ul>
+        <li>代码片段：<a href="http://gist.github.com/">gist@github</a> | <a href="http://notepad.cc/">notepad.cc</a> | <a href="http://snipt.org/">Snipt.org</a> | <a href="http://paste.ubuntu.org.cn/">Ubuntu Paste</a> | <a href="http://pastebin.com/">Pastebin</a> | <a href="http://paste.pocoo.org">Lodge It!</a></li>
+        <li>版本控制系统：<a href="http://blog.csdn.net/vagrxie/archive/2009/09/23/4582457.aspx">版本控制系统（RCS）的选择与比较</a> | <a href="http://blog.csdn.net/tony1130/archive/2008/10/25/3137494.aspx">拥抱Mercurial---选择分布式版本控制工具</a> | <a href="http://blog.csdn.net/meteor1113/archive/2009/07/16/4350408.aspx">几个分布式vcs比较</a> | <a href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">Comparison of revision control software</a></li>
     </ul>
 
     <h2>系统相关</h2>
