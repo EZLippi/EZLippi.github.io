@@ -8,7 +8,6 @@ title: Wiki
         <li><a href="http://jqfundamentals.com/book/index.html">jQuery Fundamentals</a> - jQuery 入门教程。</li>
         <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="汤姆大叔的深入理解Javascript系列">深入理解Javascript系列</a></li>
         <li><a href="http://github.com/addyosmani/backbone-fundamentals" title="Backbone.js基础介绍">Backbone.js基础</a></li>
-        <li><a href="http://www.cnblogs.com/rubylouvre/archive/2010/01/05/1639541.html" title="Javscript Bind函数">Javscript Bind函数</a></li>
         <li>国内公司JS框架：<a href="http://kissyui.com/">Kissy - Taobao</a> | <a href="http://arale.alipay.net/">Arale - Alipay</a> | <a href="http://tangram.baidu.com/">Tangram - Baidu</a></li>
         <li><a href="http://www.json.org/">JSON Home Page</a></li>
         <li>JSON工具：</li>
@@ -59,7 +58,7 @@ title: Wiki
             <li>JsBeautify：<a href="http://jsbeautifier.org/">Online Javascript jsbeautifier</a> <a href="http://github.com/einars/js-beautify">github</a>, <a href="http://www.vim.org/scripts/script.php?script_id=2727">vimscript</a></li>
             <li><a href="https://code.google.com/p/jsbeautifier/">js beautifier</a> - plugin for Chrome</li>
         </ul>
-        <li>NodeJS</li>
+        <li>NodeJS：</li>
         <ul>
             <li><a href="http://nodejs.org/">nodeJS</a> - 服务器端 JavaScript 编程</li>
             <li><a href="http://simonwillison.net/2009/Nov/23/node/">Node.js is genuinely exciting</a></li>
@@ -71,6 +70,7 @@ title: Wiki
         <ul>
             <li><a href="http://birdshome.cnblogs.com/archive/2006/05/28/IE_MemoryLeak.html">理解并解决IE的内存泄漏方式</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/01/ClosureReferences.html">2</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/17/Cross_Page_Leaks.html">3</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/30/Pseudo_Leaks.html">4</a></li>
             <li><a href="http://msdn.microsoft.com/en-us/library/bb250448.aspx">Understanding and Solving Internet Explorer Leak Patterns</a></li>
+            <li><a href="http://www.cnblogs.com/rubylouvre/archive/2010/01/05/1639541.html" title="Javscript Bind函数">Javscript Bind函数</a></li>
         </ul>
     </ul>
 
@@ -332,7 +332,7 @@ title: Wiki
         $(document).ready(function(){
             $('#content a').each(function(index,element){
                 var href = $(this).attr('href');
-                if(href.indexOf('#') > -1){
+                if(href.indexOf('#') == 0){
                 }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
                     $(this).attr('target','_blank');
                 }else{
