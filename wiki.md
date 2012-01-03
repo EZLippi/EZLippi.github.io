@@ -5,18 +5,38 @@ title: Wiki
 <div class="wiki">
     <h2>前端技术</h2>
 	<ul>
-        <li><a href="http://aliceui.com/category/solutions/" title="Alice出品的浏览器兼容解决方案">浏览器兼容解决方案</a>(AliceUI) | <a href="http://aliceui.com/w3c-docs/" title="AliceUI出品对HTML5/CSS3的标准文档研究">W3C 标准文档</a>(AliceUI)</li>
-        <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="汤姆大叔的深入理解Javascript系列">深入理解Javascript系列</a></li>
-		<li><a href="http://github.com/addyosmani/backbone-fundamentals" title="Backbone.js基础介绍">Backbone.js基础</a></li>
-		<li><a href="http://www.cnblogs.com/rubylouvre/archive/2010/01/05/1639541.html" title="Javscript Bind函数">Javscript Bind函数</a></li>
-		<li>HTML5 &amp; CSS3：<a href="http://blog.bingo929.com/google-enjoy-html5-drag-drop-filereaderenren.html" title="给力的 Google HTML5 训练营(HTML5 Drag&Drop 拖拽、FileReader实例教程)">HTML5训练营</a> | <a href="http://blog.bingo929.com/html5-websockets.html" title="HTML5 WebSockets 基础使用教程">HTML5 WebSockets</a> | <a href="http://blog.bingo929.com/html-5-canvas-the-basics-html5.html" title="关于HTML 5 canvas 的基础教程">HTML5 Canvas</a> | <a href="http://blog.bingo929.com/html5-ie-enabling-script.html" title="让所有IE支持HTML5的解决方案">IE支持HTML5</a> | <a href="http://blog.bingo929.com/power-of-html5-css3-div-css.html" title="一起感受HTML5和CSS3的能量">感受HTML5&CSS3</a></li>
+        <li>Javascript：</li>
+        <ul>
+            <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="汤姆大叔的深入理解Javascript系列">深入理解Javascript系列</a></li>
+            <li><a href="http://github.com/addyosmani/backbone-fundamentals" title="Backbone.js基础介绍">Backbone.js基础</a></li>
+            <li><a href="http://www.cnblogs.com/rubylouvre/archive/2010/01/05/1639541.html" title="Javscript Bind函数">Javscript Bind函数</a></li>
+            <li>国内公司JS框架：<a href="http://kissyui.com/">Kissy - Taobao</a> | <a href="http://arale.alipay.net/">Arale - Alipay</a> | <a href="http://tangram.baidu.com/">Tangram - Baidu</a></li>
+        </ul>
+        <li>HTML &amp; CSS：</li>
+        <ul>
+            <li><a href="http://blog.bingo929.com/css-frameworks-15.html">精选15个国外CSS框架</a></li>
+            <li>HTML5 &amp; CSS3：<a href="http://blog.bingo929.com/google-enjoy-html5-drag-drop-filereaderenren.html" title="给力的 Google HTML5 训练营(HTML5 Drag&Drop 拖拽、FileReader实例教程)">HTML5训练营</a> | <a href="http://blog.bingo929.com/html5-websockets.html" title="HTML5 WebSockets 基础使用教程">HTML5 WebSockets</a> | <a href="http://blog.bingo929.com/html-5-canvas-the-basics-html5.html" title="关于HTML 5 canvas 的基础教程">HTML5 Canvas</a> | <a href="http://blog.bingo929.com/html5-ie-enabling-script.html" title="让所有IE支持HTML5的解决方案">IE支持HTML5</a> | <a href="http://blog.bingo929.com/power-of-html5-css3-div-css.html" title="一起感受HTML5和CSS3的能量">感受HTML5&CSS3</a></li>
+            <li><a href="http://www.cnblogs.com/yizuierguo/archive/2010/08/04/1792287.html">三谈Iframe自适应高度</a> | <a href="http://www.cnblogs.com/MaxIE/archive/2008/08/13/1266597.html">再谈iframe自适应高度</a></li>
+            <li><a href="http://wiki.hotoo.me/CSS-Hacks.html">CSS Hacks &amp; Expression</a></li>
+        </ul>
+        <li>FE Tech：</li>
+        <ul>
+            <li><a href="http://www.w3.org/">World Wide Web Consortium</a></li>
+            <li><a href="http://www.webstandards.org/">The Web Standards Project</a></li>
+            <li><a href="http://www.w3schools.com/">W3Schools Online Web Tutorials</a></li>
+            <li><a href="http://www.google.com/support/webmasters/bin/answer.py?hl=cn&amp;answer=40132">HTTP 状态代码</a></li>
+            <li><a href="http://www.floatfly.cn/default/web-error-info.html">网页错误代码详解</a></li>
+            <li><a href="http://www.w3school.com.cn">w3school - 在线教程</a></li>
+            <li><a href="http://zh.wikipedia.org/zh-cn/REST">REST介绍</a></li>
+            <li><a href="http://aliceui.com/category/solutions/" title="Alice出品的浏览器兼容解决方案">浏览器兼容解决方案</a>(AliceUI) | <a href="http://aliceui.com/w3c-docs/" title="AliceUI出品对HTML5/CSS3的标准文档研究">W3C 标准文档</a>(AliceUI)</li>
+            <li>Microformats：<a href="http://microformats.org/wiki/Main_Page">Microformats</a> | <a href="http://www.blueidea.com/tech/web/2009/6471.asp">什么是微格式及经典实例演示</a> | <a href="http://zh.wikipedia.org/zh/%E5%BE%AE%E6%A0%BC%E5%BC%8F">微格式 - Wikipedia</a> <a href="http://en.wikipedia.org/wiki/Microformat">en</a> | <a href="http://suda.co.uk/projects/microformats/cheatsheet/">Microformats Cheat Sheat</a> | <a href="http://www.ued163.com/?p=470">微格式全功略Hcard、 hCalendar、hReview、XFN 轻松掌握</a> | <a href="http://tommyfan.com/blog/skill/microformats_hcard/">微格式 Microformats ? hCard</a> | <a href="http://www.mijia.org/blog/?p=152">使用微格式来丰富网站语义：简介</a> | <a href="http://www.ablognotlimited.com/articles/getting-semantic-with-microformats-introduction/">Getting Semantic With Microformats, Introduction</a></li>
+        </ul>
 	</ul>
 
     <h2>开发相关</h2>
     <ul>
         <li><a href="http://markdown.tw/">MarkDown语法</a></li>
         <li><a href="http://114.xixik.com/character/">HTML转义</a></li>
-        <li><a href="http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine" title="DlHightLight代码高亮组件">DlHightLight代码高亮组件</a></li>
     	<li>OAuth</li>
         <ul>
             <li><a href="http://oauth.net/">OAuth</a></li>
@@ -75,6 +95,18 @@ title: Wiki
             <li><a href="http://www.jeffkit.info/2010/12/885/">Git的推广心得</a> | <a href="http://www.jeffkit.info/2010/12/860/">你为神马不用git-flow呢?</a> | <a href="http://www.jeffkit.info/2010/12/842/">开始实践git-flow</a></li>
             <li><a href="http://github.com/">github</a> | <a href="http://jekyllrb.com/">jekyll</a> | <a href="https://github.com/mojombo/jekyll">codes</a> | <a href="https://github.com/mojombo/mojombo.github.com">demos</a> | <a href="https://github.com/blog/272-github-pages">GitHub Pages</a> | <a href="http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/">Publishing a Blog with GitHub Pages and Jekyll</a></li>
         </ul>
+        <li>函数式编程：</li>
+        <ul>
+            <li><a href="http://en.wikipedia.org/wiki/Functional_programming">@wikipedia</a> <a href="http://zh.wikipedia.org/zh-cn/%E5%87%BD%E6%95%B8%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80">中文</a></li>
+            <li><a href="http://www.aqee.net/2010/03/08/a-brief-history-of-object-functional-programming/">对象-函数式编程简史</a> <a href="http://news.csdn.net/a/20100311/217407.html">2</a></li>
+            <li><a href="http://www.ibm.com/developerworks/cn/web/wa-javascript.html">用函数式编程技术编写优美的 JavaScript</a></li>
+            <li><a href="http://blog.zhaojie.me/tag/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">函数式编程</a> - 老赵</li>
+            <li><a href="http://chenzhongke.com/wi/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B">函数式编程</a> - czk wiki</li>
+            <li><a href="http://wfp.group.javaeye.com/">函数式编程の道</a></li>
+            <li><a href="http://blog.csdn.net/xuejx/archive/2009/08/12/4440105.aspx">哪种语言将统治多核时代 再看函数式语言特性</a></li>
+        </ul>
+        <li><a href="http://www.canonical.org/~kragen/tao-of-programming.html">The Tao Of Programming</a>,<a href="http://osiris.urbanna.net/tao.html">2</a>,<a href="http://livecn.huasing.org/tao_of_programming.htm">《编程之道》</a> 文言文版 by Livecn，<a href="http://202.118.74.32/doc/Science/Computer/TaoOfProg.pdf">2</a> 白话文版 by 小赵</li>
+        <li>代码高亮：<a href="http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine" title="DlHightLight代码高亮组件">DlHightLight代码高亮组件</a> | <a href="http://code.google.com/p/google-code-prettify/">Google Code Prettify</a></li>
     </ul>
 
     <h2>系统相关</h2>
@@ -92,7 +124,15 @@ title: Wiki
         	<li>SSH：<a href="http://fuse.sourceforge.net/sshfs.html">SSH Filesystem</a> | <a href="http://wowubuntu.com/sshfs.html">在 Ubuntu 上使用 sshfs 映射远程 ssh 文件系统为本地磁盘</a> | <a href="http://code.google.com/p/macfuse/">MacFUSE</a> | <a href="http://www.macupdate.com/app/mac/23721/sshfs-for-mac-os-x">sshfs for Mac OS X</a></li>
         	<li>rsync：<a href="http://rsync.samba.org/">rsync</a> | <a href="http://zh.wikipedia.org/zh-cn/Rsync">zh@wikipedia</a> | <a href="http://en.wikipedia.org/wiki/Rsync">en@wikipedia</a> | <a href="http://everythinglinux.org/rsync/">A Tutorial on Using</a> | <a href="http://www.itefix.no/i2/node/10650">cwrsync - Rsync for Windows</a> | <a href="http://wowubuntu.com/rsync.html">如何用 Rsync 来备份 Linux 文件</a> | <a href="http://www.dbanotes.net/techmemo/aix_rsync.html">AIX 上配置 rsync 简记</a> | <a href="http://www.dbanotes.net/techmemo/rsync_cwrsync_backup_dreamhost_to_windows.html">用 Rsync(cwRsync)备份 Dreamhost 到 Windows 上</a> | <a href="http://www.dbanotes.net/techmemo/rsync_openssh.html">Rsync 与 OpenSSH 结合运用进行文件同步</a></li>
         </ul>
-</li>
+        <li>Email相关：</li>
+        <ul>
+            <li><a href="http://blog.miniasp.com/post/2008/02/06/How-to-send-Email-with-embedded-picture-image.aspx">如何發送內嵌圖片的 E-mail ( Inline Attachment )</a></li>
+            <li><a href="http://www.tzwhx.com/newOperate/html/1/11/112/18550.html">发送内嵌图片邮件的正确方法</a></li>
+            <li><a href="http://www.oschina.net/bbs/thread/8428">使用 Commons-Email 在邮件内容中直接嵌入图片</a></li>
+            <li><a href="http://www.iteedu.com/webtech/j2ee/springdiary/93.php">内嵌图片或附档</a></li>
+            <li><a href="http://inlinestyler.torchboxapps.com/">HTML email inline styler</a></li>
+            <li><a href="http://www.ajaxapp.com/2009/03/01/css-to-inline-styles-converter/">CSS to inline styles converter</a></li>
+        </ul>
     </ul>
 
     <h2>设计相关</h2>
