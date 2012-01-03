@@ -3,7 +3,7 @@ layout: page
 title: Wiki
 ---
 <div class="wiki">
-    <h2>前端技术</h2>
+    <h2>程序相关</h2>
 	<ul>
         <li>Javascript：</li>
         <ul>
@@ -30,6 +30,35 @@ title: Wiki
             <li><a href="http://zh.wikipedia.org/zh-cn/REST">REST介绍</a></li>
             <li><a href="http://aliceui.com/category/solutions/" title="Alice出品的浏览器兼容解决方案">浏览器兼容解决方案</a>(AliceUI) | <a href="http://aliceui.com/w3c-docs/" title="AliceUI出品对HTML5/CSS3的标准文档研究">W3C 标准文档</a>(AliceUI)</li>
             <li>Microformats：<a href="http://microformats.org/wiki/Main_Page">Microformats</a> | <a href="http://www.blueidea.com/tech/web/2009/6471.asp">什么是微格式及经典实例演示</a> | <a href="http://zh.wikipedia.org/zh/%E5%BE%AE%E6%A0%BC%E5%BC%8F">微格式 - Wikipedia</a> <a href="http://en.wikipedia.org/wiki/Microformat">en</a> | <a href="http://suda.co.uk/projects/microformats/cheatsheet/">Microformats Cheat Sheat</a> | <a href="http://www.ued163.com/?p=470">微格式全功略Hcard、 hCalendar、hReview、XFN 轻松掌握</a> | <a href="http://tommyfan.com/blog/skill/microformats_hcard/">微格式 Microformats ? hCard</a> | <a href="http://www.mijia.org/blog/?p=152">使用微格式来丰富网站语义：简介</a> | <a href="http://www.ablognotlimited.com/articles/getting-semantic-with-microformats-introduction/">Getting Semantic With Microformats, Introduction</a></li>
+        </ul>
+        <li>Python：</li>
+        <ul>
+        	<li></li>
+        	<li></li>
+        	<li></li>
+        	<li></li>
+        	<li></li>
+        </ul>
+        <li>正则表达式：</li>
+        <ul>
+            <li><a href="http://deerchao.net/tutorials/regex/regex.htm">正则表达式30分钟入门教程</a> <a href="http://help.locoy.com/Document/Learn_Regex_For_30_Minutes.htm">2</a></li>
+            <li><a href="http://www.regexlab.com/zh/">正则表达式工作室</a> | <a href="http://www.regexlab.com/zh/regref.htm">揭开正则表达式的神秘面纱</a> | <a href="http://www.regexlab.com/zh/regtopic.htm">正则表达式话题</a>|  <a href="http://www.regexlab.com/zh/deelx/introidx.htm">DEELX 正则引擎性能与特点</a></li>
+            <li><a href="http://blog.chinaunix.net/u3/112728/showart_2207101.html">各种工具之正则表达式语法比较</a> <a href="http://hi.baidu.com/libk/blog/item/b5eb710e6c636dc37acbe107.html">2</a></li>
+            <li><a href="http://www.phpx.com/man/Regular_Expression/">Regular_Expression 入门</a></li>
+            <li><a href="http://java.sun.com/docs/books/tutorial/essential/regex/">Lesson: Regular Expressions(Java)</a></li>
+            <li><a href="http://docs.python.org/library/re.html">Regular expression operations(Python)</a></li>
+            <li><a href="http://zh.wikipedia.org/wiki/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">正则表达式 - 维基百科</a></li>
+            <li><a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/RegExp#Special_characters_in_regular_expressions">RegExp - Mozilla</a></li>
+            <li><a href="http://www.ibm.com/developerworks/cn/linux/l-lpic1-v3-103-7/?ca=drs-tp4608">学习 Linux，101: 使用正则表达式搜索文本文件</a></li>
+            <li><a href="http://www.ibm.com/developerworks/cn/java/wa-regexp/index.html">构建用于正则表达式的抽象 Java API</a></li>
+            <li><a href="http://www.greenend.org.uk/rjk/2002/06/regexp.html">Regexp Syntax Summary</a></li>
+            <li><a href="http://blog.stevenlevithan.com/archives/javascript-regex-and-unicode">JavaScript, Regex, and Unicode</a></li>
+            <li><a href="http://blog.csdn.net/myan/archive/2007/03/03/1520033.aspx">《理解正则表达式（程序员第3期文章）》</a></li>
+            <li><a href="http://tech.idv2.com/2006/05/08/parse-regex-with-dfa/">利用有限自动机分析正则表达式</a></li>
+            <li><a href="http://book.51cto.com/art/200902/111541.htm">《Linux系统最佳实践工具：命令行技术》</a></li>
+            <li><a href="http://iregex.org/">我爱正则表达式</a></li>
+            <li><a href="http://regex.me/">正则表达式论坛</a></li>
+            <li>正则表达式工具：<a href="http://regexpal.com/">Regexpal (online)</a> <a href="http://www.microidc.com/usr/tools/regexpal/index.html">2</a> | <a href="http://gskinner.com/RegExr/">RegExr</a> | <a href="http://www.regexbuddy.com/">RegexBuddy</a> | <a href="http://www.ultrapico.com/Expresso.htm">Expresso (free, open-source)</a> | <a href="http://www.regexlab.com/zh/mtracer/">Match Tracer</a> | <a href="http://www.gethifi.com/tools/regex">HiFi Regex Tester</a> | <a href="http://www.redfernplace.com/software-projects/regex-builder/">RegEx Builder</a></li>
         </ul>
 	</ul>
 
