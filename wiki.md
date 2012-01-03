@@ -27,6 +27,16 @@ title: Wiki
         </ul>
         <li>国内开源镜像站：<a href="http://mirrors.sohu.com/">Sohu.com</a> | <a href="http://mirrors.163.com/">163.com</a></li>
         <li>在线IDE：<a href="http://www.coderun.com/ide/" title="Online IDE">CodeRun</a> | <a href="http://jsfiddle.net/" title="Online Editor for the Web">jsFiddle</a> | <a href="http://jsbin.com/" title="JavaScript Collaborative Debugging">JS Bin</a> | <a href="http://code.wanz.im/">小可&lt;Little Code /&gt;</a></li>
+        <li>优良的文本处理工具：SED &amp; AWK</li>
+        <ul>
+        	<li><a href="http://sed.sourceforge.net/">sed.sf.net</a> | <a href="http://en.wikipedia.org/wiki/AWK">AWK @wikipedia</a> <a href="http://zh.wikipedia.org/wiki/AWK">中文</a></li>
+            <li><a href="http://gnuwin32.sourceforge.net/packages/gawk.htm">Gawk for Windows</a> | <a href="http://gnuwin32.sourceforge.net/packages/sed.htm">Sed for Windows</a></li>
+            <li><a href="http://blog.chinaunix.net/u/13392/showart.php?id=133128">sed-非交互式文本编辑器(L.E.McMahon 著,中文翻译)</a> <a href="http://cm.bell-labs.com/7thEdMan/vol2/sed">En</a> | <a href="http://blog.chinaunix.net/u/13392/showart.php?id=134410">awk-模式扫描与处理语言(Aho,Kernighan,Weinberger著,中文翻译)(第二版)</a> <a href="http://cm.bell-labs.com/7thEdMan/vol2/awk">En</a></li>
+            <li>详解注明的AWK oneliner：<a href="http://roylez.heroku.com/2010/04/11/awk-oneliner-translation-1.html">一：空行、行号和计算</a> | <a href="http://roylez.heroku.com/2010/04/28/awk-oneliner-translation-2.html">二：文本替换</a> | <a href="http://roylez.heroku.com/2010/05/15/awk-oneliner-translation-3.html">三：选择性输出特定行</a> | <a href="http://roylez.heroku.com/2010/07/29/awk-oneliner-translation-4.html">四：定义字符串和数组</a></li>
+            <li>详解AWK oneliner原文：<a href="http://www.catonmat.net/blog/awk-one-liners-explained-part-one/">Famous Awk One-Liners Explained</a> | <a href="http://www.catonmat.net/blog/update-on-famous-awk-one-liners-explained">Update on Famous Awk One-Liners Explained: String and Array Creation</a></li>
+            <li><a href="http://panweizeng.com/archives/522">sed和awk的简单使用 - 潘魏增</a></li>
+            <li>参考书籍：<a href="http://cm.bell-labs.com/cm/cs/awkbook/">The AWK Programming Language</a> | <a href="http://oreilly.com/catalog/9780596000707/">Effective awk Programming, Third Edition</a> | <a href="http://oreilly.com/catalog/9781565922259">sed &amp; awk, Second Edition</a> | <a href="http://oreilly.com/catalog/9780596003524">sed and awk Pocket Reference, Second Edition</a></li>
+        </ul>
     </ul>
 
     <h2>系统相关</h2>
