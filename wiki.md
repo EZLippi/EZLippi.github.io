@@ -15,6 +15,7 @@ title: Wiki
     <h2>开发相关</h2>
     <ul>
         <li><a href="http://markdown.tw/">MarkDown语法</a></li>
+        <li><a href="http://114.xixik.com/character/">HTML转义</a></li>
         <li><a href="http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine" title="DlHightLight代码高亮组件">DlHightLight代码高亮组件</a></li>
     	<li>OAuth</li>
         <ul>
@@ -83,9 +84,14 @@ title: Wiki
             <li><a href="http://code.google.com/webfonts">Google Font Directory</a></li>
             <li><a href="http://www.network-science.de/ascii/" title="字符图案生成器">ASCII Generator</a></li>
             <li>假文填充：<a href="http://zh.wikipedia.org/zh-cn/Lorem_ipsum">Lorem ipsum</a> | <a href="http://more.handlino.com/" title="一用就爱上的中文假文生成器">中文假文MoreText.js</a> <a href="http://github.com/c9s/more.vim" title="MoreText的vim插件">MoreText的Vim插件</a> | <a href="http://www.richyli.com/tool/loremipsum/">亂數假文產生器 Chinese Lorem Ipsum</a> | </li>
-
         </ul>
-
+        <li>表格：</li>
+        <ul>
+            <li><a href="http://article.yeeyan.org/view/155461/108136">15个优秀的表格设计技巧</a></li>
+            <li><a href="http://www.askthecssguy.com/2007/08/creating_a_table_with_dynamica.html">Creating a table with dynamically highlighted columns like Crazy Eggs pricing table</a></li>
+            <li><a href="http://www.junchenwu.com/2007/02/redesign_a_simple_table.html">越减越妙：简单表格的再设计</a></li>
+            <li><a href="http://blog.bingo929.com/15-jquery-plugins-for-better-table-manipulation.html/comment-page-1">15款提高表格操作的jQuery插件</a></li>
+        </ul>
         <li>资源：</li>
         <ul>
             <li><a href="http://dribbble.com/">Dribble：著名设计师聚合网站</a></li>
@@ -93,6 +99,7 @@ title: Wiki
             <li><a href="http://www.quanjing.com/">全景：创意图片库</a></li>
             <li><a href="http://designlol.net/">Designlol：全球设计精享</a></li>
             <li><a href="http://cn.designboom.com/">Designboom</a></li>
+            <li>配色方案：<a href="http://www.colorschemer.com/">Color Schemer</a> | <a href="http://kuler.adobe.com/">kuler</a> | <a href="http://color.aurlien.net/">Piknik Color Picker</a></li>
             <li><a href="http://www.qianduan.net/80-more-absolutely-beautiful-dual-screen-wallpaper.html">80多个绝对漂亮的双屏壁纸</a></li>
         </ul>
     </ul>
