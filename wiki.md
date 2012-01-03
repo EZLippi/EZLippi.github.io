@@ -9,6 +9,7 @@ title: Wiki
         <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="汤姆大叔的深入理解Javascript系列">深入理解Javascript系列</a></li>
         <li><a href="http://github.com/addyosmani/backbone-fundamentals" title="Backbone.js基础介绍">Backbone.js基础</a></li>
         <li>国内公司JS框架：<a href="http://kissyui.com/">Kissy - Taobao</a> | <a href="http://arale.alipay.net/">Arale - Alipay</a> | <a href="http://tangram.baidu.com/">Tangram - Baidu</a></li>
+        <li><a href="http://js1k.com/">JS1K, 1k Javascript contest</a></li>
         <li><a href="http://www.json.org/">JSON Home Page</a></li>
         <li>JSON工具：</li>
         <ul>
@@ -83,9 +84,12 @@ title: Wiki
             <li><a href="http://diveintohtml5.info/">Dive Into HTML5</a></li>
             <li><a href="http://blog.bingo929.com/google-enjoy-html5-drag-drop-filereaderenren.html" title="给力的 Google HTML5 训练营(HTML5 Drag&Drop 拖拽、FileReader实例教程)">HTML5训练营</a></li>
             <li><a href="http://blog.bingo929.com/html5-websockets.html" title="HTML5 WebSockets 基础使用教程">HTML5 WebSockets</a></li>
-            <li><a href="http://blog.bingo929.com/html-5-canvas-the-basics-html5.html" title="关于HTML 5 canvas 的基础教程">HTML5 Canvas</a></li>
             <li><a href="http://blog.bingo929.com/html5-ie-enabling-script.html" title="让所有IE支持HTML5的解决方案">IE支持HTML5</a></li>
             <li><a href="http://blog.bingo929.com/power-of-html5-css3-div-css.html" title="一起感受HTML5和CSS3的能量">感受HTML5&CSS3</a></li>
+            <li>Canvas：<a href="http://zh.wikipedia.org/wiki/Canvas_%28HTML%E5%85%83%E7%B4%A0%29">Canvas (HTML元素)</a> | <a href="http://billmill.org/static/canvastutorial/index.html">Canvas Tutorial</a> | <a href="https://developer.mozilla.org/cn/Canvas_tutorial">Canvas 教程</a> <a href="https://developer.mozilla.org/en/Canvas_tutorial">en</a> | <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#the-canvas-element">The canvas element</a> | <a href="http://blog.bingo929.com/html-5-canvas-the-basics-html5.html" title="关于HTML 5 canvas 的基础教程">HTML5 Canvas</a></li>
+            <li>Canvas使用教程：<a href="http://jiachen.blogbus.com/logs/29567413.html">开题</a> | <a href="http://jiachen.blogbus.com/logs/29569584.html">基本语法</a> | <a href="http://jiachen.blogbus.com/logs/29596111.html">图形绘制</a> | <a href="http://jiachen.blogbus.com/logs/32827552.html">图片应用</a></li>
+            <li>用JavaScript玩转计算机图形学：<a href="http://www.cnblogs.com/miloyip/archive/2010/03/29/1698953.html">(一)光线追踪入门</a> <a href="http://www.cnblogs.com/miloyip/archive/2010/04/02/1702768.html">(二)基本光源</a></li>
+            <li>Canvas Games：<a href="http://henrikfalck.com/unrealsoccer/">Unreal Soccer</a> | <a href="http://www.benjoffe.com/code/demos/canvascape/">Canvascape</a> | <a href="http://dave-webster.com/projects/index.php?page=incs/plasma_demo1">Plasma demo using the HTML Canvas element</a> | <a href="http://www.student.kuleuven.be/~m0216922/CG/plasma.html">Lodes Computer Graphics Tutorial</a> | <a href="http://alteredqualia.com/cubeout/">CubeOut</a> - 3D 俄罗斯方块 | <a href="http://canvasrider.com/tracks/all">自行车越野</a> | <a href="http://box2d-js.sourceforge.net/index2.html">Box2DJS</a> | <a href="http://www.effectgames.com/demos/canvascycle/?sound=1">Canvas Cycles</a> | <a href="http://agent8ball.com/">Agent 8 Ball</a> - 台球</li>
             <li>工具：<a href="http://www.css3generator.com/">CSS3 Generator</a> | <a href="http://gradients.glrzad.com/">CSS3 Gradient Generator</a> | <a href="http://css-tricks.com/examples/ButtonMaker/">CSS3 Button Maker</a> | <a href="http://css3please.com/">CSS3 Please!</a> - The Cross-Browser CSS3 Rule Generator</li>
             <li>Demo：<a href="http://www.alexbuga.com/v9/">Alex Buga Livingroom</a> | <a href="http://guciek.net/test/burn">burn-canvas-test</a> - 画图 | <a href="http://webdesignledger.com/inspiration/10-html5-demos-to-make-you-forget-about-flash">10 HTML5 Demos to Make You Forget About Flash</a> <a href="http://designlol.net/archives/1418">cn</a> | <a href="http://muro.deviantart.com/">deviantART Muro</a> | <a href="http://www.phoboslab.org/biolab/">Biolab Disaster</a> - Game | <a href="http://labs.codecomputerlove.com/FlashVsHtml5/">乒乓球游戏：左边用Flash，右边用HTML5</a> | <a href="http://www.20thingsilearned.com/">20 Things I Learned About Browsers and the Web</a> | <a href="http://www.subcide.com/experiments/fail-whale/">Pure CSS Twitter 'Fail Whale'</a> | <a href="http://www.optimum7.com/css3-man/animation.html">CSS3-Man</a> | <a href="http://knb.im/css3/">A啦多梦告诉你浏览器对 CSS3 的支持程度</a></li>
         </ul>
@@ -111,6 +115,8 @@ title: Wiki
             <li><a href="http://www.zhangxinxu.com/wordpress/?p=56">复选框单选框与文字对齐问题的研究与解决</a></li>
             <li><a href="http://www.blueidea.com/tech/web/2008/6313.asp">连续字符自动换行的解决方案</a></li>
             <li><a href="http://www.cnblogs.com/yizuierguo/archive/2010/08/04/1792287.html">三谈Iframe自适应高度</a> | <a href="http://www.cnblogs.com/MaxIE/archive/2008/08/13/1266597.html">再谈iframe自适应高度</a></li>
+            <li><a href="http://www.qianduan.net/cross-browser-inline-block.html">跨浏览器的inline-block</a> <a href="http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/">en</a></li>
+            <li><a href="http://www.planabc.net/2007/03/11/display_inline-block/">display:inline-block的深入理解</a></li>
         </ul>
     </ul>
 
