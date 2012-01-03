@@ -147,6 +147,18 @@ title: Wiki
             <li><a href="http://css-tricks.com/examples/ButtonMaker/">CSS3 Button Maker</a></li>
             <li><a href="http://css3please.com/">CSS3 Please!</a> - The Cross-Browser CSS3 Rule Generator</li>
         </ul>
+        <li>Framework：</li>
+        <ul>
+            <li><a href="http://www.jgraph.com/mxgraph.html">mxGraph - the AJAX diagramming soluting</a></li>
+            <li><a href="http://code.google.com/p/svgweb/">Scalable Vector Graphics Web Browser using Flash</a></li>
+            <li><a href="http://code.google.com/p/explorercanvas/">HTML5 Canvas for Internet Explorer</a></li>
+            <li><a href="http://code.google.com/p/svg2vml/">Library that provides support for SVG and VML with an SVG style interface</a></li>
+            <li><a href="http://www.walterzorn.com/jsgraphics/jsgraphics_e.htm">DHTML: Draw Line, Ellipse, Oval, Circle, Polyline, Plygon, Triangle, with JavaScript</a></li>
+            <li><a href="http://www.cnblogs.com/webgis8/articles/1529588.html">翻译Browser Drawing一篇:Canvas/SVG/VML Drawing Roundup</a></li>
+            <li><a href="http://github.com/mrdoob/three.js">Three.js</a></li>
+            <li><a href="http://raphaeljs.com/">Rapha?l</a> - 非常棒的跨平台 JavaScript 图形库 | <a href="http://github.com/DmitryBaranovskiy/raphael">raphael@github</a> | <a href="http://dmitry.baranovskiy.com/">blog</a></li>
+            <li><a href="http://code.google.com/p/uupaa-js-spinoff/">uupaa.js spin-off projects</a></li>
+        </ul>
         <li>Demo：</li>
         <ul>
             <li><a href="http://www.alexbuga.com/v9/">Alex Buga Livingroom</a></li>
