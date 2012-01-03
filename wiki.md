@@ -57,11 +57,48 @@ title: Wiki
 </li>
     </ul>
 
+    <h2>设计相关</h2>
+    <ul>
+        <li>图片、图标(Icons)：</li>
+        <ul>
+            <li><a href="http://speckyboy.com/2011/12/12/top-50-web-development-design-and-application-icon-sets-from-2011/">2011年50个最佳图标设计集合</a></li>
+            <li><a href="http://findicons.com">FindIcons图标搜索引擎</a></li>
+            <li><a href="http://www.iconarchive.com/" title="非常多优秀的图标设计供免费下载使用">Icon Archive</a></li>
+            <li><a href="http://www.iconspedia.com/">PNG icons &amp; Icons Picks Download</a></li>
+            <li><a href="http://dryicons.com/">DryIcons - Free Icons and Vector Graphics</a></li>
+            <li><a href="http://www.iconeasy.com/">Icon Easy</a></li>
+            <li><a href="http://www.tutorial9.net/">Tutorial9 | Photoshop Tutorials, Photography Tuts, and Resources</a></li>
+            <li><a href="http://thedesignmag.com/16-sketchy-hand-drawn-icon-sets.html">16 Sketchy Hand Drawn Icon Sets</a></li>
+            <li><a href="http://people.freedesktop.org/~jimmac/icons/">Gnome Icon Theme</a></li>
+            <li><a href="http://www.dutchicon.com/">dutch icon?</a></li>
+            <li><a href="http://openiconlibrary.sourceforge.net/">开源图标库</a></li>
+            <li>PhotoShop：<a href="http://www.blueidea.com/tech/graph/2003/672.asp">PhotoShop通道白解</a> | <a href="http://zhidao.baidu.com/question/293029002.html">PhotoShop CS5序列号</a></li>
+        </ul>
+        <li>字体：</li>
+        <ul>
+        	<li><a href="http://wenq.org/">文泉驿</a> - 开源字体。开彼源兮，斯流永继。</li>
+        	<li><a href="http://www.cnbeta.com/articles/102609.htm">让代码更美:10大编程字体</a></li>
+        	<li><a href="http://www.typeisbeautiful.com/">Type is Beautiful</a> - 字体排版</li>
+            <li><a href="http://code.google.com/webfonts">Google Font Directory</a></li>
+            <li><a href="http://www.network-science.de/ascii/" title="字符图案生成器">ASCII Generator</a></li>
+            <li>假文填充：<a href="http://zh.wikipedia.org/zh-cn/Lorem_ipsum" title="英文假文生成器">Lorem ipsum</a> | <a href="http://more.handlino.com/" title="一用就爱上的中文假文生成器">中文假文MoreText.js</a> <a href="http://github.com/c9s/more.vim" title="MoreText的vim插件">MoreText的Vim插件</a> | <a href="http://www.richyli.com/tool/loremipsum/">亂數假文產生器 Chinese Lorem Ipsum</a> | </li>
+
+        </ul>
+
+        <li>资源：</li>
+        <ul>
+            <li><a href="http://dribbble.com/">Dribble：著名设计师聚合网站</a></li>
+            <li><a href="http://www.zcool.com.cn/">站酷：交流设计、分享快乐</a></li>
+            <li><a href="http://www.quanjing.com/">全景：创意图片库</a></li>
+            <li><a href="http://designlol.net/">Designlol：全球设计精享</a></li>
+            <li><a href="http://cn.designboom.com/">Designboom</a></li>
+            <li><a href="http://www.qianduan.net/80-more-absolutely-beautiful-dual-screen-wallpaper.html">80多个绝对漂亮的双屏壁纸</a></li>
+        </ul>
+    </ul>
+
     <h2>其他</h2>
     <ul>
     	<li><a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt">Proxy Switchy!等使用的GFW List</a></li>
-        <li><a href="http://speckyboy.com/2011/12/12/top-50-web-development-design-and-application-icon-sets-from-2011/">2011年50个最佳图标设计集合</a></li>
-        <li><a href="http://www.qianduan.net/80-more-absolutely-beautiful-dual-screen-wallpaper.html">80多个绝对漂亮的双屏壁纸</a></li>
         <li>我的两段吉他即兴：<a href="http://www.tudou.com/programs/view/1txOUWlIxJw/">Spanish风格</a>&nbsp;|&nbsp;<a href="http://www.tudou.com/programs/view/4qiVvUDWqjg/">C调即兴</a></li>
     </ul>
 </div>
