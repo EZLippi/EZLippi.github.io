@@ -11,6 +11,10 @@ title: Wiki
             <li><a href="http://github.com/addyosmani/backbone-fundamentals" title="Backbone.js基础介绍">Backbone.js基础</a></li>
             <li><a href="http://www.cnblogs.com/rubylouvre/archive/2010/01/05/1639541.html" title="Javscript Bind函数">Javscript Bind函数</a></li>
             <li>国内公司JS框架：<a href="http://kissyui.com/">Kissy - Taobao</a> | <a href="http://arale.alipay.net/">Arale - Alipay</a> | <a href="http://tangram.baidu.com/">Tangram - Baidu</a></li>
+            <li><a href="http://www.json.org/">JSON Home Page</a></li>
+            <li>JSON工具：<a href="http://www.jsonlint.com/">JSONLint</a> - The JSON Validator | <a href="http://undefined.org/python/#simplejson">SimpleJSON</a> - Python Stuff | <a href="http://jsonformatter.curiousconcept.com/">JSON Formatter (&amp; Validator!)</a> | <a href="http://www.raboof.com/Projects/TidyJson/">Tidy JSON - JSON Pretty Printer/Colorer</a> - C#(.NET) | <a href="http://www.cerny-online.com/cerny.js/demos/json-pretty-printing">Cerny.js - JSON Pretty Printing Demo</a> | <a href="http://github.com/nicksieger/jsonpretty">jsonpretty(ruby)</a></li>
+            <li>Vim Json：<a href="http://lumberjaph.net/perl/2009/02/17/tidify-a-json-in-vim.html">tidify a json in Vim</a> | <a href="http://www.vim.org/scripts/script.php?script_id=1945">JSON.vim</a> - syntax | <a href="http://visibletrap.blogspot.com/2010/05/vim-how-to-format-and-syntax-highlight.html">VIM - How to format and syntax highlight JSON file</a> | <a href="http://bradmontgomery.blogspot.com/2010/01/add-json-syntax-highlighting-in-vim-on.html">Add JSON syntax highlighting in Vim on OS X</a></li>
+            <li>JSONP：<a href="http://www.ibm.com/developerworks/cn/web/wa-aj-jsonp1/index.html">使用 JSONP 实现跨域通信，第 1 部分: 结合 JSONP 和 jQuery 快速构建强大的 mashup</a> <a href="http://www.ibm.com/developerworks/cn/web/wa-aj-jsonp2/index.html">第 2 部分: 使用 JSONP、jQuery 和 Yahoo! 查询语言构建 mashup</a> | <a href="http://www.cn-cuckoo.com/2008/09/13/the-origin-of-jsonp-262.html">JSONP的起源</a> | <a href="http://www.ibm.com/developerworks/cn/xml/x-mashups.html">Mashups：Web 应用程序新成员</a></li>
         </ul>
         <li>HTML &amp; CSS：</li>
         <ul>
