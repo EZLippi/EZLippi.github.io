@@ -114,7 +114,7 @@ title: Wiki
             <li><a href="http://snipt.org/">Snipt.org</a></li>
             <li><a href="http://paste.ubuntu.org.cn/">Ubuntu Paste</a></li>
             <li><a href="http://pastebin.com/">Pastebin</a></li>
-            <li><a href="http://paste.pocoo.org"></li>
+            <li><a href="http://paste.pocoo.org">Lodge It!</a></li>
         </ul>
         <li>SVN相关：</li>
         <ul>
