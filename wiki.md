@@ -214,7 +214,7 @@ title: Wiki
         <li><a href="http://blog.csdn.net/myan/archive/2007/03/03/1520033.aspx">《理解正则表达式（程序员第3期文章）》</a></li>
         <li><a href="http://tech.idv2.com/2006/05/08/parse-regex-with-dfa/">利用有限自动机分析正则表达式</a></li>
         <li><a href="http://book.51cto.com/art/200902/111541.htm">《Linux系统最佳实践工具：命令行技术》</a></li>
-        <li><a href="http://iregex.org/">我爱正则表达式</a></li>
+        <li><a href="http://iregex.org/links">我爱正则表达式</a></li>
         <li><a href="http://regex.me/">正则表达式论坛</a></li>
         <li>正则表达式工具：<a href="http://regexpal.com/">Regexpal (online)</a> <a href="http://www.microidc.com/usr/tools/regexpal/index.html">2</a> | <a href="http://gskinner.com/RegExr/">RegExr</a> | <a href="http://www.regexbuddy.com/">RegexBuddy</a> | <a href="http://www.ultrapico.com/Expresso.htm">Expresso (free, open-source)</a> | <a href="http://www.regexlab.com/zh/mtracer/">Match Tracer</a> | <a href="http://www.gethifi.com/tools/regex">HiFi Regex Tester</a> | <a href="http://www.redfernplace.com/software-projects/regex-builder/">RegEx Builder</a></li>
     </ul>
