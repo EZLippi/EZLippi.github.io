@@ -58,11 +58,18 @@ title: Wiki
             <li><a href="http://docs.jquery.com/QUnit">QUnit</a> <a href="http://github.com/jquery/qunit">@github</a></li>
             <li>JsBeautify：<a href="http://jsbeautifier.org/">Online Javascript jsbeautifier</a> <a href="http://github.com/einars/js-beautify">github</a>, <a href="http://www.vim.org/scripts/script.php?script_id=2727">vimscript</a></li>
             <li><a href="https://code.google.com/p/jsbeautifier/">js beautifier</a> - plugin for Chrome</li>
-</ul>
+        </ul>
+        <li>NodeJS</li>
+        <ul>
+            <li><a href="http://nodejs.org/">nodeJS</a> - 服务器端 JavaScript 编程</li>
+            <li><a href="http://simonwillison.net/2009/Nov/23/node/">Node.js is genuinely exciting</a></li>
+            <li><a href="http://blog.csdn.net/fuadam/archive/2010/03/15/5380178.aspx">在cygwin环境下编译node.js</a></li>
+            <li><a href="http://github.com/ry/node_chat">node char</a> - 用 nodeJS 写的聊天室</li>
+            <li><a href="https://no.de/">Joyent Node</a> | <a href="http://mattn.no.de/">mattn.no.de</a></li>
         </ul>
         <li>Javascript疑难杂症：</li>
         <ul>
-            <li><a href="http://birdshome.cnblogs.com/archive/2006/05/28/IE_MemoryLeak.html">理解并解决IE的内存泄漏方式</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/01/ClosureReferences.html">2</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/17/Cross_Page_Leaks.html">3</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/30/Pseudo_Leaks.html">4</a><br></li>
+            <li><a href="http://birdshome.cnblogs.com/archive/2006/05/28/IE_MemoryLeak.html">理解并解决IE的内存泄漏方式</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/01/ClosureReferences.html">2</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/17/Cross_Page_Leaks.html">3</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/30/Pseudo_Leaks.html">4</a></li>
             <li><a href="http://msdn.microsoft.com/en-us/library/bb250448.aspx">Understanding and Solving Internet Explorer Leak Patterns</a></li>
         </ul>
     </ul>
