@@ -88,7 +88,26 @@ title: Wiki
             <li>参考书籍：<a href="http://cm.bell-labs.com/cm/cs/awkbook/">The AWK Programming Language</a> | <a href="http://oreilly.com/catalog/9780596000707/">Effective awk Programming, Third Edition</a> | <a href="http://oreilly.com/catalog/9781565922259">sed &amp; awk, Second Edition</a> | <a href="http://oreilly.com/catalog/9780596003524">sed and awk Pocket Reference, Second Edition</a></li>
         </ul>
         <li>代码片段：<a href="http://gist.github.com/">gist@github</a> | <a href="http://notepad.cc/">notepad.cc</a> | <a href="http://snipt.org/">Snipt.org</a> | <a href="http://paste.ubuntu.org.cn/">Ubuntu Paste</a> | <a href="http://pastebin.com/">Pastebin</a> | <a href="http://paste.pocoo.org">Lodge It!</a></li>
-        <li>版本控制系统：<a href="http://blog.csdn.net/vagrxie/archive/2009/09/23/4582457.aspx">版本控制系统（RCS）的选择与比较</a> | <a href="http://blog.csdn.net/tony1130/archive/2008/10/25/3137494.aspx">拥抱Mercurial---选择分布式版本控制工具</a> | <a href="http://blog.csdn.net/meteor1113/archive/2009/07/16/4350408.aspx">几个分布式vcs比较</a> | <a href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">Comparison of revision control software</a></li>
+        <li>函数式编程：</li>
+        <ul>
+            <li><a href="http://en.wikipedia.org/wiki/Functional_programming">@wikipedia</a> <a href="http://zh.wikipedia.org/zh-cn/%E5%87%BD%E6%95%B8%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80">中文</a></li>
+            <li><a href="http://www.aqee.net/2010/03/08/a-brief-history-of-object-functional-programming/">对象-函数式编程简史</a> <a href="http://news.csdn.net/a/20100311/217407.html">2</a></li>
+            <li><a href="http://www.ibm.com/developerworks/cn/web/wa-javascript.html">用函数式编程技术编写优美的 JavaScript</a></li>
+            <li><a href="http://blog.zhaojie.me/tag/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">函数式编程</a> - 老赵</li>
+            <li><a href="http://chenzhongke.com/wi/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B">函数式编程</a> - czk wiki</li>
+            <li><a href="http://wfp.group.javaeye.com/">函数式编程の道</a></li>
+            <li><a href="http://blog.csdn.net/xuejx/archive/2009/08/12/4440105.aspx">哪种语言将统治多核时代 再看函数式语言特性</a></li>
+        </ul>
+        <li><a href="http://www.canonical.org/~kragen/tao-of-programming.html">The Tao Of Programming</a>,<a href="http://osiris.urbanna.net/tao.html">2</a>,<a href="http://livecn.huasing.org/tao_of_programming.htm">《编程之道》</a> 文言文版 by Livecn，<a href="http://202.118.74.32/doc/Science/Computer/TaoOfProg.pdf">2</a> 白话文版 by 小赵</li>
+        <li>代码高亮：<a href="http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine" title="DlHightLight代码高亮组件">DlHightLight代码高亮组件</a> | <a href="http://code.google.com/p/google-code-prettify/">Google Code Prettify</a></li>
+    </ul>
+
+    <h2>版本控制</h2>
+    <ul>
+        <li><a href="http://blog.csdn.net/vagrxie/archive/2009/09/23/4582457.aspx">版本控制系统（RCS）的选择与比较</a></li>
+        <li><a href="http://blog.csdn.net/tony1130/archive/2008/10/25/3137494.aspx">拥抱Mercurial---选择分布式版本控制工具</a></li>
+        <li><a href="http://blog.csdn.net/meteor1113/archive/2009/07/16/4350408.aspx">几个分布式vcs比较</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">Comparison of revision control software</a></li>
         <li>SVN相关：</li>
         <ul>
             <li><a href="http://svnbook.red-bean.com/" title="最详细的SVN资料">Subversion 与版本控制</a></li>
@@ -124,18 +143,6 @@ title: Wiki
             <li><a href="http://www.jeffkit.info/2010/12/885/">Git的推广心得</a> | <a href="http://www.jeffkit.info/2010/12/860/">你为神马不用git-flow呢?</a> | <a href="http://www.jeffkit.info/2010/12/842/">开始实践git-flow</a></li>
             <li><a href="http://github.com/">github</a> | <a href="http://jekyllrb.com/">jekyll</a> | <a href="https://github.com/mojombo/jekyll">codes</a> | <a href="https://github.com/mojombo/mojombo.github.com">demos</a> | <a href="https://github.com/blog/272-github-pages">GitHub Pages</a> | <a href="http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/">Publishing a Blog with GitHub Pages and Jekyll</a></li>
         </ul>
-        <li>函数式编程：</li>
-        <ul>
-            <li><a href="http://en.wikipedia.org/wiki/Functional_programming">@wikipedia</a> <a href="http://zh.wikipedia.org/zh-cn/%E5%87%BD%E6%95%B8%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80">中文</a></li>
-            <li><a href="http://www.aqee.net/2010/03/08/a-brief-history-of-object-functional-programming/">对象-函数式编程简史</a> <a href="http://news.csdn.net/a/20100311/217407.html">2</a></li>
-            <li><a href="http://www.ibm.com/developerworks/cn/web/wa-javascript.html">用函数式编程技术编写优美的 JavaScript</a></li>
-            <li><a href="http://blog.zhaojie.me/tag/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">函数式编程</a> - 老赵</li>
-            <li><a href="http://chenzhongke.com/wi/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B">函数式编程</a> - czk wiki</li>
-            <li><a href="http://wfp.group.javaeye.com/">函数式编程の道</a></li>
-            <li><a href="http://blog.csdn.net/xuejx/archive/2009/08/12/4440105.aspx">哪种语言将统治多核时代 再看函数式语言特性</a></li>
-        </ul>
-        <li><a href="http://www.canonical.org/~kragen/tao-of-programming.html">The Tao Of Programming</a>,<a href="http://osiris.urbanna.net/tao.html">2</a>,<a href="http://livecn.huasing.org/tao_of_programming.htm">《编程之道》</a> 文言文版 by Livecn，<a href="http://202.118.74.32/doc/Science/Computer/TaoOfProg.pdf">2</a> 白话文版 by 小赵</li>
-        <li>代码高亮：<a href="http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine" title="DlHightLight代码高亮组件">DlHightLight代码高亮组件</a> | <a href="http://code.google.com/p/google-code-prettify/">Google Code Prettify</a></li>
     </ul>
 
     <h2>系统相关</h2>
