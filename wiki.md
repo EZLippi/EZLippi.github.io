@@ -33,7 +33,38 @@ title: Wiki
             <li><a href="http://www.cn-cuckoo.com/2008/09/13/the-origin-of-jsonp-262.html">JSONP的起源</a></li>
             <li><a href="http://www.ibm.com/developerworks/cn/xml/x-mashups.html">Mashups：Web 应用程序新成员</a></li>
         </ul>
-        <li>JS疑难杂症：</li>
+        <li>Javascript闭包：</li>
+        <ul>
+            <li><a href="http://zh.wikipedia.org/zh-cn/%E9%97%AD%E5%8C%85_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)">闭包 (计算机科学)</a></li>
+            <li><a href="http://jibbering.com/faq/notes/closures/">Javascript Closures</a></li>
+            <li><a href="http://roshanca.com/?p=153">什么是闭包</a></li>
+            <li><a href="http://www.jibbering.com/faq/faq_notes/closures.html">Javascript Closures</a> <a href="http://www.cn-cuckoo.com/2007/08/01/understand-javascript-closures-72.html">中文</a> <a href="http://www.aspxhome.com/examples/javascript/program/483628/javascriptclosures.html">2</a></li>
+            <li><a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html">学习Javascript闭包（Closure）</a></li>
+            <li><a href="http://www.mikkolee.com/81">作用域链 词法作用域 与 闭包（一）</a> <a href="http://www.mikkolee.com/84">（二）</a></li>
+        </ul>
+        <li>Javascript工具：</li>
+        <ul>
+            <li><a href="http://www.jslint.com/">JSLint</a></li>
+            <li><a href="http://javascriptlint.com/">JavaScript Lint</a></li>
+            <li><a href="http://github.com/rainux/jslint.vim">Fork of hallettj/jslint.vim</a></li>
+            <li><a href="http://varnow.org/?p=174">Google Closure Compiler压缩优化规则初探</a></li>
+            <li><a href="http://www.phpblog.cn/archives/242">使用Google 的Closure Compiler来压缩javascript</a></li>
+            <li><a href="http://www.cnblogs.com/JeffreyZhao/archive/2009/12/09/ikvm-google-closure-compiler.html">在项目中使用Google Closure Compiler</a></li>
+            <li><a href="http://hikejun.com/blog/?p=476&amp;cpage=1">Mac下用Closure compiler</a></li>
+            <li><a href="http://ued.sohu.com/article/611">JS 库浅析之 Google Closure</a></li>
+            <li><a href="http://www.pushiming.com/blog/2010/12/advanced-optimization-in-closure-compiler-and-more/">Closure Compiler 高级模式及更多思考</a></li>
+            <li><a href="http://www.slideshare.net/lifesinger/closure-compiler-vs-yuicompressor">Closure Compiler vs YUICompressor</a></li>
+            <li><a href="http://www.minifyjs.com/">Minify JS</a></li>
+            <li><a href="http://docs.jquery.com/QUnit">QUnit</a> <a href="http://github.com/jquery/qunit">@github</a></li>
+            <li>JsBeautify：<a href="http://jsbeautifier.org/">Online Javascript jsbeautifier</a> <a href="http://github.com/einars/js-beautify">github</a>, <a href="http://www.vim.org/scripts/script.php?script_id=2727">vimscript</a></li>
+            <li><a href="https://code.google.com/p/jsbeautifier/">js beautifier</a> - plugin for Chrome</li>
+</ul>
+        </ul>
+        <li>Javascript疑难杂症：</li>
+        <ul>
+            <li><a href="http://birdshome.cnblogs.com/archive/2006/05/28/IE_MemoryLeak.html">理解并解决IE的内存泄漏方式</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/01/ClosureReferences.html">2</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/17/Cross_Page_Leaks.html">3</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/30/Pseudo_Leaks.html">4</a><br></li>
+            <li><a href="http://msdn.microsoft.com/en-us/library/bb250448.aspx">Understanding and Solving Internet Explorer Leak Patterns</a></li>
+        </ul>
     </ul>
 
     <h2>HTML &amp; CSS</h2>
