@@ -384,7 +384,7 @@ title: Wiki
 
     <h2>VIM</h2>
     <ul>
-        <li><a href="http://blog.longwin.com.tw/2009/03/choose-vim-color-scheme-2009/">挑選 Vim 顏色(Color Scheme)</a></li>
+        <li><a href="http://blog.longwin.com.tw/2009/03/choose-vim-color-scheme-2009/">配置挑选Vim颜色(Color Scheme)</a></li>
     </ul>
 
     <h2>其他</h2>
