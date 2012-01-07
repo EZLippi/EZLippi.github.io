@@ -190,11 +190,11 @@ title: Wiki
 
     <h2>Python</h2>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><a href="http://woodpecker.org.cn/abyteofpython_cn/chinese/">简明Python教程</a></li>
+        <li><a href="http://woodpecker.org.cn/diveintopython/">Dive Into Python中文版</a></li>
+        <li><a href="http://woodpecker.org.cn/diveintopython3/">Dive Into Python3中文版</a></li>
+        <li><a href="http://wiki.woodpecker.org.cn/moin/">啄木鸟社区Wiki</a></li>
+        <li><a href="http://wiki.woodpecker.org.cn/moin/PyAbsolutelyZipManual">Python绝对简明手册</a></li>
     </ul>
 
     <h2>正则表达式</h2>
