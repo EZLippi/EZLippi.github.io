@@ -4,7 +4,7 @@ title: Wiki
 ---
 <div class="wiki">
     <h2>Javascript</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://jqfundamentals.com/book/index.html">jQuery Fundamentals</a> - jQuery 入门教程。</li>
         <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="汤姆大叔的深入理解Javascript系列">深入理解Javascript系列</a></li>
         <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="&lt;Script&gt;的defer和async的区别">&lt;Script&gt;的defer和async的区别</a></li>
@@ -78,7 +78,7 @@ title: Wiki
     </ul>
 
     <h2>HTML &amp; CSS</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://wiki.hotoo.me/CSS-Hacks.html">CSS Hacks &amp; Expression</a></li>
         <li><a href="http://blog.bingo929.com/css-frameworks-15.html">精选15个国外CSS框架</a></li>
         <li>CSS栅格系统(Grid System)：</li>
@@ -109,7 +109,7 @@ title: Wiki
     </ul>
 
     <h2>HTML5 &amp; CSS3</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://diveintohtml5.info/">Dive Into HTML5</a></li>
         <li><a href="http://blog.bingo929.com/google-enjoy-html5-drag-drop-filereaderenren.html" title="给力的 Google HTML5 训练营(HTML5 Drag&Drop 拖拽、FileReader实例教程)">HTML5训练营</a></li>
         <li><a href="http://blog.bingo929.com/html5-websockets.html" title="HTML5 WebSockets 基础使用教程">HTML5 WebSockets</a></li>
@@ -178,7 +178,7 @@ title: Wiki
     </ul>
 
     <h2>前端相关</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://www.w3.org/">World Wide Web Consortium</a></li>
         <li><a href="http://www.webstandards.org/">The Web Standards Project</a></li>
         <li><a href="http://www.w3schools.com/">W3Schools Online Web Tutorials</a></li>
@@ -191,7 +191,7 @@ title: Wiki
     </ul>
 
     <h2>Python</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://woodpecker.org.cn/abyteofpython_cn/chinese/">简明Python教程</a></li>
         <li><a href="http://woodpecker.org.cn/diveintopython/">Dive Into Python中文版</a></li>
         <li><a href="http://woodpecker.org.cn/diveintopython3/">Dive Into Python3中文版</a></li>
@@ -200,7 +200,7 @@ title: Wiki
     </ul>
 
     <h2>正则表达式</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://deerchao.net/tutorials/regex/regex.htm">正则表达式30分钟入门教程</a> <a href="http://help.locoy.com/Document/Learn_Regex_For_30_Minutes.htm">2</a></li>
         <li><a href="http://www.regexlab.com/zh/">正则表达式工作室</a> | <a href="http://www.regexlab.com/zh/regref.htm">揭开正则表达式的神秘面纱</a> | <a href="http://www.regexlab.com/zh/regtopic.htm">正则表达式话题</a>|  <a href="http://www.regexlab.com/zh/deelx/introidx.htm">DEELX 正则引擎性能与特点</a></li>
         <li><a href="http://blog.chinaunix.net/u3/112728/showart_2207101.html">各种工具之正则表达式语法比较</a> <a href="http://hi.baidu.com/libk/blog/item/b5eb710e6c636dc37acbe107.html">2</a></li>
@@ -222,7 +222,7 @@ title: Wiki
     </ul>
 
     <h2>开发相关</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://markdown.tw/">MarkDown语法</a></li>
         <li><a href="http://114.xixik.com/character/">HTML转义</a></li>
     	<li>OAuth</li>
@@ -261,7 +261,7 @@ title: Wiki
     </ul>
 
     <h2>版本控制</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://blog.csdn.net/vagrxie/archive/2009/09/23/4582457.aspx">版本控制系统（RCS）的选择与比较</a></li>
         <li><a href="http://blog.csdn.net/tony1130/archive/2008/10/25/3137494.aspx">拥抱Mercurial---选择分布式版本控制工具</a></li>
         <li><a href="http://blog.csdn.net/meteor1113/archive/2009/07/16/4350408.aspx">几个分布式vcs比较</a></li>
@@ -313,7 +313,7 @@ title: Wiki
     </ul>
 
     <h2>系统相关</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://xbeta.info/win-run.htm" title="最绿色最高效，用win+r启动常用程序和文档">用win+r启动程序和文档</a></li>
         <li><a href="http://lamp.linux.gov.cn/Linux/LFS-6.2/index.html">Linux彻底定制指南(Linux From Scratch)</a></li>
         <li><a href="http://www.douban.com/group/topic/14530790/">服务器和架构方面的一些文章</a></li>
@@ -342,7 +342,7 @@ title: Wiki
     </ul>
 
     <h2>设计相关</h2>
-    <ul>
+    <ul class="hide">
         <li>图片、图标(Icons)：</li>
         <ul>
             <li><a href="http://speckyboy.com/2011/12/12/top-50-web-development-design-and-application-icon-sets-from-2011/">2011年50个最佳图标设计集合</a></li>
@@ -388,12 +388,12 @@ title: Wiki
     </ul>
 
     <h2>VIM</h2>
-    <ul>
+    <ul class="hide">
         <li><a href="http://blog.longwin.com.tw/2009/03/choose-vim-color-scheme-2009/">配置挑选Vim颜色(Color Scheme)</a></li>
     </ul>
 
     <h2>其他</h2>
-    <ul>
+    <ul class="hide">
     	<li><a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt">Proxy Switchy!等使用的GFW List</a></li>
         <li>我的两段吉他即兴：<a href="http://www.tudou.com/programs/view/1txOUWlIxJw/">Spanish风格</a>&nbsp;|&nbsp;<a href="http://www.tudou.com/programs/view/4qiVvUDWqjg/">C调即兴</a></li>
     </ul>
@@ -410,6 +410,10 @@ title: Wiki
                     $(this).attr('target','_blank');
                     $(this).addClass('external');
                 }
+            });
+            $('body').delegate('h2','click',function(e){
+                e.preventDefault();
+                $(this).next('ul').toggle();
             });
         });
     };

@@ -117,6 +117,7 @@ pre code{border:none;padding:0;}
 .category span{color:#777;font-style:italic;font-size:14px;display:block;text-align:left}
 
 /***************Wiki Style*****************/
+.wiki h2{cursor:pointer;}
 .wiki ul{margin-left:30px;margin-bottom:20px;list-style:disc}
 .wiki ul li{margin-bottom:5px;}
 .wiki ul ul{list-style:circle;margin-top:10px;margin-bottom:10px;}
