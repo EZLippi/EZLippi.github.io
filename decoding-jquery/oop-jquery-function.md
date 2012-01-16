@@ -42,6 +42,33 @@ jQuery所有的功能都包含在jQuery这个全局变量中。在core.js中有�
     }
 
 #### 函数可以使匿名的
+在定义全局变量jQuery的时候，你看到：
+
+    // global jQuery
+    var jQuery = (function() {
+      //...
+    })();
+
+我们把function剥离出来，就是：
+
+    function() {
+      //...
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
 [jQuery]:   http://jquery.com/ "jQuery"
