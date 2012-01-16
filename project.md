@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blog
+title: Project
 ---
 <div class="category">
     <ul>
