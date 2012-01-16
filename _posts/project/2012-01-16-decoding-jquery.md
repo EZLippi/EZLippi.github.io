@@ -10,7 +10,7 @@ description: jQuery是一个伟大作品，他的完成充满智慧，我们来�
 这是一个翻译项目，解构jQuery系列的作者是[Shi Chuan][2]，原文地址是：[Decoding jQuery series][3]。
 
 ## 介绍
-开源项目不错，但是他们开的还不够彻底。在这一系列解构jQuery的文章中，我们会仔细去研究jQuery的每一个方法，去研究框架的美妙之处，以此也向jQuery的作者致敬。
+开源项目不错，但是他们开的还不够彻底。在这一系列解构jQuery的文章中，我们会仔细去研究jQuery的每一个方法，去研究框架的美妙之处，也以此向jQuery的作者致敬。
 
 ## jQueyr Core
 
