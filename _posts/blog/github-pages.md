@@ -10,6 +10,7 @@ category: blog
 [Github][]很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如[jQuery][]、[Twitter][]等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了[Github Pages][]的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。
 
 Github Pages有以下几个优点：
+
 * 轻量级的博客系统，没有麻烦的配置
 * 使用标记语言，比如[Markdown][2]
 * 无需自己搭建服务器
@@ -17,6 +18,7 @@ Github Pages有以下几个优点：
 * 可以绑定自己的域名
 
 当然他也有缺点：
+
 * 使用[Jekyll][]模板系统，相当于静态页发布，适合博客，文档介绍等。
 * 动态程序的部分相当局限，比如没有评论，不过还好我们有解决方案。
 * 基于Git，很多东西需要动手，不像Wordpress有强大的后台
@@ -31,6 +33,7 @@ Github Pages有以下几个优点：
 流传Godaddy的域名解析服务器被墙掉，导致域名无法访问，后来这个事情在[BeiYuu][]也发生了，不得已需要把域名解析服务迁移到国内比较稳定的服务商处，这个迁移对于域名来说没有什么风险，最终的控制权还是在Godaddy那里，你随时都可以改回去。
 
 我们选择[DNSPod][]的服务，他们的产品做得不错，易用、免费，收费版有更高端的功能，暂不需要。注册登录之后，按照DNSPod的说法，只需三步（我们插入一步）：
+
 * 首先添加域名记录，可参考DNSPod的帮助文档：[https://www.dnspod.cn/Support](https://www.dnspod.cn/Support)
 * 在DNSPod自己的域名下添加一条[A记录][3]，地址就是Github Pages的服务IP地址：207.97.227.245
 * 在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。如果你不明白在哪里修改，可以参考这里：[https://www.dnspod.cn/support/index/fid/119](https://www.dnspod.cn/support/index/fid/119 "Godaddy注册的域名如何使用DNSPod")
