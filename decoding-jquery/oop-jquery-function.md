@@ -51,24 +51,24 @@ var jQuery = function( selector, context ){
 在定义全局变量jQuery的时候，你看到：
 
 <pre class="prettyprint">
-    // global jQuery
-    var jQuery = (function() {
-      //...
-    })();
+// global jQuery
+var jQuery = (function() {
+  //...
+})();
 </pre>
 
 我们把function剥离出来，就是：
 
 <pre class="prettyprint">
-    function() {
-      //...
-    }
+function() {
+  //...
+}
 </pre>
 
 数据在JS的存储中可以使匿名的，比如下面这段字符串就可以存在于JS中，而不会报错：
 
 <pre class="prettyprint">
-    "I am data and I don’t cause error."
+"I am data and I don’t cause error."
 </pre>
 
 根据我们在第一点中提到的，函数就是数据，数据可以匿名，所以函数也可以匿名存在，所以我们上面的代码不会报任何错误。那么匿名函数有什么用呢，我们后面来看。
@@ -77,9 +77,9 @@ var jQuery = function( selector, context ){
 匿名函数的一个好处就是他可以自动执行，例如，你执行下面的代码，那么在页面加载完成的时候，就会输出内容：
 
 <pre class="prettyprint">
-    var jQuery = (function() {
-      console.log("I am self-invoking.");
-    })();
+var jQuery = (function() {
+  console.log("I am self-invoking.");
+})();
 </pre>
 
 我们为什么要用匿名函数呢，因为这样你就可以让函数执行，而且不需要增加一个全局变量。jQuery用匿名函数来做初始化的工作。
