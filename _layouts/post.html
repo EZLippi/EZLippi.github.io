@@ -17,6 +17,9 @@ layout: page
                 var that = this;
                 BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
             });
+
+            BYB.includeScript('/js/prettify/prettify.js',function(){prettyPrint()});
+
             $('.entry a').each(function(index,element){
                 var href = $(this).attr('href');
                 if(href.indexOf('#') > -1){
@@ -29,3 +32,4 @@ layout: page
         });
     };
 </script>
+<link rel="stylesheet" href="/js/prettify/prettify.css" />
