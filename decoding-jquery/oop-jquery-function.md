@@ -70,8 +70,7 @@ jQuery所有的功能都包含在jQuery这个全局变量中。在core.js中有�
 
 我们为什么要用匿名函数呢，因为这样你就可以让函数执行，而且不需要增加一个全局变量。jQuery用匿名函数来做初始化的工作。
 
-{% include decoding-jquery-index.md %}
-
+回[jQuery解构][2]目录
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
 [jQuery]:   http://jquery.com/ "jQuery"
 [1]:    {{ page.url}}  ({{ page.title }})
