@@ -6,7 +6,7 @@ title: Wiki
     <h2>Javascript</h2>
     <ul class="hide">
         <li><a href="http://jqfundamentals.com/book/index.html">jQuery Fundamentals</a> - jQuery 入门教程。</li>
-        <li><a href="http://www.cn-cuckoo.com/deconstructed/index.html">JavaScript库 代码解构</a> - 深入JavaScript库源代码，条分缕析，顿悟最优秀JavaScript库的核心机制</li>
+        <li><a href="http://www.cn-cuckoo.com/deconstructed/index.html">JavaScript库 代码解构</a> - 将JavaScript流行框架源代码条分缕析展现出来</li>
         <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="汤姆大叔的深入理解Javascript系列">深入理解Javascript系列</a></li>
         <li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" title="&lt;Script&gt;的defer和async的区别">&lt;Script&gt;的defer和async的区别</a></li>
         <li><a href="http://coolshell.cn/articles/6441.html" title="Javascript面向对象基础">Javascript面向对象基础</a></li>
