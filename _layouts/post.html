@@ -22,7 +22,7 @@ layout: page
 
             $('.entry a').each(function(index,element){
                 var href = $(this).attr('href');
-                if(href.indexOf('#') > -1){
+                if(href.indexOf('#') == 0){
                 }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
                 }else{
                     $(this).attr('target','_blank');
