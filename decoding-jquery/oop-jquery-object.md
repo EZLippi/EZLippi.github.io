@@ -37,11 +37,11 @@ var shichuan = {
 
 总结一下就是：
 
-1. 这个对象的变量名是'chichuan'
-1. 用'{'和'}'包裹起来
+1. 这个对象的变量名是`chichuan`
+1. 用`{`和`}`包裹起来
 1. 对象里面的元素（属性、方法）用逗号分隔
 1. 对象元素的名称和值用冒号分隔
-1. 方法其实就是函数，比如'ridingUnicore'就是'shichuan'对象的一个方法
+1. 方法其实就是函数，比如`ridingUnicore`就是`shichuan`对象的一个方法
 
 ####jQuery中的对象
 那么jQuery中的对象是怎样的呢，还记得我们在第一部分中讨论过的局部变量jQuery吗？我们来看看这个jQuery函数（在[第四行][4]），只有一行代码和一行解释：jQuery对象只是一个初始化构造器的扩展。
@@ -64,7 +64,7 @@ jQuery.fn = jQuery.prototype = {
 }
 </pre>
 
-jQuery prototype（我们后面会讨论）是一个非常大的对象。有很多很多的属性和方法。比如：'constructor'、'selector'、'jquery'、'length'等等的属性。也有类似'init'、'size'、'toArray'、'get'、'pushStack'这样的方法。
+jQuery prototype（我们后面会讨论）是一个非常大的对象。有很多很多的属性和方法。比如：`constructor`、`selector`、`jquery`、`length`等等的属性。也有类似`init`、`size`、`toArray`、`get`、`pushStack`这样的方法。
 
 ####函数是数据，也是对象
 在第一部分，我们说函数是数据，而且下面这两种写法是一样的：
