@@ -11,6 +11,7 @@ category: wiki
 
 ##Class
 <a name="class"></a>
+
 <pre class="prettyprint">
 hasClass = function (el, cl) {
     var regex = new RegExp('(?:\\s|^)' + cl + '(?:\\s|$)');
