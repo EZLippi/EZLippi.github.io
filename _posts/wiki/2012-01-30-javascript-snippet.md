@@ -4,14 +4,12 @@ title: JavaScript代码片段
 category: wiki 
 ---
 # [{{ page.title }}][1]
-2012-01-16 By [BeiYuu][]
+2012-01-30 By [BeiYuu][]
 
 ##导航
 [Class](#class)
 
-##Class
-<a name="class" href="#"></a>
-
+<h2 id="class">Class</h2>
 <pre class="prettyprint">
 hasClass = function (el, cl) {
     var regex = new RegExp('(?:\\s|^)' + cl + '(?:\\s|$)');
