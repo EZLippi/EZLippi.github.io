@@ -22,7 +22,7 @@ console.log(typeof jQuery.prototype);
 ###给原型添加属性和方法
 一般用来给原型添加方法和属性的方式如下：
 
-<pre class="prttyprint">
+<pre class="prettyprint">
 jQuery.prototype.constructor = jQuery;
 jQuery.prototype.init = function( selector, context, rootjQuery ) {
   //...
