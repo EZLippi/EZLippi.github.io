@@ -10,7 +10,7 @@ category: wiki
 [Class](#class)
 
 ##Class
-<a name="class"></a>
+<a name="class" href="#"></a>
 
 <pre class="prettyprint">
 hasClass = function (el, cl) {
