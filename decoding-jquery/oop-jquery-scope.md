@@ -111,3 +111,4 @@ jQuery.fn = jQuery.prototype = {
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
 [jQuery]:   http://jquery.com/ "jQuery"
 [1]:    {{ page.url}}  ({{ page.title }})
+[2]:    /decoding-jquery/ "jQuery解构"
