@@ -7,8 +7,8 @@ category: wiki
 2012-01-30 By [BeiYuu][]
 
 ##导航
-[Class](#class)
-[Tricks](#tricks)
+* [Class](#class)
+* [Tricks](#tricks)
 
 <h2 id="class">Class</h2>
 <pre class="prettyprint">
