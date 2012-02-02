@@ -22,7 +22,7 @@ description: jQuery是一个伟大作品，他的完成充满智慧，我们来�
 
 ### 设计模式
 * [面向对象和jQuery - 工厂模式(factory pattern)](/decoding-jquery/oop-jquery-factory "面向对象和jQuery - 工厂模式(factory pattern)")
-* 面向对象和jQuery - 外观模式(facade pattern)
+* [面向对象和jQuery - 外观模式(facade pattern)](/decoding-jquery/oop-jquery-facade "面向对象和jQuery - 外观模式(facade pattern)")
 
 ### 方法
 * jQuery.extend() - 对象的继承扩展
