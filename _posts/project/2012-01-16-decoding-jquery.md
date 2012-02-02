@@ -18,7 +18,7 @@ description: jQuery是一个伟大作品，他的完成充满智慧，我们来�
 * [面向对象和jQuery - 函数](/decoding-jquery/oop-jquery-function "面向对象和jQuery - 函数")
 * [面向对象和jQuery - 对象](/decoding-jquery/oop-jquery-object "面向对象和jQuery - 对象")
 * [面向对象和jQuery - 原型](/decoding-jquery/oop-jquery-prototype "面向对象和jQuery - 原型")
-* 面向对象和jQuery - 函数作用域、链式调用以及jQuery.fn
+* [面向对象和jQuery - 函数作用域、链式调用以及jQuery.fn](/decoding-jquery/oop-jquery-scope "面向对象和jQuery - 函数作用域、链式调用以及jQuery.fn")
 
 ### 设计模式
 * 面向对象和jQuery - 工厂模式(factory pattern)
