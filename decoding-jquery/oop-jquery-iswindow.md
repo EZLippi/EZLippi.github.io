@@ -32,14 +32,16 @@ isWindow: function( obj ) {
 </pre>
 
 他的工作原理是：
+
 1. 他会检测是否返回一个对象
 2. 他会检测返回的对象是否为`object`
 2. 检测返回的对象是否有`setInterval`方法，该方法只在`window`对象中存在
 
 相关参考：
-[http://api.jquery.com/jQuery.isWindow/][3]
-[https://github.com/jquery/jquery/blob/master/src/core.js#L480][4]
-[https://developer.mozilla.org/En/Window.setInterval][5]
+
+* [http://api.jquery.com/jQuery.isWindow/][3]
+* [https://github.com/jquery/jquery/blob/master/src/core.js#L480][4]
+* [https://developer.mozilla.org/En/Window.setInterval][5]
 
 ### [回jQuery解构目录][2]
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
