@@ -82,9 +82,10 @@ console.log(
 </pre>
 
 相关参考：
-DOM事件：[http://www.w3.org/TR/DOM-Level-2-Events/events.html][4]
-jQuery.support API：[http://api.jquery.com/jQuery.support/][5]
-jQUery.support on github：[https://github.com/jquery/jquery/blob/master/src/support.js][3]
+
+* DOM事件：[http://www.w3.org/TR/DOM-Level-2-Events/events.html][4]
+* jQuery.support API：[http://api.jquery.com/jQuery.support/][5]
+* jQUery.support on github：[https://github.com/jquery/jquery/blob/master/src/support.js][3]
 
 ### [回jQuery解构目录][2]
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"

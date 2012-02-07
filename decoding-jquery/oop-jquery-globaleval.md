@@ -34,16 +34,16 @@ Internet Explorer：
 下面是个简单的测试：
 
 <pre class="prettyprint">
-<div id="log">&#60;/div>
-<script>
-function test(){
-  jQuery.globalEval("var drinkType = 'absinthe';")
-}
-test();
-if (drinkType == 'absinthe') {
-  $('#log').html('live healthly, drink ' + drinkType+'');
-}
-</script>
+    <div id="log">&#60;</div>
+    <script>
+    function test(){
+      jQuery.globalEval("var drinkType = 'absinthe';")
+    }
+    test();
+    if (drinkType == 'absinthe') {
+      $('#log').html('live healthly, drink ' + drinkType+'');
+    }
+    </script>
 </pre>
 
 相关参考：
