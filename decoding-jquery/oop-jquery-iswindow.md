@@ -32,10 +32,11 @@ isWindow: function( obj ) {
 </pre>
 
 他的工作原理是：
-
-* 他会检测是否返回一个对象
-* 他会检测返回的对象是否为`object`
-* 检测返回的对象是否有`setInterval`方法，该方法只在`window`对象中存在
+<ul>
+	<li>他会检测是否返回一个对象</li>
+	<li>他会检测返回的对象是否为`object`</li>
+	<li>检测返回的对象是否有`setInterval`方法，该方法只在`window`对象中存在</li>
+</ul>
 
 相关参考：
 
