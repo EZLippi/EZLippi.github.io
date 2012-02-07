@@ -25,13 +25,13 @@ description: jQuery是一个伟大作品，他的完成充满智慧，我们来�
 * [面向对象和jQuery - 外观模式(facade pattern)](/decoding-jquery/oop-jquery-facade "面向对象和jQuery - 外观模式(facade pattern)")
 
 ### 方法
-* jQuery.extend() - 对象的继承扩展
-* jQuery.isWindow() - 检测window对象
-* jQuery.parseXML() - 跨浏览器的XML解析
-* jQuery.globalEval() - 在全局作用域下执行脚本
-* jQuery.toarray() - 数组的切分、调用等等
-* jQuery.inarray() - 在数组中查找特定值
-* jQuery.support() - DOM2的事件冒泡和捕获
+* [jQuery.extend() - 对象的继承扩展](/decoding-jquery/oop-jquery-extend "jQuery.extend() - 对象的继承扩展")
+* [jQuery.isWindow() - 检测window对象](/decoding-jquery/oop-jquery-iswindow "jQuery.isWindow() - 检测window对象")
+* [jQuery.parseXML() - 跨浏览器的XML解析](/decoding-jquery/oop-jquery-parsexml "jQuery.parseXML() - 跨浏览器的XML解析")
+* [jQuery.globalEval() - 在全局作用域下执行脚本](/decoding-jquery/oop-jquery-globaleval "jQuery.globalEval() - 在全局作用域下执行脚本")
+* [jQuery.toarray() - 数组的切分、调用等等](/decoding-jquery/oop-jquery-toarray "jQuery.toArray() - 数组的切分、调用等等")
+* [jQuery.inarray() - 在数组中查找特定值](/decoding-jquery/oop-jquery-inarray "jQuery.inArray() - 在数组中查找特定值")
+* [jQuery.support() - DOM2的事件冒泡和捕获](/decoding-jquery/oop-jquery-support "jQuery.support() - DOM2的事件冒泡和捕获")
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
 [1]:    {{ page.url}}  ({{ page.title }})
