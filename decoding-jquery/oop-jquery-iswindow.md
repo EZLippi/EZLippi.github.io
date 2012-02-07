@@ -23,7 +23,7 @@ jQuery有一个`isWindow()`方法，在jQuery中的很多地方都有用到，�
 那么代码是怎样的呢：
 
     // A crude way of determining if an object is a window
-    var isWindow = function( obj ) {
+    isWindow:function( obj ) {
       return obj && typeof obj === "object" && "setInterval" in obj;
     }
 

@@ -42,24 +42,22 @@ extend.html:52["french", "chanson francaise", "chanson", "pop"]
 
 如果是深复制，也会一个属性一个属性的循环，但是当属性指向一个对象的时候，并不会移动原来的对象，而是拷贝一份。看代码吧：
 
-<pre class="prettyprint">
-if (deep && copy && (jQuery.isPlainObject(copy) || (copyIsArray = jQuery.isArray(copy)))) {
-    if (copyIsArray) {
-        copyIsArray = false;
-        clone = src && jQuery.isArray(src) ? src : [];
- 
-    } else {
-        clone = src && jQuery.isPlainObject(src) ? src : {};
+    if (deep && copy && (jQuery.isPlainObject(copy) || (copyIsArray = jQuery.isArray(copy)))) {
+        if (copyIsArray) {
+            copyIsArray = false;
+            clone = src && jQuery.isArray(src) ? src : [];
+     
+        } else {
+            clone = src && jQuery.isPlainObject(src) ? src : {};
+        }
+     
+        // Never move original objects, clone them
+        target[name] = jQuery.extend(deep, clone, copy);
+     
+        // Don't bring in undefined values
+    } else if (copy !== undefined) {
+        target[name] = copy;
     }
- 
-    // Never move original objects, clone them
-    target[name] = jQuery.extend(deep, clone, copy);
- 
-    // Don't bring in undefined values
-} else if (copy !== undefined) {
-    target[name] = copy;
-}
-</pre>
 
 还有一些资料：
 

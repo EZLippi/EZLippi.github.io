@@ -24,19 +24,17 @@ console.log(jQuery.inArray("Nokia", arr));
 
 源码是这样的：
 
-<pre class="prettyprint">
-inArray: function( elem, array ) {
-  if ( indexOf ) {
-    return indexOf.call( array, elem );
-  }
-  for ( var i = 0, length = array.length; i < length; i++ ) {
-    if ( array[ i ] === elem ) {
-      return i;
+    inArray: function( elem, array ) {
+      if ( indexOf ) {
+        return indexOf.call( array, elem );
+      }
+      for ( var i = 0, length = array.length; i < length; i++ ) {
+        if ( array[ i ] === elem ) {
+          return i;
+        }
+      }
+      return -1;
     }
-  }
-  return -1;
-}
-</pre>
 
 `call`我们在之前的文章中有讨论，是一个非产有用的方法，可以借用别的对象的方法作为自己的方法使用。
 
@@ -55,13 +53,11 @@ return indexOf.call( array, elem );
 </pre>
 
 ###如果不支持，就循环元素
-<pre class="prettyprint">
-for ( var i = 0, length = array.length; i < length; i++ ) {
-  if ( array[ i ] === elem ) {
-      return i;
-  }
-}
-</pre>
+    for ( var i = 0, length = array.length; i < length; i++ ) {
+      if ( array[ i ] === elem ) {
+          return i;
+      }
+    }
 
 ###如果没找到，就返回-1
 <pre class="prettyprint">

@@ -10,18 +10,16 @@ jQuery有一个`jQuery.globalEval()`方法，这个方法跟javascript原生的`
 
 看看代码吧；
 
-<pre class="prettyprint">
-globalEval: function( data ) {
-  if ( data && rnotwhite.test( data ) ) {
-    // We use execScript on Internet Explorer
-    // We use an anonymous function so that context is window
-    // rather than jQuery in Firefox
-    ( window.execScript || function( data ) {
-      window[ "eval" ].call( window, data );
-    } )( data );
-  }
-}
-</pre>
+    globalEval: function( data ) {
+      if ( data && rnotwhite.test( data ) ) {
+        // We use execScript on Internet Explorer
+        // We use an anonymous function so that context is window
+        // rather than jQuery in Firefox
+        ( window.execScript || function( data ) {
+          window[ "eval" ].call( window, data );
+        } )( data );
+      }
+    }
 
 Jim Driscoll发现对于大多数浏览器，你可以使用`eval.call(window,data)`，但是对于chrome和IE还是有点不同。
 
@@ -33,7 +31,6 @@ Internet Explorer：
 
 下面是个简单的测试：
 
-<pre class="prettyprint">
     <div id="log">&#60;</div>
     <script>
     function test(){
@@ -44,7 +41,6 @@ Internet Explorer：
       $('#log').html('live healthly, drink ' + drinkType+'');
     }
     </script>
-</pre>
 
 相关参考：
 [https://github.com/jquery/jquery/blob/master/src/core.js#L571][3]
