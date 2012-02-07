@@ -1,16 +1,16 @@
 .pln{color:#000}
 @media screen{
-    .str{color:#080}
-    .kwd{color:#008}
-    .com{color:#800}
+    .str{color:#b9bdb6}
+    .kwd{color:#5beacf}
+    .com{color:#878a85}
     .typ{color:#606}
     .lit{color:#066}
     .pun,.opn,.clo{color:#660}
     .tag{color:#008}
     .atn{color:#606}
     .atv{color:#080}
-    .dec,.var{color:#606}
-    .fun{color:red}
+    .dec,.var{color:#ffaa3e}
+    .fun{color:#ffaa3e}
 }
 @media print,projection{
     .str{color:#060}
