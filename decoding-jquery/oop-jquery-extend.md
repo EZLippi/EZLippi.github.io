@@ -62,9 +62,10 @@ if (deep && copy && (jQuery.isPlainObject(copy) || (copyIsArray = jQuery.isArray
 </pre>
 
 还有一些资料：
-jQuery源码：[https://github.com/jquery/jquery/blob/master/src/core.js#L304][3]
-$.extend的用法：[http://api.jquery.com/jQuery.extend/][4]
-深复制的概念：[http://javascript.about.com/od/objectorientedjavascript/a/oop17.htm][5]
+
+* jQuery源码：[https://github.com/jquery/jquery/blob/master/src/core.js#L304][3]
+* $.extend的用法：[http://api.jquery.com/jQuery.extend/][4]
+* 深复制的概念：[http://javascript.about.com/od/objectorientedjavascript/a/oop17.htm][5]
 
 
 ### [回jQuery解构目录][2]
