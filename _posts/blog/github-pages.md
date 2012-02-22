@@ -84,7 +84,7 @@ Enter same passphrase again:<再次输入加密串>
 </pre>
 
 最后看到这样的界面，就成功设置ssh key了：
-![ssh key success](/images/githubpages/ssh-key-set.jpg)
+![ssh key success](/images/githubpages/ssh-key-set.png)
 
 ###4、添加SSH Key到GitHub：
 在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。
@@ -92,7 +92,7 @@ Enter same passphrase again:<再次输入加密串>
 用文本编辑工具打开id_rsa.pub文件，如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。
 
 在GitHub的主页上点击设置按钮：
-![github account setting](/images/githubpages/github-account-setting.jpg)
+![github account setting](/images/githubpages/github-account-setting.png)
 
 选择SSH Keys项，把复制的内容粘贴进去，然后点击Add Key按钮即可：
 ![set ssh keys](/images/githubpages/bootcamp_1_ssh.jpg)
