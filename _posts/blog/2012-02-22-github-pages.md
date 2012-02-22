@@ -70,17 +70,15 @@ $ rm id_rsa*
 
 ###3、生成新的SSH Key：
 输入下面的代码，就可以生成新的key文件，我们只需要默认设置就好，所以当需要输入文件名的时候，回车就好。
-<pre class="prettyprint">
-$ ssh-keygen -t rsa -C "邮件地址@youremail.com"
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):<回车就好>
-</pre>
+
+    $ ssh-keygen -t rsa -C "邮件地址@youremail.com"
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):<回车就好>
 
 然后系统会要你输入加密串（[Passphrase][6]）：
-<pre class="prettyprint">
-Enter passphrase (empty for no passphrase):<输入加密串>
-Enter same passphrase again:<再次输入加密串>
-</pre>
+
+    Enter passphrase (empty for no passphrase):<输入加密串>
+    Enter same passphrase again:<再次输入加密串>
 
 最后看到这样的界面，就成功设置ssh key了：
 ![ssh key success](/images/githubpages/ssh-key-set.png)
