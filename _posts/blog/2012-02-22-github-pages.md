@@ -62,7 +62,7 @@ $ cd ~/.ssh
 
 ###2、备份和移除原来的ssh key设置：
 因为已经存在key文件，所以需要备份旧的数据并删除：
-{% highligth shell %}
+{% highligth shell lineos %}
 $ ls
 config	id_rsa	id_rsa.pub	known_hosts
 $ mkdir key_backup
