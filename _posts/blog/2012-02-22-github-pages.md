@@ -195,10 +195,10 @@ Jekyll的核心其实就是一个文本的转换引擎，用你最喜欢的标�
 配置文件，用来定义你想要的效果，设置之后就不用关心了。
 
 ####_includes
-可以用来存放一些小的可复用的模块，方便通过`\{\% include file.ext \%\}`灵活的调用。这条命令会调用_includes/file.ext文件。
+可以用来存放一些小的可复用的模块，方便通过`{ % include file.ext %}`灵活的调用。这条命令会调用_includes/file.ext文件。
 
 ####_layouts
-这是模板文件存放的位置。模板需要通过[YAML front matter][9]来定义，后面会讲到，`{\{ content \}}`标记用来将数据插入到这些模板中来。
+这是模板文件存放的位置。模板需要通过[YAML front matter][9]来定义，后面会讲到，`{ { content }}`标记用来将数据插入到这些模板中来。
 
 ####_posts
 你的动态内容，一般来说就是你的博客正文存放的文件夹。他的命名有严格的规定，必须是`2012-02-22-artical-title.MARKUP`这样的形式，MARKUP是你所使用标记语言的文件后缀名，根据_config.yml中设定的链接规则，可以根据你的文件名灵活调整，文章的日期和标记语言后缀与文章的标题的独立的。
@@ -232,7 +232,7 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 
 * `permalink: /:title` /github-pages
 
-自定义项的内容，例如我们定义了`title:BeiYuu的博客`这样一项，那么你就可以在文章中使用`{\{ site.title \}}`来引用这个变量了，非常方便定义些全局变量。
+自定义项的内容，例如我们定义了`title:BeiYuu的博客`这样一项，那么你就可以在文章中使用`{ { site.title }}`来引用这个变量了，非常方便定义些全局变量。
 
 ###YAML Front Matter和模板变量
 对于使用YAML定义格式的文章，Jekyll会特别对待，他的格式要求比较严格，必须是这样的形式：
@@ -249,7 +249,7 @@ title: Blogging Like a Hacker
 * `category` 设置文章的分类
 * `tags` 设置文章的tag
 
-上面的`title`就是自定义的内容，你也可以设置其他的内容，在文章中可以通过`{\{ page.title \}}`这样的形式调用。
+上面的`title`就是自定义的内容，你也可以设置其他的内容，在文章中可以通过`{ { page.title }}`这样的形式调用。
 
 模板变量，我们之前也涉及了不少了，还有其他需要的变量，可以参考官方的文档：[https://github.com/mojombo/jekyll/wiki/template-data](https://github.com/mojombo/jekyll/wiki/template-data "Jekyll Template Data")
 
