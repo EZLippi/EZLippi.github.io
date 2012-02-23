@@ -62,13 +62,13 @@ $ cd ~/.ssh
 
 ###2、备份和移除原来的ssh key设置：
 因为已经存在key文件，所以需要备份旧的数据并删除：
-<pre class="prettyprint">
+{% highligth shell %}
 $ ls
 config	id_rsa	id_rsa.pub	known_hosts
 $ mkdir key_backup
 $ cp id_rsa* key_backup
 $ rm id_rsa*
-</pre>
+{% endhighlight %}
 
 ###3、生成新的SSH Key：
 输入下面的代码，就可以生成新的key文件，我们只需要默认设置就好，所以当需要输入文件名的时候，回车就好。
@@ -171,6 +171,42 @@ blog.beiyuu.com
 ##Jekyll模板系统
 GitHub Pages为了提供对HTML内容的支持，选择了[Jekyll][]作为模板系统，Jekyll是一个强大的静态模板系统，作为个人博客使用，基本上可以满足要求，也能保持管理的方便，你可以查看[Jekyll官方文档][8]。
 
+###Jekyll基本结构
+Jekyll的核心其实就是一个文本的转换引擎，用你最喜欢的标记语言写文档，可以是Markdown、Textile或者HTML等等，再通过`layou`将文档拼装起来，根据你设置的URL规则来展现，这些都是通过严格的配置文件来定义，最终的产出就是web页面。
+
+基本的Jekyll结构如下：
+<pre class="prettyprint">
+|-- _config.yml
+|-- _includes
+|-- _layouts
+|   |-- default.html
+|   `-- post.html
+|-- _posts
+|   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   `-- 2009-04-26-barcamp-boston-4-roundup.textile
+|-- _site
+`-- index.html
+</pre>
+
+简单介绍一下他们的作用：
+####_config.yml
+配置文件，用来定义你想要的效果，设置之后就不用关心了。
+
+####_includes
+可以用来存放一些小的可复用的模块，方便通过`{% include file.ext %}`灵活的调用。这条命令会调用_includes/file.ext文件。
+
+####_layouts
+这是模板文件存放的位置。模板需要通过[YAML front matter][9]来定义，后面会讲到，`{{ content }}`标记用来将数据插入到这些模板中来。
+
+####_posts
+你的动态内容，一般来说就是你的博客正文存放的文件夹。他的命名有严格的规定，必须是`2012-02-22-artical-title.MARKUP`这样的形式，MARKUP是你所使用标记语言的文件后缀名，根据_config.yml中设定的链接规则，可以根据你的文件名灵活调整，文章的日期和标记语言后缀与文章的标题的独立的。
+
+####_site
+这个是Jekyll生成的最终的文档，不用去关心。最好把他放在你的`.gitignore`文件中忽略它。
+
+####其他文件夹
+你可以创建任何的文件夹，在根目录下面也可以创建任何文件，假设你创建了`project`文件夹，下面有一个`github-pages.md`的文件，那么你就可以通过`yoursite.com/project/github-pages`访问的到，如果你是使用一级域名的话。文件后缀可以是`.html`或者`markdown`或者`textile`。这里还有很多的例子：[https://github.com/mojombo/jekyll/wiki/Sites](https://github.com/mojombo/jekyll/wiki/Sites)
+
 ## 使用Disqus管理评论
 ## 代码高亮插件
 
@@ -193,3 +229,4 @@ GitHub Pages为了提供对HTML内容的支持，选择了[Jekyll][]作为模板
 [6]: http://help.github.com/ssh-key-passphrases/
 [7]: http://beiyuu.github.com
 [8]: https://github.com/mojombo/jekyll/blob/master/README.textile
+[9]: https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
