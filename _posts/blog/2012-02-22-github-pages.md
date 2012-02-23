@@ -171,6 +171,8 @@ blog.beiyuu.com
 ##Jekyll模板系统
 GitHub Pages为了提供对HTML内容的支持，选择了[Jekyll][]作为模板系统，Jekyll是一个强大的静态模板系统，作为个人博客使用，基本上可以满足要求，也能保持管理的方便，你可以查看[Jekyll官方文档][8]。
 
+你可以直接fork[我的项目][11]，然后改名，就有了你自己的满足Jekyll要求的文档了，当然你也可以按照下面的介绍自己创建。
+
 ###Jekyll基本结构
 Jekyll的核心其实就是一个文本的转换引擎，用你最喜欢的标记语言写文档，可以是Markdown、Textile或者HTML等等，再通过`layou`将文档拼装起来，根据你设置的URL规则来展现，这些都是通过严格的配置文件来定义，最终的产出就是web页面。
 
@@ -251,6 +253,7 @@ title: Blogging Like a Hacker
 
 模板变量，我们之前也涉及了不少了，还有其他需要的变量，可以参考官方的文档：[https://github.com/mojombo/jekyll/wiki/template-data](https://github.com/mojombo/jekyll/wiki/template-data "Jekyll Template Data")
 
+
 ## 使用Disqus管理评论
 ## 代码高亮插件
 
@@ -275,3 +278,4 @@ title: Blogging Like a Hacker
 [8]: https://github.com/mojombo/jekyll/blob/master/README.textile
 [9]: https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
 [10]: https://github.com/mojombo/jekyll/wiki/configuration
+[11]: https://github.com/beiyuu/beiyuu.github.com
