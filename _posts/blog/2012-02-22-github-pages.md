@@ -145,9 +145,9 @@ $ git config --global user.token 0123456789your123456789token
 
 ###User & Organization Pages
 想建立个人博客是用的第一种，形如`beiyuu.github.com`这样的可访问的站，每个用户名下面只能建立一个，创建之后点击`Admin`进入项目管理，可以看到是这样的：
-![user pages](/images/githubpages/user-pages.jpg)
+![user pages](/images/githubpages/user-pages.png)
 而普通的项目是这样的，即使你也是用的`othername.github.com`：
-![other pages](/images/githubpages/other-pages.jpg)
+![other pages](/images/githubpages/other-pages.png)
 
 创建好`username.github.com`项目之后，提交一个`index.html`文件，然后`push`到GitHub的`master`分支（也就是普通意义上的主干）。第一次页面生效需要一些时间，大概10分钟左右。
 
@@ -169,6 +169,7 @@ blog.beiyuu.com
 设置成功后，根据DNS的情况，最长可能需要一天才能生效，耐心等待吧。
 
 ##Jekyll模板系统
+GitHub Pages为了提供对HTML内容的支持，选择了[Jekyll][]作为模板系统，Jekyll是一个强大的静态模板系统，作为个人博客使用，基本上可以满足要求，也能保持管理的方便，你可以查看[Jekyll官方文档][8]。
 
 ## 使用Disqus管理评论
 ## 代码高亮插件
@@ -191,3 +192,4 @@ blog.beiyuu.com
 [5]: http://help.github.com/mac-set-up-git/ "Mac下Git安装"
 [6]: http://help.github.com/ssh-key-passphrases/
 [7]: http://beiyuu.github.com
+[8]: https://github.com/mojombo/jekyll/blob/master/README.textile
