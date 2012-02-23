@@ -232,6 +232,25 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 
 自定义项的内容，例如我们定义了`title:BeiYuu的博客`这样一项，那么你就可以在文章中使用`{{ site.title }}`来引用这个变量了，非常方便定义些全局变量。
 
+###YAML Front Matter和模板变量
+对于使用YAML定义格式的文章，Jekyll会特别对待，他的格式要求比较严格，必须是这样的形式：
+<pre class="prettyprint">
+---
+layout: post
+title: Blogging Like a Hacker
+---
+</pre>
+前后的`---`不能省略，在这之间，你可以定一些你需要的变量，layout就是调用`_layouts`下面的某一个模板，他还有一些其他的变量可以使用：
+
+* `permalink` 你可以对某一篇文章使用通用设置之外的永久链接
+* `published` 可以单独设置某一篇文章是否需要发布
+* `category` 设置文章的分类
+* `tags` 设置文章的tag
+
+上面的`title`就是自定义的内容，你也可以设置其他的内容，在文章中可以通过`{{ page.title }}`这样的形式调用。
+
+模板变量，我们之前也涉及了不少了，还有其他需要的变量，可以参考官方的文档：[https://github.com/mojombo/jekyll/wiki/template-data](https://github.com/mojombo/jekyll/wiki/template-data "Jekyll Template Data")
+
 ## 使用Disqus管理评论
 ## 代码高亮插件
 
