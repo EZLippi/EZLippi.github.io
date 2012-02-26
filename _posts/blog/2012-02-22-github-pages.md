@@ -13,7 +13,7 @@ Github Pages有以下几个优点：
 
 <ul>
     <li>轻量级的博客系统，没有麻烦的配置</li>
-    <li>使用标记语言，比如[Markdown][2]</li>
+    <li>使用标记语言，比如<a href="http://markdown.tw">Markdown</a></li>
     <li>无需自己搭建服务器</li>
     <li>根据Github的限制，对应的每个站有300MB空间</li>
     <li>可以绑定自己的域名</li>
@@ -262,7 +262,7 @@ title: Blogging Like a Hacker
 ![Disqus sites](/images/githubpages/disqus-site.png)
 
 我们选择最下面的`Universal Code`就好，然后会看到一个介绍页面，把下面这段代码复制到你的模板里面，可以只复制到显示文章的模板中：
-<pre class="prettyprint">
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -277,7 +277,6 @@ title: Blogging Like a Hacker
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-</pre>
 
 配置完之后，你也可以做一些异步加载的处理，提高性能，比如我就在最开始页面打开的时候不显示评论，当你想看评论的时候，点击“显示评论”再加载Disqus的模块。代码很简单，你可以参考我的写法。
 <pre class="prettyprint">
