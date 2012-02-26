@@ -11,6 +11,7 @@ layout: page
 <script type="text/javascript">
     BYB.readyFunction = function(){
         $(document).ready(function(){
+            $('pre').addClass('prettyprint linenums:1')
             $('#disqus_container .comment').on('click',function(){
                 $(this).html('加载中...');
                 var disqus_shortname = 'beiyuu';

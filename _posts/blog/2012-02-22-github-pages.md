@@ -279,14 +279,13 @@ title: Blogging Like a Hacker
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
 配置完之后，你也可以做一些异步加载的处理，提高性能，比如我就在最开始页面打开的时候不显示评论，当你想看评论的时候，点击“显示评论”再加载Disqus的模块。代码很简单，你可以参考我的写法。
-<pre class="prettyprint">
-$('#disqus_container .comment').on('click',function(){
-        $(this).html('加载中...');
-        var disqus_shortname = 'beiyuu';
-        var that = this;
-        BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()}); //这是一个加载js的函数
-});
-</pre>
+
+    $('#disqus_container .comment').on('click',function(){
+            $(this).html('加载中...');
+            var disqus_shortname = 'beiyuu';
+            var that = this;
+            BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()}); //这是一个加载js的函数
+    });
 
 如果你不喜欢Disqus的样式，你也可以根据他生成的HTML结构，自己改写样式覆盖它的，Disqus现在也提供每个页面的评论数接口，[帮助文档][12]在这里可以看到。
 
