@@ -195,7 +195,7 @@ Jekyll的核心其实就是一个文本的转换引擎，用你最喜欢的标�
 配置文件，用来定义你想要的效果，设置之后就不用关心了。
 
 ####_includes
-可以用来存放一些小的可复用的模块，方便通过`{ % include file.ext %}`灵活的调用。这条命令会调用_includes/file.ext文件。
+可以用来存放一些小的可复用的模块，方便通过`{ % include file.ext %}`（去掉前两个{中或者{与%中的空格，下同）灵活的调用。这条命令会调用_includes/file.ext文件。
 
 ####_layouts
 这是模板文件存放的位置。模板需要通过[YAML front matter][9]来定义，后面会讲到，`{ { content }}`标记用来将数据插入到这些模板中来。
@@ -253,11 +253,51 @@ title: Blogging Like a Hacker
 
 模板变量，我们之前也涉及了不少了，还有其他需要的变量，可以参考官方的文档：[https://github.com/mojombo/jekyll/wiki/template-data](https://github.com/mojombo/jekyll/wiki/template-data "Jekyll Template Data")
 
-
 ## 使用Disqus管理评论
-## 代码高亮插件
+模板部分到此就算是配置完毕了，但是Jekyll只是个静态页面的发布系统，想做到关爽场倒是很容易，如果想要评论呢？也很简单。
 
+现在专做评论模块的产品有很多，比如[Disqus][]，还有国产的[多说][]，Disqus对现在各种系统的支持都比较全面，到写博客为止，多说现在仅是WordPress的一个插件，所以我这里暂时也使用不了，多说与国内的社交网络紧密结合，还是有很多亮点的，值得期待一下。我先选择了Disqus。
 
+注册账号什么的就不提了，Disqus支持很多的博客平台，参见下图：
+![Disqus sites](/images/githubpages/disqus-site.png)
+
+我们选择最下面的`Universal Code`就好，然后会看到一个介绍页面，把下面这段代码复制到你的模板里面，可以只复制到显示文章的模板中：
+<pre class="prettyprint">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'example'; // required: replace example with your forum shortname 这个地方需要改成你配置的网站名
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</pre>
+
+配置完之后，你也可以做一些异步加载的处理，提高性能，比如我就在最开始页面打开的时候不显示评论，当你想看评论的时候，点击“显示评论”再加载Disqus的模块。代码很简单，你可以参考我的写法。
+<pre class="prettyprint">
+$('#disqus_container .comment').on('click',function(){
+        $(this).html('加载中...');
+        var disqus_shortname = 'beiyuu';
+        var that = this;
+        BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()}); //这是一个加载js的函数
+});
+</pre>
+
+如果你不喜欢Disqus的样式，你也可以根据他生成的HTML结构，自己改写样式覆盖它的，Disqus现在也提供每个页面的评论数接口，[帮助文档][12]在这里可以看到。
+
+##代码高亮插件
+如果写技术博客，代码高亮少不了，有两个可选插件[DlHightLight代码高亮组件][13]和[Google Code Prettify][14]。DLHightLight支持的语言相对较少一些，有js、css、xml和html，Google的高亮插件基本上任何语言都支持，也可以自定义语言，也支持自动识别，也有行号的特别支持。
+
+Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加入`prettyprint`即可。所以我选择了Google Code Prettify。
+
+##结语
+如果你跟着这篇不那么详尽的教程，搭建成功了自己的博客，恭喜你！剩下的就是保持热情的去写自己的文章吧。
 
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
@@ -268,6 +308,8 @@ title: Blogging Like a Hacker
 [Godaddy]:  http://www.godaddy.com/ "Godaddy"
 [Jekyll]:   https://github.com/mojombo/jekyll "Jekyll"
 [DNSPod]:   https://www.dnspod.cn/ "DNSPod"
+[Disqus]: http://disqus.com/
+[多说]: http://duoshuo.com/
 [1]:    {{ page.url}}  ({{ page.title }})
 [2]: http://markdown.tw/    "Markdown语法"
 [3]:    http://baike.baidu.com/view/65575.htm "A记录"
@@ -279,3 +321,6 @@ title: Blogging Like a Hacker
 [9]: https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
 [10]: https://github.com/mojombo/jekyll/wiki/configuration
 [11]: https://github.com/beiyuu/beiyuu.github.com
+[12]: http://docs.disqus.com/developers/universal/
+[13]: http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine
+[14]: http://code.google.com/p/google-code-prettify/
