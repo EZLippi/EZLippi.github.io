@@ -9,19 +9,17 @@ title: jQuery解构：面向对象和jQuery - 外观模式
 
 看jQuery的代码，在event.js中，有[这样一段][3]：
 
-<pre class="prettyprint">
-jQuery.removeEvent = document.removeEventListener ?
-    function( elem, type, handle ) {
-        if ( elem.removeEventListener ) {
-            elem.removeEventListener( type, handle, false );
-        }
-    } :
-    function( elem, type, handle ) {
-        if ( elem.detachEvent ) {
-            elem.detachEvent( "on" + type, handle );
-        }
-    };
-</pre>
+    jQuery.removeEvent = document.removeEventListener ?
+        function( elem, type, handle ) {
+            if ( elem.removeEventListener ) {
+                elem.removeEventListener( type, handle, false );
+            }
+        } :
+        function( elem, type, handle ) {
+            if ( elem.detachEvent ) {
+                elem.detachEvent( "on" + type, handle );
+            }
+        };
 
 在这个例子中，如果浏览器支持`removeEventListener`，那么`ele.removeEventListener`就会被使用，对于较古老的IE浏览器，就是用`ele,detachEvent`。所以removeEvent提供了一个对这两种存在兼容性问题的接口的一个封装接口。
 
@@ -29,16 +27,14 @@ jQuery.removeEvent = document.removeEventListener ?
 
 除了解决浏览器兼容性问题的方面，还有一些用来将不同目的的接口封装为一个接口，来简化操作的使用方式，比较好的一个例子就是：
 
-<pre class="prettyprint">
-var myevent = {
-// ...
-stop: function (e) {
+    var myevent = {
+    // ...
+    stop: function (e) {
   e.preventDefault();
-  e.stopPropagation();
-}
-// ...
-};
-</pre>
+      e.stopPropagation();
+    }
+    // ...
+    };
 
 `stopPropagation()`是用来阻止事件冒泡的，`preventDefault()`是用来阻止浏览器触发元素默认事件的（比如`click`）。虽然是两个不同的事件，但是他们经常一起使用，所以封装在`stop`方法中。
 

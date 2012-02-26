@@ -10,17 +10,15 @@ title: jQuery解构：jQuery.inArray()
 
 看看怎么使用吧：
 
-<pre class="prettyprint">
-var arr = [ "Nokia", "Android", "Palm", "iPhone" ];
-console.log(jQuery.inArray("Android", arr));
-console.log(jQuery.inArray("Motorola", arr));
-console.log(jQuery.inArray("Nokia", arr));
- 
-// returns
-// "Android" found at 1
-// "Motorola" not found, so -1
-// "Nokia" found at 0
-</pre>
+    var arr = [ "Nokia", "Android", "Palm", "iPhone" ];
+    console.log(jQuery.inArray("Android", arr));
+    console.log(jQuery.inArray("Motorola", arr));
+    console.log(jQuery.inArray("Nokia", arr));
+     
+    // returns
+    // "Android" found at 1
+    // "Motorola" not found, so -1
+    // "Nokia" found at 0
 
 源码是这样的：
 
@@ -39,20 +37,19 @@ console.log(jQuery.inArray("Nokia", arr));
 `call`我们在之前的文章中有讨论，是一个非产有用的方法，可以借用别的对象的方法作为自己的方法使用。
 
 ###检测是否支持indexOf
-<pre class="prettyprint">
-if ( indexOf ) {
-    //...
-}
-</pre>
+
+    if ( indexOf ) {
+        //...
+    }
 
 ###如果支持，直接使用indexOf方法
-<pre class="prettyprint">
-if ( indexOf ) {
-return indexOf.call( array, elem );
-}
-</pre>
+
+    if ( indexOf ) {
+    return indexOf.call( array, elem );
+    }
 
 ###如果不支持，就循环元素
+
     for ( var i = 0, length = array.length; i < length; i++ ) {
       if ( array[ i ] === elem ) {
           return i;
@@ -60,9 +57,8 @@ return indexOf.call( array, elem );
     }
 
 ###如果没找到，就返回-1
-<pre class="prettyprint">
-return -1;
-</pre>
+
+    return -1;
 
 如果使用原生的indexOf，效率会高一些。
 

@@ -55,20 +55,19 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 
 ###1、检查SSH keys的设置
 首先我们需要检查你电脑上现有的ssh key：
-<pre class="prettyprint">
-$ cd ~/.ssh
-</pre>
+
+    $ cd ~/.ssh
+
 如果显示“No such file or directory”，跳到第三步，否则继续。
 
 ###2、备份和移除原来的ssh key设置：
 因为已经存在key文件，所以需要备份旧的数据并删除：
-<pre class="prettyprint">
-$ ls
-config	id_rsa	id_rsa.pub	known_hosts
-$ mkdir key_backup
-$ cp id_rsa* key_backup
-$ rm id_rsa*
-</pre>
+
+    $ ls
+    config	id_rsa	id_rsa.pub	known_hosts
+    $ mkdir key_backup
+    $ cp id_rsa* key_backup
+    $ rm id_rsa*
 
 ###3、生成新的SSH Key：
 输入下面的代码，就可以生成新的key文件，我们只需要默认设置就好，所以当需要输入文件名的时候，回车就好。
@@ -98,30 +97,28 @@ $ rm id_rsa*
 
 ###5、测试一下
 可以输入下面的命令，看看设置是否成功，`git@github.com`的部分不要修改：
-<pre class="prettyprint">
-$ ssh -T git@github.com
-</pre>
+
+    $ ssh -T git@github.com
+
 
 如果是下面的反应：
-<pre class="prettyprint">
-The authenticity of host 'github.com (207.97.227.239)' can't be established.
-RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-Are you sure you want to continue connecting (yes/no)?
-</pre>
+
+    The authenticity of host 'github.com (207.97.227.239)' can't be established.
+    RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+    Are you sure you want to continue connecting (yes/no)?
+
 
 不要紧张，输入`yes`就好，然后会看到：
-<pre class="prettyprint">
-Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.
-</pre>
+
+    Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.
 
 ###6、设置你的账号信息
 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。
 
 Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。
-<pre class="prettyprint">
-$ git config --global user.name "你的名字"
-$ git config --global user.email "your_email@youremail.com"
-</pre>
+
+    $ git config --global user.name "你的名字"
+    $ git config --global user.email "your_email@youremail.com"
 
 ####设置GitHub的token
 有些工具没有通过SSH来链接GitHub。如果要使用这类工具，你需要找到然后设置你的API Token。
@@ -130,10 +127,9 @@ $ git config --global user.email "your_email@youremail.com"
 ![set ssh keys](/images/githubpages/bootcamp_1_token.jpg)
 
 然后在你的命令行中，输入下面的命令，把token添加进去：
-<pre class="prettyprint">
-$ git config --global user.name "你的名字"
-$ git config --global user.token 0123456789your123456789token
-</pre>
+
+    $ git config --global user.name "你的名字"
+    $ git config --global user.token 0123456789your123456789token
 
 如果你改了GitHub的密码，需要重新设置token。
 
@@ -157,13 +153,13 @@ $ git config --global user.token 0123456789your123456789token
 
 ###绑定域名
 我们在第一部分就提到了在DNS部分的设置，再来看在GitHub的配置，要想让`username.github.com`能通过你自己的域名来访问，需要在项目的根目录下新建一个名为`CNAME`的文件，文件内容形如：
-<pre class="prettyprint">
-beiyuu.com
-</pre>
+
+    beiyuu.com
+
 你也可以绑定在二级域名上：
-<pre class="prettyprint">
-blog.beiyuu.com
-</pre>
+
+    blog.beiyuu.com
+
 需要提醒的一点是，如果你使用形如`beiyuu.com`这样的一级域名的话，需要在DNS处设置A记录到`207.97.227.245`，而不是在DNS处设置为CNAME的形式，否则可能会对其他服务（比如email）造成影响。
 
 设置成功后，根据DNS的情况，最长可能需要一天才能生效，耐心等待吧。
@@ -177,18 +173,18 @@ GitHub Pages为了提供对HTML内容的支持，选择了[Jekyll][]作为模板
 Jekyll的核心其实就是一个文本的转换引擎，用你最喜欢的标记语言写文档，可以是Markdown、Textile或者HTML等等，再通过`layou`将文档拼装起来，根据你设置的URL规则来展现，这些都是通过严格的配置文件来定义，最终的产出就是web页面。
 
 基本的Jekyll结构如下：
-<pre class="prettyprint">
-|-- _config.yml
-|-- _includes
-|-- _layouts
-|   |-- default.html
-|   `-- post.html
-|-- _posts
-|   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   `-- 2009-04-26-barcamp-boston-4-roundup.textile
-|-- _site
-`-- index.html
-</pre>
+
+    |-- _config.yml
+    |-- _includes
+    |-- _layouts
+    |   |-- default.html
+    |   `-- post.html
+    |-- _posts
+    |   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile
+    |   `-- 2009-04-26-barcamp-boston-4-roundup.textile
+    |-- _site
+    `-- index.html
+
 
 简单介绍一下他们的作用：
 ####_config.yml
@@ -236,12 +232,12 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 
 ###YAML Front Matter和模板变量
 对于使用YAML定义格式的文章，Jekyll会特别对待，他的格式要求比较严格，必须是这样的形式：
-<pre class="prettyprint">
----
-layout: post
-title: Blogging Like a Hacker
----
-</pre>
+
+    ---
+    layout: post
+    title: Blogging Like a Hacker
+    ---
+
 前后的`---`不能省略，在这之间，你可以定一些你需要的变量，layout就是调用`_layouts`下面的某一个模板，他还有一些其他的变量可以使用：
 
 * `permalink` 你可以对某一篇文章使用通用设置之外的永久链接

@@ -9,34 +9,31 @@ title: jQuery解构：jQuery.extend() - 从对象继承的对象
 
 当新生成一个对象的时候，通常有两种方式，一种是浅复制，一种是深复制。在浅复制中，如果你在拷贝中修改这个对象，源对象同样会被修改。在深复制中，修改新对象不会对源对象造成影响，下面看看深浅复制的例子：
 
-<pre class="prettyprint">
-var artist = {
-    name: 'Serge Gainsbourg',
-    tags: ['french', 'chanson francaise', 'chanson'],
-    similar: {
-        name: 'Jane Birkin'
-    }
-};
-var myShallow = {};
-$.extend(myShallow, artist);
-myShallow.tags.push('pop');
-console.log(myShallow.tags);
-console.log(artist.tags);
- 
-var myDeep = {};
-$.extend(true, myDeep, artist);
-myDeep.tags.push('french pop');
-console.log(myDeep.tags);
-console.log(artist.tags);
-</pre>
+    var artist = {
+        name: 'Serge Gainsbourg',
+        tags: ['french', 'chanson francaise', 'chanson'],
+        similar: {
+            name: 'Jane Birkin'
+        }
+    };
+    var myShallow = {};
+    $.extend(myShallow, artist);
+    myShallow.tags.push('pop');
+    console.log(myShallow.tags);
+    console.log(artist.tags);
+     
+    var myDeep = {};
+    $.extend(true, myDeep, artist);
+    myDeep.tags.push('french pop');
+    console.log(myDeep.tags);
+    console.log(artist.tags);
 
 你会得到下面的结果：
-<pre class="prettyprint">
-["french", "chanson francaise", "chanson", "pop"]
-extend.html:46["french", "chanson francaise", "chanson", "pop"]
-extend.html:51["french", "chanson francaise", "chanson", "pop", "french pop"]
-extend.html:52["french", "chanson francaise", "chanson", "pop"]
-</pre>
+
+    ["french", "chanson francaise", "chanson", "pop"]
+    extend.html:46["french", "chanson francaise", "chanson", "pop"]
+    extend.html:51["french", "chanson francaise", "chanson", "pop", "french pop"]
+    extend.html:52["french", "chanson francaise", "chanson", "pop"]
 
 在jQuery的代码中，你会看待有个`deep`变量用来确定到底是用浅复制还是深复制，如果是浅复制，就会一个一个的循环对象的属性。
 

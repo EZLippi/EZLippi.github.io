@@ -19,67 +19,57 @@ DOM2有5种事件类型，下面是他们的分类：
 ###事件支持测试
 DOM标准并没有提供如何去检测事件。之前一般都是通过浏览器的识别来解决，但是这个很不可靠。后来Juriy Zaytsev提出另一种检测DOM2的事件的方法。这个技巧的原理是，元素会包含所支持的事件名。
 
-<pre class="prettyprint">
-'onclick' in document.documentElement; // true
-'onclick2' in document.documentElement; // false
-</pre>
+    'onclick' in document.documentElement; // true
+    'onclick2' in document.documentElement; // false
 
 但是这个方法的问题是，FireFox不支持，而且浏览器也不是支持对所有元素进行这样的检测。后来发现，创建一个元素之后，元素所支持的事件名也会被设置在这个元素上。
 
-<pre class="prettyprint">
-var el = document.createElement('div');
- 
-el.setAttribute('onclick', 'return;');
-typeof el.onclick; // "function"
- 
-el.setAttribute('onclick2', 'return;');
-typeof el.onclick2; // "undefined"
-</pre>
+    var el = document.createElement('div');
+     
+    el.setAttribute('onclick', 'return;');
+    typeof el.onclick; // "function"
+     
+    el.setAttribute('onclick2', 'return;');
+    typeof el.onclick2; // "undefined"
 
 比较完善的方法应该是综合上面两种，也就是jQuery的实现方法：
 
-<pre class="prettyprint">
-function isMouseEventSupported(eventName) {
-    var el = document.createElement('div');
-    eventName = 'on' + eventName;
-    var isSupported = (eventName in el);
-    if (!isSupported) {
-        el.setAttribute(eventName, 'return;');
-        isSupported = typeof el[eventName] == 'function';
+    function isMouseEventSupported(eventName) {
+        var el = document.createElement('div');
+        eventName = 'on' + eventName;
+        var isSupported = (eventName in el);
+        if (!isSupported) {
+            el.setAttribute(eventName, 'return;');
+            isSupported = typeof el[eventName] == 'function';
+        }
+        el = null;
+        return isSupported;
     }
-    el = null;
-    return isSupported;
-}
-</pre>
 
 ###jQuery.support和事件冒泡
 DOM2的规范建议事件分三个步骤：捕获、目标、冒泡。FireFox、Opera和Safari对这个支持的很好，但是IE只支持冒泡。我们不用关心捕获和目标阶段了。重点在冒泡。submit、change和focusin在W3C的DOM事件模型中也是规定需要冒泡的DOM树的。
 
-<pre class="prettyprint">
-if ( div.attachEvent ) {
-  for( i in {
-    submit: 1,
-    change: 1,
-    focusin: 1
-  } ) {
-    eventName = "on" + i;
-    isSupported = ( eventName in div );
-    if ( !isSupported ) {
-      div.setAttribute( eventName, "return;" );
-      isSupported = ( typeof div[ eventName ] === "function" );
+    if ( div.attachEvent ) {
+      for( i in {
+        submit: 1,
+        change: 1,
+        focusin: 1
+      } ) {
+        eventName = "on" + i;
+        isSupported = ( eventName in div );
+        if ( !isSupported ) {
+          div.setAttribute( eventName, "return;" );
+          isSupported = ( typeof div[ eventName ] === "function" );
+        }
+        support[ i + "Bubbles" ] = isSupported;
+      }
     }
-    support[ i + "Bubbles" ] = isSupported;
-  }
-}
-</pre>
 
 你可以这样测试：
 
-<pre class="prettyprint">
-console.log(
-  'submitBubbles: ' + jQuery.support.submitBubbles+'\n' + 'changeBubbles: ' + jQuery.support.changeBubbles+'\n' + 'focusinBubbles: ' + jQuery.support.focusinBubbles+''
-  );
-</pre>
+    console.log(
+      'submitBubbles: ' + jQuery.support.submitBubbles+'\n' + 'changeBubbles: ' + jQuery.support.changeBubbles+'\n' + 'focusinBubbles: ' + jQuery.support.focusinBubbles+''
+      );
 
 相关参考：
 

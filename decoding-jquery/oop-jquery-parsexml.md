@@ -9,38 +9,35 @@ title: jQuery解构：jQuery.parseXML() - 跨浏览器XML解析
 jQuery.parseXML使用浏览器原生的处理函数来创建有效的XML文档。
 
 使用方法如下：
-<pre class="prettyprint">
-var xml = "<rss version='2.0'><channel><title>RSS Title</title></channel></rss>",
-    xmlDoc = $.parseXML( xml ),
-    $xml = $( xmlDoc ),
-    $title = $xml.find("title");
-console.log($title.text( "XML Title" ));
-// return "XML Title"
-</pre>
+
+    var xml = "<rss version='2.0'><channel><title>RSS Title</title></channel></rss>",
+        xmlDoc = $.parseXML( xml ),
+        $xml = $( xmlDoc ),
+        $title = $xml.find("title");
+    console.log($title.text( "XML Title" ));
+    // return "XML Title"
 
 我们看看是怎么实现的：
 
-<pre class="prettyprint">
-parseXML: function(data, xml, tmp) {
- 
-    if (window.DOMParser) { // Standard
-        tmp = new DOMParser();
-        xml = tmp.parseFromString(data, "text/xml");
-    } else { // IE
-        xml = new ActiveXObject("Microsoft.XMLDOM");
-        xml.async = "false";
-        xml.loadXML(data);
+    parseXML: function(data, xml, tmp) {
+     
+        if (window.DOMParser) { // Standard
+            tmp = new DOMParser();
+            xml = tmp.parseFromString(data, "text/xml");
+        } else { // IE
+            xml = new ActiveXObject("Microsoft.XMLDOM");
+            xml.async = "false";
+            xml.loadXML(data);
+        }
+     
+        tmp = xml.documentElement;
+     
+        if (!tmp || !tmp.nodeName || tmp.nodeName === "parsererror") {
+            jQuery.error("Invalid XML: " + data);
+        }
+     
+        return xml;
     }
- 
-    tmp = xml.documentElement;
- 
-    if (!tmp || !tmp.nodeName || tmp.nodeName === "parsererror") {
-        jQuery.error("Invalid XML: " + data);
-    }
- 
-    return xml;
-}
-</pre>
 
 `DOMParser`虽然很好用，但是并不是所有浏览器都支持，是的，是IE不支持。所以在IE下面，我们使用`ActiveXObject("Microsoft.XMLDOM")`。（IE9以上就有DOMParser方法了）
 

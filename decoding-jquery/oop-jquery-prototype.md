@@ -10,34 +10,29 @@ title: jQuery解构：面向对象和jQuery - 原型
 ###每一个function都有一个原型，原型也是一个对象
 我们可以用jQuery的[core.js](https://github.com/jquery/jquery/blob/master/src/core.js)来测试：
 
-<pre class="prettyprint">
-var jQuery = function( selector, context ) {
-  //...
-}
-console.log(typeof jQuery.prototype);
- 
-// returns object
-</pre>
+    var jQuery = function( selector, context ) {
+      //...
+    }
+    console.log(typeof jQuery.prototype);
+     
+    // returns object
 
 ###给原型添加属性和方法
 一般用来给原型添加方法和属性的方式如下：
 
-<pre class="prettyprint">
-jQuery.prototype.constructor = jQuery;
-jQuery.prototype.init = function( selector, context, rootjQuery ) {
-  //...
-}
-</pre>
+    jQuery.prototype.constructor = jQuery;
+    jQuery.prototype.init = function( selector, context, rootjQuery ) {
+      //...
+    }
 
 在jQuery的原型中，大概在[78行][5]附近，用来定义原型的方式确是下面这种形式（实际上这是jQuery.fn的定义，他是jQuery.prototype的一个别名，为了简洁，我们直接写prototype）：
-<pre class="prettyprint">
-jQuery.prototype = {
-  constructor: jQuery,
-  init: function( selector, context, rootjQuery ) {
-    //...
-  }
-}
-</pre>
+
+    jQuery.prototype = {
+      constructor: jQuery,
+      init: function( selector, context, rootjQuery ) {
+        //...
+      }
+    }
 
 在jQuery中，完全用一个对象重写了prototype。那么第一种写法和这种写法的区别之处在哪呢？其实就像下面这两段话一样：
 
@@ -48,44 +43,37 @@ jQuery.prototype = {
 
 还有第三种写法，你可以使用this关键字来添加方法和属性：
 
-<pre class="prettyprint">
-function jQuery() {
-  this.constructor= jQuery;
-  this.init= function( selector, context, rootjQuery ) {
-    //...
-  }
-}
-</pre>
+    function jQuery() {
+      this.constructor= jQuery;
+      this.init= function( selector, context, rootjQuery ) {
+        //...
+      }
+    }
 
 ###使用原型的方法和属性
 如果要使用方法或者属性，就必须new一个对象。在jQuery中是这样的，大概在[第6行][4]附近：
 
-<pre class="prettyprint">
-new jQuery.fn.init( selector, context, rootjQuery );
-</pre>
+    new jQuery.fn.init( selector, context, rootjQuery );
 
 你可能会注意到，在[302行][6]附近，还有一句这样的：
-<pre class="prettyprint">
-jQuery.fn.init.prototype = jQuery.fn;
-</pre>
+
+    jQuery.fn.init.prototype = jQuery.fn;
 
 那么，jQuery函数，jQuery.fn，prototype和init之间的关系到底是怎么样的呢？
 
 我们在下一部分会讲到他们之间的联系。
 
-<pre class="prettyprint">
-var jQuery = function( selector, context ) {
-  // The jQuery object is actually just the init constructor 'enhanced'
-  return new jQuery.fn.init( selector, context, rootjQuery );
-}
-jQuery.fn = jQuery.prototype = {
-  init: function( selector, context, rootjQuery ) {
-    //...
-  }
-}
-// Give the init function the jQuery prototype for later instantiation
-jQuery.fn.init.prototype = jQuery.fn;
-</pre>
+    var jQuery = function( selector, context ) {
+      // The jQuery object is actually just the init constructor 'enhanced'
+      return new jQuery.fn.init( selector, context, rootjQuery );
+    }
+    jQuery.fn = jQuery.prototype = {
+      init: function( selector, context, rootjQuery ) {
+        //...
+      }
+    }
+    // Give the init function the jQuery prototype for later instantiation
+    jQuery.fn.init.prototype = jQuery.fn;
 
 ### [回jQuery解构目录][2]
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"

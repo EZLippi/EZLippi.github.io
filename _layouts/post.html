@@ -11,15 +11,14 @@ layout: page
 <script type="text/javascript">
     BYB.readyFunction = function(){
         $(document).ready(function(){
-            $('pre').addClass('prettyprint linenums:1')
+            $('pre').addClass('prettyprint linenums:1') //添加Google code Hight需要的class
+
             $('#disqus_container .comment').on('click',function(){
                 $(this).html('加载中...');
                 var disqus_shortname = 'beiyuu';
                 var that = this;
                 BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
             });
-
-            BYB.includeScript('/js/prettify/prettify.js',function(){prettyPrint()});
 
             $('.entry a').each(function(index,element){
                 var href = $(this).attr('href');
@@ -30,6 +29,8 @@ layout: page
                     $(this).addClass('external');
                 }
             });
+
+            BYB.includeScript('/js/prettify/prettify.js',function(){prettyPrint()});
         });
     };
 </script>

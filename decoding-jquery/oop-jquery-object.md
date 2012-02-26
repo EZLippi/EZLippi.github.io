@@ -12,28 +12,22 @@ title: jQuery解构：面向对象和jQuery - 对象
 
 所以在面向对象编程中，可以用一个对象来表示我：
 
-<pre class="prettyprint">
-var shichuan= {}
-</pre>
+    var shichuan= {}
 
 对于没一个对象来说，都有他的属性和方法（行为）。比如，我是黑头发，这就是我的属性。它不是一个方法，因为我不需要经常把它染黑。他就是黑的。所以我可以把这个属性添在对象上。
 
-<pre class="prettyprint">
-var shichuan = {
-    hair:'black'
-};
-</pre>
+    var shichuan = {
+        hair:'black'
+    };
 
 然后呢我还有个爱好，就是喜欢骑独角兽，所以骑独角兽就是我的一个方法。放在对象中，就是：
 
-<pre class="prettyprint">
-var shichuan = {
-    hair:'black',
-    ridingUnicorn:function(){
-        //how i ride unicorn
+    var shichuan = {
+        hair:'black',
+        ridingUnicorn:function(){
+            //how i ride unicorn
+        }
     }
-}
-</pre>
 
 总结一下就是：
 
@@ -46,44 +40,39 @@ var shichuan = {
 ###jQuery中的对象
 那么jQuery中的对象是怎样的呢，还记得我们在第一部分中讨论过的局部变量jQuery吗？我们来看看这个jQuery函数（在[第四行][4]），只有一行代码和一行解释：jQuery对象只是一个初始化构造器的扩展。
 
-<pre class="prettyprint">
-var jQuery = function( selector, context ) {
-  // The jQuery object is actually just the init constructor 'enhanced'
-  return new jQuery.fn.init( selector, context, rootjQuery );
-}
-</pre>
+    var jQuery = function( selector, context ) {
+      // The jQuery object is actually just the init constructor 'enhanced'
+      return new jQuery.fn.init( selector, context, rootjQuery );
+    }
 
 如果你搜索jQuery.fn，差不多在[78行][5]附近，可以看到：
-<pre class="prettyprint">
-jQuery.fn = jQuery.prototype = {
-  constructor: jQuery,
-  init: function( selector, context, rootjQuery ) {
-  ...
-  },
-  ...
-}
-</pre>
+
+    jQuery.fn = jQuery.prototype = {
+      constructor: jQuery,
+      init: function( selector, context, rootjQuery ) {
+      ...
+      },
+      ...
+    }
 
 jQuery prototype（我们后面会讨论）是一个非常大的对象。有很多很多的属性和方法。比如：`constructor`、`selector`、`jquery`、`length`等等的属性。也有类似`init`、`size`、`toArray`、`get`、`pushStack`这样的方法。
 
 ###函数是数据，也是对象
 在第一部分，我们说函数是数据，而且下面这两种写法是一样的：
-<pre class="prettyprint">
-// local jQuery
-function jQuery( selector, context ){
-  //...
-}
-// local jQuery
-var jQuery = function( selector, context ){
-  //...
-}
-</pre>
+
+    // local jQuery
+    function jQuery( selector, context ){
+      //...
+    }
+    // local jQuery
+    var jQuery = function( selector, context ){
+      //...
+    }
 
 其实还有第三种方法：
-<pre class="prettyprint">
-// local jQuery
-var jQuery = new Function('selector', 'context', '//...');
-</pre>
+
+    // local jQuery
+    var jQuery = new Function('selector', 'context', '//...');
 
 虽说这样子也可以定义函数，但是不推荐，因为如果这样写，javascript会想处理eval一样把你传入的源码执行。
 
