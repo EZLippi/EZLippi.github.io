@@ -395,6 +395,7 @@ title: Wiki
     <ul class="hide">
         <li><a href="http://blog.longwin.com.tw/2009/03/choose-vim-color-scheme-2009/">配置挑选Vim颜色(Color Scheme)</a></li>
         <li><a href="http://scmbob.org/vim_fdm.html">VIM折叠简介</a></li>
+        <li><a href="http://freewind.me/blog/20110912/102.html">FuzzyFinder快速查找文件</a></li>
     </ul>
 
     <h2>其他</h2>
