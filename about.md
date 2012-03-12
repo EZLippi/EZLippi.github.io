@@ -8,7 +8,6 @@ title: About BeiYuu
 
 博客目前仍在不断完善中，感谢您的光临，你也可以在下面的我的在线联系方式中关注我，获取最新的消息。
 
-<script type="text/javascript" src="http://www.douban.com/service/badge/beiyuu/?show=collection&amp;select=random&amp;n=12&amp;columns=6&amp;picsize=medium&amp;hidelogo=yes&amp;hideself=yes&amp;cat=movie|book" ></script>
-
+<div><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="799" height="350" id="passing" > <param name="movie" value="http://www.douban.com/doushow/beiyuu/collection_latest_movie|book_12_6_medium_logo_noself/doushow.swf" /> <param name="quality" value="high" /> <param name="scale" value="noscale"/> <param name="align" value="tl"/> <param name="wmode" value="transparent"/> <embed src="http://www.douban.com/doushow/beiyuu/collection_latest_movie|book_12_6_medium_logo_noself/doushow.swf" wmode="transparent" quality="high" width="799" height="350" name="passing" scale="noscale" align="tl" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /> </object></div>
 
 [BeiYuu]: http://beiyuu.com "BeiYuu"
