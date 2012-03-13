@@ -15,6 +15,7 @@ title: Wiki
         <li>国内公司JS框架：<a href="http://kissyui.com/">Kissy - Taobao</a> | <a href="http://arale.alipay.net/">Arale - Alipay</a> | <a href="http://tangram.baidu.com/">Tangram - Baidu</a></li>
         <li><a href="http://js1k.com/">JS1K, 1k Javascript contest</a></li>
         <li><a href="http://www.json.org/">JSON Home Page</a></li>
+        <li><a href="http://code.google.com/p/molokoloco-coding-project/wiki/JavascriptBase">NB JS Wiki(CSS、PHP、jQuery、Linux)</a></li>
         <li>JSON工具：</li>
         <ul>
             <li><a href="http://www.jsonlint.com/">JSONLint</a> - The JSON Validator</li>
