@@ -16,6 +16,10 @@ title: Wiki
         <li><a href="http://js1k.com/">JS1K, 1k Javascript contest</a></li>
         <li><a href="http://www.json.org/">JSON Home Page</a></li>
         <li><a href="http://code.google.com/p/molokoloco-coding-project/wiki/JavascriptBase">NB JS Wiki(CSS、PHP、jQuery、Linux)</a></li>
+        <li><a href="http://birdshome.cnblogs.com/archive/2006/05/28/IE_MemoryLeak.html">理解并解决IE的内存泄漏方式</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/01/ClosureReferences.html">2</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/17/Cross_Page_Leaks.html">3</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/30/Pseudo_Leaks.html">4</a></li>
+        <li><a href="http://msdn.microsoft.com/en-us/library/bb250448.aspx">Understanding and Solving Internet Explorer Leak Patterns</a></li>
+        <li><a href="http://www.cnblogs.com/rubylouvre/archive/2010/01/05/1639541.html" title="Javscript Bind函数">Javscript Bind函数</a></li>
+        <li><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/" title="Javscript设计模式">Javscript设计模式</a></li>
         <li>JSON工具：</li>
         <ul>
             <li><a href="http://www.jsonlint.com/">JSONLint</a> - The JSON Validator</li>
@@ -72,12 +76,6 @@ title: Wiki
             <li><a href="http://github.com/ry/node_chat">node char</a> - 用 nodeJS 写的聊天室</li>
             <li><a href="https://no.de/">Joyent Node</a> | <a href="http://mattn.no.de/">mattn.no.de</a></li>
         </ul>
-        <li>Javascript疑难杂症：</li>
-        <ul>
-            <li><a href="http://birdshome.cnblogs.com/archive/2006/05/28/IE_MemoryLeak.html">理解并解决IE的内存泄漏方式</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/01/ClosureReferences.html">2</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/17/Cross_Page_Leaks.html">3</a> <a href="http://birdshome.cnblogs.com/archive/2006/06/30/Pseudo_Leaks.html">4</a></li>
-            <li><a href="http://msdn.microsoft.com/en-us/library/bb250448.aspx">Understanding and Solving Internet Explorer Leak Patterns</a></li>
-            <li><a href="http://www.cnblogs.com/rubylouvre/archive/2010/01/05/1639541.html" title="Javscript Bind函数">Javscript Bind函数</a></li>
-        </ul>
     </ul>
 
     <h2>HTML &amp; CSS</h2>
@@ -98,6 +96,8 @@ title: Wiki
         </ul>
         <li>CSS疑难杂症：</li>
         <ul>
+            <li><a href="http://www.smallni.com/haslayout-block-formatting-contexts/">HasLayout和BFC(Block Formatting Contexts)的区别完整对比</a></li>
+            <li><a href="http://rebuildpattern.com/node/44">Block Formatting Contexts的特性</a></li>
             <li><a href="http://haslayout.net/">hasLayout.net</a></li>
             <li><a href="http://www.satzansatz.de/cssd/onhavinglayout.html">On having layout</a> <a href="http://www.blueidea.com/tech/site/2006/3698.asp">中文版</a></li>
             <li><a href="http://www.positioniseverything.net/explorer/expandingboxbug.html">Internet Explorer 6 and the Expanding Box Problem</a></li>
@@ -304,6 +304,7 @@ title: Wiki
         <li>Git相关：</li>
         <ul>
             <li><a href="http://git-scm.com/">Git</a> - the Fast Version Control System. </li>
+            <li><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/index.html">Stanford出品的Git Magic教程</a></li>
             <li>最详细Git介绍：<a href="http://progit.org/">Pro Git</a> (<a href="http://progit.org/book/">book</a>, <a href="http://progit.org/book/zh/">中文版</a>)</li>
             <li><a href="http://help.github.com/">Git官方帮助文档</a></li>
             <li>简明教程：<a href="http://blog.csdn.net/chinalinuxzend/archive/2008/11/14/3292896.aspx">git 之五分钟教程</a> | <a href="http://wangcong.org/blog/?p=283">进一步学习 Git</a> | <a href="http://www.ibm.com/developerworks/cn/linux/l-git/">使用 Git 管理源代码</a> | <a href="http://www.elias.cn/Develop/GitMini">分布式版本控制工具Git简明笔记</a> | <a href="http://labs.chinamobile.com/mblog/225_2822">译文:GIT日常命令20来条</a></li>
@@ -337,6 +338,7 @@ title: Wiki
         </ul>
         <li>Email相关：</li>
         <ul>
+            <li><a href="http://htmlemailboilerplate.com/">HTML Email Boilerplate - Email模板</a></li>
             <li><a href="http://blog.miniasp.com/post/2008/02/06/How-to-send-Email-with-embedded-picture-image.aspx">如何發送內嵌圖片的 E-mail ( Inline Attachment )</a></li>
             <li><a href="http://www.tzwhx.com/newOperate/html/1/11/112/18550.html">发送内嵌图片邮件的正确方法</a></li>
             <li><a href="http://www.oschina.net/bbs/thread/8428">使用 Commons-Email 在邮件内容中直接嵌入图片</a></li>
