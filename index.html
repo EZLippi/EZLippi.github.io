@@ -40,35 +40,24 @@ layout:           default
 <script type="text/javascript">
     BYB.readyFunction = function(){
         var imgWidth,imgHeight,winWidth,winHeight;
-        var ie6 = !!($.browser.msie && parseInt($.browser.version,10)<=6);
         var imgComplete = function(){
-            if(!ie6){
-                imgHeight = BYB.img.height;
-                imgWidth = BYB.img.width;
-                resizeWindow();
-                //$('#mycard').css({'opacity':0.8});
-                $(BYB.img).animate({opacity:'toggle'},500);
-            }else{
-                imgHeight = winHeight;
-                imgWidth = winWidth;
-                $(BYB.img).animate({opacity:'toggle'},500);
-            }
+            imgHeight = BYB.img.height;
+            imgWidth = BYB.img.width;
+            resizeWindow();
+            //$('#mycard').css({'opacity':0.8});
+            $(BYB.img).animate({opacity:'toggle'},500);
         }
 
         var resizeWindow = function(){
-            if(ie6){
-                $('#bgImage').css({'height':winHeight,'width':winWidth,'verflow':'hidden'});
+            var _width,_height;
+            winHeight = $(document).height();
+            winWidth = $(document).width();
+            _height = imgHeight*winWidth/imgWidth;
+            _width = imgWidth*winHeight/imgHeight;
+            if(_height < winHeight){
+                $('#bgImage').css({'height':winHeight,'width':_width,'left':-(_width-winWidth)*0.5});
             }else{
-                var _width,_height;
-                winHeight = $(document).height();
-                winWidth = $(document).width();
-                _height = imgHeight*winWidth/imgWidth;
-                _width = imgWidth*winHeight/imgHeight;
-                if(_height < winHeight){
-                    $('#bgImage').css({'height':winHeight,'width':_width,'left':-(_width-winWidth)*0.5});
-                }else{
-                    $('#bgImage').css({'width':winWidth,'height':_height,'left':0});
-                }
+                $('#bgImage').css({'width':winWidth,'height':_height,'left':0});
             }
         }
 
