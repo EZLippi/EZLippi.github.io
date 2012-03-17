@@ -38,13 +38,14 @@ layout:           default
     BYB.img.id = 'bgImage'
 
     BYB.readyFunction = function(){
+        var back-img-sytle = 'url('+BYB.img.src+') no-repeat center center fixed';
 
         $('html').css({
-            'background':'url('+BYB.img.src+') no-repeat center center fixed;',
-            '-webkit-background-size':'cover;',
-            '-moz-background-size':'cover;',
-            '-o-background-size':'cover;',
-            'background-size':'cover;'
+            'background':back-img-sytle,
+            '-webkit-background-size':'cover',
+            '-moz-background-size':'cover',
+            '-o-background-size':'cover',
+            'background-size':'cover'
         })
         /*
         var imgWidth,imgHeight,winWidth,winHeight;
