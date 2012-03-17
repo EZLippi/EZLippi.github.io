@@ -14,8 +14,6 @@ layout:           default
 </script>
 <style type="text/css">
     html{
-        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
-        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
     }
 </style>
 <div id="mycard" class="clearfix">
@@ -46,13 +44,16 @@ layout:           default
 <script type="text/javascript">
     BYB.readyFunction = function(){
         var backImgSytle = 'url('+BYB.img.src+') no-repeat center center fixed';
+        var msStyle = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src='+BYB.img.src+', sizingMethod="scale")';
 
         $('html').css({
             'background':backImgSytle,
             '-webkit-background-size':'cover',
             '-moz-background-size':'cover',
             '-o-background-size':'cover',
-            'background-size':'cover'
+            'background-size':'cover',
+            'filter':msStyle,
+            '-ms-filter':msStyle;
         })
         /*
         var imgWidth,imgHeight,winWidth,winHeight;
