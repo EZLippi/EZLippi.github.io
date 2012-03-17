@@ -31,13 +31,22 @@ layout:           default
 	'http://ww1.sinaimg.cn/large/8b8af2c8gw1do3eq6pla4j.jpg',
 	'http://ww3.sinaimg.cn/large/8b8af2c8gw1dnukcrkc1kj.jpg',
 	'http://ww3.sinaimg.cn/large/8b8af2c8gw1dnukdit7vwj.jpg',
+    'http://ww4.sinaimg.cn/large/8b8af2c8gw1dr2tvop10qj.jpg',
 	'http://ww4.sinaimg.cn/large/8b8af2c8gw1dnukdtqx9dj.jpg'];
 	BYB.img = new Image();
-        BYB.img.src = BYB.images[parseInt(Math.random()*10,10)%5];
-        BYB.img.id = 'bgImage'
+    BYB.img.src = BYB.images[parseInt(Math.random()*10,10)%6];
+    BYB.img.id = 'bgImage'
 
     BYB.readyFunction = function(){
 
+        $(html).css({
+            'background':'url('+BYB.img.src+') no-repeat center center fixed;',
+            '-webkit-background-size':'cover;',
+            '-moz-background-size':'cover;',
+            '-o-background-size':'cover;',
+            'background-size':'cover;'
+        })
+        /*
         var imgWidth,imgHeight,winWidth,winHeight;
         var imgComplete = function(){
             imgHeight = BYB.img.height;
@@ -69,6 +78,7 @@ layout:           default
         }
 
         $(window).on('resize',resizeWindow);
+        */
 
         $('#mycard div').on('mouseenter',function(){
             if(!$(this).hasClass('name')){
