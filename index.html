@@ -1,6 +1,17 @@
 ---
 layout:           default
 ---
+<script type="text/javascript">
+	BYB.images = ['http://ww1.sinaimg.cn/large/8b8af2c8gw1do3ek44ojej.jpg',
+	'http://ww1.sinaimg.cn/large/8b8af2c8gw1do3eq6pla4j.jpg',
+	'http://ww3.sinaimg.cn/large/8b8af2c8gw1dnukcrkc1kj.jpg',
+	'http://ww3.sinaimg.cn/large/8b8af2c8gw1dnukdit7vwj.jpg',
+    'http://ww4.sinaimg.cn/large/8b8af2c8gw1dr2tvop10qj.jpg',
+	'http://ww4.sinaimg.cn/large/8b8af2c8gw1dnukdtqx9dj.jpg'];
+	BYB.img = new Image();
+    BYB.img.src = BYB.images[parseInt(Math.random()*10,10)%6];
+    BYB.img.id = 'bgImage'
+</script>
 <div id="mycard" class="clearfix">
     <div class="name">
         <a href="/" class="link-icon">BeiYuu</a>
@@ -27,16 +38,6 @@ layout:           default
     </div>
 </div>
 <script type="text/javascript">
-	BYB.images = ['http://ww1.sinaimg.cn/large/8b8af2c8gw1do3ek44ojej.jpg',
-	'http://ww1.sinaimg.cn/large/8b8af2c8gw1do3eq6pla4j.jpg',
-	'http://ww3.sinaimg.cn/large/8b8af2c8gw1dnukcrkc1kj.jpg',
-	'http://ww3.sinaimg.cn/large/8b8af2c8gw1dnukdit7vwj.jpg',
-    'http://ww4.sinaimg.cn/large/8b8af2c8gw1dr2tvop10qj.jpg',
-	'http://ww4.sinaimg.cn/large/8b8af2c8gw1dnukdtqx9dj.jpg'];
-	BYB.img = new Image();
-    BYB.img.src = BYB.images[parseInt(Math.random()*10,10)%6];
-    BYB.img.id = 'bgImage'
-
     BYB.readyFunction = function(){
         var backImgSytle = 'url('+BYB.img.src+') no-repeat center center fixed';
 
