@@ -12,6 +12,12 @@ layout:           default
     BYB.img.src = BYB.images[parseInt(Math.random()*10,10)%6];
     BYB.img.id = 'bgImage'
 </script>
+<style type="text/css">
+    html{
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+    }
+</style>
 <div id="mycard" class="clearfix">
     <div class="name">
         <a href="/" class="link-icon">BeiYuu</a>
