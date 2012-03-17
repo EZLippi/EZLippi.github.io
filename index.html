@@ -40,17 +40,24 @@ layout:           default
 <script type="text/javascript">
     BYB.readyFunction = function(){
         var imgWidth,imgHeight,winWidth,winHeight;
+        var ie6 = !!($.browser.msie && parseInt($.browser.version,10)<=6);
         var imgComplete = function(){
-            imgHeight = BYB.img.height;
-            imgWidth = BYB.img.width;
-            resizeWindow();
-            //$('#mycard').css({'opacity':0.8});
-            $(BYB.img).animate({opacity:'toggle'},500);
+            if(!ie6){
+                imgHeight = BYB.img.height;
+                imgWidth = BYB.img.width;
+                resizeWindow();
+                //$('#mycard').css({'opacity':0.8});
+                $(BYB.img).animate({opacity:'toggle'},500);
+            }else{
+                imgHeight = winHeight;
+                imgWidth = winWidth;
+                $(BYB.img).animate({opacity:'toggle'},500);
+            }
         }
 
         var resizeWindow = function(){
-            if($.browser.msie && parseInt($.browser.version,10)<=6 ){
-                return false;
+            if(ie6){
+                $('#bgImage').css({'height':winHeight,'width':winWidth,'verflow':'hidden'});
             }else{
                 var _width,_height;
                 winHeight = $(document).height();
@@ -65,7 +72,7 @@ layout:           default
             }
         }
 
-        if(!($.browser.msie && parseInt($.browser.version,10)<=6 )){
+        if(!ie6){
             $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
         }
         $('body').append(BYB.img);
@@ -89,10 +96,3 @@ layout:           default
         });
     }
 </script>
-<style type="text/css">
-    body #bdImage{
-        _width:100%;
-        _height:100%;
-        overflow:hidden;
-    }
-</style>
