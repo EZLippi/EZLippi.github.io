@@ -49,6 +49,9 @@ layout:           default
         }
 
         var resizeWindow = function(){
+            if($.browser.msie && parseInt($.browser.version,10)<=6 ){
+                return false;
+            }
             var _width,_height;
             winHeight = $(document).height();
             winWidth = $(document).width();
