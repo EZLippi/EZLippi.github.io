@@ -72,9 +72,7 @@ layout:           default
             }
         }
 
-        if(!ie6){
-            $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
-        }
+        $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
         $('body').append(BYB.img);
         if(BYB.img.complete){
             imgComplete()
