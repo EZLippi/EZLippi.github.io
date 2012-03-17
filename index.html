@@ -50,22 +50,24 @@ layout:           default
 
         var resizeWindow = function(){
             if($.browser.msie && parseInt($.browser.version,10)<=6 ){
-                alert(222);
                 return false;
-            }
-            var _width,_height;
-            winHeight = $(document).height();
-            winWidth = $(document).width();
-            _height = imgHeight*winWidth/imgWidth;
-            _width = imgWidth*winHeight/imgHeight;
-            if(_height < winHeight){
-                $('#bgImage').css({'height':winHeight,'width':_width,'left':-(_width-winWidth)*0.5});
             }else{
-                $('#bgImage').css({'width':winWidth,'height':_height,'left':0});
+                var _width,_height;
+                winHeight = $(document).height();
+                winWidth = $(document).width();
+                _height = imgHeight*winWidth/imgWidth;
+                _width = imgWidth*winHeight/imgHeight;
+                if(_height < winHeight){
+                    $('#bgImage').css({'height':winHeight,'width':_width,'left':-(_width-winWidth)*0.5});
+                }else{
+                    $('#bgImage').css({'width':winWidth,'height':_height,'left':0});
+                }
             }
         }
 
-        $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
+        if(!($.browser.msie && parseInt($.browser.version,10)<=6 )){
+            $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
+        }
         $('body').append(BYB.img);
         if(BYB.img.complete){
             imgComplete()
