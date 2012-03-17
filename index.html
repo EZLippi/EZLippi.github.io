@@ -12,10 +12,6 @@ layout:           default
     BYB.img.src = BYB.images[parseInt(Math.random()*10,10)%6];
     BYB.img.id = 'bgImage'
 </script>
-<style type="text/css">
-    html{
-    }
-</style>
 <div id="mycard" class="clearfix">
     <div class="name">
         <a href="/" class="link-icon">BeiYuu</a>
@@ -43,19 +39,6 @@ layout:           default
 </div>
 <script type="text/javascript">
     BYB.readyFunction = function(){
-        var backImgSytle = 'url('+BYB.img.src+') no-repeat center center fixed';
-        var msStyle = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src='+BYB.img.src+', sizingMethod="scale")';
-
-        $('html').css({
-            'background':backImgSytle,
-            '-webkit-background-size':'cover',
-            '-moz-background-size':'cover',
-            '-o-background-size':'cover',
-            'background-size':'cover',
-            'filter':msStyle,
-            '-ms-filter':msStyle
-        })
-        /*
         var imgWidth,imgHeight,winWidth,winHeight;
         var imgComplete = function(){
             imgHeight = BYB.img.height;
@@ -76,6 +59,7 @@ layout:           default
             }else{
                 $('#bgImage').css({'width':winWidth,'height':_height,'left':0});
             }
+            $('#bdImage').css({'_overflow':'hidden','_width':winWidth,'_height':winHeight});
         }
 
         $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
@@ -87,7 +71,6 @@ layout:           default
         }
 
         $(window).on('resize',resizeWindow);
-        */
 
         $('#mycard div').on('mouseenter',function(){
             if(!$(this).hasClass('name')){
