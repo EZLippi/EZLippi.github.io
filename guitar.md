@@ -47,7 +47,7 @@ category: blog
 
 听完了有了自己的结论了吗，这里查看答案：[同品牌吉他面单和全单声音比较][4]。也可Ctrl+A查看答案。
 
-<div style="color:white">第一把是面单，第二把是全单</div>
+<div style="color:white;margin-bottom:30px;">第一把是面单，第二把是全单</div>
 
 论坛上也有一篇说的比较全面的的文章：[如何判定吉他是不是全实木单板][5]。
 
@@ -91,6 +91,9 @@ category: blog
 ##吉他品牌初识
 ##吉他琴弦与保养
 
+
+![张震岳](/images/guitarmaterial/zhangzhenyue315.jpg "张震岳 Taylor 315CE")
+![曾轶可](/images/guitarmaterial/zengyike214.jpg "曾轶可 Taylor 214CE")
 阅读更多：
 [【翻译】－Ultimate Guitar民谣区置顶帖－入门吉他选购以及品牌介绍](http://bbs.guitarchina.com/viewthread.php?tid=1112026&extra=page%3D14%26amp%3Bfilter%3Ddigest)
 
