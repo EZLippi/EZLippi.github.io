@@ -43,7 +43,7 @@ category: blog
 
 我还是要啰嗦一下，无论材质怎样怎样，材质也不是吉他音质的全部，好的材料也只有在好的工艺之下，才能发挥它的真正价值，你需要更多的练习是耳朵的辨别能力，合板吉他如何都不会好过单板的音质，面单和全单之中鱼龙混杂，全单音质也不一定就强过面单。下面这个音频是某网友自己录制的，每一小段乐曲都用两把琴演奏，一把是全单，一把是面单，看看你能听出来哪个是全单吗？
 
-<embed src="http://www.tudou.com/v/Itc0aUqqnB0/&resourceId=0_05_02_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" align="middle" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed>
+<div style="margin:20px auto"><embed src="http://www.tudou.com/v/Itc0aUqqnB0/&resourceId=0_05_02_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" align="middle" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></div>
 
 听完了有了自己的结论了吗，这里查看答案：[同品牌吉他面单和全单声音比较][4]。也可Ctrl+A查看答案。
 
@@ -74,7 +74,8 @@ category: blog
 这里还有一个帖子[【一支1970年巴西玫瑰木Martin的重生】][6]，讲述给一把巴西玫瑰木背板的木吉他换了全部配件的过程，挺有趣的。
 
 关于吉他面板，有一段不错的视频，可以看看，你会了解更多的制作工艺。
-<embed src="http://player.youku.com/player.php/sid/XMzM2NDUzNzMy/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed>
+
+<div style="margin:20px auto"><embed src="http://player.youku.com/player.php/sid/XMzM2NDUzNzMy/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></div>
 
 视频中有一些点简单记录如下：
 
@@ -86,7 +87,8 @@ category: blog
 * “熊爪纹”的面板存在下的吉他，由于木材生长时，部分位置反复弯曲，产生了类似熊爪的斑点，此类吉他的特点：木材密度很高，对演奏力度的反馈能力非常好，音色力量感绝佳。好的手工吉他制作家能够根据面板的打磨，厚度的调整，制作出音色绝佳的吉他！这也是手工吉他的精髓所在！根据不同的材质打磨出更完美的音色需求！
 
 下面还有一段花絮：
-<embed src="http://player.youku.com/player.php/sid/XMzM3MzI4NDA4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed>
+
+<div style="margin:20px auto"><embed src="http://player.youku.com/player.php/sid/XMzM3MzI4NDA4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></div>
 
 ##吉他品牌初识
 ##吉他琴弦与保养
