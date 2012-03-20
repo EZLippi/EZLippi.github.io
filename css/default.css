@@ -109,6 +109,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .entry ul{margin-bottom:20px;margin-left:25px;}
 .entry ul li{margin-bottom:10px;list-style:disc}
 .entry blockquote{margin-left:30px;font-size:14px;font-style:italic}
+.entry img{max-width:650px;}
 
 /***************category style**************/
 .category h2{font-size:19px;}
