@@ -4,6 +4,10 @@ layout: page
 <link rel="stylesheet" href="/js/prettify/prettify.css" />
 <div class="entry">
     {{ content }}
+    <!--<p>-->
+    <!--如果您觉得我的博客对您有所帮助，您可以选择捐助或分享：-->
+        <!--<a href='http://me.alipay.com/beiyuu' target="_blank"><img src='https://img.alipay.com/sys/personalprod/style/mc/btn-index.png' style="display:inline" /></a>-->
+    <!--</p>-->
 </div><!-- .entry -->
 <div id="disqus_container"> 
     <a href="#" class="comment" onclick="return false;">点击查看评论</a>
@@ -29,6 +33,35 @@ layout: page
                     $(this).attr('target','_blank');
                     $(this).addClass('external');
                 }
+            });
+
+            var h2 = [],h3 = [],tmpl = '<ul>';
+            $.each($('h2,h3'),function(index,item){
+                if(item.tagName.toLowerCase() == 'h2'){
+                    var h2item = {};
+                    h2item.name = $(item).text();
+                    h2item.top = $(item).offset().top();
+                    h2item.index = index;
+                    h2.push(h2item);
+                }else{
+                    var h3item = {};
+                    h3item.name = $(item).text();
+                    h3item.top = $(item).offset().top();
+                    h3[index].push(h3item);
+                }
+
+                for(var i=0;i<h2.length;i++){
+                    tmpl += '<li><a href="#" data-top="'+h2[i].top+'">'+h2[i].name+'</a></li>';
+                    if(h3[h2[i].index]){
+                        for(var j=0;j<h3[h2[i].index].length;j++){
+                            tmpl += '<li class="h3"><a href="#" data-top="'+h3[h2[i].index][j].top+'">'+h3[h2[i].index][j].name+'</a></li>';
+                        }
+                    }
+                }
+                tmpl += '</ul>';
+
+                $('body').append('<div id="menuIndex"></div>');
+                $('#menuIndex').append($(tmpl));
             });
 
             BYB.includeScript('/js/prettify/prettify.js',function(){prettyPrint()});

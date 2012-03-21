@@ -129,4 +129,9 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 #footer h3 {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #footer .my-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}
 #footer .copyright {margin-top:15px;font-size:10px;font-color:#ccc;text-align:center}
-
+/**************目录导航**************/
+#menuIndex {position:fixed;top:60px;right:20px;width:250px;}
+#menuIndex h2{font-size:14px;font-weight:normal;}
+#menuIndex a:hover {text-decoration:none;}
+#menuIndex ul li{font-size:12px;margin-bottom:5px;word-wrap:break-word;}
+#menuIndex li.h3{margin-left:15px;}
