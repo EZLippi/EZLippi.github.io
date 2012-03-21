@@ -72,7 +72,7 @@ layout: page
             $('#menuIndex').append($(tmpl)).delegate('a','click',function(e){
                 e.preventDefault();
                 var scrollNum = $('#'+$(this).attr('data-id')).offset().top;
-                window.scrollTo(scrollNum);
+                window.scrollTo(0,scrollNum);
             })
         }
 
