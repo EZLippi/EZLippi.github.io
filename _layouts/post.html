@@ -86,9 +86,9 @@ layout: page
                 });
 
                 $(window).scroll(function(){
-                    var nowTop = window.scrollY,index;
+                    var nowTop = $(window).scrollTop(),index;
                     for(var i=0;i<scrollTop.length;i++){
-                        if(nowTop < scrollTop[i]){
+                        if(nowTop+100 < scrollTop[i]){
                             index = i
                             break;
                         }
