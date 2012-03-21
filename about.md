@@ -10,8 +10,8 @@ title: About BeiYuu
 
 <div><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="650" height="505" id="passing" > <param name="movie" value="http://www.douban.com/doushow/beiyuu/collection_latest_movie|book_15_5_medium_logo_noself/doushow.swf" /> <param name="quality" value="high" /> <param name="scale" value="noscale"/> <param name="align" value="tl"/> <param name="wmode" value="transparent"/> <embed src="http://www.douban.com/doushow/beiyuu/collection_latest_movie|book_15_5_medium_logo_noself/doushow.swf" wmode="transparent" quality="high" width="650" height="505" name="passing" scale="noscale" align="tl" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /> </object></div>
 
-<h3>More About Me</h3>
-<div class="my-link">
+<h3 class="about">More About Me</h3>
+<div class="about-link">
     <a href="" title="邮箱" target="_blank" onclick="alert('BeiYuu 在 Gmail，你懂得！');return false;">eMail&gt;&gt;</a>
     <a href="http://www.douban.com/people/beiyuu" title="我的书影音" target="_blank">豆瓣&gt;&gt;</a>
     <a href="http://weibo.com/beiyuu" title="我的闲言碎语" target="_blank">新浪微博&gt;&gt;</a>
