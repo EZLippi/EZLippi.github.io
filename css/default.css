@@ -130,7 +130,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .about-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}
 /**************目录导航**************/
-#menuIndex {position:fixed;top:60px;right:20px;width:250px;}
+#menuIndex {position:fixed;top:60px;right:20px;width:250px;overflow:auto}
 #menuIndex a:hover {text-decoration:none;}
 #menuIndex ul li{font-size:12px;margin-bottom:5px;word-wrap:break-word;}
 #menuIndex ul li.on{background-color:#eee}

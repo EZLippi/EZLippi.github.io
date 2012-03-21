@@ -97,6 +97,9 @@ layout: page
                     $('#menuIndex li').eq(index).addClass('on')
                 });
             });
+
+            //用js计算屏幕的高度
+            $('#menuIndex').css('max-height',$(window).height()-80);
         }
 
         BYB.includeScript('/js/prettify/prettify.js',function(){prettyPrint()});
