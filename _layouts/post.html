@@ -42,17 +42,16 @@ layout: page
                     h2item.name = $(item).text();
                     h2item.top = $(item).offset().top;
                     h2.push(h2item);
+                    h2index++;
                 }else{
                     var h3item = {};
                     h3item.name = $(item).text();
                     h3item.top = $(item).offset().top;
-                    if(!h3[h2index]){
-                        h3[h2index] = [];
+                    if(!h3[h2index-1]){
+                        h3[h2index-1] = [];
                     }
-                    h3[h2index].push(h3item);
+                    h3[h2index-1].push(h3item);
                 }
-
-                h2index++;
             });
 
             //添加h1
