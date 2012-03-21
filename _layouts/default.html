@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/default.css" type="text/css" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="http://beiyuu.com/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript">
         var BYB = {};
         BYB.readyFunction = function(){};
@@ -44,11 +45,11 @@
             return false;
         }
 
-        if(!window.jQuery){
-            BYB.includeScript('http://beiyuu.com/js/jquery-1.7.1.min.js',BYB.readyFunction);
-        }else{
-            BYB.readyFunction();
-        }
+        //if(!window.jQuery){
+            //BYB.includeScript('http://beiyuu.com/js/jquery-1.7.1.min.js',BYB.readyFunction);
+        //}else{
+            //BYB.readyFunction();
+        //}
 
         //统计代码
         //var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
