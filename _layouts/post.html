@@ -40,7 +40,7 @@ layout: page
                 if(item.tagName.toLowerCase() == 'h2'){
                     var h2item = {};
                     h2item.name = $(item).text();
-                    h2item.top = $(item).offset().top();
+                    h2item.top = $(item).offset().top;
                     h2item.index = index;
                     h2.push(h2item);
                 }else{
