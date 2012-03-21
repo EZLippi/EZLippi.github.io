@@ -255,7 +255,7 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 现在专做评论模块的产品有很多，比如[Disqus][]，还有国产的[多说][]，Disqus对现在各种系统的支持都比较全面，到写博客为止，多说现在仅是WordPress的一个插件，所以我这里暂时也使用不了，多说与国内的社交网络紧密结合，还是有很多亮点的，值得期待一下。我先选择了Disqus。
 
 注册账号什么的就不提了，Disqus支持很多的博客平台，参见下图：
-![Disqus sites](/images/githubpages/disqus-site.png)
+![Disqus sites](/images/githubpages/disqus-site.jpg)
 
 我们选择最下面的`Universal Code`就好，然后会看到一个介绍页面，把下面这段代码复制到你的模板里面，可以只复制到显示文章的模板中：
 
