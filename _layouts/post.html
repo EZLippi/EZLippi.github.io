@@ -4,10 +4,20 @@ layout: page
 <link rel="stylesheet" href="/js/prettify/prettify.css" />
 <div class="entry">
     {{ content }}
-    <!--<p>-->
-    <!--如果您觉得我的博客对您有所帮助，您可以选择捐助或分享：-->
-        <!--<a href='http://me.alipay.com/beiyuu' target="_blank"><img src='https://img.alipay.com/sys/personalprod/style/mc/btn-index.png' style="display:inline" /></a>-->
-    <!--</p>-->
+    如果您觉得我的博客对您有所帮助，您可以选择捐助或分享：<br/>
+    <a href='http://me.alipay.com/beiyuu' target="_blank" style="float:left;"><img src='https://img.alipay.com/sys/personalprod/style/mc/btn-index.png' style="display:inline" /></a>
+    <div id="jiathis_style_32x32" style="float:left;margin-left:20px;margin-top:15px;">
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_douban"></a>
+        <a class="jiathis_button_tqq"></a>
+        <a class="jiathis_button_renren"></a>
+        <a class="jiathis_button_douban9dian"></a>
+        <!--<a class="jiathis_button_readitlater"></a>-->
+        <!--<a class="jiathis_button_instapaper"></a>-->
+        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <!--<a class="jiathis_counter_style"></a>-->
+    </div>
+    <div style="clear:both"></div>
 </div><!-- .entry -->
 <div id="disqus_container"> 
     <a href="#" class="comment" onclick="return false;">点击查看评论</a>
@@ -103,5 +113,7 @@ layout: page
         }
 
         BYB.includeScript('/js/prettify/prettify.js',function(){prettyPrint()});
+
+        BYB.includeScript('http://v2.jiathis.com/code/jia.js',function(){})
     });
 </script>
