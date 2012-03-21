@@ -36,10 +36,12 @@ Github Pages有以下几个优点：
 
 我们选择[DNSPod][]的服务，他们的产品做得不错，易用、免费，收费版有更高端的功能，暂不需要。注册登录之后，按照DNSPod的说法，只需三步（我们插入一步）：
 
-* 首先添加域名记录，可参考DNSPod的帮助文档：[https://www.dnspod.cn/Support](https://www.dnspod.cn/Support)
-* 在DNSPod自己的域名下添加一条[A记录][3]，地址就是Github Pages的服务IP地址：207.97.227.245
-* 在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。如果你不明白在哪里修改，可以参考这里：[https://www.dnspod.cn/support/index/fid/119](https://www.dnspod.cn/support/index/fid/119 "Godaddy注册的域名如何使用DNSPod")
-* 等待域名解析生效
+<ul>
+	<li>首先添加域名记录，可参考DNSPod的帮助文档：<a href="https://www.dnspod.cn/Support">https://www.dnspod.cn/Support</a></li>
+	<li>在DNSPod自己的域名下添加一条[A记录][3]，地址就是Github Pages的服务IP地址：207.97.227.245</li>
+	<li>在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。如果你不明白在哪里修改，可以参考这里：<a href="https://www.dnspod.cn/support/index/fid/119" title="Godaddy注册的域名如何使用DNSPod"></li>
+	<li>等待域名解析生效</li>
+</ul>
 
 域名的配置部分完成，跪谢方校长。
 
