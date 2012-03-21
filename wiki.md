@@ -408,22 +408,20 @@ title: Wiki
     </ul>
 </div>
 <script type="text/javascript">
- BYB.readyFunction = function(){
-        $(document).ready(function(){
-            $('#content a').each(function(index,element){
-                var href = $(this).attr('href');
-                if(href.indexOf('#') == 0){
-                }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
-                    $(this).attr('target','_blank');
-                }else{
-                    $(this).attr('target','_blank');
-                    $(this).addClass('external');
-                }
-            });
-            $('body').delegate('h2','click',function(e){
-                e.preventDefault();
-                $(this).next('ul').toggle();
-            });
+    $(document).ready(function(){
+        $('#content a').each(function(index,element){
+            var href = $(this).attr('href');
+            if(href.indexOf('#') == 0){
+            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
+                $(this).attr('target','_blank');
+            }else{
+                $(this).attr('target','_blank');
+                $(this).addClass('external');
+            }
         });
-    };
+        $('body').delegate('h2','click',function(e){
+            e.preventDefault();
+            $(this).next('ul').toggle();
+        });
+    });
 </script>
