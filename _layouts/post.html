@@ -71,9 +71,32 @@ layout: page
             $('body').append('<div id="menuIndex"></div>');
             $('#menuIndex').append($(tmpl)).delegate('a','click',function(e){
                 e.preventDefault();
-                var scrollNum = $('#'+$(this).attr('data-id')).offset().top;
+                var scrollNum = $(this).attr('data-top') || $('#'+$(this).attr('data-id')).offset().top;
                 window.scrollTo(0,scrollNum);
             })
+
+            $(window).load(function(){
+                var scrollTop = [];
+                $.each($('#menuIndex li a'),function(index,item){
+                    if(!$(item).attr('data-top')){
+                        var top = $('#'+$(item).attr('data-id')).offset().top;
+                        scrollTop.push(top);
+                        $(item).attr('data-top',top);
+                    }
+                });
+
+                $(window).scroll(function(){
+                    var nowTop = window.scrollY,index;
+                    for(var i=0;i<scrollTop.length;i++){
+                        if(nowTop < scrollTop[i]){
+                            index = i
+                            break;
+                        }
+                    }
+                    $('#menuIndex li').removeClass('on')
+                    $('#menuIndex li').eq(index).addClass('on')
+                });
+            });
         }
 
         BYB.includeScript('/js/prettify/prettify.js',function(){prettyPrint()});
