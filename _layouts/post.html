@@ -99,13 +99,14 @@ layout: page
                 });
 
                 $(window).scroll(function(){
-                    var nowTop = $(window).scrollTop(),index;
-                    for(var i=0;i<scrollTop.length;i++){
-                        if(nowTop+100 < scrollTop[i]){
+                    var nowTop = $(window).scrollTop(),index,length = scroll.length;
+                    for(var i=0;i<length;i++){
+                        if(nowTop+60 < scrollTop[i]){
                             index = i
                             break;
                         }
                     }
+                    if(nowTop+60 > scrollTop[length]){index = length}
                     $('#menuIndex li').removeClass('on')
                     $('#menuIndex li').eq(index).addClass('on')
                 });
