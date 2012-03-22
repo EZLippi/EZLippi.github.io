@@ -106,7 +106,7 @@ layout: page
                             break;
                         }
                     }
-                    if(nowTop+60 > scrollTop[length]){index = length}
+                    if(nowTop+60 > scrollTop[length-1]){index = length-1}
                     $('#menuIndex li').removeClass('on')
                     $('#menuIndex li').eq(index).addClass('on')
                 });
