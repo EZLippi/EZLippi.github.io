@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：jQuery.globalEval() - 在全局上下文中执行脚本
 ---
 # [{{ page.title }}][1]
-2012-02-07 By [BeiYuu][]
+2012-02-07 By {{ site.author_info }}
 
 ###jQuery.globalEval()
 jQuery有一个`jQuery.globalEval()`方法，这个方法跟javascript原生的`eval()`方法的不同之处在于，`globalEval()`是在全局的上下文环境中执行代码，可以在全局的域上动态加载代码。

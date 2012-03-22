@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：jQuery.parseXML() - 跨浏览器XML解析
 ---
 # [{{ page.title }}][1]
-2012-02-07 By [BeiYuu][]
+2012-02-07 By {{ site.author_info }}
 
 ###jQuery.parseXML()
 jQuery.parseXML使用浏览器原生的处理函数来创建有效的XML文档。

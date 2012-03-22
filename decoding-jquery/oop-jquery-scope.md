@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：面向对象和jQuery - 作用域
 ---
 # [{{ page.title }}][1]
-2012-02-02 By [BeiYuu][]
+2012-02-02 By {{ site.author_info }}
 
 在这一部分，我们来看一下函数作用域，jQuery的链式调用和jQuery.fn。
 

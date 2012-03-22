@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：$.support() - DOM2级的事件冒泡和捕获
 ---
 # [{{ page.title }}][1]
-2012-02-07 By [BeiYuu][]
+2012-02-07 By {{ site.author_info }}
 
 ###$.support()
 jQuery.support是一系列浏览器的差别的属性的集合。所有支持的方法都在[support.js][3]。

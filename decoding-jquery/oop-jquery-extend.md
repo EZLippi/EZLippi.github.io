@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：jQuery.extend() - 从对象继承的对象
 ---
 # [{{ page.title }}][1]
-2012-02-07 By [BeiYuu][]
+2012-02-07 By {{ site.author_info }}
 
 ###jQuery.extend()
 

@@ -6,7 +6,7 @@ category:	blog
 ---
 
 # [{{ page.title }}][1]
-2011-12-29 By [BeiYuu][]
+2011-12-29 By {{ site.author_info }}
 
 
 

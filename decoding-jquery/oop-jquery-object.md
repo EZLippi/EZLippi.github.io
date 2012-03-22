@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：面向对象和jQuery - 对象
 ---
 # [{{ page.title }}][1]
-2012-01-29 By [BeiYuu][]
+2012-01-29 By {{ site.author_info }}
 
 在[第一部分][3]中，我们介绍了**变量**和**函数**的概念，这一部分，我们来看看对象的概念。
 

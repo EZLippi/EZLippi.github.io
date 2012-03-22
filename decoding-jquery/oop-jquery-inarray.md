@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：jQuery.inArray()
 ---
 # [{{ page.title }}][1]
-2012-02-07 By [BeiYuu][]
+2012-02-07 By {{ site.author_info }}
 
 ###jQuery.inArray()
 在大多数的编程语言中，都会有`inArray`方法，但是javascript中没有。jQuery实现了该方法，他会在一个数组中查找特定的值，然后返回index（如果没找到返回-1）。

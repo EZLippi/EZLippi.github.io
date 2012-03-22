@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：面向对象和jQuery - 函数
 ---
 # [{{ page.title }}][1]
-2012-01-16 By [BeiYuu][]
+2012-01-16 By {{ site.author_info }}
 
 作为[jQeury解构][2]中的一个小系列，面向对象和[jQuery][]主要集中看一下jQuery内部的实现以及一些面向对象的概念。
 

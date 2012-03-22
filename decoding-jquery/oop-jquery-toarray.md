@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：.toArray()
 ---
 # [{{ page.title }}][1]
-2012-02-07 By [BeiYuu][]
+2012-02-07 By {{ site.author_info }}
 
 ###.toArray()
 就像方法的名字一样，`.toArray()`用来把jQuery集合中的DOM元素按照数组的形式返回。

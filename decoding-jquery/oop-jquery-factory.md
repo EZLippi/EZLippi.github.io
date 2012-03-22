@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：面向对象和jQuery - 工厂模式
 ---
 # [{{ page.title }}][1]
-2012-02-02 By [BeiYuu][]
+2012-02-02 By {{ site.author_info }}
 
 在这一部分，我们来看工厂设计模式（Factory Design Pattern），也是jQuery core中使用的一种设计模式。
 

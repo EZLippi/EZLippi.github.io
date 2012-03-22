@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：面向对象和jQuery - 外观模式
 ---
 # [{{ page.title }}][1]
-2012-02-02 By [BeiYuu][]
+2012-02-02 By {{ site.author_info }}
 
 在这一部分，我们来讨论一下外观设计模式，用到的地方很多，比如jQuery Event。外观模式用来把一堆功能残缺的接口封装成一个完美的接口。
 

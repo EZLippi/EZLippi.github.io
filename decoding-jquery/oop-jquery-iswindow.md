@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：jQuery.isWidow() - 检测window对象
 ---
 # [{{ page.title }}][1]
-2012-02-07 By [BeiYuu][]
+2012-02-07 By {{ site.author_info }}
 
 ###jQuery.isWindow()
 jQuery有一个`isWindow()`方法，在jQuery中的很多地方都有用到，用来检测操作对象是否为浏览器窗口（比如当前的窗口，或者iframe）。

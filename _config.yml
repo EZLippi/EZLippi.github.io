@@ -5,7 +5,7 @@ pygments:         true
 paginate:         6
 permalink:        /:title
 
-title:            I'm BeiYuu
+title:            BeiYuu.com
 url:              http://beiyuu.com
 feed:             /atom.xml
 author:

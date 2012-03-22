@@ -3,7 +3,7 @@ layout: post
 title: jQuery解构：面向对象和jQuery - 原型
 ---
 # [{{ page.title }}][1]
-2012-01-30 By [BeiYuu][]
+2012-01-30 By {{ site.author_info }}
 
 在这一部分中，我们来讨论原型（prototype）。因为Javascript是一个基于原型的语言，所以原型的概念很重要。那么基于class的语言呢？我们会跟基于class的语言做比较吗？不，至少现在不。我不觉得为了理解原型去和class做对比。你给一个人教日语的时候，不需要先介绍中文吧。现在我们来看看到底什么是原型，以及在jQuery中原型是怎么被使用的吧。
 
