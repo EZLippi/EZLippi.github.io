@@ -97,11 +97,25 @@ KOA是一种看起来非常华丽的木材，音色也非常亮丽，但是上�
 <table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://player.youku.com/player.php/sid/XMzM3MzI4NDA4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></td></tr></table>
 
 ##吉他品牌初识
+对于吉他来说，大品牌的优势显而易见，品质的保证，价值的保证，都是我们选择大品牌的初衷。我的一点建议是，如果你确实想认真的学习吉他，一把好琴不可或缺，即使一开始资金不充裕，可以考虑大品牌的二手琴，价格合理，即使要换琴的时候再出手，也不会损失太多，我认为这是性价比最高的选择了。
+
+对于民谣吉他来说，大品牌无非就是[Taylor][7]，[Margin][8]，[Gibson][9]之类，价格区间的跨度也比较大，根据自己的需要和承受能力来选择一款，可以经常逛逛[吉他中国的二手交易区][10]，看看不同的二手琴的成色与价格，做到心里有数。
+
+各大品牌的官网一般都有比较详细的产品目录，也会有相应的价格，这个是[Taylor的2011年的价格表][11]，一般查价格也可以去[亚马逊][12]或者[ebay][13]。
+
+我购买之前通过对比了下Taylor和Martin的手感和音色，最终选择了Taylor，国内的[名屋音乐][14]提供很多品牌琴的试听，这种在线试听虽不是最好的方式，但是也能听出个大概，有一点点印象。最终还是要实际操练才行。
+
+Taylor在艺人中也比较受欢迎，我随手查了下，普通型号的使用也很常见：
+![张震岳](/images/guitarmaterial/zhangzhenyue315.jpg "张震岳 Taylor 315CE")
+
+张震岳用的是Taylor的315CE，而曾轶可可可用的是Taylor 214CE：
+![曾轶可](/images/guitarmaterial/zengyike214.jpg "曾轶可 Taylor 214CE")
+
+Taylor的型号中，一般的命名是三位数字，当然也有其他系列的，三位数字中从小到大，品质一次增高，1、2系是入门系列，面板是单板，背板是合板，使用普通的Taylor拾音系统，价格比较便宜，人民币不会过万，从3系开始都是全单琴，档次不同，使用木材也不同，吉他中国上这篇帖子对[Taylor全系列][14]有个详细的介绍（中文的），不过图片显示有问题，也有人转载过：[Taylor不完整手册][15]。
+
 ##吉他琴弦与保养
 
 
-![张震岳](/images/guitarmaterial/zhangzhenyue315.jpg "张震岳 Taylor 315CE")
-![曾轶可](/images/guitarmaterial/zengyike214.jpg "曾轶可 Taylor 214CE")
 阅读更多：
 [【翻译】－Ultimate Guitar民谣区置顶帖－入门吉他选购以及品牌介绍](http://bbs.guitarchina.com/viewthread.php?tid=1112026&extra=page%3D14%26amp%3Bfilter%3Ddigest)
 
@@ -115,3 +129,12 @@ KOA是一种看起来非常华丽的木材，音色也非常亮丽，但是上�
 [4]: http://bbs.guitarchina.com/thread-1214288-1-1.html
 [5]: http://bbs.guitarchina.com/viewthread.php?tid=499813
 [6]: http://bbs.guitarchina.com/viewthread.php?tid=922086
+[7]: http://www.taylorguitars.com/
+[8]: http://www.martinguitar.com/
+[9]: http://www.gibson.com
+[10]: http://bbs.guitarchina.com/forum-101-1.html
+[11]: http://www.taylorguitars.com/guitars/PriceList_2011.pdf
+[12]: http://www.amazon.com
+[13]: http://www.ebay.com
+[14]: http://bbs.guitarchina.com/thread-749709-1-4.html
+[15]: http://blog.sina.com.cn/s/blog_6b728f0b0100l453.html

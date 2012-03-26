@@ -83,6 +83,7 @@ title: Wiki
         <li><a href="http://wiki.hotoo.me/CSS-Hacks.html">CSS Hacks &amp; Expression</a></li>
         <li><a href="http://www.digitalmediaminute.com/reference/entity/">XHTML Character Entity Reference HTML实体字符引用</a></li>
         <li><a href="http://blog.bingo929.com/css-frameworks-15.html">精选15个国外CSS框架</a></li>
+        <li><a href="http://nicolasgallagher.com/pure-css-speech-bubbles/demo/">Pure Css Speech Bubbles</a></li>
         <li>CSS栅格系统(Grid System)：</li>
         <ul>
             <li><a href="http://1kbgrid.com/">The 1Kb CSS Grid</a> - 拖放各个阈值并直接下载自动生成的CSS。</li>
