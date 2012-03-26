@@ -118,9 +118,13 @@ Taylor的型号中，一般的命名是三位数字，当然也有其他系列�
 谈到吉他品牌，就不得不提一下李宗盛的[Lee Guitar][17]，李宗盛在音乐上的成就自不必说，成功者的成功的品质用在各行各业，都不会太差，李宗盛做的吉他，用料讲究，做工精致，港台的一线明星很多都在使用：纵贯线、周华健、朴树、陈绮贞、五月天等等。真是有钱也不一定买得到手工定制款。
 ![Lee Guitar](/images/guitarmaterial/leeguitar.jpg "Lee Guitar")
 
-关于Lee Guitar还有两篇文章可以参考：[李宗盛和他的琴][18]，[阿信：LeeGuitar有关吉他迷人的一切][19]。
+关于Lee Guitar还有两篇文章可以参考：
+
+* [李宗盛和他的琴][18]
+* [阿信：LeeGuitar有关吉他迷人的一切][19]
 
 下面这段视频是纵贯线在春晚上的表演，使用的就是Lee Guitar：
+
 <table align="center" style="margin-bottom:30px;"><tr><td><object width="541" height="450"><param name="allowFullScreen" value="true"><param name="flashVars" value="id=215145&autoplay=0" /><param name="movie" value="http://i7.imgs.letv.com/player/swfPlayer.swf" /><embed src="http://i7.imgs.letv.com/player/swfPlayer.swf" flashVars="id=215145&autoplay=0" width="541" height="450" allowFullScreen="true" type="application/x-shockwave-flash" /></object></td></tr></table>
 
 
