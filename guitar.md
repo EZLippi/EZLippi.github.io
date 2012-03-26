@@ -125,7 +125,7 @@ Taylor的型号中，一般的命名是三位数字，当然也有其他系列�
 
 下面这段视频是纵贯线在春晚上的表演，使用的就是Lee Guitar：
 
-<table align="center" style="margin-bottom:30px;"><tr><td><object width="541" height="450"><param name="allowFullScreen" value="true"><param name="flashVars" value="id=215145&autoplay=0" /><param name="movie" value="http://i7.imgs.letv.com/player/swfPlayer.swf" /><embed src="http://i7.imgs.letv.com/player/swfPlayer.swf" flashVars="id=215145&autoplay=0" width="541" height="450" allowFullScreen="true" type="application/x-shockwave-flash" /></object></td></tr></table>
+<table align="center" style="margin-bottom:30px;"><tr><td><param name="allowFullScreen" value="true"><param name="flashVars" value="id=215145&autoplay=0" /><param name="movie" value="http://i7.imgs.letv.com/player/swfPlayer.swf" /><embed src="http://i7.imgs.letv.com/player/swfPlayer.swf" flashVars="id=215145&autoplay=0" width="541" height="450" allowFullScreen="true" type="application/x-shockwave-flash" /></td></tr></table>
 
 
 ##吉他琴弦与保养
