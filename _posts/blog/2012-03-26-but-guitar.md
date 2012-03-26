@@ -6,7 +6,7 @@ category: blog
 ---
 
 # [{{ page.title }}][1]
-2012-03-22 By {{ site.author_info }}
+2012-03-26 By {{ site.author_info }}
 
 ![Joe Satriani](/images/guitarmaterial/joesatriani.jpg)
 
