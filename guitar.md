@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 吉他
-description: 存在感对于每个人的生活有多么的重要，可能平时并不是太关注，其实他就是生活的全部
+title: 如何选择与购买吉他
+description: 选择一把属于自己的吉他，并不是一件简单的事情，方方面面都需要注意到才会买到满意的吉他。
 category: blog
 ---
 
@@ -125,7 +125,7 @@ Taylor的型号中，一般的命名是三位数字，当然也有其他系列�
 
 下面这段视频是纵贯线在春晚上的表演，使用的就是Lee Guitar：
 
-<table align="center" style="margin-bottom:30px;"><tr><td><param name="allowFullScreen" value="true"><param name="flashVars" value="id=215145&autoplay=0" /><param name="movie" value="http://i7.imgs.letv.com/player/swfPlayer.swf" /><embed src="http://i7.imgs.letv.com/player/swfPlayer.swf" flashVars="id=215145&autoplay=0" width="541" height="450" allowFullScreen="true" type="application/x-shockwave-flash" /></td></tr></table>
+<table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://www.tudou.com/v/R6K98aQSuq0/&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></td></tr></table>
 
 
 ##吉他琴弦与保养
@@ -148,10 +148,10 @@ Elixir琴弦材质分两种：
 
 <table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://player.youku.com/player.php/sid/XMjQxNDg2MDI4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></td></tr></table>
 
-##其他：
+##结语
 还有一些国外论坛上的类似的帖子，国人翻译过来的，也可以读一读：
 
-* [【翻译】－Ultimate Guitar民谣区置顶帖－入门吉他选购以及品牌介绍](http://bbs.guitarchina.com/viewthread.php?tid=1112026&extra=page%3D14%26amp%3Bfilter%3Ddigest)
+* [入门吉他选购以及品牌介绍](http://bbs.guitarchina.com/viewthread.php?tid=1112026&extra=page%3D14%26amp%3Bfilter%3Ddigest)
 * [吉他选择面面观(作者：John Schroeter)](http://blog.sina.com.cn/s/blog_606a5f730100ntiq.html)
 
 看完这篇博客，不知道对你认识和购买吉他有没有帮助，你也可以谈谈你的想法，多多交流罢。
