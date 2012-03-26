@@ -149,7 +149,7 @@ Elixir琴弦材质分两种：
 <table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://player.youku.com/player.php/sid/XMjQxNDg2MDI4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></td></tr></table>
 
 ##结语
-还有一些国外论坛上的类似的帖子，国人翻译过来的，也可以读一读：
+还有一些国外论坛上的类似的帖子，国人翻译过来的，可以读一读：
 
 * [入门吉他选购以及品牌介绍](http://bbs.guitarchina.com/viewthread.php?tid=1112026&extra=page%3D14%26amp%3Bfilter%3Ddigest)
 * [吉他选择面面观(作者：John Schroeter)](http://blog.sina.com.cn/s/blog_606a5f730100ntiq.html)
