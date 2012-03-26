@@ -129,12 +129,32 @@ Taylor的型号中，一般的命名是三位数字，当然也有其他系列�
 
 
 ##吉他琴弦与保养
+琴弦对于吉他音色的影响也非常大，中档的琴配几块钱的弦就太说不过去了，经过对比和试用，我最终选择了Elixir的琴弦，他的琴弦比一般的弦会稍贵一些，但是更加的经久耐用，音色也很不错，Taylor新琴出厂就是Elixir的弦。看看我的换弦手艺，还不错吧：
+![My Taylor](/images/guitarmaterial/mystring.jpg "My Taylor")
 
+###Elixir
+Elixir琴弦材质分两种：
 
-阅读更多：
-[【翻译】－Ultimate Guitar民谣区置顶帖－入门吉他选购以及品牌介绍](http://bbs.guitarchina.com/viewthread.php?tid=1112026&extra=page%3D14%26amp%3Bfilter%3Ddigest)
+* P系列是POLYWEB，代表标准厚度涂层，大多是80/20 bronze（青铜材质）声音偏亮
+* N系列就是NANOWEB，代表超薄涂层，有phosphor bronze（磷铜材质）可以选择，声音温暖
+* 盒装的包装上如果标有with ANTI-RUST这种字样代表一二弦都加了防锈，没有则是只有三四五六有防锈
+* 不建议买散装，原因复杂，也不好辨别，找可信的店铺买盒装吧
+* 011的弦属轻质琴弦，中档一点的民谣吉他最好使用012型号的，012才是民谣吉他的标准张力。玩指弹甚至有用013、014这种高张力的型号
 
-[吉他选择面面观(作者：John Schroeter)](http://blog.sina.com.cn/s/blog_606a5f730100ntiq.html)
+###保养和换弦
+关于吉他的保养，找到了个视频，很具体详细，是Taylor的专家录制的：
+
+<table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://player.youku.com/player.php/sid/XMjQxNDM0OTYw/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></td></tr></table>
+
+<table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://player.youku.com/player.php/sid/XMjQxNDg2MDI4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></td></tr></table>
+
+##其他：
+还有一些国外论坛上的类似的帖子，国人翻译过来的，也可以读一读：
+
+* [【翻译】－Ultimate Guitar民谣区置顶帖－入门吉他选购以及品牌介绍](http://bbs.guitarchina.com/viewthread.php?tid=1112026&extra=page%3D14%26amp%3Bfilter%3Ddigest)
+* [吉他选择面面观(作者：John Schroeter)](http://blog.sina.com.cn/s/blog_606a5f730100ntiq.html)
+
+看完这篇博客，不知道对你认识和购买吉他有没有帮助，你也可以谈谈你的想法，多多交流罢。
 
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
