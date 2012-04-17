@@ -12,6 +12,7 @@ title: Wiki
         <li><a href="http://coolshell.cn/articles/6441.html" title="Javascript面向对象基础">Javascript面向对象基础</a></li>
         <li><a href="http://github.com/addyosmani/backbone-fundamentals" title="Backbone.js基础介绍">Backbone.js基础</a></li>
         <li><a href="http://unixpapa.com/js/key.html">JavaScript Madness: Keyboard Events</a></li>
+        <li><a href="http://dailyjs.com/tags.html#frameworks">Let's Make Frameworks</a></li>
         <li>国内公司JS框架：<a href="http://kissyui.com/">Kissy - Taobao</a> | <a href="http://arale.alipay.net/">Arale - Alipay</a> | <a href="http://tangram.baidu.com/">Tangram - Baidu</a></li>
         <li><a href="http://js1k.com/">JS1K, 1k Javascript contest</a></li>
         <li><a href="http://www.json.org/">JSON Home Page</a></li>
