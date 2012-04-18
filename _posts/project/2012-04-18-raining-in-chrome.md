@@ -12,7 +12,7 @@ description: 不知道这是杯具还是悲剧，反正就是可以假装下雨�
 
 京城令人发指的秋天，蓝的清透，顶着这样的天，要是心底再泛起所谓的忧郁，自己都会鄙视自己。时常也会怀念连绵的阴雨，天色阴暗、空气清新、雨声滴答，单纯而静谧，就算假装想想心事也很有情调。
 
-近来对Chrome插件有点兴趣，刚好又有[RainyMood][2]的启发，就试试写一个这样调整气氛心情的插件。不得不说，Chrome的插件开发体验很棒，待整理下发个博客。
+近来对Chrome插件有点兴趣，刚好又有[RainyMood][2]的启发，就试试写一个这样调整气氛心情的插件。不得不说，Chrome的插件开发体验很棒，待整理下发个博客。感谢[softicons][6]提供漂亮的图标，
 
 [Black Mirror][3]最近很火，豆瓣评分也非常高。我看完的时候，心中的赞叹感让我觉得应该写篇影评骂一骂，影评还没写，却发现我经常会想起里面的剧情，想起里面的情景，所以我不得不低头承认，他确实拍的有那么一点深刻了。
 
@@ -26,3 +26,4 @@ description: 不知道这是杯具还是悲剧，反正就是可以假装下雨�
 [3]:    http://movie.douban.com/subject/7054120/ "黑镜"
 [4]:    http://beiyuu.com/images/rainingchrome/RainingChrome.crx
 [5]:    https://www.google.com/chrome
+[6]:    http://www.softicons.com/free-icons/web-icons/vector-stylish-weather-icons-by-bartosz-kaszubowski/cloud-dark-rain-icon
