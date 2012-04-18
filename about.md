@@ -4,7 +4,7 @@ title: About BeiYuu
 ---
 # [BeiYuu][]
 
-您好，我是[BeiYuu][]，欢迎光临我的博客，我是一名前端开发攻城师，曾就职于<a href="http://s.baidu.com" class="external" target="_blank">百度身边</a>，目前就职于<a href="http://douban.com/people/beiyuu" class="external" target="_blank">豆瓣网</a>。
+您好，我是[BeiYuu][]，欢迎光临我的博客，我是一名前端开发攻城师，曾就职于<a href="http://s.baidu.com" class="external" target="_blank">百度</a>，目前在<a href="http://douban.com/people/beiyuu" class="external" target="_blank">豆瓣网</a>。
 
 博客仍在不断完善中，感谢关注，如有问题可以给我<a href="" title="邮箱" onclick="alert('BeiYuu 在 Gmail，你懂得！');return false;">eMail</a>，或者在<a href="http://weibo.com/beiyuu" title="我的闲言碎语" target="_blank" class="external">微博</a>关注我。
 
