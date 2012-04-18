@@ -1,6 +1,6 @@
 #一点点说明
 
-这是我的博客[BeiYuu.com](http://beiyuu.com)的博客源码，如果你是通过[http://beiyuu.com/github-pages/](http://beiyuu.com/github-pages/)这篇文章到了这里，并打算Fork代码并自己大干一场的，希望你能看一下我的唠叨：
+这是我的博客[BeiYuu.com](http://beiyuu.com)的博客源码，如果你是通过[使用Github Pages建独立博客](http://beiyuu.com/github-pages/)这篇文章到了这里，并打算Fork代码并自己大干一场的，希望你能看一下我的唠叨：
 
 * 马上动手很好
 * 也感谢你对我的工作的认可
