@@ -7,7 +7,7 @@
 
 /* 重置浏览器CSS */
 /* 防止用户自定义背景颜色对网页的影响 */
-html{color:#000;background:#fff;}
+html{color:#000;background:#F5F3EF;}
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}
 /* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
@@ -50,7 +50,7 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑","Times New Roman", Times, serif;font-size:16px;}
+body {font-family: "微软雅黑","Times New Roman", Times, serif;font-size:16px;background:#F5F3EF}
 a {color:#4A75B5;text-decoration:none;outline:none;}
 a:hover {text-decoration:underline}
 a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;}
@@ -67,7 +67,8 @@ pre code{background-color:transparent;border:none;padding:0;}
 pre ol{margin-left:25px;list-style-type:decimal;}
 
 /************layout style*****************/
-#head {width:100%;height:60px;background:url('/images/head-bg.png') 0 -31px;margin-bottom:50px;}
+/*#head {width:100%;height:60px;background:url('/images/head-bg.png') 0 -31px;margin-bottom:50px;}*/
+#head {width:100%;height:60px;margin-bottom:50px;}
 #header {width:650px;margin:0 auto;}
 #content {width:650px;margin:0 auto;min-height:400px;height:auto !important;height:400px;}
 #footer {width:650px;margin:0 auto;}
