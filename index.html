@@ -45,6 +45,7 @@ layout:           default
             imgWidth = BYB.img.width;
             resizeWindow();
             //$('#mycard').css({'opacity':0.8});
+            $('body').css('background-color','');
             $(BYB.img).animate({opacity:'toggle'},500);
         }
 
@@ -62,7 +63,7 @@ layout:           default
         }
 
         $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
-        $('body').append(BYB.img).css('background-color':'');
+        $('body').append(BYB.img);
         if(BYB.img.complete){
             imgComplete()
         }else{
