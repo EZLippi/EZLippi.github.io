@@ -62,7 +62,7 @@ layout:           default
         }
 
         $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
-        $('body').append(BYB.img);
+        $('body').append(BYB.img).css('background-color':'');
         if(BYB.img.complete){
             imgComplete()
         }else{
