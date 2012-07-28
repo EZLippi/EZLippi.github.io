@@ -2,7 +2,7 @@
 layout: post
 title: 使用Github Pages建独立博客
 description: Github本身就是不错的代码社区，他也提供了一些其他的服务，比如Github Pages，使用它可以很方便的建立自己的独立博客，并且免费。
-category: blog
+categories: [blog,rss]
 ---
 # [{{ page.title }}][1]
 2012-02-22 By {{ site.author_info }}

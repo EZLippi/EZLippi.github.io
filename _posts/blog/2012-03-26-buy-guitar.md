@@ -2,7 +2,7 @@
 layout: post
 title: 如何选择与购买吉他
 description: 选择一把属于自己的吉他，并不是一件简单的事情，方方面面都需要注意到才会买到满意的吉他。
-category: blog
+categories: [blog,rss]
 ---
 
 # [{{ page.title }}][1]
