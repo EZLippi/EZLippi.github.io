@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 听雨
-categories: [project,rss]
+category: project
 description: 不知道这是杯具还是悲剧，反正就是可以假装下雨了。
 ---
 # [{{ page.title }}][1]

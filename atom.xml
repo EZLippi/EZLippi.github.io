@@ -14,7 +14,7 @@ layout: nil
      <email>{{ site.author.email }}</email>
    </author>
 
-   {% for post in site.categories.rss limit:10 %}
+   {% for post in site.posts limit:10 %}
    <entry>
      <title>{{ post.title }}</title>
      <link href="http://beiyuu.com{{ post.url }}"/>
