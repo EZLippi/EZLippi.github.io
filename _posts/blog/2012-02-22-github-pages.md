@@ -297,6 +297,36 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 
 Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加入`prettyprint`即可。所以我选择了Google Code Prettify。
 
+##搭建本地jekyll环境
+这里主要介绍一下在Mac OS X下面的安装过程，其他操作系统可以参考官方的[jekyll安装][15]。
+
+作为生活在水深火热的墙内人民，有必要进行下面一步修改gem的源，方便我们更快的下载所需组建：
+
+    sudo gem sources --remove http://rubygems.org/ 
+    sudo gem sources -a http://ruby.taobao.org/ 
+
+然后用Gem安装jekyll
+
+    $ gem install jekyll
+
+不过一般如果有出错提示，你可能需要这样安装：
+
+    $ sudo gem install jekyll
+
+我到了这一步的时候总是提示错误`Failed to build gem native extension`，很可能的一个原因是没有安装rvm，[rvm的安装][16]可以参考这里，或者敲入下面的命令：
+
+    $ curl -L https://get.rvm.io | bash -s stable --ruby
+
+好了，如果一切顺利的话，本地环境就基本搭建完成了，进入之前我们建立的博客目录，运行下面的命令：
+
+    $ jekyll --server
+
+这个时候，你就可以通过`localhost:4000`来访问了。还有关于[jekyll bootstrap][17]的资料，需要自己修改调试的，可以研究一下。
+
+我在这个过程中还遇到两个诡异的没有解决的问题，一个是我放在根目录下面的blog.md等文件，在GitHub的pages服务上一切正常，可以通过`beiyuu.com/blog`访问的到，但是在本地环境下，总是`not found`，很是让人郁闷，看生成的`_site`目录下面的文件，也是正常的`blog.html`，但就是找不到，只有当我把URL改为`localhost:4000/blog.html`的时候，才能访问的到，环境不同真糟糕。
+
+还有一个是关于`category`的问题，根据`YAML`的语法，我们在文章头部可以定义文章所属的类别，也可以定义为`category:[blog,rss]`这样子的多类别，我在本地试一切正常，但是push到GitHub之后，就无法读取了，真让人着急，没有办法，只能采用别的办法满足我的需求了。这里还有一篇[Jekyll 本地调试之若干问题][18]，安装中如果有其他问题，也可以对照参考一下。
+
 ##结语
 如果你跟着这篇不那么详尽的教程，成功搭建了自己的博客，恭喜你！剩下的就是保持热情的去写自己的文章吧。
 
@@ -325,3 +355,7 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 [12]: http://docs.disqus.com/developers/universal/
 [13]: http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine
 [14]: http://code.google.com/p/google-code-prettify/
+[15]: https://github.com/mojombo/jekyll/wiki/Install
+[16]: https://rvm.io/rvm/install/
+[17]: http://jekyllbootstrap.com/
+[18]: http://chxt6896.github.com/blog/2012/02/13/blog-jekyll-native.html
