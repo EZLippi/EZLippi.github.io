@@ -317,6 +317,10 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 
     $ curl -L https://get.rvm.io | bash -s stable --ruby
 
+然后还需要安装Markdown的解释器，这个需要在你的_config.yml里面设置`markdown:rdiscount`：
+
+    $ gem install jekyll rdiscount
+
 好了，如果一切顺利的话，本地环境就基本搭建完成了，进入之前我们建立的博客目录，运行下面的命令：
 
     $ jekyll --server
