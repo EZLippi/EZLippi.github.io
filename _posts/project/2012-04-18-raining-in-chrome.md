@@ -7,7 +7,7 @@ description: 不知道这是杯具还是悲剧，反正就是可以假装下雨�
 # [{{ page.title }}][1]
 2012-04-18 By {{ site.author_info }}
 
-**之前直接下载.crx文件的童鞋，现在可以把原来的卸载，直接在Chrome Web Store中下载了：地址：[It's Raining][4]**
+**之前直接下载.crx文件的童鞋，现在可以把原来的卸载，直接在Chrome Web Store中下载了，地址：[It's Raining][4]**
 
 来京快两年了，撑伞的次数屈指可数，有时候也会在心里暗暗后怕，是帝都的蓝天硬生生战胜了抑郁。
 
