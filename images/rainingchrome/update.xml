@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='ebfonfcicjbmgofjalecmndlfepjpffm'>
-    <updatecheck codebase='https://clients2.googleusercontent.com/crx/download/OwAAAOPOqoj61iXCjCpHRAilyF7EGdKc1Xmw5cWJC4Ze5zkKqfV1PqmQMSbKxzeraLJKu5YPf2ASGtrk62PvCAHm4yUAxlKa5UXtvbjVQzR7swt7xqSWuVXIPes8/extension_1_6.crx' version='1.5' />
+    <updatecheck codebase='http://beiyuu.com/images/rainingchrome/RainingChrome.crx' version='1.4' />
   </app>
 </gupdate>
