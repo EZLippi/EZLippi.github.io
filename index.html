@@ -47,7 +47,7 @@ layout:           default
             //$('#mycard').css({'opacity':0.8});
             $('body').css('background','none');
             $(BYB.img).animate({opacity:'toggle'},500);
-        }
+        };
 
         var resizeWindow = function(){
             var _width,_height;
@@ -60,7 +60,7 @@ layout:           default
             }else{
                 $('#bgImage').css({'width':winWidth,'height':_height,'left':0});
             }
-        }
+        };
 
         $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
         $('body').append(BYB.img);
