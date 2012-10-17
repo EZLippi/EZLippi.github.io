@@ -495,7 +495,7 @@ Chrome插件开发的流程很舒适、自然。为了先配好环境，就先�
 ###发布、推广
 Chrome Store上插件的发布很简单，把自己的插件按要求打包好，上传即可，介绍写的简洁动人一些，准备几个漂亮的图标，再做几张符合尺寸要求的宣传图，发布之后，很快就能生效在相关的分类里面看到。吐槽一下，我的宣传图上传好几天了，也没见通过审核的迹象，效率啊XD。
 
-最后再广告一下我的[便签插件][Notty]吧：
+最后再广告一下我的[便签插件][Notty]吧，感谢[靖哥哥][26]帮我做宣传图：
 <a href="https://chrome.google.com/webstore/detail/notty-notes/ggbmjahbkbhakkfgjiggdclpmmpmhajn?hl=zh-CN" title="Notty Notes" target="_blank"><img src="/images/backbonechrome/notes-logo.jpg" alt="Notty Notes"></a>
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
@@ -524,3 +524,4 @@ Chrome Store上插件的发布很简单，把自己的插件按要求打包好�
 [23]:    http://blog.csdn.net/soasme/article/details/6581029 "Backbone HelloWorld"
 [24]:    http://weakfi.iteye.com/blog/1391990 "Backbone初探"
 [25]:    http://floatleft.com/notebook/backbone-has-made-me-a-better-programmer "Backbone has made me a better programmer" 
+[26]:    http://www.douban.com/people/JGuo/
