@@ -200,6 +200,7 @@ Model就是要操作对象的数据结构，存储需要用到的数据，基于
     });
 
 删除：
+
     // 这里设置了model的id
     var user = new Usermodel({
         id: 1
