@@ -50,7 +50,7 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑";font-size:16px;background:#F8F8F0}
+body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;background:#F8F8F0}
 a {color:#4A75B5;text-decoration:none;outline:none;}
 a:hover {text-decoration:underline}
 a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;}
