@@ -1,9 +1,10 @@
 ---
 layout: post
-title: jQuery解构
+title: 谈谈刚需和360影视
 category: opinion
-description: jQuery是一个伟大作品，他的完成充满智慧，我们来一点点拆解他，去理解作者的思想精华。
+description: 一个看起来很简单的需求，做起来真的有那么困难吗，到底是怎么回事？
 ---
+
 # [{{ page.title }}][1]
 2012-01-16 By {{ site.author_info }}
 
