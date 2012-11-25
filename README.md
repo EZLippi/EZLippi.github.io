@@ -1,6 +1,6 @@
 #一点点说明
 
-这是我的博客[BeiYuu.com](http://beiyuu.com)的源码，如果你是通过[使用Github Pages建独立博客](http://beiyuu.com/github-pages/)这篇Blog到了这里，希望看下去哦：
+这是我的博客[BeiYuu.com](http://beiyuu.com)的源码，如果你来自[使用Github Pages建独立博客](http://beiyuu.com/github-pages/)这篇Blog，希望看下去哦：
 
 * 马上动手，很赞
 * 感谢认可
