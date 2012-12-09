@@ -17,7 +17,7 @@ title: About BeiYuu
 
 <script type="text/javascript">
     window.disqus_shortname = 'beiyuu'; // required: replace example with your forum shortname
-    $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
+    $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js');
 </script>
 
 <!--
