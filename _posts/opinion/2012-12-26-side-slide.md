@@ -10,8 +10,9 @@ category: opinion
 
 前两天这样感叹过：
 
- > 像Weico和网易新闻的手势滑动后退这样流畅、高效的交互真让人爱不释手，而且会很快形成惯性，真期待成为各App标配。就像当年第一次用完触屏手机，再去用其他机器，都会上手去摸一样。
-
+<blockquote><p>
+像Weico和网易新闻的手势滑动后退这样流畅、高效的交互真让人爱不释手，而且会很快形成惯性，真期待成为各App标配。就像当年第一次用完触屏手机，再去用其他机器，都会上手去摸一样。
+</p></blockquote>
 
 ![Weico Side](/images/other/side-slide.jpg)
 
@@ -25,7 +26,7 @@ category: opinion
 
 侧滑本就是手机上很舒适自然的一个体验，想想你会不会没事解锁手机，桌面划两下，再锁屏呢？
 
-希望能有更多的PM、设计师和开发者认同吧，赶紧给自己的APP加上这个舒适的Feature吧！
+希望能有更多的PM、设计师和开发者认同，赶紧给自己的APP加上这个舒适的Feature吧！
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
 [1]:    {{ page.url}}  ({{ page.title }})
