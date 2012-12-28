@@ -100,7 +100,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 
 
 /***************header style************/
-#head .logo {font-size:35px;font-weight:bold;margin-top:18px;}
+#head .logo {font-size:35px;font-weight:bold;margin-top:18px;padding-left:20px;}
 #head .logo a{color:#999;}
 #head .logo a:hover {text-decoration:none;color:#666;}
 #head .logo a:active {position:relative;top:1px;opacity:0.9;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=90)";filter:alpha(opacity=90);}
@@ -119,7 +119,17 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .category h2 a{color:#444}
 .category h2 a:hover {color:#E50053;text-decoration:none;}
 .category li{display:-moz-inline-stack;display:inline-block;*display:inline;width:230px;margin-bottom:30px;zoom:1;padding:10px 45px;vertical-align:middle;text-align:center;}
-.category span{color:#777;font-style:italic;font-size:14px;display:block;text-align:left}
+.category span{color:#999;font-style:italic;font-size:14px;display:block;text-align:left}
+
+.index-artical ul{display:inline-block;width:290px;vertical-align:top;*float:left;zoom:1;}
+.index-artical .index-left{padding-right:28px}
+.index-artical .index-mid {margin-top:15px;border-right:1px solid #ccc;width:1px;}
+.index-artical .index-right{padding-left:28px;}
+.index-artical h2{font-size:19px;}
+.index-artical h2 a{color:#444}
+.index-artical h2 a:hover {color:#E50053;text-decoration:none;}
+.index-artical li{margin-bottom:45px;}
+.index-artical span{color:#999;font-style:italic;font-size:14px;display:block;text-align:left}
 
 /***************Wiki Style*****************/
 .wiki h2{cursor:pointer;}
