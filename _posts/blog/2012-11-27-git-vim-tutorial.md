@@ -5,9 +5,6 @@ description: 在Git流行的时代，VIM的生态环境也有了长足的进步�
 category: blog
 ---
 
-# [{{ page.title }}][1]
-2012-11-27 By {{ site.author_info }}
-
 最近整理了VIM的配置，换上插件管理的神器-----[Vundle][2]，由他引发的VIM生态环境的改善，堪称完美。遂打算写一份简单的教程，分享Git时代VIM新世界的美丽动人之处。**对VIM有基础的同学，可直接跳至插件管理部分。**
 
 ##VIM的模式

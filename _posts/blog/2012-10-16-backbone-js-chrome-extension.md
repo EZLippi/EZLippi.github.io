@@ -5,9 +5,6 @@ description: 没有合适的插件，就只好自己动手了，同时也用Back
 category: blog
 ---
 
-# [{{ page.title }}][1]
-2012-10-16 By {{ site.author_info }}
-
 ##开始之前
 在Web Store上没找到满意的便签插件，就只好自己动手写了[Notty Notes][Notty]，你可以试试看，多多提建议哦~
 <a href="https://chrome.google.com/webstore/detail/notty-notes/ggbmjahbkbhakkfgjiggdclpmmpmhajn?hl=zh-CN" title="Notty Notes" target="_blank"><img src="/images/backbonechrome/notes-logo.jpg" alt="Notty Notes"></a>

@@ -5,9 +5,6 @@ description: 那么世界就又美好了一点点
 category: opinion
 ---
 
-# [{{ page.title }}][1]
-2012-12-26 By {{ site.author_info }}
-
 前两天这样感叹过：
 
 <blockquote><p>

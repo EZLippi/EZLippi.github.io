@@ -5,9 +5,6 @@ description: 又一个专属移动设备上的交互细节，有用有趣。
 category: opinion
 ---
 
-# [{{ page.title }}][1]
-2012-12-27 By {{ site.author_info }}
-
 最先在[Google+][3]的APP上看到这种交互细节，而后在[美丽说][2]的新版上也看到了，上图：
 
 ![Auto Edit Bar](/images/other/auto-edit-bar.jpg)

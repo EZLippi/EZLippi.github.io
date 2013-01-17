@@ -4,8 +4,6 @@ title: Notty Notes
 category: project
 description: 对于不满意确很需要的东西，只能自己动手，比如这个Chrome的便签插件。
 ---
-# [{{ page.title }}][1]
-2012-10-17 By {{ site.author_info }}
 
 [Notty Notes][Notty]是为我自己写的便签插件，满足基本需求，并且看起来比较舒适，这是我的目标。可以在Chrome Store中下载安装，感谢[靖哥哥][2]帮我做宣传图：
 
