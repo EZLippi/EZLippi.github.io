@@ -111,6 +111,8 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 #content .entry{margin-bottom:50px;}
 .entry ul{margin-bottom:20px;margin-left:25px;}
 .entry ul li{margin-bottom:10px;list-style:disc}
+.entry ol{margin-bottom:20px;margin-left:25px;}
+.entry ol li{margin-bottom:10px;list-style:decimal;}
 .entry blockquote{margin-left:30px;font-size:14px;font-style:italic}
 .entry img{max-width:650px;display:block;margin:10px auto;}
 
