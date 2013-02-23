@@ -175,254 +175,49 @@ VIM的基本操作，可以挖掘的东西非常多，不仅仅需要记忆，�
 ##插件介绍
 有了Vundle，再装插件就是件享受的事情了。我常用的插件有：
 
+    #相比于Command-T之类的查找文件的插件，ctrlp.vim最大的好处在于，无需安装其他的包，只要他自己，就可以很好的工作了，恩，就是需要这样干净利落的解决问题。
     Bundle 'ctrlp.vim'
+
+    #可以在你输入一个(或者"之类的配对符号时，自动帮你补全剩余半个；
     Bundle 'AutoClose'
+
+    #ZenCoding是一个神级的插件，用他可以让你一种神奇而无比爽快的感觉写HTML、CSS，官网上有动画演示，你一定会心动的。
     Bundle 'ZenCoding.vim'
+
+    #在()、""、甚至HTML标签之间快速跳转；
     Bundle 'matchit.zip'
+
+    #显示行末的空格；
     Bundle 'ShowTrailingWhitespace'
+
+    #JS代码格式化插件；
     Bundle '_jsbeautify'
+
+    #最近看到别人介绍，开始使用的一个插件，用全新的方式在文档中高效的移动光标，和ZenCoding一样，属于革命性的方便好用，[这里][11]有教程,你一定也会心动的。
     Bundle 'EasyMotion'
+
+    #自动识别文件编码；
     Bundle 'FencView.vim'
+
+    #这是我认为VIM最不能缺少的插件，在VIM的编辑窗口树状显示文件目录，没什么好多说的，必需品。
     Bundle 'The-NERD-tree'
+
+    #NERD出品的快速给代码加注释插件，选中，`ctrl+h`即可注释多种语言代码；
     Bundle 'The-NERD-Commenter'
-    Bundle 'snipMate'
+
+    #又一个解放生产力的神奇，简单配置，就可以按照自己的风格快速输入大段代码。
+    Bundle 'UltiSnips'
+
+    #让代码更加易于纵向排版，以=或,符号对齐
+    Bundle 'Tabular'
+
+    #迄今位置最好的自动VIM自动补全插件了吧
+    Bundle 'Valloric/YouCompleteMe'
 
 以上插件都可以在[vim-script.org][3]找到源码和详细的使用文档，简单说明下：
 
-###The NERDTree
-这是我认为VIM最不能缺少的插件，在VIM的编辑窗口树状显示文件目录，没什么好多说的，必需品。
-
-###ctrlp.vim
-相比于Command-T之类的查找文件的插件，ctrlp.vim最大的好处在于，无需安装其他的包，只要他自己，就可以很好的工作了，恩，就是需要这样干净利落的解决问题。
-
-###ZenCoding.vim
-[ZenCoding][10]是一个神级的插件，用他可以让你一种神奇而无比爽快的感觉写HTML、CSS，官网上有动画演示，你一定会心动的。
-
-###EasyMotion
-最近看到别人介绍，开始使用的一个插件，用全新的方式在文档中高效的移动光标，和ZenCoding一样，属于革命性的方便好用，[这里][11]有教程,你一定也会心动的。
-
-###snipMate
-又一个解放生产力的神奇，简单配置，就可以按照自己的风格快速输入大段代码。
-
-###其他
-- AutoClose 可以在你输入一个(或者"之类的配对符号时，自动帮你补全剩余半个；
-- matchit.zip 在()、""、甚至HTML标签之间快速跳转；
-- ShowTrailingWhitespace 显示行末的空格；
-- _jsbeautify JS代码格式化插件；
-- FencView.vim 自动识别文件编码；
-- The-NERD-Commenter NERD出品的快速给代码加注释插件，选中，`ctrl+h`即可注释多种语言代码；
-
 ##.vimrc配置
-贴一下我的vimrc配置，注释都有，仅供参考：
-
-    "必须的设置：
-    filetype off
-    filetype plugin indent on
-    "打开高亮
-    syntax enable
-    "不要兼容vi
-    set nocompatible
-
-    "使用color solarized
-    set background=dark
-    colorscheme solarized
-    "terminal下面的背景问题
-    let g:solarized_termtrans=1
-    let g:solarized_termcolors=256
-    let g:solarized_contrast="high"
-    let g:solarized_visibility="high"
-
-    set modelines=0
-
-
-    "tab键的设定
-    set tabstop=4
-    set shiftwidth=4
-    set softtabstop=4
-    set expandtab
-
-    "一些其他的设定
-    "字符设置
-    set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5
-    "set encoding=utf-8
-    set scrolloff=3
-    "新建文件编码
-    set fenc=utf-8
-    set autoindent
-    set hidden
-    "设置光标高亮显示
-    set cursorline
-    set cursorcolumn
-    set ttyfast
-    set ruler
-    set backspace=indent,eol,start
-    "set laststatus=2
-    "相对行号 要想相对行号起作用要放在显示行号后面
-    set relativenumber
-    "显示行号
-    "set number
-    "无限undo
-    "set undofile
-    "自动换行
-    set wrap
-    "禁止自动换行
-    "set nowrap
-    "GUI界面里的字体，默认有抗锯齿
-    set guifont=Inconsolata:h12
-    "自动载入配置文件不需要重启
-    "autocmd! bufwritepost _vimrc source %
-    "将-连接符也设置为单词
-    set isk+=-
-
-    "设置大小写敏感和聪明感知(小写全搜，大写完全匹配)
-    set ignorecase
-    set smartcase
-    "set gdefault
-    set incsearch
-    set showmatch
-    set hlsearch
-
-    "加入html标签配对
-    "runtime macros/matchit.vim 
-
-    "以下设置用来是vim正确显示过长的行
-    "set textwidth=80
-    "set formatoptions=qrnl
-    "彩色显示第85行
-    set colorcolumn=85
-    "设置256色显示
-    set t_Co=256
-
-    "行号栏的宽度
-    set numberwidth=4
-    "初始窗口的宽度
-    "set columns=135
-    "初始窗口的高度
-    "set lines=50
-    "初始窗口的位置
-    "winpos 620 45 
-
-    "匹配括号的规则，增加针对html的<>
-    "set matchpairs=(:),{:},[:],<:>
-    "让退格，空格，上下箭头遇到行首行尾时自动移到下一行（包括insert模式）
-    set whichwrap=b,s,<,>,[,]
-
-    "插入模式下移动
-    inoremap <c-j> <down>
-    inoremap <c-k> <up>
-    inoremap <c-l> <right>
-    inoremap <c-h> <left>
-
-    "===================================================
-    "leader键的功能设置
-    "修改leader键为逗号
-    let mapleader=","
-    "esc的映射
-    imap jj <esc>
-    "屏蔽掉讨厌的F1键
-    inoremap <F1> <ESC>
-    nnoremap <F1> <ESC>
-    vnoremap <F1> <ESC>
-    "修改vim的正则表达
-    nnoremap / /\v
-    vnoremap / /\v
-    "使用tab键来代替%进行匹配跳转
-    nnoremap <tab> %
-    vnoremap <tab> %
-    "折叠html标签 ,fold tag
-    nnoremap <leader>ft vatzf
-    "使用,v来选择刚刚复制的段落，这样可以用来缩进
-    nnoremap <leader>v v`]
-    "使用,w来垂直分割窗口，这样可以同时查看多个文件,如果想水平分割则<c-w>s
-    nnoremap <leader>w <c-w>v<c-w>l
-    nnoremap <leader>wc <c-w>c
-    nnoremap <leader>ww <c-w>w
-    "使用<leader>t来控制Tab的切换
-    nnoremap <leader>t gt
-    nnoremap <leader>r gT
-    "使用<leader>空格来取消搜索高亮
-    nnoremap <leader><space> :noh<cr>
-    "html中的js加注释 取消注释
-    nmap <leader>h I//jj
-    nmap <leader>ch ^xx
-    "切换到当前目录
-    nmap <leader>q :execute "cd" expand("%:h")<CR>
-    "搜索替换
-    nmap <leader>s :,s///c
-
-    "取消粘贴缩进
-    nmap <leader>p :set paste<CR>
-    nmap <leader>pp :set nopaste<CR>
-
-    "文件类型切换
-    nmap <leader>fj :set ft=javascript<CR>
-    nmap <leader>fc :set ft=css<CR>
-    nmap <leader>fx :set ft=xml<CR>
-    nmap <leader>fm :set ft=mako<CR>
-
-    "设置隐藏gvim的菜单和工具栏 F2切换
-    set guioptions-=m
-    set guioptions-=T
-    "去除左右两边的滚动条
-    set go-=r
-    set go-=L
-
-    map <silent> <F2> :if &guioptions =~# 'T' <Bar>
-            \set guioptions-=T <Bar>
-            \set guioptions-=m <bar>
-        \else <Bar>
-            \set guioptions+=T <Bar>
-            \set guioptions+=m <Bar>
-        \endif<CR>
-
-    "===================================================
-    "插件的设置
-
-    "Indent Guides设置
-    let g:indent_guides_guide_size=1
-
-
-    set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
-
-    " let Vundle manage Vundle
-    " required!
-    Bundle 'gmarik/vundle'
-
-    " vim-scripts repos
-    Bundle 'ctrlp.vim'
-    Bundle 'AutoClose'
-    Bundle 'ZenCoding.vim'
-    Bundle 'matchit.zip'
-    Bundle 'ShowTrailingWhitespace'
-
-    "jsbeautify的设置
-    Bundle '_jsbeautify'
-    nnoremap <leader>_ff :call g:Jsbeautify()<CR>  
-
-    "EasyMotion设置
-    Bundle 'EasyMotion'
-    let g:EasyMotion_leader_key = '<Leader><Leader>' 
-
-    "Fencview的初始设置
-    Bundle 'FencView.vim'
-    let g:fencview_autodetect=1
-
-    "NerdTree的设置 并且相对行号显示
-    Bundle 'The-NERD-tree'
-    nmap <leader>nt :NERDTree<cr>:set rnu<cr>
-    let NERDTreeShowBookmarks=1
-    let NERDTreeShowFiles=1
-    let NERDTreeShowHidden=1
-    let NERDTreeIgnore=['\.$','\~$']
-    let NERDTreeShowLineNumbers=1
-    let NERDTreeWinPos=1
-
-    "对NERD_commenter的设置
-    Bundle 'The-NERD-Commenter'
-    let NERDShutUp=1
-    "支持单行和多行的选择，//格式
-    map <c-h> ,c<space>
+因为配置不断的更新，所以就提供一个链接：[.vimrc配置][vimrc]
 
 ##更多
 VIM在一开始会觉得非常不习惯，一定要坚持下去，收获的会更多，不仅仅是在装大侠方面的哦~
@@ -461,3 +256,4 @@ VIM在一开始会觉得非常不习惯，一定要坚持下去，收获的会�
 [16]:  http://hi.baidu.com/whqvzhjoixbbdwd/item/11315a5073667d0de6c4a5e9
 [17]:  http://www.rayninfo.co.uk/vimtips.html
 [18]:  https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
+[vimrc]: https://github.com/beiyuu/vimfiles/blob/master/_vimrc
