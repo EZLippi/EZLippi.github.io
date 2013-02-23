@@ -85,24 +85,6 @@ layout: page
         if($('h2').length > 2 && !isMobile.any()){
             var h2 = [],h3 = [],tmpl = '<ul>',h2index = 0;
 
-            var findScrollableElement = function(els) {
-                for (var i = 0, argLength = arguments.length; i < argLength; i++) {
-                    var el = arguments[i],
-                    $scrollElement = $(el);
-                    if ($scrollElement.scrollTop() > 0) {
-                        return $scrollElement;
-                    } else {
-                        $scrollElement.scrollTop(1);
-                        var isScrollable = $scrollElement.scrollTop() > 0;
-                        $scrollElement.scrollTop(0);
-                        if (isScrollable) {
-                            return $scrollElement;
-                        }
-                    }
-                }
-                return [];
-            };
-
             $.each($('h2,h3'),function(index,item){
                 if(item.tagName.toLowerCase() == 'h2'){
                     var h2item = {};
@@ -135,13 +117,12 @@ layout: page
             }
             tmpl += '</ul>';
 
-            var $scrollable = findScrollableElement('body','html');
             $('body').append('<div id="menuIndex"></div>');
             $('#menuIndex').append($(tmpl)).delegate('a','click',function(e){
                 e.preventDefault();
                 var scrollNum = $(this).attr('data-top') || $('#'+$(this).attr('data-id')).offset().top;
                 //window.scrollTo(0,scrollNum-30);
-                $scrollable.animate({ scrollTop: scrollNum-30 }, 400, 'swing');
+                $('body','html').animate({ scrollTop: scrollNum-30 }, 400, 'swing');
             })
 
             $(window).load(function(){
