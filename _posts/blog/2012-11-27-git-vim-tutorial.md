@@ -216,7 +216,7 @@ VIM的基本操作，可以挖掘的东西非常多，不仅仅需要记忆，�
     Bundle 'Valloric/YouCompleteMe'
 
 
-以上插件(除最后一个)可以在[vim-script.org][3]找到源码和文档，[ZenCoding][10]和[EasyMotion][11]演示点链接,你会心动的。
+以上插件可以在[vim-script.org][3]找到源码和文档，[ZenCoding][10]和[EasyMotion][11]演示点链接,你会心动的。
 
 ##.vimrc配置
 因为配置不断在更新，所以放上我的配置的链接：[.vimrc配置][vimrc]
