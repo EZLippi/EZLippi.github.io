@@ -226,6 +226,7 @@ VIM在一开始会觉得非常不习惯，一定要坚持下去，收获的会�
 
 关于VIM的使用，这篇博客仅仅介绍了很小的一部分，网络上还有大量朋友总结的心得，常学常有收获：
 
+- [Practical Vim][p-vim]，强烈推荐的一本系统介绍VIM的书籍
 - [Vim Cheat Sheet][vim-cs]，有VIM的各种助记图，可以作为桌面
 - [Vimer的程序世界][14]，不错的站，博主持续钻研VIM各种技巧
 - [网友狂人收集的vim资料链接][16]
@@ -259,3 +260,4 @@ VIM在一开始会觉得非常不习惯，一定要坚持下去，收获的会�
 [17]:  http://www.rayninfo.co.uk/vimtips.html
 [18]:  https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
 [vimrc]: https://github.com/beiyuu/vimfiles/blob/master/_vimrc
+[p-vim]: http://book.douban.com/subject/10599776/
