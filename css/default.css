@@ -151,9 +151,9 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #menuIndex li.h1{font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
 #menuIndex li.h3{padding-left:25px;}
 
-#about{background:#262626;width:100%;margin:0 auto;border-top:6px solid #026b8c;overflow:hidden;margin-top:30px;}
+#about{background:#262626;width:100%;margin:0 auto;border-top:6px solid #026b8c;overflow:hidden;margin-top:30px;font-size:14px;line-height:1.6em;}
 #about .about-content {width:720px;margin:50px auto;}
-#about h2{color:#bbb;font-size:24px;font-weight:bold;border-bottom:1px solid #444;}
+#about h2{color:#bbb;font-size:24px;font-weight:bold;border-bottom:1px solid #444;line-height:45px;}
 #about .about-left{float:left;width:200px;color:#999;}
 #about .about-more {margin-left:60px;}
 #about .weibo-con{margin-top:-10px;margin-left:-14px;}
