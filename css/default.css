@@ -71,7 +71,6 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 #head {width:100%;height:60px;margin-bottom:50px;}
 #header {width:650px;margin:0 auto;}
 #content {width:650px;margin:0 auto;min-height:400px;height:auto !important;height:400px;}
-#footer {width:650px;margin:0 auto;}
 
 /*****************mycard style*********/
 #mycard {width:514px;background-color:#555;position:absolute;top:38.2%;left:40%;margin-left:-250px;margin-top:-100px;opacity:0.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";filter:alpha(opacity=80);*padding-bottom:2px;}
@@ -141,7 +140,6 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 /***************contact style*************/
 #disqus_container {font-size:12px;}
 #disqus_container a.comment{font-size:14px;}
-#footer .copyright {margin-top:15px;font-size:10px;font-color:#ccc;text-align:center}
 h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .about-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}
 /**************目录导航**************/
@@ -152,3 +150,11 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #menuIndex ul li.on{background-color:#eee}
 #menuIndex li.h1{font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
 #menuIndex li.h3{padding-left:25px;}
+
+#about{background:#262626;width:100%;margin:0 auto;border-top:6px solid #026b8c;overflow:hidden;margin-top:30px;}
+#about .about-content {width:650px;margin:30px auto;}
+#about h2{color:#bbb;font-size:24px;font-weight:bold;border-bottom:1px solid #bbb;}
+#about .about-left{float:left;width:15em;color:#999;}
+#about .about-right{float:right;width:15em;color:#999;}
+#about .weibo-con{margin-top:-10px;margin-left:-14px;}
+#about .copyright {margin-top:15px;font-size:12px;color:#666;overflow:hidden;}
