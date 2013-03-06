@@ -8,7 +8,7 @@ layout: page
             <h2>
             	<a href="{{ post.url }}">{{ post.title }}</a>
             </h2>
-            <span>{{ post.description }}</span>
+            <span class="title-desc">{{ post.description }}</span>
         </li>
     {% endfor %}
     </ul>
@@ -21,7 +21,7 @@ layout: page
             <h2>
             	<a href="{{ post.url }}">{{ post.title }}</a>
             </h2>
-            <span>{{ post.description }}</span>
+            <span class="title-desc">{{ post.description }}</span>
         </li>
     {% endfor %}
     </ul>
