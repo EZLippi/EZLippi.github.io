@@ -38,13 +38,13 @@ category: blog
 
 另外还有一种方法是靠嗅觉，去闻木材的香味，这个对于低端琴和入门者来说难度太大，被欺骗的可能性也会更高，就不做讨论了。
 
-我还是要啰嗦一下，无论材质怎样怎样，材质也不是吉他音质的全部，好的材料也只有在好的工艺之下，才能发挥它的真正价值，你需要更多的练习是耳朵的辨别能力，合板吉他如何都不会好过单板的音质，面单和全单之中鱼龙混杂，全单音质也不一定就强过面单。下面这个音频是某网友自己录制的，每一小段乐曲都用两把琴演奏，一把是全单，一把是面单，看看你能听出来哪个是全单吗？
+我还是要啰嗦一下，无论材质怎样怎样，材质也不是吉他音质的全部，好的材料也只有在好的工艺之下，才能发挥它的真正价值，你需要更多的练习是耳朵的辨别能力，合板吉他如何都不会好过单板的音质，面单和全单之中鱼龙混杂，全单音质也不一定就强过面单。下面[这个音频][danbanshiting]是某网友自己录制的，每一小段乐曲都用两把琴演奏，一把是全单，一把是面单，看看你能听出来哪个是全单吗？
 
 <table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://www.tudou.com/v/Itc0aUqqnB0/&resourceId=0_05_02_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" align="middle" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></td></tr></table>
 
 听完了有了自己的结论了吗，这里查看答案：[同品牌吉他面单和全单声音比较][4]。也可Ctrl+A查看答案。
 
-<div style="color:white;margin-bottom:20px;">第一把是面单，第二把是全单</div>
+<div style="color:#f8f8f0;margin-bottom:20px;">第一把是面单，第二把是全单</div>
 
 论坛上也有一篇说的比较全面的的文章：[如何判定吉他是不是全实木单板][5]。
 
@@ -74,7 +74,7 @@ KOA是一种看起来非常华丽的木材，音色也非常亮丽，但是上�
 这里还有一个帖子[【一支1970年巴西玫瑰木Martin的重生】][6]，讲述给一把巴西玫瑰木背板的木吉他换了全部配件的过程，挺有趣的。
 
 ###面板制作工艺
-关于吉他面板，有一段不错的视频，可以看看，你会了解更多的制作工艺。
+关于[吉他面板][mianbangongyi]，有一段不错的视频，可以看看，你会了解更多的制作工艺。
 
 <table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://player.youku.com/player.php/sid/XMzM2NDUzNzMy/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></td></tr></table>
 
@@ -89,7 +89,7 @@ KOA是一种看起来非常华丽的木材，音色也非常亮丽，但是上�
 <li>“熊爪纹”的面板存在下的吉他，由于木材生长时，部分位置反复弯曲，产生了类似熊爪的斑点，此类吉他的特点：木材密度很高，对演奏力度的反馈能力非常好，音色力量感绝佳。好的手工吉他制作家能够根据面板的打磨，厚度的调整，制作出音色绝佳的吉他！这也是手工吉他的精髓所在！根据不同的材质打磨出更完美的音色需求！</li>
 </ul>
 
-下面还有一段花絮：
+下面还有一段[花絮][huaxu]：
 
 <table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://player.youku.com/player.php/sid/XMzM3MzI4NDA4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></td></tr></table>
 
@@ -120,7 +120,7 @@ Taylor的型号中，一般的命名是三位数字，当然也有其他系列�
 * [李宗盛和他的琴][18]
 * [阿信：LeeGuitar有关吉他迷人的一切][19]
 
-下面这段视频是纵贯线在春晚上的表演，使用的就是Lee Guitar：
+下面这段视频是[纵贯线][zongguanxian]在春晚上的表演，使用的就是Lee Guitar：
 
 <table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://www.tudou.com/v/R6K98aQSuq0/&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></td></tr></table>
 
@@ -139,7 +139,7 @@ Elixir琴弦材质分两种：
 * 011的弦属轻质琴弦，中档一点的民谣吉他最好使用012型号的，012才是民谣吉他的标准张力。玩指弹甚至有用013、014这种高张力的型号
 
 ###保养和换弦
-关于吉他的保养，找到了个视频，很具体详细，是Taylor的专家录制的：
+关于吉他的保养，找到了个视频，很具体详细，是Taylor的专家录制([保养1][baoyang1]，[保养2][baoyang2])的：
 
 <table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://player.youku.com/player.php/sid/XMjQxNDM0OTYw/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed></td></tr></table>
 
@@ -174,3 +174,9 @@ Elixir琴弦材质分两种：
 [17]: http://www.leeguitars.com/
 [18]: http://www.xiami.com/group/thread-detail/tid/10921
 [19]: http://blog.sina.com.cn/s/blog_4b66ade80100bqoi.html
+[mianbangongyi]: http://v.youku.com/v_show/id_XMzM2NDUzNzMy.html
+[danbanshiting]: http://www.tudou.com/programs/view/Itc0aUqqnB0/
+[huaxu]: http://v.youku.com/v_show/id_XMzM3MzI4NDA4.html
+[zongguanxian]: http://www.tudou.com/programs/view/R6K98aQSuq0/
+[baoyang1]: http://v.youku.com/v_show/id_XMjQxNDM0OTYw.html
+[baoyang2]: http://v.youku.com/v_show/id_XMjQxNDg2MDI4.html

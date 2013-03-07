@@ -98,7 +98,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .index-artical .index-left{padding-right:28px}
 .index-artical .index-mid {margin-top:15px;border-right:1px solid #ccc;width:1px;}
 .index-artical .index-right{padding-left:28px;}
-.index-artical h2{font-size:19px;}
+.index-artical h2{font-size:20px;}
 .index-artical h2 a{color:#444}
 .index-artical h2 a:hover {color:#E50053;text-decoration:none;}
 .index-artical li{margin-bottom:45px;}
@@ -136,25 +136,34 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #about a:active {color:#5e8dba;outline:none;text-decoration:none;}
 #about a:hover {text-decoration:underline;}
 
-@media only screen and (max-device-width: 600px) {
-    body {font-size:20px}
-    #head {margin-bottom:60px;}
-    #head .logo{font-size:40px;}
+@media screen and (max-width: 480px){
+    body {font-size:14px}
+    #head {height:25px;}
+    #head .logo{font-size:22px;padding-left:8px;text-align:center;}
     #content {width:95%;margin:0 auto;}
-    a.external {background:url('/images/icons.gif') no-repeat right 1px;background-position-y:13px;}
-    .entry-title,.entry-title a {font-size:40px;}
-    .entry-date {font-size:20px;}
-    .entry img{max-width:80%;}
-    .entry blockquote {font-size:20px;}
-    .index-artical h2 {font-size:32px;}
-    .index-artical ul{width:46%;}
-    .index-artical .index-left{padding-right:3%}
-    .index-artical .index-right{padding-left:3%}
-    .title-desc{font-size:22px;}
-    #disqus_container {font-size:16px;}
-    #disqus_container a.comment{font-size:18px;}
 
-    #about h2{font-size:30px;}
-    #about .about-content {width:95%;font-size:24px;}
-    #about .about-left {width:28%}
+    h2{font-size:20px;}
+    h3{font-size:16px;}
+    embed {display:none;}
+
+    .entry-title,.entry-title a {font-size:24px;}
+    .entry-date {margin-bottom:40px;}
+    .entry img{max-width:90%;}
+    .entry pre ol li{margin-bottom:0;line-height:1em;}
+    .entry pre code{line-height:1em;font-size:12px;}
+    
+    .index-artical ul {display:block;margin:0 auto;width:95%;}
+    .index-artical .index-mid {display:none;}
+    .index-artical .index-left {padding:0;}
+    .index-artical .index-right {padding:0;}
+
+    #about h2{font-size:20px;line-height:30px;margin-bottom:10px;}
+    #about .about-content {width:95%;margin:15px auto;}
+    #about .about-left {float:none;width:70%;margin:0 auto;}
+    #about .about-left h2{text-align:right;}
+    #about .about-more {margin:0 auto;;margin-top:20px}
+    #about .copyright {margin-top:0;}
+}
+@media (max-width: 850px){
+    #menuIndex {display:none;}
 }
