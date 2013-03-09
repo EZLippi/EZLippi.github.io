@@ -165,7 +165,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
     blog.beiyuu.com
 
-需要提醒的一点是，如果你使用形如`beiyuu.com`这样的一级域名的话，需要在DNS处设置A记录到`207.97.227.245`（**此处每个人的地址都不同，需要根据Github提供的地址自行修改**），而不是在DNS处设置为CNAME的形式，否则可能会对其他服务（比如email）造成影响。
+需要提醒的一点是，如果你使用形如`beiyuu.com`这样的一级域名的话，需要在DNS处设置A记录到`207.97.227.245`（**这个地址会有变动，[这里][a-record]查看**），而不是在DNS处设置为CNAME的形式，否则可能会对其他服务（比如email）造成影响。
 
 设置成功后，根据DNS的情况，最长可能需要一天才能生效，耐心等待吧。
 
@@ -361,3 +361,4 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 [16]: https://rvm.io/rvm/install/
 [17]: http://jekyllbootstrap.com/
 [18]: http://chxt6896.github.com/blog/2012/02/13/blog-jekyll-native.html
+[a-record]: https://help.github.com/articles/my-custom-domain-isn-t-working
