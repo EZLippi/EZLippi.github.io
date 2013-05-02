@@ -142,22 +142,22 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 好了，你已经可以成功连接GitHub了。
 
 ## 使用GitHub Pages建立博客
-与GitHub建立好链接之后，就可以方便的使用它提供的Pages服务，GitHub Pages分两种，一种是你的GitHub用户名建立的`username.github.com`这样的用户&组织页（站），另一种是依附项目的pages。
+与GitHub建立好链接之后，就可以方便的使用它提供的Pages服务，GitHub Pages分两种，一种是你的GitHub用户名建立的`username.github.io`这样的用户&组织页（站），另一种是依附项目的pages。
 
 ###User & Organization Pages
-想建立个人博客是用的第一种，形如`beiyuu.github.com`这样的可访问的站，每个用户名下面只能建立一个，创建之后点击`Admin`进入项目管理，可以看到是这样的：
+想建立个人博客是用的第一种，形如`beiyuu.github.io`这样的可访问的站，每个用户名下面只能建立一个，创建之后点击`Admin`进入项目管理，可以看到是这样的：
 ![user pages](/images/githubpages/user-pages.png)
-而普通的项目是这样的，即使你也是用的`othername.github.com`：
+而普通的项目是这样的，即使你也是用的`othername.github.io`：
 ![other pages](/images/githubpages/other-pages.png)
 
-创建好`username.github.com`项目之后，提交一个`index.html`文件，然后`push`到GitHub的`master`分支（也就是普通意义上的主干）。第一次页面生效需要一些时间，大概10分钟左右。
+创建好`username.github.io`项目之后，提交一个`index.html`文件，然后`push`到GitHub的`master`分支（也就是普通意义上的主干）。第一次页面生效需要一些时间，大概10分钟左右。
 
-生效之后，访问`username.github.com`就可以看到你上传的页面了，[beiyuu.github.com][7]就是一个例子。
+生效之后，访问`username.github.io`就可以看到你上传的页面了，[beiyuu.github.com][7]就是一个例子。
 
 关于第二种项目`pages`，简单提一下，他和用户pages使用的后台程序是同一套，只不过它的目的是项目的帮助文档等跟项目绑定的内容，所以需要在项目的`gh-pages`分支上去提交相应的文件，GitHub会自动帮你生成项目pages。具体的使用帮助可以参考[Github Pages][]的官方文档：
 
 ###绑定域名
-我们在第一部分就提到了在DNS部分的设置，再来看在GitHub的配置，要想让`username.github.com`能通过你自己的域名来访问，需要在项目的根目录下新建一个名为`CNAME`的文件，文件内容形如：
+我们在第一部分就提到了在DNS部分的设置，再来看在GitHub的配置，要想让`username.github.io`能通过你自己的域名来访问，需要在项目的根目录下新建一个名为`CNAME`的文件，文件内容形如：
 
     beiyuu.com
 
