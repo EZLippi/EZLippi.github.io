@@ -5,12 +5,8 @@ description: 存在感对于每个人的生活有多么的重要，可能平时�
 category: blog
 ---
 
-# [{{ page.title }}][1]
-2011-12-29 By {{ site.author_info }}
-
 
 
 
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
-[1]:    {{ page.url}}  ({{ page.title }})
