@@ -41,6 +41,6 @@ Apple II发布时，乔布斯年仅21岁，从此之后，他的财富不断增�
 
 乔布斯很欣赏这种精神，他也想把这种精神溶入到产品中。只要用户使用产品，就能感受到这种精神，如果与Macintosh的用户交谈，会发现他们喜爱这个产品，在此之前，你很少听人说真心喜欢某个商业产品——是的，但你可以从Macintosh感受到某种奇妙的东西。
 
-<iframe height=498 width=510 src="http://player.youku.com/embed/XNTUxNDY1NDY4" frameborder=0 allowfullscreen style="margin:0 auto"></iframe>
+<iframe height=498 width=510 src="http://player.youku.com/embed/XNTUxNDY1NDY4" frameborder=0 allowfullscreen class="video-frame"></iframe>
 
 [BeiYuu]:    http://beiyuu.com  "BeiYuu"
