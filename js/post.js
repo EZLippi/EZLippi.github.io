@@ -89,7 +89,7 @@ $(document).ready(function(){
                 e.preventDefault();
                 var scrollNum = $(this).attr('data-top') || $('#'+$(this).attr('data-id')).offset().top;
                 //window.scrollTo(0,scrollNum-30);
-                $('body','html').animate({ scrollTop: scrollNum-30 }, 400, 'swing');
+                $('body, html').animate({ scrollTop: scrollNum-30 }, 400, 'swing');
             })
 
             $(window).load(function(){
