@@ -102,20 +102,35 @@ $(document).ready(function(){
                     }
                 });
 
+                var waitForFinalEvent = (function () {
+                    var timers = {};
+                    return function (callback, ms, uniqueId) {
+                        if (!uniqueId) {
+                            uniqueId = "Don't call this twice without a uniqueId";
+                        }
+                        if (timers[uniqueId]) {
+                            clearTimeout (timers[uniqueId]);
+                        }
+                        timers[uniqueId] = setTimeout(callback, ms);
+                    };
+                })();
+
                 $(window).scroll(function(){
-                    var nowTop = $(window).scrollTop(),index,length = scrollTop.length;
-                    if(nowTop+60 > scrollTop[length-1]){
-                        index = length
-                    }else{
-                        for(var i=0;i<length;i++){
-                            if(nowTop+60 <= scrollTop[i]){
-                                index = i
-                                break;
+                    waitForFinalEvent(function(){
+                        var nowTop = $(window).scrollTop(),index,length = scrollTop.length;
+                        if(nowTop+60 > scrollTop[length-1]){
+                            index = length
+                        }else{
+                            for(var i=0;i<length;i++){
+                                if(nowTop+60 <= scrollTop[i]){
+                                    index = i
+                                    break;
+                                }
                             }
                         }
-                    }
-                    $('#menuIndex li').removeClass('on')
-                    $('#menuIndex li').eq(index).addClass('on')
+                        $('#menuIndex li').removeClass('on')
+                        $('#menuIndex li').eq(index).addClass('on')
+                    })
                 });
             });
 
@@ -125,7 +140,8 @@ $(document).ready(function(){
     }
 
     $.getScript('/js/prettify/prettify.js',function(){
-        prettyPrint();
-        menuIndex();
+        prettyPrint(function(){
+            menuIndex();
+        });
     });
 });

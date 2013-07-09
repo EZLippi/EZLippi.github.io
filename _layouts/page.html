@@ -1,43 +1,7 @@
 ---
 layout:           default
 ---
-<div id="head">
-    <div class='logo'>
-        <a href="/" title="Home">BeiYuu.com</a>
-    </div>
-</div>
 
 <div id="content">
     {{ content }}
-</div><!-- #content --> 
-
-<div id="about">
-    <div class="about-content">
-        <div class="clearfix">
-            <div class="about-left">
-                <h2>Contact</h2>
-                <div class="weibo-con">
-                    <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=75&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1855270953&verifier=375b89d6&colors=d6f3f7,262626,666666,0082cb,ecfbfd&dpc=1"></iframe>
-                </div>
-            </div>
-            <div class="about-left about-more">
-                <h2>Project</h2>
-                {% for post in site.categories.project %}
-                    <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a><br/>
-                {% endfor %}
-            </div>
-            <div class="about-left about-more">
-                <h2>About</h2>
-                <p>
-                    Working(F2E)<a href="http://douban.com/people/beiyuu" class="external" target="_blank">@Douban</a><br/>
-                    Code<a href="https://github.com/beiyuu" class="external" target="_blank">@GitHub</a><br/>
-                    Photo<a href="http://instagram.com/beiyuu/" class="external" target="_blank">@Instagram</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="copyright right">
-            <p>Design by <a href="http://beiyuu.com/about" title="BeiYuu" target="_blank">BeiYuu</a> © 2013</p>
-        </div>
-    </div>
 </div>
