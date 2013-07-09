@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: home
 ---
 
 <div class="index-content project">
