@@ -4,44 +4,28 @@
  */
 
 /* 重置浏览器CSS */
-/* 防止用户自定义背景颜色对网页的影响 */
 html{color:#000;}
-/* 内外边距通常让各个浏览器样式的表现位置不同 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}
-/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
-  /* 要注意表单元素并不继续父级 font 的问题 */
 body,button,input,select,textarea{font-size:12px/1.5;}
 input,select,textarea{font-size:100%;}
-  /* 去掉各Table  cell 的边距并让其边重合 */
 table{border-collapse:collapse;border-spacing:0;}
-  /* IE bug fixed: th 不继承 text-align*/
 th{text-align:inherit;}
-/* 去除默认边框 */
 fieldset,img,a img{border:0;}
-/* ie6 7 8(q) bug 显示为行内表现 */
 iframe{display:block;}
-/* 去掉 firefox 下此元素的边框 */
 abbr,acronym{border:0;font-variant:normal;}
-/* 一致的 del 样式 */
 del{text-decoration:line-through;}
 address,caption,cite,code,dfn,em,th,var {font-style:normal;font-weight:500;}
-  /* 去掉列表前的标识, li 会继承 */
 ol,ul {list-style:none;}
-/* 对齐是排版最重要的因素, 别让什么都居中 */
 caption,th{text-align:left;}
-/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
 q:before,q:after {content:'';}
-/* 统一上标和下标 */
 sup{vertical-align:text-top;}
 sub{vertical-align:text-bottom;}
-/* 清理浮动 */
+
 .clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
 .clearfix{zoom:1; /* for IE6 IE7 */}
-/* 隐藏, 通常用来与 JS 配合 */
 body .hide{display:none;}
-/* 设置内联, 减少浮动带来的bug */
 .left,.right{display:inline;}
 .left{float:left;}
 .right{float:right;}
@@ -60,7 +44,7 @@ a.external:hover {background-position:right -15px;}
 h2 {font-size:22px;font-weight:bold;margin-bottom:25px;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
 h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
-p {margin-bottom:35px;line-height:1.8em;}
+p {margin-bottom:40px;line-height:1.8em;}
 code {background:#eee;border:1px solid #ccc;padding:0 5px;font-family:"Courier";line-height:14px;font-size:14px;word-wrap:break-word;}
 pre {background-color:#000;padding:15px;overflow:auto;margin-bottom:20px;font-size:14px;border: 1px solid #eee;-webkit-border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;border-radius: 4px 4px 4px 4px;color:#b9bdb6}
 pre code{background-color:transparent;border:none;padding:0;word-wrap:normal;}
@@ -80,36 +64,44 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .entry img{max-width:670px;display:block;margin:10px auto;}
 
 
-.index-content aside {
+.index-content .aside {
     position: fixed;
-    z-index: 100;
     top: 0;
     left: 0;
     width: 30%;
     height: 100%;
     max-width: 500px;
     background:#000;
-    background-image:url(//dnqgz544uhbo8.cloudfront.net/_/fp/img/home/01.R0QM9YAUAl4AZhs5ncYiiQ.jpg);
     box-shadow:inset -1px 0 0 rgba(0,0,0,0.3);
     background-size:cover;
 }
-.index-content section{
-    outline: 0;
-    position: absolute;
-    left: 30%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #fff;
-    padding-top:50px;
+.blog .aside{
+    background-image:url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
 }
-.index-content section ul{display:inline-block;vertical-align:top;*float:left;zoom:1;padding:50px 120px;}
-.index-content section h2{font-size:20px;}
-.index-content section h2 a{color:#444}
-.index-content section h2 a:hover {color:#E50053;text-decoration:none;}
-.index-content section li{margin-bottom:45px;}
+.opinion .aside{
+    background-image:url(https://dnqgz544uhbo8.cloudfront.net/_/fp/img/bestof/june-2013.CaUUbO2jIECgCmldhmxCCA.jpg);
+}
+.project .aside{
+    background-image:url('https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*kTUZamBulGQZg1MW.jpeg')
+}
+.index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
 
-.title-desc {color:#aaa;font-style:italic;font-size:14px;display:block;text-align:left;margin-top:20px;}
+.index-content .artical-list { width:70%; margin:0 auto; }
+.index-content .artical-list li { margin-bottom:70px; }
+.index-content h2 { font-size:20px; margin-bottom:15px; }
+.index-content h2 a { color:#444 }
+.index-content h2 a:hover { color:#E50053; text-decoration:none; }
+.index-content .title-desc {color:#aaa;font-size:14px;line-height:1.6em;}
+
+.index-content .artical-cate { width:70%; margin:0 auto; }
+.index-content .artical-cate li { display:inline-block; *float:left; zoom:1; font-size:18px; width:32%; cursor:pointer; }
+.index-content .artical-cate li a,
+.index-content .artical-cate li a:visited { display:inline-block; zoom:1; color:#000; width:100%; }
+.index-content .artical-cate li a:hover { text-decoration:none; }
+.index-content .artical-cate li.on span{ color:red; }
+
+.index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
+.index-content #cateBar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
 
 /***************Wiki Style*****************/
 .wiki h2{cursor:pointer;}
@@ -133,46 +125,9 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #menuIndex li.h1{font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
 #menuIndex li.h3{padding-left:25px;}
 
-/*
-#about{background:#262626;width:100%;margin:0 auto;border-top:6px solid #026b8c;overflow:hidden;margin-top:30px;font-size:14px;line-height:1.6em;}
-#about .about-content {width:720px;margin:50px auto;}
-#about h2{color:#bbb;font-size:24px;font-weight:bold;border-bottom:1px solid #444;line-height:45px;}
-#about .about-left{float:left;width:200px;color:#999;}
-#about .about-more {margin-left:60px;}
-#about .weibo-con{margin-top:-10px;margin-left:-14px;}
-#about .copyright {margin-top:15px;font-size:12px;color:#666;overflow:hidden;}
-#about a:link,
-#about a:visited,
-#about a:hover,
-#about a:active {color:#5e8dba;outline:none;text-decoration:none;}
-#about a:hover {text-decoration:underline;}
-*/
-
 .home-menu { position:fixed; top:15px; left:15px; background:#000; }
 .home-menu-icon { line-height:43px; padding:0 11px; font-size:18px; cursor:pointer; display:inline-block; color:#fff; }
 .home-menu-icon:hover { color:#fff; text-decoration:none; }
-
-/*
-.side-nav { position:fixed; height:500px; width:250px; background:#333332; top:15px; left:15px; box-shadow:inset -10px 0 6px -9px rgba(0,0,0,0.7); display:none; }
-
-.side-nav-transition #content {
-    -webkit-transition: -webkit-transform .2s cubic-bezier(0.2,0.3,0.25,0.9);
-    -moz-transition: -webkit-transform .2s cubic-bezier(0.2,0.3,0.25,0.9);
-    -ms-transition: -webkit-transform .2s cubic-bezier(0.2,0.3,0.25,0.9);
-    -o-transition: -webkit-transform .2s cubic-bezier(0.2,0.3,0.25,0.9);
-    transition: -webkit-transform .2s cubic-bezier(0.2,0.3,0.25,0.9);
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0)
-}
-.side-nav-open #content {
-    -webkit-transform: translate3d(250px,0,0);
-    -moz-transform: translate3d(250px,0,0);
-    -o-transform: translate3d(250px,0,0);
-    transform: translate3d(250px,0,0);
-}
-*/
 
 
 @media screen and (max-width: 750px){
@@ -189,18 +144,15 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .entry pre ol li{margin-bottom:0;line-height:1em;}
     .entry pre code{line-height:1em;font-size:12px;}
 
-    .index-artical ul {display:block;margin:0 auto;width:95%;}
-    .index-artical .index-mid {display:none;}
-    .index-artical .index-left {padding:0;}
-    .index-artical .index-right {padding:0;}
+    .index-content .aside { position:relative; width:100%; height:300px; max-width:none; }
+    .index-content .section { margin-left:0; padding-right:0; }
+    .index-content .section ul { width:85%; }
+    .index-content .cate-bar { width:85%; }
+    .index-content .artical-cate { margin-top:50px; }
 
-    #about h2{font-size:20px;line-height:30px;margin-bottom:10px;}
-    #about .about-content {width:95%;margin:15px auto;}
-    #about .about-left {float:none;width:70%;margin:0 auto;}
-    #about .about-left h2{text-align:right;}
-    #about .about-more {margin:0 auto;;margin-top:20px}
-    #about .copyright {margin-top:0;}
+    .aside {display:none;}
 }
+
 @media (max-width: 1020px){
     #menuIndex {display:none;}
     .home-menu { position:absolute; }
