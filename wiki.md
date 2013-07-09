@@ -117,10 +117,10 @@ title: Wiki
     <h2>HTML5 &amp; CSS3</h2>
     <ul class="hide">
         <li><a href="http://diveintohtml5.info/">Dive Into HTML5</a></li>
-        <li><a href="http://blog.bingo929.com/google-enjoy-html5-drag-drop-filereaderenren.html" title="给力的 Google HTML5 训练营(HTML5 Drag&Drop 拖拽、FileReader实例教程)">HTML5训练营</a></li>
+        <li><a href="http://blog.bingo929.com/google-enjoy-html5-drag-drop-filereaderenren.html" title="给力的 Google HTML5 训练营(HTML5 Drag&amp;Drop 拖拽、FileReader实例教程)">HTML5训练营</a></li>
         <li><a href="http://blog.bingo929.com/html5-websockets.html" title="HTML5 WebSockets 基础使用教程">HTML5 WebSockets</a></li>
         <li><a href="http://blog.bingo929.com/html5-ie-enabling-script.html" title="让所有IE支持HTML5的解决方案">IE支持HTML5</a></li>
-        <li><a href="http://blog.bingo929.com/power-of-html5-css3-div-css.html" title="一起感受HTML5和CSS3的能量">感受HTML5&CSS3</a></li>
+        <li><a href="http://blog.bingo929.com/power-of-html5-css3-div-css.html" title="一起感受HTML5和CSS3的能量">感受HTML5&amp;CSS3</a></li>
         <li>用JavaScript玩转计算机图形学：<a href="http://www.cnblogs.com/miloyip/archive/2010/03/29/1698953.html">(一)光线追踪入门</a> <a href="http://www.cnblogs.com/miloyip/archive/2010/04/02/1702768.html">(二)基本光源</a></li>
         <li>Canvas：</li>
         <ul>

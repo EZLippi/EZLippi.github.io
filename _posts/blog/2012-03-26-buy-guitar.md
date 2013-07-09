@@ -40,7 +40,7 @@ category: blog
 
 我还是要啰嗦一下，无论材质怎样怎样，材质也不是吉他音质的全部，好的材料也只有在好的工艺之下，才能发挥它的真正价值，你需要更多的练习是耳朵的辨别能力，合板吉他如何都不会好过单板的音质，面单和全单之中鱼龙混杂，全单音质也不一定就强过面单。下面[这个音频][danbanshiting]是某网友自己录制的，每一小段乐曲都用两把琴演奏，一把是全单，一把是面单，看看你能听出来哪个是全单吗？
 
-<table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://www.tudou.com/v/Itc0aUqqnB0/&resourceId=0_05_02_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" align="middle" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></td></tr></table>
+<table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://www.tudou.com/v/Itc0aUqqnB0/&amp;resourceId=0_05_02_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" align="middle" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></td></tr></table>
 
 听完了有了自己的结论了吗，这里查看答案：[同品牌吉他面单和全单声音比较][4]。也可Ctrl+A查看答案。
 
@@ -122,7 +122,7 @@ Taylor的型号中，一般的命名是三位数字，当然也有其他系列�
 
 下面这段视频是[纵贯线][zongguanxian]在春晚上的表演，使用的就是Lee Guitar：
 
-<table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://www.tudou.com/v/R6K98aQSuq0/&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></td></tr></table>
+<table align="center" style="margin-bottom:30px;"><tr><td><embed src="http://www.tudou.com/v/R6K98aQSuq0/&amp;resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></td></tr></table>
 
 
 ##吉他琴弦与保养
