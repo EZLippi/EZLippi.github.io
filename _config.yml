@@ -1,7 +1,6 @@
 auto:	          true
 
 markdown:         maruku
-pygments:         true
 paginate:         6
 permalink:        /:title
 
@@ -10,6 +9,5 @@ url:              http://beiyuu.com
 feed:             /atom.xml
 author:
     name:         BeiYuu
-    twitter:      twitter.com/beiyuu
 description:      "BeiYuu\'s Blog"
 author_info:      <a href="http://beiyuu.com/">BeiYuu</a>
