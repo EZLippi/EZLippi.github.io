@@ -140,8 +140,7 @@ $(document).ready(function(){
     }
 
     $.getScript('/js/prettify/prettify.js',function(){
-        prettyPrint(function(){
-            menuIndex();
-        });
+        prettyPrint();
+        menuIndex();
     });
 });
