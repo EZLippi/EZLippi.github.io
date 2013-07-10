@@ -24,7 +24,7 @@ sup{vertical-align:text-top;}
 sub{vertical-align:text-bottom;}
 
 .clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
-.clearfix{zoom:1; /* for IE6 IE7 */}
+.clearfix{zoom:1;}
 body .hide{display:none;}
 .left,.right{display:inline;}
 .left{float:left;}
@@ -92,7 +92,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .index-content h2 { font-size:20px; margin-bottom:15px; }
 .index-content h2 a { color:#444 }
 .index-content h2 a:hover { color:#E50053; text-decoration:none; }
-.index-content .title-desc {color:#aaa;font-size:14px;line-height:1.6em;}
+.index-content .title-desc {color:#999;font-size:14px;line-height:1.6em;}
 
 .index-content .artical-cate { width:70%; margin:0 auto; }
 .index-content .artical-cate li { display:inline-block; *float:left; zoom:1; font-size:18px; width:32%; cursor:pointer; }
@@ -159,4 +159,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 @media (max-width: 1020px){
     #menuIndex {display:none;}
     .home-menu { position:absolute; }
+    .index-content .cate-bar ,
+    .index-content .artical-list,
+    .index-content .artical-cate { width:85%; }
 }
