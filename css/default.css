@@ -55,7 +55,7 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 
 
 /****************entry style**************/
-#content .entry{margin-bottom:50px;}
+#content .entry{margin-bottom:80px;}
 .entry ul{margin-bottom:25px;margin-left:25px;}
 .entry ul li{margin-bottom:5px;list-style:disc;line-height:1.8em;}
 .entry ol{margin-bottom:25px;margin-left:25px;}
@@ -126,9 +126,15 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 #menuIndex li.h1{font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
 #menuIndex li.h3{padding-left:25px;}
 
-.home-menu { position:fixed; top:15px; left:15px; background:#000; }
+.home-menu { position:fixed; top:15px; left:15px; background:#000; z-index:5; }
 .home-menu-icon { line-height:43px; padding:0 11px; font-size:18px; cursor:pointer; display:inline-block; color:#fff; }
 .home-menu-icon:hover { color:#fff; text-decoration:none; }
+
+.contact-me { margin:80px 0 20px; overflow:hidden; }
+.contact-me h2 { font-size:18px; color:#666; margin-bottom:0;}
+.weibo-con { margin-left:-15px; float:left; width:160px; }
+.contact-more { font-size:14px; margin-top:50px; float:left; }
+.contact-more a { margin-left:45px; }
 
 
 @media screen and (max-width: 750px){
@@ -154,6 +160,12 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .blog .aside,
     .project .aside,
     .opinion .aside {display:none;background-image:none;}
+}
+
+@media screen and (max-width: 450px){
+    .weibo-con { float:none; }
+    .contact-more { margin-top:15px; }
+    .contact-more a { margin-left:0; margin-right:40px; }
 }
 
 @media (max-width: 1020px){

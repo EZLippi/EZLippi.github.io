@@ -2,17 +2,15 @@
 layout: page
 ---
 <link rel="stylesheet" href="/js/prettify/prettify.css" />
-<div class="entry">
 
+<div class="entry">
     <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
     <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
-
     {{ content }}
-
 </div><!-- .entry -->
+
 <div id="disqus_container">
-    <a href="#" class="right comment" onclick="return false;">点击查看评论</a>
-    <div style="margin-bottom:20px">
+    <div style="margin-bottom:20px" class="right">
         <script type="text/javascript" charset="utf-8">
         (function(){
           var _w = 86 , _h = 16;
@@ -35,7 +33,19 @@ layout: page
         })()
         </script>
     </div>
+    <a href="#" class="comment" onclick="return false;">点击查看评论</a>
     <div id="disqus_thread"></div>
+</div>
+
+<div class="contact-me">
+    <h2>Contact Me</h2>
+    <div class="weibo-con">
+        <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=75&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1855270953&verifier=375b89d6&dpc=1"></iframe>
+    </div>
+    <div class="contact-more">
+        <a href="http://www.douban.com/people/beiyuu/" target="_blank">@Douban</a>
+        <a href="http://instagram.com/beiyuu/" target="_blank">@Instagram</a>
+    </div>
 </div>
 
 <script src="/js/post.js" type="text/javascript"></script>
