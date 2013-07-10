@@ -1,11 +1,11 @@
-auto:	          true
+auto: true
 
-markdown:         rdiscount
-pygments:         true
-paginate:         6
-permalink:        /:title
+markdown: rdiscount
+pygments: true
+paginate: 6
+permalink: /:title
 
-title:            BeiYuu.com
-url:              http://beiyuu.com
-feed:             /atom.xml
-author_info:      <a href="http://beiyuu.com/">BeiYuu</a>
+title: BeiYuu.com
+url: http://beiyuu.com
+feed: /atom.xml
+author_info: <a href="http://beiyuu.com/">BeiYuu</a>
