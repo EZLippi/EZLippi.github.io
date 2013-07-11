@@ -1,6 +1,6 @@
 auto: true
 
-markdown: maruku
+markdown: rdiscount
 pygments: true
 paginate: 6
 permalink: /:title
