@@ -131,7 +131,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .home-menu-icon:hover { color:#fff; text-decoration:none; }
 
 .contact-me { margin:80px 0 20px; overflow:hidden; }
-.contact-me h2 { font-size:18px; color:#666; margin-bottom:0;}
+.contact-me .contact-title { font-size:18px; color:#666; margin-bottom:0;}
 .weibo-con { margin-left:-15px; float:left; width:160px; }
 .contact-more { font-size:14px; margin-top:50px; float:left; }
 .contact-more a { margin-left:45px; }
