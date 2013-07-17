@@ -21,7 +21,7 @@ $(document).ready(function(){
         }
     };
 
-    $('pre').addClass('prettyprint linenums') //添加Google code Hight需要的class
+    $('pre').addClass('prettyprint linenums'); //添加Google code Hight需要的class
 
     //***********************
     //**评论的代码也删掉哦***
@@ -68,7 +68,7 @@ $(document).ready(function(){
                     }
                     h3[h2index-1].push(h3item);
                 }
-                item.id = 'menuIndex' + index
+                item.id = 'menuIndex' + index;
             });
 
             //添加h1
@@ -90,7 +90,7 @@ $(document).ready(function(){
                 var scrollNum = $(this).attr('data-top') || $('#'+$(this).attr('data-id')).offset().top;
                 //window.scrollTo(0,scrollNum-30);
                 $('body, html').animate({ scrollTop: scrollNum-30 }, 400, 'swing');
-            })
+            }):
 
             $(window).load(function(){
                 var scrollTop = [];
@@ -119,28 +119,32 @@ $(document).ready(function(){
                     waitForFinalEvent(function(){
                         var nowTop = $(window).scrollTop(),index,length = scrollTop.length;
                         if(nowTop+60 > scrollTop[length-1]){
-                            index = length
+                            index = length;
                         }else{
                             for(var i=0;i<length;i++){
                                 if(nowTop+60 <= scrollTop[i]){
-                                    index = i
+                                    index = i;
                                     break;
                                 }
                             }
                         }
-                        $('#menuIndex li').removeClass('on')
-                        $('#menuIndex li').eq(index).addClass('on')
-                    })
+                        $('#menuIndex li').removeClass('on');
+                        $('#menuIndex li').eq(index).addClass('on');
+                    });
                 });
             });
 
             //用js计算屏幕的高度
             $('#menuIndex').css('max-height',$(window).height()-80);
         }
-    }
+    };
 
     $.getScript('/js/prettify/prettify.js',function(){
         prettyPrint();
         menuIndex();
     });
+
+    if(/\#comment/.test(location.hash)){
+        $('#disqus_container .comment').trigger('click');
+    }
 });

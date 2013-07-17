@@ -45,8 +45,8 @@ h2 {font-size:22px;font-weight:bold;margin-bottom:25px;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
 h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
 p {margin-bottom:40px;line-height:1.8em;}
-code {background:#eee;border:1px solid #ccc;padding:0 5px;font-family:"Courier";line-height:14px;font-size:14px;word-wrap:break-word;}
-pre {background-color:#000;padding:15px;overflow:auto;margin-bottom:20px;font-size:14px;border: 1px solid #eee;-webkit-border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;border-radius: 4px 4px 4px 4px;color:#b9bdb6}
+code {background:#eee;border:1px solid #ccc;padding:0 5px;font-family:"Courier";line-height:14px;font-size:14px;word-wrap:break-word; }
+pre {background-color:#000;padding:15px;overflow:auto;margin-bottom:40px;font-size:14px;border: 1px solid #eee;-webkit-border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;border-radius: 4px 4px 4px 4px;color:#b9bdb6;margin-top:-20px; }
 pre code{background-color:transparent;border:none;padding:0;word-wrap:normal;}
 pre ol{margin-left:25px;list-style-type:decimal;}
 
