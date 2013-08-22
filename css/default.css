@@ -47,15 +47,21 @@ h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
 p {margin-bottom:40px;line-height:1.8em;}
 code {background:#eee;border:1px solid #ccc;padding:0 5px;font-family:"Courier";line-height:14px;font-size:14px;word-wrap:break-word; }
 pre {background-color:#000;padding:15px;overflow:auto;margin-bottom:40px;font-size:14px;border: 1px solid #eee;-webkit-border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;border-radius: 4px 4px 4px 4px;color:#b9bdb6;margin-top:-20px; }
+h4+pre { margin-top:20px; }
 pre code{background-color:transparent;border:none;padding:0;word-wrap:normal;}
 pre ol{margin-left:25px;list-style-type:decimal;}
 
 /************layout style*****************/
-#content {width:680px;margin:90px auto 60px;min-height:400px;height:auto !important;height:400px;}
+#content {width:1060px;margin:90px auto 60px;min-height:400px;height:auto !important;height:400px; }
 
 
 /****************entry style**************/
-#content .entry{margin-bottom:80px;}
+.sidenav { width:240px; background:#fff; float:right; padding:20px; margin-bottom:50px; box-shadow:0 1px 4px #ccc; }
+.sidenav h2 { font-size:18px; color:#333; margin-bottom:15px; }
+.sidenav ul { margin-bottom:50px; }
+.sidenav li { margin-bottom:12px; }
+.sidenav a { color:#555; font-size:14px; display:block;}
+.entry{margin-bottom:80px;width:680px; float:left; background:#fff; padding:30px; box-shadow:0 2px 6px #ccc; }
 .entry ul{margin-bottom:25px;margin-left:25px;}
 .entry ul li{margin-bottom:5px;list-style:disc;line-height:1.8em;}
 .entry ol{margin-bottom:25px;margin-left:25px;}
@@ -118,9 +124,10 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 
 /**************目录导航**************/
-#menuIndex {position:fixed;top:60px;right:20px;width:200px;overflow:auto}
+#menuIndex {overflow:auto;}
 #menuIndex a {display:block; padding:2px 0; }
 #menuIndex a:hover {text-decoration:none;}
+#menuIndex ul {margin-bottom:10px;}
 #menuIndex ul li{font-size:12px;margin-bottom:5px;word-wrap:break-word;padding-left:10px;}
 #menuIndex ul li.on{background-color:#f5f5f5;}
 #menuIndex li.h1{font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
@@ -136,7 +143,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .home-contact img { width:18px; }
 
 @media screen and (max-width: 750px){
-    body {font-size:14px}
+    body {font-size:14px;}
     #content {width:85%;margin:100px auto 50px; }
 
     h2{font-size:20px;}
@@ -148,6 +155,8 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .entry img{max-width:90%;}
     .entry pre ol li{margin-bottom:0;line-height:1em;}
     .entry pre code{line-height:1em;font-size:12px;}
+    .sidenav {display:none;}
+    .entry {float:none;width:auto;background:transparent;padding:0;box-shadow:none;}
 
     .index-content .aside { position:relative; width:100%; height:300px; max-width:none; }
     .index-content .section { margin-left:0; padding-right:0; }
@@ -160,16 +169,16 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .opinion .aside {display:none;background-image:none;}
 }
 
-@media screen and (max-width: 450px){
-    .weibo-con { float:none; }
-    .contact-more { margin-top:15px; }
-    .contact-more a { margin-left:0; margin-right:40px; }
-}
-
 @media (max-width: 1020px){
     #menuIndex {display:none;}
     .home-menu { position:absolute; }
     .index-content .cate-bar ,
     .index-content .artical-list,
     .index-content .artical-cate { width:85%; }
+    .sidenav {display:none;}
+    .entry {float:none;width:auto;background:transparent;padding:0;box-shadow:none;}
+    #content {width:85%;margin:100px auto 50px; }
+}
+@media (max-width: 1300px){
+    .home-menu { position:absolute; }
 }
