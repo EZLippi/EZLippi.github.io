@@ -176,7 +176,7 @@ $(document).ready(function(){
                             }
                         }
                         $('#menuIndex li').removeClass('on');
-                        $('#menuIndex li').eq(index).addClass('on');
+                        $('#menuIndex li').eq(index-1).addClass('on');
                     });
                 });
 
