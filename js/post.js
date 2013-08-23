@@ -92,7 +92,7 @@ $(document).ready(function(){
                 $('body, html').animate({ scrollTop: scrollNum-30 }, 400, 'swing');
             });
 
-            $(window).load(function(){
+            //$(window).load(function(){
                 var scrollTop = [];
                 $.each($('#menuIndex li a'),function(index,item){
                     if(!$(item).attr('data-top')){
@@ -165,7 +165,7 @@ $(document).ready(function(){
 
                     $(window).trigger('scroll')
                 });
-            });
+            //});
 
             //用js计算屏幕的高度
             $('#menuIndex').css('max-height',$(window).height()-80);
