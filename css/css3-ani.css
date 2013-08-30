@@ -523,6 +523,7 @@
     font-weight: bold;
     color: white;
     text-align: center;
+    opacity: 0.9;
 }
 
 #carousel figure:nth-child(1) {

@@ -779,19 +779,7 @@ js代码如下：
                 });
         });
 
-<section id="caro-con">
-<div id="carousel">
-<figure>1</figure>
-<figure>2</figure>
-<figure>3</figure>
-<figure>4</figure>
-<figure>5</figure>
-<figure>6</figure>
-<figure>7</figure>
-<figure>8</figure>
-<figure>9</figure>
-</div>
-</section>
+<section id="caro-con"><div id="carousel"><figure>1</figure><figure>2</figure><figure>3</figure><figure>4</figure><figure>5</figure><figure>6</figure><figure>7</figure><figure>8</figure><figure>9</figure></div></section>
 <div id="car-btn">
 <button id="car-pre">&lt; Prev</button>
 <button id="car-next">Next &gt;</button>
