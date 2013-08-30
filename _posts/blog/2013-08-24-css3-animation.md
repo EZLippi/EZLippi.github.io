@@ -198,15 +198,15 @@ transition-delay声明了动画延迟开始的时间，很容易理解
 
 <div id="transition1">
 #transition1 {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;width:350px;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;background-color:#1abc9c;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;transition-propety:width,background-color;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;transition-duration:.5s, 1s;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;width:350px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background-color:#1abc9c;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;transition-propety:width,background-color;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;transition-duration:.5s, 1s;<br>
 }<br>
 #transition1:hover {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;width:450px;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;background-color:#8e44ad;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;transition-duration:.5s, 3s;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;width:450px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background-color:#8e44ad;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;transition-duration:.5s, 3s;<br>
 }<br>
 </div>
 
@@ -305,8 +305,8 @@ animation-direction有四个值：
 效果如下：
 
 <div id="translate1">
-    <div id="trans-inner1">Normal Div</div>
-    <div id="trans-inner2">transform:tranlated(40px, 40px)</div>
+<div id="trans-inner1">Normal Div</div>
+<div id="trans-inner2">transform:tranlated(40px, 40px)</div>
 </div>
 
 ####Rotate
@@ -314,8 +314,8 @@ animation-direction有四个值：
 `rotate()`方法可以将元素按照时钟方向旋转，参数可以是`0deg`到`360deg`，也是在x-y轴平面，示例如下：
 
 <div id="rotate1">
-    <div id="rota-inner1">Normal Div</div>
-    <div id="rota-inner2">transform:rotate(-30deg)</div>
+<div id="rota-inner1">Normal Div</div>
+<div id="rota-inner2">transform:rotate(-30deg)</div>
 </div>
 
 ####Scale
@@ -330,8 +330,8 @@ animation-direction有四个值：
 `skew()`方法可以将元素按照指定参数进行扭曲，你需要指定x、y轴的扭曲角度，看示例：
 
 <div id="skew1">
-    <div id="sk-inner1">Normal Div</div>
-    <div id="sk-inner2">transform:skew(30deg,0)</div>
+<div id="sk-inner1">Normal Div</div>
+<div id="sk-inner2">transform:skew(30deg,0)</div>
 </div>
 
 ####Matrix
@@ -359,41 +359,41 @@ animation-direction有四个值：
 来看看例子：
 
 <div class="transform-con">
-    <div id="trans-3" class="inner">
-        width:100%;<br>
-        height:100%;<br>
-        transform: translateZ(-200px);
-    </div>
+<div id="trans-3" class="inner">
+width:100%;<br>
+height:100%;<br>
+transform: translateZ(-200px);
+</div>
 </div>
 
 <div class="transform-con">
-    <div id="trans-31" class="inner">
-        width:100%;<br>
-        height:100%;<br>
-        transform: translateZ(100px);
-    </div>
+<div id="trans-31" class="inner">
+width:100%;<br>
+height:100%;<br>
+transform: translateZ(100px);
+</div>
 </div>
 
 <div class="transform-con">
-    <div id="rotate-31" class="inner">
-        width:100%;<br>
-        height:100%;<br>
-        transform: rotateX(45deg);
-    </div>
+<div id="rotate-31" class="inner">
+width:100%;<br>
+height:100%;<br>
+transform: rotateX(45deg);
+</div>
 </div>
 <div class="transform-con">
-    <div id="rotate-32" class="inner">
-        width:100%;<br>
-        height:100%;<br>
-        transform: rotateY(45deg);
-    </div>
+<div id="rotate-32" class="inner">
+width:100%;<br>
+height:100%;<br>
+transform: rotateY(45deg);
+</div>
 </div>
 <div class="transform-con">
-    <div id="rotate-33" class="inner">
-        width:100%;<br>
-        height:100%;<br>
-        transform: rotateZ(45deg);
-    </div>
+<div id="rotate-33" class="inner">
+width:100%;<br>
+height:100%;<br>
+transform: rotateZ(45deg);
+</div>
 </div>
 
 任何有3D变换的元素，不论最后只是做了2D的变换，或者什么都没做`translate3d(0,0,0)`，都会触发浏览器去计算。不过，以后会更新优化也不一定。
@@ -412,17 +412,16 @@ animation-direction有四个值：
       transform: perspective( 400px ) rotateY(45deg);
     }
 
-
 <div class="pers-con" id="pers-red">
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
 </div>
 
     #pers-blue {
@@ -435,15 +434,15 @@ animation-direction有四个值：
     }
 
 <div class="pers-con" id="pers-blue">
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
-    <div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
+<div class="item">&nbsp;</div>
 </div>
 
 上面这两种写法，都触发了元素的3D行为，函数型的写法`transform:perspective(400px)`适用于单个元素，会对每一个元素做3D视图的变换，而`perspective:400px`的写法，需写在父元素上，然后以父元素的视角，对多个子元素进行3D变换，多个子元素共享同一个3D空间，可以自己打开console修改感受一下。
@@ -456,22 +455,22 @@ animation-direction有四个值：
     perspective-orgin: 20% 70%;
 
 这个是默认值的`perspective-orign:50% 50%`：
-<!--<div id="transform1">-->
-    <!--<div class="inner">-->
-        <!--<img src="http://lorempixel.com/150/150/city" alt="Nature">-->
-        <!--<img src="http://lorempixel.com/150/150/food" alt="Nature">-->
-        <!--<img src="http://lorempixel.com/150/150/people" alt="Nature">-->
-    <!--</div>-->
-<!--</div>-->
+<div id="transform1">
+<div class="inner">
+<img src="http://lorempixel.com/150/150/city" alt="Nature">
+<img src="http://lorempixel.com/150/150/food" alt="Nature">
+<img src="http://lorempixel.com/150/150/people" alt="Nature">
+</div>
+</div>
 
 这个是`perspective-orgin: 0% 50%;`
-<!--<div id="transform1" sytle="-webkit-perspective-origin:0% 50%;perspective-origin:0% 50%">-->
-    <!--<div class="inner">-->
-        <!--<img src="http://lorempixel.com/150/150/nature" alt="Nature">-->
-        <!--<img src="http://lorempixel.com/150/150/animals" alt="Nature">-->
-        <!--<img src="http://lorempixel.com/150/150/abstract" alt="Nature">-->
-    <!--</div>-->
-<!--</div>-->
+<div id="transform1" sytle="-webkit-perspective-origin:0% 50%;perspective-origin:0% 50%">
+<div class="inner">
+<img src="http://lorempixel.com/150/150/nature" alt="Nature">
+<img src="http://lorempixel.com/150/150/animals" alt="Nature">
+<img src="http://lorempixel.com/150/150/abstract" alt="Nature">
+</div>
+</div>
 
 ####transform-style
 这个参数用来共享父元素的3D空间，这样说起来有些抽象，下面第一个翻卡片的例子中会讲到。
@@ -544,10 +543,10 @@ backface-visibility 属性可用于隐藏内容的背面。默认情况下，背
 当`#card1`添加了`.flipped`的样式，`#card1`以Y轴旋转了180度，这时候`.front`转到了背面，而`.back`从背面转到了前面，所以就完成了切换。这一段需要仔细的想一想。好了，看看下面的实例，点击即可翻转：
 
 <div id="cardflip">
-  <div id="card1">
-    <div class="front">1</div>
-    <div class="back">2</div>
-  </div>
+<div id="card1">
+<div class="front">1</div>
+<div class="back">2</div>
+</div>
 </div>
 
 我们再给这个翻转加一些偏移的效果，看起来会不那么生硬。这就用到了`transform-origin`，这个参数：
@@ -563,10 +562,10 @@ backface-visibility 属性可用于隐藏内容的背面。默认情况下，背
 可以在console里面去掉`#card1.flipped`的`translate`帮助理解。
 
 <div id="cardflip1">
-  <div id="card2">
-    <div class="front">1</div>
-    <div class="back">2</div>
-  </div>
+<div id="card2">
+<div class="front">1</div>
+<div class="back">2</div>
+</div>
 </div>
 
 这里有一点需要注意，当元素在z轴上有了位移，或者朝向负角度旋转，会导致元素在页面上无法被鼠标点击到，想像一下3D空间，这个元素已经位于整个页面平面的**里面**，所以无法触及了。
@@ -635,23 +634,23 @@ backface-visibility 属性可用于隐藏内容的背面。默认情况下，背
     #cube { transition: transform 1s; }
 
 <section id="cube-con">
-  <div id="cube">
-    <figure class="front">1</figure>
-    <figure class="back">2</figure>
-    <figure class="right">3</figure>
-    <figure class="left">4</figure>
-    <figure class="top">5</figure>
-    <figure class="bottom">6</figure>
-  </div>
+<div id="cube">
+<figure class="front">1</figure>
+<figure class="back">2</figure>
+<figure class="right">3</figure>
+<figure class="left">4</figure>
+<figure class="top">5</figure>
+<figure class="bottom">6</figure>
+</div>
 </section>
 
 <div id="cube-btn">
-    <button data-class="show-front">Show Front</button>
-    <button data-class="show-back">Show Back</button>
-    <button data-class="show-right">Show Right</button>
-    <button data-class="show-left">Show Left</button>
-    <button data-class="show-top">Show Top</button>
-    <button data-class="show-bottom">Show Bottom</button>
+<button data-class="show-front">Show Front</button>
+<button data-class="show-back">Show Back</button>
+<button data-class="show-right">Show Right</button>
+<button data-class="show-left">Show Left</button>
+<button data-class="show-top">Show Top</button>
+<button data-class="show-bottom">Show Bottom</button>
 </div>
 
 
@@ -781,21 +780,21 @@ js代码如下：
         });
 
 <section id="caro-con">
-  <div id="carousel">
-    <figure>1</figure>
-    <figure>2</figure>
-    <figure>3</figure>
-    <figure>4</figure>
-    <figure>5</figure>
-    <figure>6</figure>
-    <figure>7</figure>
-    <figure>8</figure>
-    <figure>9</figure>
-  </div>
+<div id="carousel">
+<figure>1</figure>
+<figure>2</figure>
+<figure>3</figure>
+<figure>4</figure>
+<figure>5</figure>
+<figure>6</figure>
+<figure>7</figure>
+<figure>8</figure>
+<figure>9</figure>
+</div>
 </section>
 <div id="car-btn">
-    <button id="car-pre">&lt; Prev</button>
-    <button id="car-next">Next &gt;</button>
+<button id="car-pre">&lt; Prev</button>
+<button id="car-next">Next &gt;</button>
 </div>
 
 ##结语
