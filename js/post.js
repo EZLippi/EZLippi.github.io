@@ -210,5 +210,6 @@ $(document).ready(function(){
 
     if(/css3-animation/.test(location.href)){
         $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
+        $.getScript('/js/css3-ani.js',function(){});
     }
 });
