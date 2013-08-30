@@ -4,7 +4,6 @@ title: CSS3动画详解
 description: 随着低版本IE份额下降，以及移动端流量的增长，在项目中也可以大胆使用CSS3动画来增强体验和提高产品的优雅程度，对那些不支持的浏览器也不用再费心去做更多兼容，所以，我们来研究下CSS3动画，到底应该怎么用。
 category: blog
 ---
-
 <style type="text/css">
 #transition1 {
     padding:20px;
@@ -596,7 +595,6 @@ category: blog
          -o-transform:rotateY(320deg) translateZ(288px);
             transform:rotateY(320deg) translateZ(288px);
 }
-
 </style>
 
 ##CSS3动画
@@ -1144,14 +1142,6 @@ backface-visibility 属性可用于隐藏内容的背面。默认情况下，背
   </div>
 </div>
 
-<script type="text/javascript">
-$(function(){
-    $('#cardflip').click(function(){
-        $('#card1').toggleClass('flipped')
-    })
-})
-</script>
-
 我们再给这个翻转加一些偏移的效果，看起来会不那么生硬。这就用到了`transform-origin`，这个参数：
 
     #card1 { transform-origin: left center; }
@@ -1170,14 +1160,6 @@ $(function(){
     <div class="back">2</div>
   </div>
 </div>
-
-<script type="text/javascript">
-$(function(){
-    $('body').delegate('#cardflip1','click',function(){
-        $('#card2').toggleClass('flipped')
-    })
-})
-</script>
 
 这里有一点需要注意，当元素在z轴上有了位移，或者朝向负角度旋转，会导致元素在页面上无法被鼠标点击到，想像一下3D空间，这个元素已经位于整个页面平面的**里面**，所以无法触及了。
 
@@ -1263,16 +1245,6 @@ $(function(){
     <button data-class="show-top">Show Top</button>
     <button data-class="show-bottom">Show Bottom</button>
 </div>
-
-<script type="text/javascript">
-    $(function(){
-        $('body').delegate('#cube-btn button','click',function(){
-            var cls = $(this).attr('data-class');
-            $('#cube').removeClass();
-            $('#cube').addClass(cls);
-        });
-    })
-</script>
 
 
 ###3D 旋转跑马灯
@@ -1417,40 +1389,55 @@ js代码如下：
     <button id="car-pre">&lt; Prev</button>
     <button id="car-next">Next &gt;</button>
 </div>
-<script type="text/javascript">
-    $(function(){
-        $('#car-pre').click(function(){
-            var deg = $('#carousel').attr('data-deg') || 0;
-            deg = parseInt(deg)+40;
-
-            var value = 'translateZ(-288px) rotateY('+deg+'deg)';
-
-            $('#carousel')
-                .attr('data-deg',deg)
-                .css({
-                    '-webkit-transform':value
-                    ,'-moz-transform':value
-                    ,'-o-transform':value
-                    ,'transform':value
-                });
-        });
-        $('#car-next').click(function(){
-            var deg = $('#carousel').attr('data-deg') || 0;
-            deg = parseInt(deg)-40;
-
-            var value = 'translateZ(-288px) rotateY('+deg+'deg)';
-
-            $('#carousel')
-                .attr('data-deg',deg)
-                .css({
-                    '-webkit-transform':value
-                    ,'-moz-transform':value
-                    ,'-o-transform':value
-                    ,'transform':value
-                });
-        });
-    })
-</script>
 
 ##结语
-终于完成了这个长篇，梳理的过程对我自己很有提高，希望对你也能有些帮助，有兴趣可以关注我，期待下以后的博客~
+终于完成了这篇，梳理的过程对我自己很有提高，希望对你也能有些帮助，有兴趣可以关注我，期待下以后的博客~
+
+<script type="text/javascript">
+$(function(){
+    $('#cardflip').click(function(){
+        $('#card1').toggleClass('flipped')
+    });
+
+    $('body').delegate('#cardflip1','click',function(){
+        $('#card2').toggleClass('flipped')
+    });
+
+    $('body').delegate('#cube-btn button','click',function(){
+        var cls = $(this).attr('data-class');
+        $('#cube').removeClass();
+        $('#cube').addClass(cls);
+    });
+
+    $('#car-pre').click(function(){
+        var deg = $('#carousel').attr('data-deg') || 0;
+        deg = parseInt(deg)+40;
+
+        var value = 'translateZ(-288px) rotateY('+deg+'deg)';
+
+        $('#carousel')
+            .attr('data-deg',deg)
+            .css({
+                '-webkit-transform':value
+                ,'-moz-transform':value
+                ,'-o-transform':value
+                ,'transform':value
+            });
+    });
+    $('#car-next').click(function(){
+        var deg = $('#carousel').attr('data-deg') || 0;
+        deg = parseInt(deg)-40;
+
+        var value = 'translateZ(-288px) rotateY('+deg+'deg)';
+
+        $('#carousel')
+            .attr('data-deg',deg)
+            .css({
+                '-webkit-transform':value
+                ,'-moz-transform':value
+                ,'-o-transform':value
+                ,'transform':value
+            });
+    });
+});
+</script>
