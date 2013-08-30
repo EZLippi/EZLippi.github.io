@@ -207,4 +207,8 @@ $(document).ready(function(){
     if(/\#comment/.test(location.hash)){
         $('#disqus_container .comment').trigger('click');
     }
+
+    if(/css3-animation/.test(location.href)){
+        $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
+    }
 });
