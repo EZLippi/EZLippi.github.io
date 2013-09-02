@@ -219,7 +219,7 @@ transition-delay声明了动画延迟开始的时间，很容易理解
 <ul>
     <li>和transition一样都可以定义开始和结束状态，但是animation还可以指定更确定的中间状态</li>
     <li>animation可以像transition一样被触发，也可以自动运行</li>
-    <li>animation可以无线循环的运行下去，也可以指定运行的次数</li>
+    <li>animation可以无限循环的运行下去，也可以指定运行的次数</li>
     <li>animation可以在顺序运行也可以反向运行</li>
     <li>animatino写起来稍麻烦些，但是依然比js简单许多</li>
 </ul>
