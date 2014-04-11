@@ -143,6 +143,7 @@ $(document).ready(function(){
                 });
 
                 var menuIndexTop = $('#menuIndex').offset().top;
+                var menuIndexLeft = $('#menuIndex').offset().left;
 
                 $(window).scroll(function(){
                     waitForFinalEvent(function(){
@@ -154,11 +155,13 @@ $(document).ready(function(){
                             $('#menuIndex').css({
                                 position:'fixed'
                                 ,top:'20px'
+                                ,left:menuIndexLeft
                             });
                         }else{
                             $('#menuIndex').css({
                                 position:'static'
                                 ,top:0
+                                ,left:0
                             });
                         }
 
@@ -178,6 +181,16 @@ $(document).ready(function(){
                 });
 
                 $(window).resize(function(){
+                    $('#menuIndex').css({
+                        position:'static'
+                        ,top:0
+                        ,left:0
+                    });
+
+                    menuIndexTop = $('#menuIndex').offset().top;
+                    menuIndexLeft = $('#menuIndex').offset().left;
+
+                    $(window).trigger('scroll')
                     $('#menuIndex').css('max-height',$(window).height()-80);
                 });
             })
