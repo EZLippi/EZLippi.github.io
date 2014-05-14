@@ -42,6 +42,10 @@ category: blog
     ##以上参数也可以修改passwd文件来调整
     sudo vim /etc/passwd
 
+    ##sudo和用户组管理在
+    visudo
+    sudo vim /etc/sudoers
+
 新增用户之后，需要解锁：
 
     ##为新增用户设置一个初始密码即可解锁
@@ -59,7 +63,7 @@ category: blog
 
     ##VPS上，添加本地机器的信任关系
     cd ~/.ssh
-    cat id_dsa.pub >> ~/.ssh/authorized_keys
+    cat id_rsa.pub >> ~/.ssh/authorized_keys
 
     ##OK，从本地机器登录到VPS的bob用户就不需要密码了
     ##同理，也可以添加到michael用户的.ssh目录下
@@ -70,6 +74,8 @@ category: blog
   <li><a href="http://sofish.de/1685" target="_blank" class="external">把 Mac 上的 bash 换成 zsh</a></li>
   <li><a href="http://leeiio.me/bash-to-zsh-for-mac/" target="_blank" class="external">zsh – 给你的Mac不同体验的Terminal</a></li>
   <li><a href="http://blog.csdn.net/kongqz/article/details/6338690" target="_blank" class="external">ssh-keygen的使用方法</a></li>
+  <li><a href="http://www.ruanyifeng.com/blog/2014/03/server_setup.html" target="_blank" class="external">Linux服务器的初步配置流程</a></li>
+  <li><a href="http://www.ruanyifeng.com/blog/2014/03/server_setup.html" target="_blank" class="external">Linux服务器的初步配置流程</a></li>
 </ul>
 
 ##为每个APP创建Virtualenv
