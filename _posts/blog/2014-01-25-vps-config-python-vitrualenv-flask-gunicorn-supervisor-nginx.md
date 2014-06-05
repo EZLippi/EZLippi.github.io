@@ -5,7 +5,7 @@ description: VPS环境搭建就是去理解各种概念的过程，这篇博客�
 category: blog
 ---
 
-新用户注册购买[DigitalOcean][DO]的VPS，使用优惠码`2014SSD`（或请尝试`DEPLOY2DO`）有$10赠送，可用两个月。DO采取丧心病狂的低价竞争策略，每月$5即可享用全功能的SSD硬盘VPS，具体去看看[这里][DO]吧。
+新用户注册购买[DigitalOcean][DO]的VPS，使用优惠码`2014SSD`（或请尝试`10TOSHIP`）有$10赠送，可用两个月。DO采取丧心病狂的低价竞争策略，每月$5即可享用全功能的SSD硬盘VPS，具体去看看[这里][DO]吧。
 
 注册，选择套餐、机房、系统(我选默认Ubuntu 12)，付款成功，可以开始配置了。
 
@@ -348,7 +348,7 @@ Nginx的配置文件和Supervisor类似，不同的程序可以分别配置，�
 配置完成之后，'sudo service nginx restart'重启一下服务，再配置一下本地的Hosts，打开浏览器应该就能看到了。
 
 ##完成
-至此，一个完整的环境搭建就完成了，推荐试用[DigitalOcean][DO]的VPS看看，`2014SSD`（或请尝试`DEPLOY2DO`）的优惠码也可以试试看看有没有过期哦~
+至此，一个完整的环境搭建就完成了，推荐试用[DigitalOcean][DO]的VPS看看，`2014SSD`（或请尝试`10TOSHIP`）的优惠码也可以试试看看有没有过期哦~
 
 
 [DO]: https://www.digitalocean.com/?refcode=f95f7297ed94 "DigitalOcean"
