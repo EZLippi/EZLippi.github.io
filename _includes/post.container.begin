@@ -1,0 +1,14 @@
+<div class="post main">
+	<div class="date">		
+		<div class="background">
+			<span class="day">{{ page.date | date_to_string | truncatewords: 2 | remove: '...' }}</span><br>
+			<span class="month">{{ page.date | date_to_string | split: ' ' | last }}</span><br>
+		</div>
+	</div>
+	<div class="detail">
+		<h1 class="title"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h1>
+		<div class="article">
+		<p><font style="font-weight: bold">摘要</font></p>
+		<p><font style="font-weight: bold">
+		{{ page.description }}
+		</font></p>

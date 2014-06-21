@@ -1,0 +1,38 @@
+
+		</div>
+	</div>	
+	<div style="clear:both"></div>			
+</div>
+
+<ul class="tag_box inline">
+	<li><span>Categories</span></li>
+	{% for cat in page.categories %}
+		<li><a href="{{ site.baseurl }}/categories/{{ cat }}.html">{{ cat }} <span>{{ site.categories[cat].size }}</span></a></li>
+	{% endfor %}
+</ul>
+
+<ul class="tag_box inline">
+	<li><span>Tags</span></li>
+	{% for tag in page.tags %}
+		<li><a href="{{ site.baseurl }}/tags/{{ tag }}.html">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+	{% endfor %}
+</ul>
+
+<div class="navigation">
+	{% if page.previous %}
+		<div class="alignleft">
+		<span>上一篇</span>
+		<a href="{{ site.baseurl }}{{ page.previous.url }}">{{ page.previous.title }}</a>
+		</div>
+	{% endif %}
+	{% if page.next %}
+		<div class="alignright">
+		<span>下一篇</span>
+		<a href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a>
+		</div>
+	{% endif %}
+	<div style="clear:both">&nbsp;</div>
+</div>
+
+<div id="disqus_thread"></div>
+{% include disqus %}

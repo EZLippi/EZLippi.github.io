@@ -1,0 +1,28 @@
+---
+layout: default
+title: P_Chou's Tech Space
+---
+{% for cat in site.categories %}
+	{% if cat[0] == 'algorithm' %} {% comment %}<!-- change the target category name for each category -->{% endcomment %}
+		{% for post in cat[1] %}
+			<div class="post main">
+				<div class="date">		
+					<div class="background">
+						<span class="day">{{ post.date | date_to_string | truncatewords: 2 | remove: '...' }}</span><br>
+						<span class="month">{{ post.date | date_to_string | split: ' ' | last }}</span><br>
+					</div>
+				</div>
+				<div class="detail">
+					<h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+					<a href="{{ site.baseurl }}{{ post.url }}#disqus_thread"></a>
+					<div class="article">
+						{{ post.description }}
+					</div>
+				</div>	
+				<div style="clear:both"></div>			
+			</div>
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+
+{% include disqus %}

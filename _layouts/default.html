@@ -1,56 +1,140 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!--
-    * Author:         LippiOuYang
-    -->
-    <meta charset="utf-8" />
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="author" content="LippiOuYang" />
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="Lippi's Blog" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/css/default.css" type="text/css" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
-    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>yucz's Tech Space</title>
+<link rel="stylesheet" href="/assert/css/style.css" type="text/css" media="screen">
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37440538-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
 
-    <div class="home-menu">
-        <div class="home-icon-con">
-            <a class="home-menu-icon" href="/">LippiOuYang</a>
-            <a class="home-follow" href="#" title="Contact Me">+</a>
-        </div>
-        <div class="home-contact">
-            <a href="http://weibo.com/ouyanglip/" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
-            <a href="http://www.douban.com/people/61479377/" target="_blank" style="text-align:center;"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
-        </div>
-    </div>
+<div id="nav">
+	<div class="container">
+		<ul id="custom-pages">
+			<li class="page_item page-item-46"><a href="{{ site.baseurl }}/index.html">Home Page</a></li>
+			<li class="page_item page-item-2"><a href="http://yucz.blog.chinaunix.net" target="_blank">My Chinaunixblogs</a></li>
+			<li class="page_item page-item-2"><a href="http://github.com/">GitHub</a></li>
+			<!--<li class="page_item page-item-2"><a href="http://github.com/PChou/NRemedy">NRemedy</a></li>-->
+      
+		</ul>
+		<!--<div id="rss">
+			<a href="http://wp-themes.com/?feed=rss2">subscribe</a> <a href="http://wp-themes.com/?feed=rss2"><img src="./Theme Preview_files/rss_icon.gif" class="icon" alt="RSS Feed"></a>
+		</div>-->
+		<div style="clear:both"></div>
+	</div>
+</div>
 
-    {{ content }}
+<div class="container">
+<script>
+  (function() {
+    var cx = '003119422597305414498:dbmtlmnlark';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+	<div id="header">
+		<div id="title">
+			<h1><a href="{{ site.baseurl }}/index.html"><span class="bold">yucz's</span> <span class="italic">Tech Space</span></a></h1>
+			<p id="subtitle">互联网技术的设计与分享</p>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div id="postcount">
+		<p>Posts : {{ site.posts.size }}</p>
+	</div>
+	<div id="content">
+		<div id="index">		
+			<div id="posts">
+				<div id="left">
+					{{ content }}
+				</div>
+				<!--right-->
+				<div id="right">
+					<div class="sidebar">
+						<div id="about-me-3" class="left">
+							<h3>About Me</h3>
+							<div class="aboutme">
+								<img src="{{ site.baseurl }}/assert/img/head.jpg" title="形象照"/>
+								<p>MySQL DBA，熟练使用常见的计算机语言：windows .net linux python mysql... </p>
+								<p>目前从事数据库相关工作.</p>
+								<p>现专职于一家视频会议公司DBA</p>
+								<p>mail:250305240@qq.com</p>
+								<p>新浪微博:<a href="http://weibo.com/yucz250" target="_blank">http://weibo.com/yucz250</a></p>
+							</div>
+						</div>
+						<div id="recent-posts-3" class="left">
+							<h3>近期文章</h3>
+								<ul>
+									{% for post in site.posts limit:10 offset:0 %}
+									<li><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+									{% endfor %}
+								</ul>
+						</div>
+						<!--
+						<div id="recent-comments-3" class="left">
+							<h3>Recent Comments</h3>
+							<ul id="recentcomments">
+								<li class="recentcomments"><a href="http://josephscott.org/" rel="external nofollow" class="url">Joseph Scott</a> on <a href="http://wp-themes.com/?p=1&cpage=1#comment-509">Hello world!</a></li>
+							</ul>
+						</div>
+						
+						<div id="archives-3" class="left">
+							<h3>Archives</h3>
+							<ul>
+								<li><a href="http://wp-themes.com/?m=200810" title="October 2008">October 2008</a></li>
+							</ul>
+						</div>-->
+						<div id="categories-3" class="left">
+							<h3>类  别</h3>
+								<ul>
+									{% for cat in site.categories %}
+									<li class="cat-item cat-item-6"><a href="{{ site.baseurl }}/categories/{{ cat[0] }}.html">{{ cat[0] }}</a></li>
+									{% endfor %}
+								</ul>
+						</div>
+						<div id="categories-3" class="left">
+							<h3>Tags</h3>
+							<ul></ul>
+							{% for tag in site.tags %}
+							<a href="{{ site.baseurl }}/tags/{{ tag[0] }}.html">{{ tag[0] }}</a><span>&nbsp;</span>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+<div id="footer">
+	<div id="breaker">&nbsp;</div>
+	<div class="container">
+		<ul class="footer-sidebar">
+				
+		</ul>
+		<div style="clear:both;"></div>
 
-    <!--*********************************************************-->
-    <!--****** 宝贝儿，看见这个时候，删掉下面的统计代码哦~ ******-->
-    <!--************* 再推荐下我的第一篇博客哦~~ ****************-->
-    <!--*********************************************************-->
-
-    <!--<div class="hide">
-        <script type="text/javascript" src="http://js.tongji.linezing.com/2727758/tongji.js"></script>
-        <noscript><a href="http://www.linezing.com"><img src="http://img.tongji.linezing.com/2727758/tongji.gif"/></a></noscript>
-	</div>-->
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-        })
-    </script>
+		<div id="credits">
+			Powered by <a href="http://www.wordpress.org/">Wordpress</a> and The Essayist by <a href="http://www.squarefour.net/">squarefour</a>
+		</div>
+	</div>
+</div>
 </body>
 </html>
