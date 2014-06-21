@@ -52,10 +52,10 @@ layout: default
      	<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=100&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1763970605&verifier=d643d182&dpc=1"></iframe>
     </div>
 	<div id="recent-posts-3" class="left">
-							<h3>近期文章</h3>
+							<h2>近期文章</h2>
 								<ul>
-									{% for post in site.posts.blog limit:10 offset:0 %}
-									<li><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+									{% for post in site.posts limit:10 offset:0 %}
+									<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 									{% endfor %}
 								</ul>
 						</div>
