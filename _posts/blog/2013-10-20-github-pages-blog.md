@@ -655,7 +655,7 @@ google的站内搜索叫：custome search engine：http://www.google.com/cse
 ！[](/images/githubpages/sitemap.jpg)
 接下来下载sitemap文件，把它上传到你的域名根目录，
 打开Optimization->Sitemaps，点击Add/TEST SITEMAP，输入指向你的站点的sitemap地址，本博客的sitemap是：http://lippiouyangonline.info/sitemap.xml,过几分钟就看到下面的结果：
-！[](/images/githubpages/sitemap.jpg)
+！[](/images/githubpages/sitemap2.jpg)
 
 
 

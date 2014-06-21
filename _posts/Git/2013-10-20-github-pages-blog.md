@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      利用github-pages建立个人博客 
-category:	git
+category:	blog 
 description: 轻量级的博客系统，不需要自己的服务器，可以设置自己的域名
 ---
 
@@ -648,18 +648,16 @@ google的站内搜索叫：custome search engine：http://www.google.com/cse
 进入地址：https://www.google.com/webmasters/tools/home
 
 点击![](/images/githubpages/build-github-blog-page-06-img5.png)
+它会要你认证你对网站的所有权，下载一个HTML文件，把它上传到你的网站上，
+设置完成之后基本上立刻就生效了，无需等待一天。
 
-Webmaster Tools需要认证你的站点，它会自动检测你的域名提供商，并给出详细的步骤执导你如何配置。我的域名提供商是goddady，所以将看到如下提示：
+认证成功后，进入[sitemaps网站](http://www.xml-sitemaps.com/),在下面填入你的网站后点击start，
+！[](/images/githubpages/sitemap.jpg)
+接下来下载sitemap文件，把它上传到你的域名根目录，
+打开Optimization->Sitemaps，点击Add/TEST SITEMAP，输入指向你的站点的sitemap地址，本博客的sitemap是：http://lippiouyangonline.info/sitemap.xml,过几分钟就看到下面的结果：
+！[](/images/githubpages/sitemap2.jpg)
 
-![](/images/githubpages/build-github-blog-page-06-img2.png)
 
-需要我在DNS记录中增加一条TXT记录，于是我照做了。设置完成之后基本上立刻就生效了，无需等待一天。
-
-认证成功后，在面板中打开你的网站：
-
-![](/images/githubpages/build-github-blog-page-06-img4.png)
-
-打开Optimization->Sitemaps，点击Add/TEST SITEMAP，输入指向你的站点的sitemap地址，本博客的sitemap是：http://pchou.info/sitemap.txt
 
 sitemap是网站所有链接的集合，最简单的sitemap可以是一个文本文件，其中只存放你网站的所有可用资源的链接，这有利于搜索引擎收录你的网站内容。复杂的sitemap还可以利用sitemap的专用格式来标注资源的形式，更多关于sitemap可以参考：http://www.sitemaps.org/
 完成站点认证和sitemap测试后，我们回到自定义搜索的页面，进入到control panel->Indexing，在其中使用sitemap来迫使google索引你的网站。这样，你的网站就算被google收录了。
