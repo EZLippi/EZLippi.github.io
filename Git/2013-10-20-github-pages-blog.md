@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      利用github-pages建立个人博客 
-category:	Git
+category: git
 description: 轻量级的博客系统，不需要自己的服务器，可以设置自己的域名
 ---
 
