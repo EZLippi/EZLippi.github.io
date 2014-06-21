@@ -72,16 +72,58 @@ layout: default
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
 			</ul>
-			</div>
+		</div>
+
 <div id="categories-3" class="sidenav">
-     <h3>Categories</h3>
-     <ul>
-         {% for cat in site.categories %}
-         <li class="cat-item cat-item-6">
-         	<a href="/categories/{{ cat[0] }}.html">{{ cat[0] }}</a></li>
-         {% endfor %}
-     </ul>
+       <h2>Algorithm</h2>
+        <ul class="artical-list">
+        {% for post in site.categories.Algorithm%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+
+        <h2>C++</h2>
+        <ul class="artical-list">
+        {% for post in site.categories.C++%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+
+        <h2>Git</h2>
+        <ul class="artical-list">
+        {% for post in site.categories.Git%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>  
+		 <h2>Life</h2>
+        <ul class="artical-list">
+        {% for post in site.categories.Life%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+
+        <h2>Linux</h2>
+        <ul class="artical-list">
+        {% for post in site.categories.Linux%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+
+        <h2>Network</h2>
+        <ul class="artical-list">
+        {% for post in site.categories.Network%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>  
+
+		 <h2>Web</h2>
+        <ul class="artical-list">
+        {% for post in site.categories.Web%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>  
  </div>
+ 
 <!--
     <div class="sidenav">
         <h2>Blog</h2>
