@@ -25,7 +25,7 @@ $(document).ready(function(){
 
     //***********************
     //**评论的代码也删掉哦***
-    window.disqus_shortname = 'lippiouyangonline'; // required: replace example with your forum shortname
+    window.disqus_shortname = 'lippiouyang'; // required: replace example with your forum shortname
     $('#disqus_container .comment').on('click',function(){
         $(this).html('加载中...');
         var that = this;

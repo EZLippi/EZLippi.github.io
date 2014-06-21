@@ -414,7 +414,7 @@ title: Wiki
         $('#content a').each(function(index,element){
             var href = $(this).attr('href');
             if(href.indexOf('#') == 0){
-            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('beiyuu.com')>-1 ){
+            }else if ( href.indexOf('/') == 0 || href.toLowerCase().indexOf('lippiouyangonline.info')>-1 ){
                 $(this).attr('target','_blank');
             }else{
                 $(this).attr('target','_blank');
