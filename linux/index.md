@@ -2,7 +2,7 @@
 layout: home
 ---
 
-<div class="index-content algorithm">
+<div class="index-content linux">
     <div class="section">
         <ul class="artical-cate">
             <li><a href="/"><span>Blog</span></a></li>
@@ -13,7 +13,7 @@ layout: home
         <div class="cate-bar"><span id="cateBar"></span></div>
 
         <ul class="artical-list">
-        {% for post in site.categories.algorithm %}
+        {% for post in site.categories.linux %}
             <li>
                 <h2>
                     <a href="{{ post.url }}">{{ post.title }}</a>
