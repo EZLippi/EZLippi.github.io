@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      利用github-pages建立个人博客 
-category:	blog 
+category:	git 
 description: 轻量级的博客系统，不需要自己的服务器，可以设置自己的域名
 ---
 
@@ -640,21 +640,22 @@ google的站内搜索叫：custome search engine：http://www.google.com/cse
 
 创建一个自定义搜索与添加评论类似只要三步：
 
-填写自定义搜索的名字、描述、语言、站点信息，这些信息中唯一需要注意的是站点信息，建议使用mydomain.com作为搜索范围，因为这样的话，会自动转化成*.mydomain.com/*，能包含全站的内容
-选择样式和尝试搜索。尝试搜索有时不能成功，但是不要紧
-将生成脚本写到网页中
++填写自定义搜索的名字、描述、语言、站点信息，这些信息中唯一需要注意的是站点信息，建议使用mydomain.com作为搜索范围，因为这样的话，会自动转化成*.mydomain.com/*，能包含全站的内容
++选择样式和尝试搜索。尝试搜索有时不能成功，但是不要紧
++将生成脚本写到网页中
+
 这时，可能搜索功能仍然无法使用，尤其是你的网站没有什么名气，也没有什么外链。因为google的爬虫不可能很快的抓到你的网站。但这里有个技巧可以让你的网站立刻被google收录（姑且不论排名），那就是google的Webmaster Tools工具，该工具是免费的，而且还集成了站点流量统计功能，十分强大。
 
-进入地址：https://www.google.com/webmasters/tools/home
+进入地址：[https://www.google.com/webmasters/tools/home](https://www.google.com/webmasters/tools/home)
 
-点击![](/images/githubpages/build-github-blog-page-06-img5.png)
+![](/images/githubpages/build-github-blog-page-06-img5.png)
 它会要你认证你对网站的所有权，下载一个HTML文件，把它上传到你的网站上，
 设置完成之后基本上立刻就生效了，无需等待一天。
 
 认证成功后，进入[sitemaps网站](http://www.xml-sitemaps.com/),在下面填入你的网站后点击start，
-！[](/images/githubpages/sitemap.jpg)
+![](/images/githubpages/sitemap.jpg)
 接下来下载sitemap文件，把它上传到你的域名根目录，
-打开Optimization->Sitemaps，点击Add/TEST SITEMAP，输入指向你的站点的sitemap地址，本博客的sitemap是：http://lippiouyangonline.info/sitemap.xml,过几分钟就看到下面的结果：
+打开Optimization->Sitemaps，点击Add/TEST SITEMAP，输入指向你的站点的sitemap地址，本博客的sitemap是：[http://lippiouyangonline.info/sitemap.xml](http://lippiouyangonline.info/sitemap.xml),过几分钟就看到下面的结果：
 ！[](/images/githubpages/sitemap2.jpg)
 
 
