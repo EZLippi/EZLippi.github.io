@@ -2,7 +2,7 @@
 layout:     post
 title:      利用github-pags建立个人博客
 category: blog
-description: 轻量级的博客系统，没有麻烦的配置；使用标记语言，比如Markdown；无需自己搭建服务器；根据Github的限制，对应的每个站有300MB空间；可以绑定自己的域名。
+description: 轻量级的博客系统，无需自己搭建服务器；对应的每个站有300MB空间；可以绑定自己的域名
 ---
 
 Github很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如jQuery、Twitter等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了Github Pages的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。
@@ -671,20 +671,5 @@ sitemap是网站所有链接的集合，最简单的sitemap可以是一个文本
 ###站点统计
 
 这里介绍的站点统计是google的analytics，analytics的使用十分简单，同样的原理，利用注入脚本来实现流量统计的外挂，统计功能十分强大，谁用谁知道。这里就不再唠叨了。
-[GoDaddy]:  http://godaddy.com  "Godaddy"
-[GitHub]: http://github.com "Github:social coding"
-[Jekyll]:   https://github.com/mojombo/jekyll
-[Disqus]: http://disqus.com "Disqus"
-[DNSPod]: http://dnspod.cn "DNSPod"
-[GitHub Pages]: http://pages.github.com "GitHub Pages"
-[WordPress]:    http://wordpress.org    "WordPress"
-[1]:    {{ page.url}}  ({{ page.title }})
-[2]:  http://stevelosh.com/blog/2011/09/writing-vim-plugins/ "Write Vim Plugins"
-[3]: http://sivers.org/sharing   "The co-op business model: share whatever you've got"
-[4]: http://artificialrecords.com
-[5]: http://sivers.org/below-average    "probably below average"
-[6]: http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/    "怎样花两年时间去面试一个人"
-[7]: http://progit.org/book/zh/    "Pro Git"
-[8]: http://markdown.tw/    "Markdown语法"
-[9]: http://www.cnblogs.com/bangerlee/archive/2011/09/11/2173632.html   "Why I Blog翻译版"
+
 
