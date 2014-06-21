@@ -58,7 +58,18 @@ layout: default
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
 			</ul>
-		
+		<h2>类别</h2>
+			<ul class="artical-list">
+			{% for cat in site.categroies %}
+				<li><a href="/categories/{{ cat[0] }}.html">{{ cat[0] }}</a></li>
+			{% endfor %}
+			</ul>	
+		<h2>tags</h2>
+			<ul class="artical-list">
+			{% for tag in site.tags %}
+				<li><a href="/tags/{{ tag[0] }}.html">{{ tag[0] }}</a></li>
+			{% endfor %}
+			</ul>	
 <!--
     <div class="sidenav">
         <h2>Blog</h2>
