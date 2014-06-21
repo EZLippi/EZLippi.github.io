@@ -1,8 +1,3 @@
-/**
- * Author:           BeiYuu
- * Contact:          beiyuu.com
- */
-
 /* 重置浏览器CSS */
 html{color:#000;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}
@@ -86,12 +81,12 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .blog .aside{
     background-image:url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
 }
-.project .aside{
+/*.project .aside{
     background-image:url(https://dnqgz544uhbo8.cloudfront.net/_/fp/img/bestof/june-2013.CaUUbO2jIECgCmldhmxCCA.jpg);
 }
 .AboutMe .aside{
     background-image:url('https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*kTUZamBulGQZg1MW.jpeg')
-}
+}*/
 .index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
 
 .index-content .artical-list { width:70%; margin:0 auto; }
@@ -165,9 +160,9 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
     .index-content .cate-bar { width:85%; }
     .index-content .artical-cate { margin-top:50px; }
 
-    .blog .aside,
-    .AboutMe .aside,
-    .project .aside {display:none;background-image:none;}
+    .blog .aside
+    /*.AboutMe .aside,
+    .project .aside*/ {display:none;background-image:none;}
 }
 
 @media (max-width: 1020px){
