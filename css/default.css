@@ -1,0 +1,185 @@
+/**
+ * Author:           BeiYuu
+ * Contact:          beiyuu.com
+ */
+
+/* 重置浏览器CSS */
+html{color:#000;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body,button,input,select,textarea{font-size:12px/1.5;}
+input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+th{text-align:inherit;}
+fieldset,img,a img{border:0;}
+iframe{display:block;}
+abbr,acronym{border:0;font-variant:normal;}
+del{text-decoration:line-through;}
+address,caption,cite,code,dfn,em,th,var {font-style:normal;font-weight:500;}
+ol,ul {list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
+q:before,q:after {content:'';}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix{zoom:1;}
+body .hide{display:none;}
+.left,.right{display:inline;}
+.left{float:left;}
+.right{float:right;}
+
+
+/***********default settings**********/
+body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;}
+a {color:#4A75B5;text-decoration:none;outline:none;}
+a:hover {text-decoration:underline}
+a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;}
+a.external:hover {background-position:right -15px;}
+.entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#000;text-align:center;word-wrap: break-word;}
+.entry-title a:hover {text-decoration:none;}
+.entry-date {text-align:center;color:#999;margin-bottom:60px;font-size:14px;}
+
+h2 {font-size:22px;font-weight:bold;margin-bottom:25px;}
+h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
+h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
+p {margin-bottom:40px;line-height:1.8em;}
+code {background:#eee;border:1px solid #ccc;padding:0 5px;font-family:"Courier";line-height:14px;font-size:14px;word-wrap:break-word; }
+pre {background-color:#000;padding:15px;overflow:auto;margin-bottom:40px;font-size:14px;border: 1px solid #eee;-webkit-border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;border-radius: 4px 4px 4px 4px;color:#b9bdb6;margin-top:-20px; }
+h4+pre, h3+pre { margin-top:20px; }
+pre code{background-color:transparent;border:none;padding:0;word-wrap:normal;}
+pre ol{margin-left:25px;list-style-type:decimal;}
+
+/************layout style*****************/
+#content {width:1060px;margin:90px auto 60px;min-height:400px;height:auto !important;height:400px; }
+
+
+/****************entry style**************/
+.sidenav { width:240px; background:#fff; float:right; padding:20px; margin-bottom:50px; box-shadow:0 1px 4px #ccc; }
+.sidenav h2 { font-size:18px; color:#333; margin-bottom:15px; }
+.sidenav ul { margin-bottom:50px; }
+.sidenav li { margin-bottom:12px; word-break: break-all;}
+.sidenav a { color:#555; font-size:14px; display:block;}
+.entry{margin-bottom:80px;width:680px; float:left; background:#fff; padding:30px; box-shadow:0 2px 6px #ccc; }
+.entry ul{margin-bottom:25px;margin-left:25px;}
+.entry p+ul {margin-top:-20px;}
+.entry ul li{margin-bottom:5px;list-style:disc;line-height:1.8em;}
+.entry ol{margin-bottom:25px;margin-left:25px;}
+.entry ol li{margin-bottom:5px;list-style:decimal;line-height:1.1em;}
+.entry blockquote{margin-left:25px;font-size:14px;font-style:italic}
+.entry img{max-width:670px;display:block;margin:10px auto;}
+
+
+.index-content .aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    max-width: 500px;
+    background:#000;
+    box-shadow:inset -1px 0 0 rgba(0,0,0,0.3);
+    background-size:cover;
+    background-position:50% 50%;
+}
+.blog .aside{
+    background-image:url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
+}
+.opinion .aside{
+    background-image:url(https://dnqgz544uhbo8.cloudfront.net/_/fp/img/bestof/june-2013.CaUUbO2jIECgCmldhmxCCA.jpg);
+}
+.project .aside{
+    background-image:url('https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*kTUZamBulGQZg1MW.jpeg')
+}
+.index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
+
+.index-content .artical-list { width:70%; margin:0 auto; }
+.index-content .artical-list li { margin-bottom:70px; }
+.index-content h2 { font-size:20px; margin-bottom:15px; word-break: break-all;}
+.index-content h2 a { color:#444 }
+.index-content h2 a:hover { color:#E50053; text-decoration:none; }
+.index-content .title-desc {color:#999;font-size:14px;line-height:1.6em;}
+
+.index-content .artical-cate { width:70%; margin:0 auto; }
+.index-content .artical-cate li { display:inline-block; *float:left; zoom:1; font-size:18px; width:32%; cursor:pointer; }
+.index-content .artical-cate li a,
+.index-content .artical-cate li a:visited { display:inline-block; zoom:1; color:#000; width:100%; }
+.index-content .artical-cate li a:hover { text-decoration:none; }
+.index-content .artical-cate li.on span{ color:red; }
+
+.index-content .cate-bar { height:3px; width:70%; margin:0 auto;margin-bottom:100px; }
+.index-content #cateBar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0; }
+
+/***************Wiki Style*****************/
+.wiki h2{cursor:pointer;}
+.wiki ul{margin-left:30px;margin-bottom:20px;list-style:disc}
+.wiki ul li{margin-bottom:5px;}
+.wiki ul ul{list-style:circle;margin-top:10px;margin-bottom:10px;}
+
+/***************contact style*************/
+#disqus_container {font-size:12px;}
+#disqus_container a.comment{font-size:14px;}
+h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
+.about-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}
+
+
+/**************目录导航**************/
+#menuIndex {overflow:auto;}
+#menuIndex a {display:block; padding:2px 0; }
+#menuIndex a:hover {text-decoration:none;}
+#menuIndex ul {margin-bottom:10px;}
+#menuIndex ul li{font-size:12px;margin-bottom:5px;word-wrap:break-word;padding-left:10px;}
+#menuIndex ul li.on{background-color:#f5f5f5;}
+#menuIndex li.h1{font-size:14px;font-weight:normal;padding-left:0;margin-bottom:10px;}
+#menuIndex li.h3{padding-left:25px;}
+
+.home-menu { position:fixed; top:15px; left:15px; z-index:5; font-size:0; }
+.home-menu-icon { line-height:38px; padding:0 8px; display:inline-block; color:#fff; font-size:18px;  background:#000; }
+.home-follow { margin-left:2px; line-height:38px; padding:0 8px; display:inline-block; color:#fff; font-size:18px; background:#000;  }
+.home-menu-icon:hover,
+.home-follow:hover { color:#fff; text-decoration:none; }
+.home-contact { color:#fff; margin-top:2px; background:#000; padding:8px 0 7px; text-align:center; display:none;}
+.home-contact a { width:30px; display:inline-block; }
+.home-contact img { width:18px; }
+
+@media screen and (max-width: 750px){
+    body {font-size:14px;}
+    #content {width:85%;margin:100px auto 50px; }
+
+    h2{font-size:20px;}
+    h3{font-size:16px;}
+    embed {display:none;}
+
+    .entry-title,.entry-title a {font-size:24px;}
+    .entry-date {margin-bottom:40px;}
+    .entry img{max-width:90%;}
+    .entry pre ol li{margin-bottom:0;line-height:1em;}
+    .entry pre code{line-height:1em;font-size:12px;}
+    .sidenav {display:none;}
+    .entry {float:none;width:auto;background:transparent;padding:0;box-shadow:none;}
+
+    .index-content .aside { position:relative; width:100%; height:300px; max-width:none; }
+    .index-content .section { margin-left:0; padding-right:0; }
+    .index-content .section ul { width:85%; }
+    .index-content .cate-bar { width:85%; }
+    .index-content .artical-cate { margin-top:50px; }
+
+    .blog .aside,
+    .project .aside,
+    .opinion .aside {display:none;background-image:none;}
+}
+
+@media (max-width: 1020px){
+    #menuIndex {display:none;}
+    .home-menu { position:absolute; }
+    .index-content .cate-bar ,
+    .index-content .artical-list,
+    .index-content .artical-cate { width:85%; }
+    .sidenav {display:none;}
+    .entry {float:none;width:auto;background:transparent;padding:0;box-shadow:none;}
+    #content {width:85%;margin:100px auto 50px; }
+}
+@media (max-width: 1300px){
+    .home-menu { position:absolute; }
+}
