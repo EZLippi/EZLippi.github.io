@@ -72,18 +72,16 @@ layout: default
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
 			</ul>
-		<h2>类别</h2>
-			<ul class="artical-list">
-			{% for cat in site.categroies %}
-				<li><a href="/categories/{{ cat[0] }}.html">{{ cat[0] }}</a></li>
-			{% endfor %}
-			</ul>	
-		<h2>tags</h2>
-			<ul class="artical-list">
-			{% for tag in site.tags %}
-				<li><a href="/tags/{{ tag[0] }}.html">{{ tag[0] }}</a></li>
-			{% endfor %}
-			</ul>	
+			</div>
+<div id="categories-3" class="sidenav">
+     <h3>Categories</h3>
+     <ul>
+         {% for cat in site.categories %}
+         <li class="cat-item cat-item-6">
+         	<a href="{{ site.baseurl }}/categories/{{ cat[0] }}.html">{{ cat[0] }}</a></li>
+         {% endfor %}
+     </ul>
+ </div>
 <!--
     <div class="sidenav">
         <h2>Blog</h2>
@@ -93,7 +91,7 @@ layout: default
         {% endfor %}
         </ul>
     </div>-->
-	</div>
+
 </div>
 
 <script src="/js/post.js" type="text/javascript"></script>
