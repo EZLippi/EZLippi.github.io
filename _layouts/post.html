@@ -68,55 +68,55 @@ layout: default
 
 			<h2>近期文章</h2>
 			<ul class="artical-list">
-			{% for post in site.posts limit:10 offset:0 %}
+			{% for post in site.categories.blog limit:10 offset:0 %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
 			</ul>
 		<h2>分类<h2>
        <h2>Algorithm</h2>
         <ul class="artical-list">
-        {% for post in site.categories.Algorithm %}
+        {% for post in site.categories.algorithm %}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>
 
         <h2>C++</h2>
         <ul class="artical-list">
-        {% for post in site.categories.C++ %}
+        {% for post in site.categories.c++ %}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>
 
         <h2>Git</h2>
         <ul class="artical-list">
-        {% for post in site.categories.Git %}
+        {% for post in site.categories.git %}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>  
 		 <h2>Life</h2>
         <ul class="artical-list">
-        {% for post in site.categories.Life %}
+        {% for post in site.categories.life %}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>
 
         <h2>Linux</h2>
         <ul class="artical-list">
-        {% for post in site.categories.Linux %}
+        {% for post in site.categories.linux %}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>
 
         <h2>Network</h2>
         <ul class="artical-list">
-        {% for post in site.categories.Network %}
+        {% for post in site.categories.network %}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>  
 
 		 <h2>Web</h2>
         <ul class="artical-list">
-        {% for post in site.categories.Web %}
+        {% for post in site.categories.web %}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>  
