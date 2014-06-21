@@ -717,17 +717,3 @@ Disqus是一个社会化的评论解决方案，请允许我使用这个烂透�
 [8]: http://markdown.tw/    "Markdown语法"
 [9]: http://www.cnblogs.com/bangerlee/archive/2011/09/11/2173632.html   "Why I Blog翻译版"
 
-<div id="disqus_thread"></div>  
-<script type="text/javascript">  
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */  
-    var disqus_shortname = 'lippiouyangonlineinfo'; // required: replace example with your forum shortname 这个地方需要改成你配置的网站名  
-  
-    /* * * DON'T EDIT BELOW THIS LINE * * */  
-    (function() {  
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;  
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';  
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);  
-    })();  
-</script>  
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>  
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>  
