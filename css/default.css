@@ -81,12 +81,12 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .blog .aside{
     background-image:url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*kTUZamBulGQZg1MW.jpeg);
 }
-/*.project .aside{
+.project .aside{
     background-image:url(https://dnqgz544uhbo8.cloudfront.net/_/fp/img/bestof/june-2013.CaUUbO2jIECgCmldhmxCCA.jpg);
 }
-.AboutMe .aside{
+.aboutme .aside{
     background-image:url('https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*kTUZamBulGQZg1MW.jpeg')
-}*/
+}
 .index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
 
 .index-content .artical-list { width:70%; margin:0 auto; }
