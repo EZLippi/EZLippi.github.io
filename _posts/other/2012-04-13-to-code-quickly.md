@@ -3,7 +3,7 @@ layout: post
 title: 高效编程的秘诀
 description: 高效编程的秘诀
 keywords: 技巧,编程
-category : other
+categories : [other, programming, reprints]
 tags : [编程, 技巧]
 ---
 

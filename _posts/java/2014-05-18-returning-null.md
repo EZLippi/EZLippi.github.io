@@ -3,7 +3,7 @@ layout: post
 title: 关于返回 Null 值的问题
 description: 我感觉返回null值是有问题的，它大量的被使用在一个方法有不同的返回类型时。返回一个Null对象在某些情况下是合适的，但并不适合当你需要向客户端传送两种不同的东西的情形。
 keywords: java, Null, 函数
-category : java
+categories : [java, reprints]
 tags : [java, 技巧]
 ---
 

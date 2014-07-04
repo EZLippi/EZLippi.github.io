@@ -3,7 +3,7 @@ layout: post
 title: 极限编程的12个实践原则
 description: 极限编程的12个实践原则
 keywords: xp, 极限编程
-category : other
+categories : [other, programming, reprints]
 tags : [编程]
 ---
 

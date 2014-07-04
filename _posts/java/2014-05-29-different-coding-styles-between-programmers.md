@@ -3,7 +3,7 @@ layout: post
 title: 各种囧然不同流行的编程风格
 description: 我遇到了很多使用囧然不同风格的开发者，下面是我所知道的一些，你还知道其它的吗? 
 keywords: code, 编程, 编程风格
-category : other
+categories : [java, reprints]
 tags : [编程]
 ---
 

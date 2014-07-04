@@ -2,7 +2,7 @@
 layout:     post
 title:      Linux 计划任务 — crontab
 keywords: linux, cron
-category : other
+categories : [other, programming, reprints]
 tags : [linux, cron]
 ---
 

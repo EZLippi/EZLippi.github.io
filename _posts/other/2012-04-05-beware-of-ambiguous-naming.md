@@ -3,7 +3,7 @@ layout: post
 title: 当心那些有歧义的命名
 description: 当心那些有歧义的命名
 keywords: 技巧,命名
-category : other
+categories : [other, programming, reprints]
 tags : [命名, 技巧]
 ---
 

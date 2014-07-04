@@ -2,7 +2,7 @@
 layout:     post
 title:      精通one，学习another，关注next
 keywords: 学习,晋升
-category : other
+categories : [other, programming, reprints]
 tags : [学习]
 ---
 

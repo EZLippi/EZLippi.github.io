@@ -3,7 +3,7 @@ layout: post
 title: 简明 Python 编程规范
 description: 简明 Python 编程规范
 keywords: python,编程规范
-category : python
+categories : [python, reprints]
 tags : [python, 编程规范]
 ---
 

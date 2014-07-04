@@ -2,7 +2,7 @@
 layout: post
 title: 为什么 jdk 中把 String 类设计成 final 
 keywords: jdk, String, final
-category : java
+categories : [java, reprints]
 tags : [java, final]
 ---
 

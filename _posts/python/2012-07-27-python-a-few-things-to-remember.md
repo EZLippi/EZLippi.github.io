@@ -3,7 +3,7 @@ layout: post
 title: Python 编码时应该注意的几件事情
 description: 在编程过程中，多了解语言周边的一些知识，以及一些技巧，可以让你加速成为一个优秀的程序员。对于Python程序员，你需要注意一下本文所提到的这些事情。
 keywords: python, 编码, code
-category : python
+categories : [python, reprints]
 tags : [python, code]
 ---
 

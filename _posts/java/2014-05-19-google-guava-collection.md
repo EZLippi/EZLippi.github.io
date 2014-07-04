@@ -4,7 +4,7 @@ title: Google Guava Collections 使用介绍
 tagline: Java Collections Framework 的非官方扩展 API
 description: Google Guava Collections 是一个对 Java Collections Framework 增强和扩展的一个开源项目。由于它高质量 API 的实现和对 JDK5 特性的充分利用，使得其在 Java 社区受到很高评价。笔者主要介绍它的基本用法和功能特性。
 keywords: api, collections, data_collection, google, guava, 代码库, 应用开发, 算法, 编码
-category : java
+categories : [java, reprints]
 tags : [api, collections, google, guava, 算法]
 ---
 

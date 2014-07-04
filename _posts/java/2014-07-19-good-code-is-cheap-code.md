@@ -2,7 +2,7 @@
 layout: post
 title: 好代码是廉价的代码
 keywords: 代码, code
-category : java
+categories : [java, reprints]
 tags : [java]
 ---
 

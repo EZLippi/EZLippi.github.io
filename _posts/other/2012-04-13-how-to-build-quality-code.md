@@ -2,7 +2,7 @@
 layout:     post
 title:      如何构建优质代码
 keywords: 优质代码,代码质量
-category : other
+categories : [other, programming, reprints]
 tags : [code]
 ---
 

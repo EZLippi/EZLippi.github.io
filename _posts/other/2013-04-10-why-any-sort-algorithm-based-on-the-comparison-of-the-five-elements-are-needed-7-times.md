@@ -3,7 +3,7 @@ layout: post
 title: 为什么说任何基于比较的算法将5个元素排序都需要7次？
 description: 为什么说任何基于比较的算法将5个元素排序都需要7次？
 keywords: 算法, 排序
-category : other
+categories : [other, programming, reprints]
 tags : [排序, 算法]
 ---
 

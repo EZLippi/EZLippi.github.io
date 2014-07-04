@@ -3,7 +3,7 @@ layout: post
 title: 程序员看法上的几个典型错误
 description: 今天我不谈抱负理想，也不谈具体的技术，我来谈几个看法上的典型错误。下面的这些问题都是我曾经遇到，或者是我的朋友们遇到过的问题，这些都是我个人的理解，希望对大家有帮助。
 keywords: 程序员, 编程, 错误
-category : other
+categories : [java, reprints]
 tags : [程序员]
 ---
 

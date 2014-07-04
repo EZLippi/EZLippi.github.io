@@ -3,7 +3,7 @@ layout: post
 title: java API 设计准则
 description: 在java API设计中有着许多的各种规则与折衷考量，和其他所有复杂任务一样，它考验着我们的记忆力及脑力.
 keywords: java, API, 设计准则
-category : java
+categories : [java, reprints]
 tags : [java]
 ---
 

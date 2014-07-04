@@ -2,7 +2,7 @@
 layout: post
 title: 十三个代码注释的小技巧
 keywords: 代码, 注释, 技巧
-category : other
+categories : [other, programming, reprints]
 tags : [代码, 注释, 技巧]
 ---
 

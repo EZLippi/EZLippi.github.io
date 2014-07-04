@@ -3,7 +3,7 @@ layout: post
 title: 反 for-if 编程模式
 description: 这些年来，我看到过大量的反编程模式。我感觉应该向大家分享一些。今天，我要介绍的是被我称作反 for-if 编程模式的反模式，也就是人们所说的”我们卖给你整个座位，但你需要的只是一个边。”
 keywords: 编程, for, if
-category : other
+categories : [other, programming, reprints]
 tags : [编程]
 ---
 

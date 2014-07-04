@@ -3,7 +3,7 @@ layout: post
 title: 那就叫它Util吧
 description: Util 是 Utility 的简写，有用的东西的意思。如果你找到这样的东西，它也许真的会对你非常的有用。
 keywords: Util, 命名
-category : other
+categories : [java, reprints]
 tags : [编程]
 ---
 

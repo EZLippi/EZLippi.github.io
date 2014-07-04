@@ -3,7 +3,7 @@ layout: post
 title: 为 jekyll 博客添加 category 分类
 description: jekyll 搭建起来的博客系统，本身就具备了 category 的功能，为了更好地将 category 页面展示出来，我们能做到的方法有很多，例如使用插件。本文为您分享如何为你的博客添加分类。
 keywords: jekyll, category, blog, 分类, plugins
-category : jekyll
+categories : [jekyll, reprints]
 tags : [jekyll, category, blog]
 ---
 

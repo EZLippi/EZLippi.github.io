@@ -3,7 +3,7 @@ layout: post
 title: 三种东西永远不要放到数据库里
 description: 改进你的系统的最好的方法是先避免做“蠢事”。我并不是说你或你开发的东西“蠢”，只是有些决定很容易被人们忽略掉其暗含的牵连，认识不到这样做对系统维护尤其是系统升级带来多大的麻烦。
 keywords: 数据库, BD
-category : other
+categories : [other, programming, reprints]
 tags : [数据库, BD]
 ---
 

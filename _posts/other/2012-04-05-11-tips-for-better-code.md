@@ -3,7 +3,7 @@ layout: post
 title: 改良程序的11技巧
 description: 改良程序的11技巧
 keywords: 技巧,程序
-category : other
+categories : [other, programming, reprints]
 tags : [程序, 技巧]
 ---
 

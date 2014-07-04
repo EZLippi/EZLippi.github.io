@@ -3,7 +3,7 @@ layout: post
 title: 关于 Java Collections API 您不知道的 5 件事，第 1 部分
 description: 对于很多 Java 开发人员来说，Java Collections API 是标准 Java 数组及其所有缺点的一个非常需要的替代品。将 Collections 主要与 ArrayList 联系到一起本身没有错，但是对于那些有探索精神的人来说，这只是 Collections 的冰山一角。
 keywords: api, collections, 算法
-category : java
+categories : [java, reprints] 
 tags : [api, collections, 算法]
 ---
 

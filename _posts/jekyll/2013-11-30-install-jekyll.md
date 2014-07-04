@@ -3,7 +3,7 @@ layout:         post
 title:          mac 本地按安装 jekyll
 description:    安装 jekyll 的方法。
 keywords: jekyll, ruby
-category : jekyll
+categories : [jekyll, reprints]
 tags : [iruby, jekyll]
 ---
 本地安装 jekyll 其实很简单的，继续做笔记。

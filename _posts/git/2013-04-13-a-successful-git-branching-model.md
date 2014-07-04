@@ -3,7 +3,7 @@ layout: post
 title: git多人协作开发流程
 description: git多人协作开发流程
 keywords: git, 协作开发
-category : git
+categories : [git, reprints]
 tags : [git]
 ---
 

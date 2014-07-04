@@ -2,7 +2,7 @@
 layout:     post
 title:      关于编程学习的七点思索
 keywords: 编程学习,思索
-category : other
+categories : [other, programming, reprints]
 tags : [编程, 学习]
 ---
 

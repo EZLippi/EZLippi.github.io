@@ -2,7 +2,7 @@
 layout: post
 title: Git魔法 - 克隆周边
 keywords: gitmagic, git, 克隆
-category : git
+categories : [git, reprints]
 tags : [Git魔法, git, gitmagic]
 ---
 ## 克隆周边 ##

@@ -2,7 +2,7 @@
 layout:     post
 title:      写更少的代码
 keywords: 代码,思索
-category : other
+categories : [other, programming, reprints]
 tags : [编程, 代码]
 ---
 

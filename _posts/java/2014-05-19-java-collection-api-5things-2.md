@@ -3,7 +3,7 @@ layout: post
 title: 关于 Java Collections API 您不知道的 5 件事，第 2 部分
 description: java.util 中的 Collections 类旨在通过取代数组提高 Java 性能。Collections 非常强大，但是很多变：使用它们要小心，滥用它们会带来风险。
 keywords: api, collections, 算法
-category : java
+categories : [java, reprints] 
 tags : [api, collections, 算法]
 ---
 

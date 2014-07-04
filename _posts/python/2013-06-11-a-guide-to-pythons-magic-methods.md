@@ -2,7 +2,7 @@
 layout:     post
 title: Python 的神奇方法指南
 keywords: python, Magic Methods, Guide
-category: python
+categories : [python, reprints]
 tags: [python]
 ---
 

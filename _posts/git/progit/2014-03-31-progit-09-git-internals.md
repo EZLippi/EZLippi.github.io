@@ -2,7 +2,7 @@
 layout: post
 title: progit - Git 内部原理
 keywords: progit, git, 原理
-category : git
+categories : [git, reprints]
 tags : [progit, git, 原理]
 ---
 

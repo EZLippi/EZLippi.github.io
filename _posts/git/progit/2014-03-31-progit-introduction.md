@@ -2,7 +2,7 @@
 layout: post
 title: progit - 起步
 keywords: progit, git, 起步
-category : git
+categories : [git, reprints]
 tags : [progit, git, 起步]
 ---
 # 起步 #

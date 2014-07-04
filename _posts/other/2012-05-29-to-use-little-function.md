@@ -3,7 +3,7 @@ layout: post
 title: 函数要多小才够好——谈小函数之道
 description: 设计良好的函数往往比较小，而过大函数的设计往往一塌糊涂，或者存在很大的优化空间。
 keywords: code, 代码, 函数
-category : other
+categories : [other, programming, reprints]
 tags : [函数, code]
 ---
 

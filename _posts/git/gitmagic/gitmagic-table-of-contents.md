@@ -2,7 +2,7 @@
 layout: post
 title: Git魔法 - 目录
 keywords: gitmagic, git,目录
-category : git
+categories : [git, reprints]
 tags : [Git魔法, git, gitmagic]
 ---
 ## 目录 ##

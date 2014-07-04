@@ -3,7 +3,7 @@ layout: post
 title: 只要一个返回语句
 description: 如果你的方法返回一个值，你应该在方法的开始处把它声明做一个变量。然后再去做一些赋予这个变量正确意义的操作。然后，在你的最后一行，把这个变量返回给调用程序。
 keywords: java
-category : java
+categories : [java, reprints]
 tags : [java, 技巧]
 ---
 

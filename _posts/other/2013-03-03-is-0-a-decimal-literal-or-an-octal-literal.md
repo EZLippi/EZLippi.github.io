@@ -3,7 +3,7 @@ layout: post
 title: C++ 中 0 是十进制还是八进制？
 description: C++ 中 0 是十进制还是八进制？。
 keywords: 0, 进制, 八进制
-category : other
+categories : [other, programming, reprints]
 tags : [进制]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: 一条很有价值的编程建议
 description: 不要使用‘er’结尾的对象命名。（Don’t make objects that end with ‘er’.） 
 keywords: code, 代码
-category : other
+categories : [other, programming, reprints]
 tags : [code, 代码]
 ---
 

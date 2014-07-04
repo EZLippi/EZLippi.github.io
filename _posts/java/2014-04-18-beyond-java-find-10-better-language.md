@@ -3,7 +3,7 @@ layout: post
 title: 离开Java，寻找更佳语言的10大理由
 description: 离开Java，寻找更佳语言的10大理由
 keywords: java
-category : java
+categories : [java, reprints]
 tags : [java]
 ---
 

@@ -2,7 +2,7 @@
 layout:     post
 title:      Git教程 快速上手
 keywords: git, github
-category : git
+categories : [git, reprints]
 tags : [github, git]
 ---
 

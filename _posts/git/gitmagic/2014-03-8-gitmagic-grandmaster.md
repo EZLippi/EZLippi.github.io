@@ -2,7 +2,7 @@
 layout: post
 title: Git魔法 - Git大师技巧
 keywords: gitmagic, git, 技巧, 高级技巧
-category : git
+categories : [git, reprints]
 tags : [Git魔法, git, gitmagic]
 ---
 ## Git大师技巧 ##

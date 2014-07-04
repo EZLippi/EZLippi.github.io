@@ -3,7 +3,7 @@ layout: post
 title: 一个合格的程序员应该读过哪些书
 description: 如果能时光倒流，回到过去，作为一个开发人员，你可以告诉自己在职业生涯初期应该读一本，你会选择哪本书呢？我希望这个书单列表内容丰富，可以涵盖很多东西
 keywords: 程序,书籍
-category : other
+categories : [other, programming, reprints]
 tags : [书籍, 程序]
 ---
 

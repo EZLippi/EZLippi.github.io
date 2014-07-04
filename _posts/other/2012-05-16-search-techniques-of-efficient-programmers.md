@@ -3,7 +3,7 @@ layout: post
 title: 成为高效程序员的搜索技巧
 description: 对于缺乏编程知识的人来说，完全有可能编写一个网页或小程序。如果在用Google搜索相关示例时幸运的话，可以搜到现成的代码。即使是经验丰富的程序员，通常也会为了节省时间和精力而在网上搜索解决方案。
 keywords: for, 闭包
-category : other
+categories : [other, programming, reprints]
 tags : [for, 闭包]
 ---
 

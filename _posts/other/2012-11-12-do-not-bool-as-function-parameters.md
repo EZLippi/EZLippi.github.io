@@ -2,7 +2,7 @@
 layout:     post
 title:      千万不要把 bool 当成函数参数
 keywords: 参数,函数
-category : other
+categories : [other, programming, reprints]
 tags : [参数,函数]
 ---
 

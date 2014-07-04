@@ -2,7 +2,7 @@
 layout:     post
 title:      多个github帐号的SSH key切换
 keywords: git, github, ssh
-category : git
+categories : [git, reprints]
 tags : [github, github, ssh]
 ---
 
