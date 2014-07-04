@@ -3,7 +3,7 @@ layout: post
 title: github 不能访问了，无法连接到服务器
 description: github 不能访问了，无法连接到服务器，修改 hosts 文件。
 keywords: git, github, GFW
-category : [git, reprints]
+categories: [git, reprints]
 tags : [git, github, GFW]
 ---
 
