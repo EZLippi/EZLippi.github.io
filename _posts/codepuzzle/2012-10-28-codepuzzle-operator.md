@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 代码的秘密-运算符
-keywords: 代码的秘密
+title: 代码陷阱-运算符
+keywords: 代码陷阱
 category : codepuzzle
-tags : [代码的秘密]
+tags : [代码陷阱]
 ---
 
 “1加2加3” 在计算机中被表述为：
