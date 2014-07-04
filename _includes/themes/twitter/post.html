@@ -1,0 +1,153 @@
+<div class="page-header">
+  <h1>{{ page.title }} <small>{{ page.tagline }}</small></h1>
+</div>
+<div class="row-fluid">
+  <div class="span8">  
+    <div id="article">
+    {{ content }}    
+    </div>  
+
+    {% unless page.tags == empty %}
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      {% assign tags_list = page.tags %}
+      {% include JB/tags_list %}
+    </ul>
+    {% endunless %}  
+    
+    <hr/>
+
+    <div class="pagination">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; 上一篇</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">归档</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>下一篇 &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
+    
+   
+   
+    <script type="text/javascript" id="wumiiRelatedItems"></script>
+    <script type="text/javascript">
+    var wumiiPermaLink = ""; //请用代码生成文章永久的链接
+    var wumiiTitle = {{ page.title | jsonify }}; //请用代码生成文章标题
+    var wumiiTags = {{ page.tags | join:"," | jsonify }}; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = {{ page.categories | jsonify }};
+    var wumiiSitePrefix = "http://justjavac.com/";
+    var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.com/ext/relatedItemsWidget"></script>
+<a rel="nofollow" href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅相关文章插件，快速提升流量" style="border:0;padding:0;margin:0;" />
+</a>    
+    <hr>
+    <!-- Duoshuo Comment BEGIN -->
+    <div id="comments" class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"justjavac"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- Duoshuo Comment END -->
+  </div>
+  
+  <aside class="span4">
+
+    <section>
+    <h3>推荐阅读</h3>
+    <ul id="recent_posts">
+      <li><a href="http://justjavac.com/codepuzzle/2012/09/25/codepuzzle-introduction.html" target="_blank">代码之谜 - 开篇/前言/序</a></li>
+      <li><a href="http://justjavac.com/other/2012/05/15/qualified-programmer-should-read-what-books.html" target="_blank">一个合格的程序员应该读过哪些书</a></li>
+      <li><a href="http://justjavac.com/other/2012/09/21/why-are-you-so-low-salary.html" target="_blank">你为什么薪水那么低</a></li>
+      <li><a href="http://justjavac.com/javascript/2012/05/24/can-you-explain-why-10.html" target="_blank">为什么 ++[[]][+[]]+[+[]] = 10？</a></li>
+      <li><a href="http://justjavac.com/other/2012/09/20/a-programmer-mentees-recommendations.html" target="_blank">程序员之路——一个老程序员的忠告</a></li>
+      <li><a href="http://justjavac.com/other/2012/09/03/how-lazy-have-much-leisure.html" target="_blank">人有多大懒，才有多大闲</a></li>
+      <li><a href="http://justjavac.com/other/2012/05/15/whats-wrong-with-the-for-loop.html" target="_blank">for 循环为何可恨？</a></li>
+      <li><a href="http://justjavac.com/other/2012/05/24/introducing-the-for-if-anti-pattern.html" target="_blank">反for-if编程模式</a></li>
+      <li><a href="http://justjavac.com/javascript/2012/04/05/how-to-avoid-the-assignment-statement.html" target="_blank">如何避免产生赋值语句</a></li>
+      <li><a href="http://justjavac.com/other/2012/07/20/write-less-code.html" target="_blank">写更少的代码</a>
+    </ul>
+    </section>
+    
+    <section data-spy="affix" data-offset-top="418" class="hot_articles affix-top">
+    <h3>热门文章</h3>
+    <ul class="hots gray">
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="hot">1</span>
+                <a href="http://justjavac.com/codepuzzle/2012/09/25/codepuzzle-introduction.html" target="_blank" title="代码之谜（零）- 开篇/前言/序">
+    代码之谜（零）- 开篇/前言/序</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="hot">2</span>
+                <a href="http://justjavac.com/codepuzzle/2012/11/02/codepuzzle-float-from-surprised-to-ponder.html" target="_blank" title="代码之谜（四）- 浮点数（从惊讶到思考）">
+    代码之谜（四）- 浮点数（从惊讶到思考）</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="hot">3</span>
+                <a href="http://justjavac.com/javascript/2012/05/24/can-you-explain-why-10.html" target="_blank" title="为什么 ++[[]][+[]]+[+[]] = 10？">
+    为什么 ++[[]][+[]]+[+[]] = 10？</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="">4</span>
+                <a href="http://justjavac.com/codepuzzle/2012/10/28/codepuzzle-operator.html" target="_blank" title="代码之谜（三）- 运算符">
+    代码之谜（三）- 运算符</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="">5</span>
+                <a href="http://justjavac.com/other/2012/11/12/do-not-bool-as-function-parameters.html" target="_blank" title="千万不要把 bool 当成函数参数">
+    千万不要把 bool 当成函数参数</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="">6</span>
+                <a href="http://justjavac.com/other/2012/05/15/qualified-programmer-should-read-what-books.html" target="_blank" title="一个合格的程序员应该读过哪些书">
+    一个合格的程序员应该读过哪些书</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="">7</span>
+                <a href="http://justjavac.com/codepuzzle/2012/10/28/codepuzzle-expression-and-statement.html" target="_blank" title="代码之谜（二）- 语句与表达式">
+    代码之谜（二）- 语句与表达式</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="">8</span>
+                <a href="http://justjavac.com/codepuzzle/2012/10/15/codepuzzle-finite-and-infinite.html" target="_blank" title="代码之谜（一）- 有限与无限">
+    代码之谜（一）- 有限与无限</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="">9</span>
+                <a href="http://justjavac.com/nosql/2012/04/13/redis-persistence-demystified.html" target="_blank" title="解密Redis持久化">
+    解密Redis持久化</a></p>
+            </li>
+    <li class="textItem">
+            <p class="itemTitle">
+                <span class="">10</span>
+                <a href="http://justjavac.com/codepuzzle/2012/11/11/codepuzzle-float-who-stole-your-accuracy.html" target="_blank" title="代码之谜（五）- 浮点数（谁偷了你的精度？）">
+    代码之谜（五）- 浮点数（谁偷了你的精度？）</a></p>
+            </li>
+    </ul>
+    </section>    
+
+  </aside>
+</div>
