@@ -1,10 +1,9 @@
 ---
 layout:     post
 title:      C++各种类型转换总结
+keywords:   type casting
 category:   algorithm 
-description: 介绍C++四种类型转换的用法
-keywords:type casting
-tags:[type casting]
+tags:[type casting,类型转换]
 ---
 
 
