@@ -8,402 +8,417 @@
 
 <url>
   <loc>http://lippiouyangonline.info/</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/categories.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://lippiouyangonline.info/java/reprints/2014/07/19/good-code-is-cheap-code.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>http://lippiouyangonline.info/c/programming/2014/07/05/c-advaced-programming.html</loc>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://lippiouyangonline.info/algorithm/2014/07/05/c-.html</loc>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://lippiouyangonline.info/java/reprints/2014/06/19/good-code-is-cheap-code.html</loc>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/29/why-jdk-string-is-final.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/29/the-common-error-for-programmer.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/29/so-called-it-util.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/29/different-coding-styles-between-programmers.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/24/java-api-design-checklist.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/19/java-collection-api-5things-2.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/19/java-collection-api-5things-1.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/19/google-guava-collection.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/18/returning-null.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/18/a-return-to-good-code.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/05/16/78-golden-rules-of-the-java-programming.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/04/18/beyond-java-find-10-better-language.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/java/reprints/2014/04/18/26-methods-to-improve-java-performance.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/31/progit-introduction.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/31/progit-09-git-internals.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/22/gitmagic-translate.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/20/gitmagic-drawbacks.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/08/gitmagic-grandmaster.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/07/gitmagic-branch.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/06/gitmagic-multiplayer.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/05/gitmagic-clone.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/04/gitmagic-basic.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/03/03/gitmagic-intro.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/02/27/gitmagic-history.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/02/25/gitmagic-secrets.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2014/02/22/gitmagic-preface.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/algorithm/2013/12/29/graph.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/algorithm/2013/12/18/skip-list.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/jekyll/reprints/2013/11/30/install-jekyll.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://lippiouyangonline.info/algorithm/2013/11/29/graph.html</loc>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/algorithm/2013/11/18/leveldb.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2013/11/12/github-notes.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2013/11/08/oracle-ceo-allison-speech-in-yale-drop-out-of-school.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/codepuzzle/2013/11/02/codepuzzle-float-from-surprised-to-ponder.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/book/2013/11/01/how-to-evaluate-the-hackers-and-painters.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2013/10/20/github-pages-blog.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2013/10/02/start-github-on-window.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/jekyll/reprints/2013/09/24/jekyll-more.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2013/09/22/linux-scheduled-task-crontab.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2013/09/22/create-github-page.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/python/reprints/2013/06/11/a-guide-to-pythons-magic-methods.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/jekyll/reprints/2013/05/22/use-category-plugin-for-jekyll-blog.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2013/04/13/writing-space-with-git-github-markdown-jekyll.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2013/04/13/multiple-ssh-keys.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2013/04/13/git-quick-start.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2013/04/13/a-successful-git-branching-model.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2013/04/10/why-any-sort-algorithm-based-on-the-comparison-of-the-five-elements-are-needed-7-times.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/jekyll/reprints/2013/04/05/use-jekyll-build-blog-on-github.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/jekyll/2013/03/31/markdown-syntax.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/jekyll/2013/03/31/markdown-basics.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2013/03/21/10-steps-becoming-the-developer-everyone-wants.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/python/reprints/2013/03/11/if-x-is-list-why-does-x-ha-work-while-x-x-ha-throw-an-exception.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2013/03/03/is-0-a-decimal-literal-or-an-octal-literal.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/git/reprints/2013/01/22/github-can-not-access-unable-to-connect-to-the-server.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/11/12/do-not-bool-as-function-parameters.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/11/02/proficient-one-learn-another-concerned-next.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/codepuzzle/2012/10/28/codepuzzle-operator.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/python/reprints/2012/07/27/python-a-few-things-to-remember.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/07/20/write-less-code.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/07/03/seven-thoughts-on-the-programming-learning.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/29/to-use-little-function.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/29/13-tips-for-code-comment.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/24/sign-of-maturity-of-programmer.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/24/one-of-best-bits-of-programming-advice.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/24/introducing-the-for-if-anti-pattern.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/16/search-techniques-of-efficient-programmers.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/15/whats-wrong-with-the-for-loop.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/15/three-things-you-should-never-put-your-database.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/05/15/qualified-programmer-should-read-what-books.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/04/13/to-code-quickly.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/python/reprints/2012/04/13/pythoner-handout.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/python/reprints/2012/04/13/python-code-spec.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/04/13/how-to-build-quality-code.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/04/13/12-practice-principles-of-extreme-programming.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/04/05/beware-of-ambiguous-naming.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/other/programming/reprints/2012/04/05/11-tips-for-better-code.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/tags.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://lippiouyangonline.info/archive.html</loc>
-  <lastmod>2014-07-04T12:32:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-05T08:23:59+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 </urlset>
