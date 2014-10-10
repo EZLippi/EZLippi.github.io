@@ -1,680 +1,738 @@
 ---
 layout: post
-title:  处理并发之二：libevent 和 libev 提高网络应用性能
-keywords: 并发， 事件驱动， 网络库
+title:  处理并发之一：LINUX Epoll机制介绍
+keywords: 并发， I/O多路复用
 categories : [c/c++]
 tags : [c++, concurrent]
 ---
+##1. Epoll简单介绍
+
+Epoll可是当前在Linux下开发大规模并发网络程序的热门人选，Epoll 在Linux2.6内核中正式引入，和select相似，其实都I/O多路复用技术而已，并没有什么神秘的。
+
+其实在Linux下设计并发网络程序，向来不缺少方法，比如典型的Apache模型（Process Per Connection，简称PPC），TPC（Thread Per Connection）模型，以及select模型和poll模型，那为何还要再引入Epoll这个东东呢？那还是有得说说的…
+
+##2. 常用模型的缺点
+
+如果不摆出来其他模型的缺点，怎么能对比出Epoll的优点呢。
+
+###2.1 PPC/TPC模型
+
+这两种模型思想类似，就是让每一个到来的连接一边自己做事去，别再来烦我。只是PPC是为它开了一个进程，而TPC开了一个线程。可是别烦我是有代价的，它要时间和空间啊，连接多了之后，那么多的进程/线程切换，这开销就上来了；因此这类模型能接受的最大连接数都不会高，一般在几百个左右。
+
+###2.2 select模型
+
+1. 最大并发数限制，因为一个进程所打开的FD（文件描述符）是有限制的，由FD_SETSIZE设置，默认值是1024/2048，因此Select模型的最大并发数就被相应限制了。自己改改这个FD_SETSIZE？想法虽好，可是先看看下面吧…
+
+2. 效率问题，select每次调用都会线性扫描全部的FD集合，这样效率就会呈现线性下降，把FD_SETSIZE改大的后果就是，大家都慢慢来，什么？都超时了？？！！
+
+3. 内核/用户空间 内存拷贝问题，如何让内核把FD消息通知给用户空间呢？在这个问题上select采取了内存拷贝方法。
+
+###2.3 poll模型
+
+基本上效率和select是相同的，select缺点的2和3它都没有改掉。
+
+##3.Epoll的提升
+
+把其他模型逐个批判了一下，再来看看Epoll的改进之处吧，其实把select的缺点反过来那就是Epoll的优点了。
+
+3.1. Epoll没有最大并发连接的限制，上限是最大可以打开文件的数目，这个数字一般远大于2048, 一般来说这个数目和系统内存关系很大，具体数目可以cat /proc/sys/fs/file-max察看。
+
+3.2. 效率提升，Epoll最大的优点就在于它只管你“活跃”的连接，而跟连接总数无关，因此在实际的网络环境中，Epoll的效率就会远远高于select和poll。
+
+3.3. 内存拷贝，Epoll在这点上使用了“共享内存”，这个内存拷贝也省略了。
 
 
-构建现代的服务器应用程序需要以某种方法同时接收数百、数千甚至数万个事件，无论它们是内部请求还是网络连接，都要有效地处理它们的操作。有许多解决方 案，但是 libevent 库和 libev 库能够大大提高性能和事件处理能力。在本文中，我们要讨论在 UNIX® 应用程序中使用和部署这些解决方案所用的基本结构和方法。libev 和 libevent 都可以在高性能应用程序中使用，包括部署在 IBM Cloud 或 Amazon EC2 环境中的应用程序，这些应用程序需要支持大量并发客户端或操作。
+##4. Epoll为什么高效
 
-简介
---
+Epoll的高效和其数据结构的设计是密不可分的，这个下面就会提到。
 
-许多服务器部署（尤其是 web 服务器部署）面对的最大问题之一是必须能够处理大量连接。无论是通过构建基于云的服务来处理网络通信流，还是把应用程序分布在 IBM Amazon EC 实例上，还是为网站提供高性能组件，都需要能够处理大量并发连接。
-
-一个好例子是，web 应用程序最近越来越动态了，尤其是使用 AJAX 技术的应用程序。如果要部署的系统允许数千客户端直接在网页中更新信息，比如提供事件或问题实时监视的系统，那么提供信息的速度就非常重要了。在网格或云 环境中，可能有来自数千客户端的持久连接同时打开着，必须能够处理每个客户端的请求并做出响应。
-
-在讨论 libevent 和 libev 如何处理多个网络连接之前，我们先简要回顾一下处理这类连接的传统解决方案。
-
-处理多个客户端
--------
-
-处理多个连接有许多不同的传统方法，但是在处理大量连接时它们往往会产生问题，因为它们使用的内存或 CPU 太多，或者达到了某个操作系统限制。
-
-使用的主要方法如下：
-
-**循环**：早期系统使用简单的循环选择解决方案，即循环遍历打开的网络连接的列表，判断是否有要读取的数 据。这种方法既缓慢（尤其是随着连接数量增加越来越慢），又低效（因为在处理当前连接时其他连接可能正在发送请求并等待响应）。在系统循环遍历每个连接 时，其他连接不得不等待。如果有 100 个连接，其中只有一个有数据，那么仍然必须处理其他 99 个连接，才能轮到真正需要处理的连接。
-**poll、epoll 和变体**：这是对循环方法的改进，它用一个结构保存要监视的每个连接的数组，当在网络套接字上发现数据时，通过回调机制调用处理函数。poll 的问题是这个结构会非常大，在列表中添加新的网络连接时，修改结构会增加负载并影响性能。
-**选择**：select() 函数调用使用一个静态结构，它事先被硬编码为相当小的数量（1024 个连接），因此不适用于非常大的部署。
-在各种平台上还有其他实现（比如 Solaris 上的 /dev/poll 或 FreeBSD/NetBSD 上的 kqueue），它们在各自的 OS 上性能可能更好，但是无法移植，也不一定能够解决处理请求的高层问题。
-
-上面的所有解决方案都用简单的循环等待并处理请求，然后把请求分派给另一个函数以处理实际的网络交互。关键在于循环和网络套接字需要大量管理代码，这样才能监听、更新和控制不同的连接和接口。
-
-处理许多连接的另一种方法是，利用现代内核中的多线程支持监听和处理连接，为每个连接启动一个新线程。这把责任直接交给操作系统，但是会在 RAM 和 CPU 方面增加相当大的开销，因为每个线程都需要自己的执行空间。另外，如果每个线程都忙于处理网络连接，线程之间的上下文切换会很频繁。最后，许多内核并不适 于处理如此大量的活跃线程。
-
-libevent 方法
------------
-
-libevent 库实际上没有更换 select()、poll() 或其他机制的基础。而是使用对于每个平台最高效的高性能解决方案在实现外加上一个包装器。
-
-为了实际处理每个请求，libevent 库提供一种事件机制，它作为底层网络后端的包装器。事件系统让为连接添加处理函数变得非常简便，同时降低了底层 I/O 复杂性。这是 libevent 系统的核心。
-
-libevent 库的其他组件提供其他功能，包括缓冲的事件系统（用于缓冲发送到客户端/从客户端接收的数据）以及 HTTP、DNS 和 RPC 系统的核心实现。
-
-创建 libevent 服务器的基本方法是，注册当发生某一操作（比如接受来自客户端的连接）时应该执行的函数，然后调用主事件循环 event_dispatch()。执行过程的控制现在由 libevent 系统处理。注册事件和将调用的函数之后，事件系统开始自治；在应用程序运行时，可以在事件队列中添加（注册）或删除（取消注册）事件。事件注册非常方便，可以通过它添加新事件以处理新打开的连接，从而构建灵活的网络处理系统。
-
-例如，可以打开一个监听套接字，然后注册一个回调函数，每当需要调用 accept() 函数以打开新连接时调用这个回调函数，这样就创建了一个网络服务器。清单 1 所示的代码片段说明基本过程：
+首先回忆一下select模型，当有I/O事件到来时，select通知应用程序有事件到了快去处理，而应用程序必须轮询所有的FD集合，测试每个FD是否有事件发生，并处理事件；代码像下面这样：
 
 
-清单 1. 打开监听套接字，注册一个回调函数（每当需要调用 accept() 函数以打开新连接时调用它），由此创建网络服务器
 
-				
-    int main(int argc, char **argv)
+    int res = select(maxfd+1, &readfds, NULL, NULL, 120);
+    if(res > 0)
+    
     {
-    ...
-        ev_init();
-    
-       /* Setup listening socket */
-    
-       event_set(&ev_accept, listen_fd, EV_READ|EV_PERSIST, on_accept, NULL);
-       event_add(&ev_accept, NULL);
-    
-       /* Start the event loop. */
-        event_dispatch();
-    }
-
- 
-
-event_set() 函数创建新的事件结构，event_add() 在事件队列机制中添加事件。然后，event_dispatch() 启动事件队列系统，开始监听（并接受）请求。
-
-清单 2 给出一个更完整的示例，它构建一个非常简单的回显服务器：
-
-
-清单 2. 构建简单的回显服务器
-
-    #include <event.h>
-    #include <sys/types.h> 
-    #include <sys/socket.h> 
-    #include <netinet/in.h>
-    #include <arpa/inet.h> 
-    #include <string.h> 
-    #include <stdlib.h> 
-    #include <stdio.h> 
-    #include <fcntl.h> 
-    #include <unistd.h> 
-
-      #define SERVER_PORT 8080 
-      int debug = 0;
-    struct client {
-      int fd;
-      struct bufferevent *buf_ev;
-    };
-    
-    int setnonblock(int fd)
-    {
-      int flags;
-    
-      flags = fcntl(fd, F_GETFL);
-      flags |= O_NONBLOCK;
-      fcntl(fd, F_SETFL, flags);
-    }
-
-    void buf_read_callback(struct bufferevent *incoming,
-                           void *arg)
-    {
-      struct evbuffer *evreturn;
-      char *req;
-    
-      req = evbuffer_readline(incoming->input);
-      if (req == NULL)
-        return;
-    
-      evreturn = evbuffer_new();
-      evbuffer_add_printf(evreturn,"You said %s\n",req);
-      bufferevent_write_buffer(incoming,evreturn);
-      evbuffer_free(evreturn);
-      free(req);
-    }
-    
-    void buf_write_callback(struct bufferevent *bev,
-                            void *arg)
-    {
-    }
-
-    void buf_error_callback(struct bufferevent *bev,
-                            short what,
-                            void *arg)
-    {
-      struct client *client = (struct client *)arg;
-      bufferevent_free(client->buf_ev);
-      close(client->fd);
-      free(client);
-    }
-    
-    void accept_callback(int fd,
-                         short ev,
-                         void *arg)
-    {
-      int client_fd;
-      struct sockaddr_in client_addr;
-      socklen_t client_len = sizeof(client_addr);
-      struct client *client;
-    
-      client_fd = accept(fd,
-                         (struct sockaddr *)&client_addr,
-                         &client_len);
-
- 
-
-     if (client_fd < 0)
+        for(int i = 0; i < MAX_CONNECTION; i++)
         {
-          warn("Client: accept() failed");
-          return;
-        }
-    
-      setnonblock(client_fd);
-    
-      client = calloc(1, sizeof(*client));
-      if (client == NULL)
-        err(1, "malloc failed");
-      client->fd = client_fd;
-    
-      client->buf_ev = bufferevent_new(client_fd,
-                                       buf_read_callback,
-                                       buf_write_callback,
-                                       buf_error_callback,
-                                       client);
-    
-      bufferevent_enable(client->buf_ev, EV_READ);
-    }
-
-    int main(int argc,
-             char **argv)
-    {
-      int socketlisten;
-      struct sockaddr_in addresslisten;
-      struct event accept_event;
-      int reuse = 1;
-    
-      event_init();
-    
-      socketlisten = socket(AF_INET, SOCK_STREAM, 0);
-    
-      if (socketlisten < 0)
-        {
-          fprintf(stderr,"Failed to create listen socket");
-          return 1;
-        }
-    
-      memset(&addresslisten, 0, sizeof(addresslisten));
-    
-      addresslisten.sin_family = AF_INET;
-      addresslisten.sin_addr.s_addr = INADDR_ANY;
-      addresslisten.sin_port = htons(SERVER_PORT);
-
- 
-
-     if (bind(socketlisten,
-               (struct sockaddr *)&addresslisten,
-               sizeof(addresslisten)) < 0)
-        {
-          fprintf(stderr,"Failed to bind");
-          return 1;
-        }
-    
-      if (listen(socketlisten, 5) < 0)
-        {
-          fprintf(stderr,"Failed to listen to socket");
-          return 1;
-        }
-    
-      setsockopt(socketlisten,
-                 SOL_SOCKET,
-                 SO_REUSEADDR,
-                 &reuse,
-                 sizeof(reuse));
-
-      setnonblock(socketlisten);
-    
-      event_set(&accept_event,
-                socketlisten,
-                EV_READ|EV_PERSIST,
-                accept_callback,
-                NULL);
-    
-      event_add(&accept_event,
-                NULL);
-    
-      event_dispatch();
-    
-      close(socketlisten);
-    
-      return 0;
-    }
-
- 
-
-下面讨论各个函数及其操作：
-
- - main()：
-
-主函数创建用来监听连接的套接字，然后创建 accept() 的回调函数以便通过事件处理函数处理每个连接。
-
- - 
-
-accept_callback()：
-
-当接受连接时，事件系统调用此函数。此函数接受到客户端的连接；添加客 户端套接字信息和一个 bufferevent 结构；在事件结构中为客户端套接字上的读/写/错误事件添加回调函数；作为参数传递客户端结构（和嵌入的 eventbuffer 和客户端套接字）。每当对应的客户端套接字包含读、写或错误操作时，调用对应的回调函数。
-
- - buf_read_callback()：
-
-当客户端套接字有要读的数据时调用它。作为回显服务，此函数把 "you said..." 写回客户端。套接字仍然打开，可以接受新请求。
-
- - buf_write_callback()：
-
-当有要写的数据时调用它。在这个简单的服务中，不需要此函数，所以定义是空的。
-
- - buf_error_callback()：
-
-当出现错误时调用它。这包括客户端中断连接。在出现错误的所有场景中，关闭客户端套接字，从事件列表中删除客户端套接字的事件条目，释放客户端结构的内存。
-
- - setnonblock()：
-
-设置网络套接字以开放 I/O。
-当客户端连接时，在事件队列中添加新事件以处理客户端连接；当客户端中断连接时删除事件。在幕后，libevent 处理网络套接字，识别需要服务的客户端，分别调用对应的函数。
-
-为了构建这个应用程序，需要编译 C 源代码并添加 libevent 库：$ gcc -o basic basic.c -levent。
-
-从客户端的角度来看，这个服务器仅仅把发送给它的任何文本发送回来（见 清单 3）。
-
-
-清单 3. 服务器把发送给它的文本发送回来
-
-				
-    $ telnet localhost 8080
-    Trying 127.0.0.1...
-    Connected to localhost.
-    Escape character is '^]'.
-    Hello!
-    You said Hello!
-
-这样的网络应用程序非常适合需要处理多个连接的大规模分布式部署，比如 IBM Cloud 系统。
-
-很难通过简单的解决方案观察处理大量并发连接的情况和性能改进。可以使用嵌入的 HTTP 实现帮助了解可伸缩性。
-
-使用内置的 HTTP 服务器
-
-如果希望构建本机应用程序，可以使用一般的基于网络的 libevent 接口；但是，越来越常见的场景是开发基于 HTTP 协议的应用程序，以及装载或动态地重新装载信息的网页。如果使用任何 AJAX 库，客户端就需要 HTTP，即使您返回的信息是 XML 或 JSON。
-
-libevent 中的 HTTP 实现并不是 Apache HTTP 服务器的替代品，而是适用于与云和 web 环境相关联的大规模动态内容的实用解决方案。例如，可以在 IBM Cloud 或其他解决方案中部署基于 libevent 的接口。因为可以使用 HTTP 进行通信，服务器可以与其他组件集成。
-
-要想使用 libevent 服务，需要使用与主要网络事件模型相同的基本结构，但是还必须处理网络接口，HTTP 包装器会替您处理。这使整个过程变成四个函数调用（初始化、启动 HTTP 服务器、设置 HTTP 回调函数和进入事件循环），再加上发送回数据的回调函数。清单 4 给出一个非常简单的示例：
-
-
-清单 4. 使用 libevent 服务的简单示例
-
-				
-    #include <sys/types.h>
-    
-    #include <stdio.h>
-    #include <stdlib.h>
-    #include <unistd.h>
-    
-    #include <event.h>
-    #include <evhttp.h>
-
-    void generic_request_handler(struct evhttp_request *req, void *arg)
-    {
-      struct evbuffer *returnbuffer = evbuffer_new();
-    
-      evbuffer_add_printf(returnbuffer, "Thanks for the request!");
-      evhttp_send_reply(req, HTTP_OK, "Client", returnbuffer);
-      evbuffer_free(returnbuffer);
-      return;
-    }
-    
-    int main(int argc, char **argv)
-    {
-      short          http_port = 8081;
-      char          *http_addr = "192.168.0.22";
-      struct evhttp *http_server = NULL;
-    
-      event_init();
-      http_server = evhttp_start(http_addr, http_port);
-      evhttp_set_gencb(http_server, generic_request_handler, NULL);
-    
-      fprintf(stderr, "Server started on port %d\n", http_port);
-      event_dispatch();
-    
-      return(0);
-    }
-     
-
-应该可以通过前面的示例看出代码的基本结构，不需要解释。主要元素是 evhttp_set_gencb() 函数（它设置当收到 HTTP 请求时要使用的回调函数）和 generic_request_handler() 回调函数本身（它用一个表示成功的简单消息填充响应缓冲区）。
-
-HTTP 包装器提供许多其他功能。例如，有一个请求解析器，它会从典型的请求中提取出查询参数（就像处理 CGI 请求一样）。还可以设置在不同的请求路径中要触发的处理函数。通过设置不同的回调函数和处理函数，可以使用路径 '/db/' 提供到数据库的接口，或使用 '/memc' 提供到 memcached 的接口。
-
-libevent 工具包的另一个特性是支持通用计时器。可以在指定的时间段之后触发事件。可以通过结合使用计时器和 HTTP 实现提供轻量的服务，从而自动地提供文件内容，在修改文件内容时更新返回的数据。例如，以前要想在新闻频发的活动期间提供即时更新服务，前端 web 应用程序就需要定期重新装载新闻稿，而现在可以轻松地提供内容。整个应用程序（和 web 服务）都在内存中，因此响应非常快。
-
-这就是 清单 5 中的示例的主要用途：
-
-
-清单 5. 使用计时器在新闻频发的活动期间提供即时更新服务
-
-				
-    #include <sys/types.h>
-    #include <stdio.h>
-    #include <stdlib.h>
-    #include <string.h>
-    #include <unistd.h>
-    #include <sys/stat.h>
-    #include <event.h>
-    #include <evhttp.h>
-    
-    #define RELOAD_TIMEOUT 5
-    #define DEFAULT_FILE "sample.html"
-
-    char *filedata;
-    time_t lasttime = 0;
-    char filename[80];
-    int counter = 0;
-    
-    void read_file()
-    {
-      int size = 0;
-      char *data;
-      struct stat buf;
-    
-      stat(filename,&buf);
-    
-      if (buf.st_mtime > lasttime)
-        {
-          if (counter++)
-            fprintf(stderr,"Reloading file: %s",filename);
-          else
-            fprintf(stderr,"Loading file: %s",filename);
-    
-          FILE *f = fopen(filename, "rb");
-          if (f == NULL)
+            if(FD_ISSET(allConnection[i],&readfds))
             {
-              fprintf(stderr,"Couldn't open file\n");
-              exit(1);
+                handleEvent(allConnection[i]);
             }
-
-          fseek(f, 0, SEEK_END);
-          size = ftell(f);
-          fseek(f, 0, SEEK_SET);
-          data = (char *)malloc(size+1);
-          fread(data, sizeof(char), size, f);
-          filedata = (char *)malloc(size+1);
-          strcpy(filedata,data);
-          fclose(f);
-    
-    
-          fprintf(stderr," (%d bytes)\n",size);
-          lasttime = buf.st_mtime;
         }
     }
-    
-    void load_file()
-    {
-      struct event *loadfile_event;
-      struct timeval tv;
-    
-      read_file();
+    // if(res == 0) handle timeout, res < 0 handle error
 
-  
 
-    tv.tv_sec = RELOAD_TIMEOUT;
-      tv.tv_usec = 0;
+Epoll不仅会告诉应用程序有I/0事件到来，还会告诉应用程序相关的信息，这些信息是应用程序填充的，因此根据这些信息应用程序就能直接定位到事件，而不必遍历整个FD集合。
+
+    intres = epoll_wait(epfd, events, 20, 120);
     
-      loadfile_event = malloc(sizeof(struct event));
-    
-      evtimer_set(loadfile_event,
-                  load_file,
-                  loadfile_event);
-    
-      evtimer_add(loadfile_event,
-                  &tv);
-    }
-    
-    void generic_request_handler(struct evhttp_request *req, void *arg)
+    for(int i = 0; i < res;i++)
     {
-      struct evbuffer *evb = evbuffer_new();
-    
-      evbuffer_add_printf(evb, "%s",filedata);
-      evhttp_send_reply(req, HTTP_OK, "Client", evb);
-      evbuffer_free(evb);
+        handleEvent(events[n]);
     }
 
-    int main(int argc, char *argv[])
-    {
-      short          http_port = 8081;
-      char          *http_addr = "192.168.0.22";
-      struct evhttp *http_server = NULL;
+##5. Epoll关键数据结构
+
+前面提到Epoll速度快和其数据结构密不可分，其关键数据结构就是：
+
+    struct epoll_event {
     
-      if (argc > 1)
-        {
-          strcpy(filename,argv[1]);
-          printf("Using %s\n",filename);
-        }
-      else
-        {
-          strcpy(filename,DEFAULT_FILE);
-        }
+        __uint32_t events;      // Epoll events
     
-      event_init();
+        epoll_data_t data;      // User datavariable
     
-      load_file();
+    };
+
+    typedef union epoll_data {
     
-      http_server = evhttp_start(http_addr, http_port);
-      evhttp_set_gencb(http_server, generic_request_handler, NULL);
+        void *ptr;
     
-      fprintf(stderr, "Server started on port %d\n", http_port);
-      event_dispatch();
-    }
-
- 
-
-这个服务器的基本原理与前面的示例相同。首先，脚本设置一个 HTTP 服务器，它只响应对基本 URL 主机/端口组合的请求（不处理请求 URI）。第一步是装载文件 (read_file())。在装载最初的文件时和在计时器触发回调时都使用此函数。
-
-read_file() 函数使用 stat() 函数调用检查文件的修改时间，只有在上一次装载之后修改了文件的情况下，它才重新读取文件的内容。此函数通过调用 fread() 装载文件数据，把数据复制到另一个结构中，然后使用 strcpy() 把数据从装载的字符串转移到全局字符串中。
-
-load_file() 函数是触发计时器时调用的函数。它通过调用 read_file() 装载内容，然后使用 RELOAD_TIMEOUT 值设置计时器，作为尝试装载文件之前的秒数。libevent 计时器使用 timeval 结构，允许按秒和毫秒指定计时器。计时器不是周期性的；当触发计时器事件时设置它，然后从事件队列中删除事件。
-
-使用与前面的示例相同的格式编译代码：$ gcc -o basichttpfile basichttpfile.c -levent。
-
-现在，创建作为数据使用的静态文件；默认文件是 sample.html，但是可以通过命令行上的第一个参数指定任何文件（见 清单 6）。
-
-
-清单 6. 创建作为数据使用的静态文件
-
-				
-    $ ./basichttpfile
-    Loading file: sample.html (8046 bytes)
-    Server started on port 8081
-     
-
-现在，程序可以接受请求了，重新装载计时器也启动了。如果修改 sample.html 的内容，应该会重新装载此文件并在日志中记录一个消息。例如，清单 7 中的输出显示初始装载和两次重新装载：
-
-
-清单 7. 输出显示初始装载和两次重新装载
-
-    				
-    $ ./basichttpfile
-    Loading file: sample.html (8046 bytes)
-    Server started on port 8081
-    Reloading file: sample.html (8047 bytes)
-    Reloading file: sample.html (8048 bytes)
-
- 
-
-注意，要想获得最大的收益，必须确保环境没有限制打开的文件描述符数量。可以使用 ulimit 命令修改限制（需要适当的权限或根访问）。具体的设置取决与您的 OS，但是在 Linux® 上可以用 -n 选项设置打开的文件描述符（和网络套接字）的数量：
-
-
-清单 8. 用 -n 选项设置打开的文件描述符数量
-
-				
-    $ ulimit -n
-    1024
-     
-
-通过指定数字提高限制：$ ulimit -n 20000。
-
-可以使用 Apache Bench 2 (ab2) 等性能基准测试应用程序检查服务器的性能。可以指定并发查询的数量以及请求的总数。例如，使用 100,000 个请求运行基准测试，并发请求数量为 1000 个：$ ab2 -n 100000 -c 1000 http://192.168.0.22:8081/。
-
-使用服务器示例中所示的 8K 文件运行这个示例系统，获得的结果为大约每秒处理 11,000 个请求。请记住，这个 libevent 服务器在单一线程中运行，而且单一客户端不太可能给服务器造成压力，因为它还受到打开请求的方法的限制。尽管如此，在交换的文档大小适中的情况下，这样的 处理速率对于单线程应用程序来说仍然令人吃惊。
-
-使用其他语言的实现
-
-尽管 C 语言很适合许多系统应用程序，但是在现代环境中不经常使用 C 语言，脚本语言更灵活、更实用。幸运的是，Perl 和 PHP 等大多数脚本语言是用 C 编写的，所以可以通过扩展模块使用 libevent 等 C 库。
-
-例如，清单 9 给出 Perl 网络服务器脚本的基本结构。accept_callback() 函数与 清单 1 所示核心 libevent 示例中的 accept 函数相同。
-
-
-清单 9. Perl 网络服务器脚本的基本结构
-
-				
-    my $server = IO::Socket::INET->new(
-        LocalAddr       => 'localhost',
-        LocalPort       => 8081,
-        Proto           => 'tcp',
-        ReuseAddr       => SO_REUSEADDR,
-        Listen          => 1,
-        Blocking        => 0,
-        ) or die $@;
+       int fd;
     
-    my $accept = event_new($server, EV_READ|EV_PERSIST, \&accept_callback);
+        __uint32_t u32;
     
-    $main->add;
+        __uint64_t u64;
     
-    event_mainloop();
-     
+    } epoll_data_t;
 
-用这些语言编写的 libevent 实现通常支持 libevent 系统的核心，但是不一定支持 HTTP 包装器。因此，对脚本编程的应用程序使用这些解决方案会比较复杂。有两种方法：要么把脚本语言嵌入到基于 C 的 libevent 应用程序中，要么使用基于脚本语言环境构建的众多 HTTP 实现之一。例如，Python 包含功能很强的 HTTP 服务器类 (httplib/httplib2)。
+结构体epoll_event 被用于注册所感兴趣的事件和回传所发生待处理的事件. 
+其中epoll_data 联合体用来保存触发事件的某个文件描述符相关的数据. 
+例如一个client连接到服务器，服务器通过调用accept函数可以得到于这个client对应的socket文件描述符，可以把这文件描述符赋给epoll_data的fd字段以便后面的读写操作在这个文件描述符上进行。epoll_event 结构体的events字段是表示感兴趣的事件和被触发的事件可能的取值为： 
 
-应该指出一点：在脚本语言中没有什么东西是无法用 C 重新实现的。但是，要考虑到开发时间的限制，而且与现有代码集成可能更重要。
+ - EPOLLIN ：表示对应的文件描述符可以读；
+ - EPOLLOUT：表示对应的文件描述符可以写；
+ - EPOLLPRI：表示对应的文件描述符有紧急的数据可读
+ - EPOLLERR：表示对应的文件描述符发生错误；
+ - EPOLLHUP：表示对应的文件描述符被挂断；
+ - EPOLLET：表示对应的文件描述符有事件发生；
 
-libev 库
--------
+**ET和LT模式**
+LT(level triggered)是缺省的工作方式，并且同时支持block和no-block socket.在这种做法中，内核告诉你一个文件描述符是否就绪了，然后你可以对这个就绪的fd进行IO操作。如果你不作任何操作，内核还是会继续通知你的，所以，这种模式编程出错误可能性要小一点。传统的select/poll都是这种模型的代表。
 
-与 libevent 一样，libev 系统也是基于事件循环的系统，它在 poll()、select() 等机制的本机实现的基础上提供基于事件的循环。到我撰写本文时，libev 实现的开销更低，能够实现更好的基准测试结果。libev API 比较原始，没有 HTTP 包装器，但是 libev 支持在实现中内置更多事件类型。例如，一种 evstat 实现可以监视多个文件的属性变动，可以在 清单 4 所示的 HTTP 文件解决方案中使用它。
+ET (edge-triggered)是高速工作方式，只支持no-block socket。在这种模式下，当描述符从未就绪变为就绪时，内核通过epoll告诉你。然后它会假设你知道文件描述符已经就绪，并且不会再为那个文件描述符发送更多的就绪通知，直到你做了某些操作导致那个文件描述符不再为就绪状态了（比如，你在发送，接收或者接收请求，或者发送接收的数据少于一定量时导致了一个EWOULDBLOCK 错误）。但是请注意，如果一直不对这个fd作IO操作（从而导致它再次变成未就绪），内核不会发送更多的通知(only once)，不过在TCP协议中，ET模式的加速效用仍需要更多的benchmark确认。
+ET和LT的区别在于LT事件不会丢弃，而是只要读buffer里面有数据可以让用户读，则不断的通知你。而ET则只在事件发生之时通知。可以简单理解为LT是水平触发，而ET则为边缘触发。
+ET模式仅当状态发生变化的时候才获得通知,这里所谓的状态的变化并不包括缓冲区中还有未处理的数据,也就是说,如果要采用ET模式,需要一直read/write直到出错为止,很多人反映为什么采用ET模式只接收了一部分数据就再也得不到通知了,大多因为这样;而LT模式是只要有数据没有处理就会一直通知下去的.
 
-但是，libevent 和 libev 的基本过程是相同的。创建所需的网络监听套接字，注册在执行期间要调用的事件，然后启动主事件循环，让 libev 处理过程的其余部分。
+##6. 使用Epoll
 
- 
+既然Epoll相比select这么好，那么用起来如何呢？会不会很繁琐啊…先看看下面的三个函数吧，就知道Epoll的易用了。
 
-Libev是一个eventloop：向libev注册感兴趣的events，比如Socket可读事件，libev会对所注册的事件的源进行管理，并在事件发生时触发相应的程序。
+    int epoll_create(int size);
 
-To do this, it must take more or less complete control over yourprocess (or thread) by executing the event loop handler, andwill then communicate events via a callback mechanism.
+生成一个Epoll专用的文件描述符，其实是申请一个内核空间，用来存放你想关注的socket fd上是否发生以及发生了什么事件。size就是你在这个Epoll fd上能关注的最大socket fd数，大小自定，只要内存足够。
 
-通过event watcher来注册事件，which are relatively small C structures youinitialise with the details of the event, and then hand it over tolibev by starting the watcher.
+    int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);
 
-先来解释watcher，libev通过分配和注册watcher对不同类型的事件进行监听。不同事件类型的watcher又对应不同的数据类型，watcher的定义模式是structev_TYPE或者ev_TYPE，其中TYPE为具体的类型。当前libev定义了如下类型的watcher：
+epoll的事件注册函数，它不同与select()是在监听事件时告诉内核要监听什么类型的事件，而是在这里先注册要监听的事件类型。第一个参数是epoll_create()的返回值，第二个参数表示动作，用三个宏来表示：
+
+ - EPOLL_CTL_ADD：注册新的fd到epfd中；
+ - EPOLL_CTL_MOD：修改已经注册的fd的监听事件；
+ - EPOLL_CTL_DEL：从epfd中删除一个fd；
+
+第三个参数是需要监听的fd，第四个参数是告诉内核需要监听什么事
+
+    int epoll_wait(int epfd,struct epoll_event * events,int maxevents,int timeout);
+
+等待I/O事件的发生；参数说明：
+
+ - epfd:由epoll_create() 生成的Epoll专用的文件描述符；
+ - epoll_event:用于回传代处理事件的数组；
+ - maxevents:每次能处理的事件数；
+ - timeout:等待I/O事件发生的超时值；
+ - 返回发生事件数。
 
 
-ev_io
-ev_timer
-ev_periodic
-ev_signal
-ev_child
-ev_stat
-ev_idle
-ev_prepare and ev_check
-ev_embed
-ev_fork
-ev_cleanup
-ev_async
+----------
 
-下面是一个libev使用的例子，通过注册io类型的watcher来监视STDIN可读事件的发生：
 
-  
+----------
 
-     static void my_cb (structev_loop *loop, ev_io *w, int revents)
-       {
-        ev_io_stop (w);
-        ev_break (loop, EVBREAK_ALL);
-       }
+##测试程序
+首先对服务端和客户端做下说明：
+我想实现的是客户端和服务端并发的程序，客户端通过配置并发数，说明有多少个用户去连接服务端。
+客户端会发送消息："Client: i send message Hello Server!”，其中i表示哪一个客户端；收到消息："Recv Server Msg Content:%s\n"。
+例如：
+发送：Client: 1 send message "Hello Server!"
+接收：Recv Derver Msg Content:Hello, client fd: 6
+服务端收到后给客户端回复消息："Hello, client fd: i"，其中i表示服务端接收的fd,用户区别是哪一个客户端。接收客户端消息："Terminal Received Msg Content:%s\n"
+例如：
+发送：Hello, client fd: 6
+接收：Terminal Received Msg Content:Client: 1 send message "Hello Server!"
+备注：这里在接收到消息后，直接打印出消息，如果需要对消息进行处理（如果消息处理比较占用时间，不能立即返回，可以将该消息放入一个队列中，然后开启一个线程从队列中取消息进行处理，这样的话不会因为消息处理而阻塞epoll）。libenent好像对这种有2中处理方式，一个就是回调，要求回调函数，不占用太多的时间，基本能立即返回，另一种好像也是一个队列实现的，这个还需要研究。
+服务端代码说明：
+服务端在绑定监听后，开启了一个线程，用于负责接收客户端连接，加入到epoll中，这样只要accept到客户端的连接，就将其add EPOLLIN到epoll中，然后进入循环调用epoll_wait，监听到读事件，接收数据，并将事件修改为EPOLLOUT；反之监听到写事件，发送数据，并将事件修改为EPOLLIN。
+**服务器代码：**
+
+    //cepollserver.h  
+    #ifndef  C_EPOLL_SERVER_H  
+    #define  C_EPOLL_SERVER_H  
+      
+    #include <sys/epoll.h>  
+    #include <sys/socket.h>  
+    #include <netinet/in.h>  
+    #include <fcntl.h>  
+    #include <arpa/inet.h>  
+    #include <stdio.h>  
+    #include <stdlib.h>  
+    #include <iostream>  
+    #include <pthread.h>  
+      
+    #define _MAX_SOCKFD_COUNT 65535  
+      
+    class CEpollServer  
+    {  
+            public:  
+                    CEpollServer();  
+                    ~CEpollServer();  
+      
+                    bool InitServer(const char* chIp, int iPort);  
+                    void Listen();  
+                    static void ListenThread( void* lpVoid );  
+                    void Run();  
+      
+            private:  
+                    int        m_iEpollFd;  
+                    int        m_isock;  
+                    pthread_t       m_ListenThreadId;// 监听线程句柄  
+      
+    };  
+      
+    #endif  
     
-       struct ev_loop *loop =ev_default_loop (0);
-    
-       ev_io stdin_watcher;，
-    
-       ev_init(&stdin_watcher, my_cb);
-       ev_io_set(&stdin_watcher, STDIN_FILENO, EV_READ);
-       ev_io_start (loop,&stdin_watcher);
-    
-       ev_run (loop, 0);
+       #include "cepollserver.h"  
+      
+    using namespace std;  
+      
+    CEpollServer::CEpollServer()  
+    {  
+    }  
+      
+    CEpollServer::~CEpollServer()  
+    {  
+        close(m_isock);  
+    }  
+      
+    bool CEpollServer::InitServer(const char* pIp, int iPort)  
+    {  
+        m_iEpollFd = epoll_create(_MAX_SOCKFD_COUNT);  
+      
+        //设置非阻塞模式  
+        int opts = O_NONBLOCK;  
+        if(fcntl(m_iEpollFd,F_SETFL,opts)<0)  
+        {  
+            printf("设置非阻塞模式失败!\n");  
+            return false;  
+        }  
+      
+        m_isock = socket(AF_INET,SOCK_STREAM,0);  
+        if ( 0 > m_isock )  
+        {  
+            printf("socket error!\n");  
+            return false;  
+    　　}  
+    　　  
+    　　sockaddr_in listen_addr;  
+    　　    listen_addr.sin_family=AF_INET;  
+    　　    listen_addr.sin_port=htons ( iPort );  
+    　　    listen_addr.sin_addr.s_addr=htonl(INADDR_ANY);  
+    　　    listen_addr.sin_addr.s_addr=inet_addr(pIp);  
+    　　  
+    　　    int ireuseadd_on = 1;//支持端口复用  
+    　　    setsockopt(m_isock, SOL_SOCKET, SO_REUSEADDR, &ireuseadd_on, sizeof(ireuseadd_on) );  
+    　　  
+    　　    if ( bind ( m_isock, ( sockaddr * ) &listen_addr,sizeof ( listen_addr ) ) !=0 )  
+    　　    {  
+    　　        printf("bind error\n");  
+    　　        return false;  
+    　　    }  
+    　　  
+    　　    if ( listen ( m_isock, 20) <0 )  
+    　　    {  
+    　　        printf("listen error!\n");  
+    　　        return false;  
+    　　    }  
+    　　    else  
+    　　    {  
+    　　        printf("服务端监听中...\n");  
+    　　    }  
+    　　  
+    　　    // 监听线程，此线程负责接收客户端连接，加入到epoll中  
+    　　    if ( pthread_create( &m_ListenThreadId, 0, ( void * ( * ) ( void * ) ) ListenThread, this ) != 0 )  
+    　　    {  
+    　　        printf("Server 监听线程创建失败!!!");  
+    　　        return false;  
+    　　    }  
+    　　}  
+    　　// 监听线程  
+    　　void CEpollServer::ListenThread( void* lpVoid )  
+    　　{  
+    　　    CEpollServer *pTerminalServer = (CEpollServer*)lpVoid;  
+    　　    sockaddr_in remote_addr;  
+    　　    int len = sizeof (remote_addr);  
+    　　    while ( true )  
+    　　    {  
+    　　        int client_socket = accept (pTerminalServer->m_isock, ( sockaddr * ) &remote_addr,(socklen_t*)&len );  
+    　　        if ( client_socket < 0 )  
+    　　        {  
+    　　            printf("Server Accept失败!, client_socket: %d\n", client_socket);  
+    　　            continue;  
+    　　        }  
+    　　        else  
+    　　        {  
+    　　            struct epoll_event    ev;  
+    　　            ev.events = EPOLLIN | EPOLLERR | EPOLLHUP;  
+    　　            ev.data.fd = client_socket;     //记录socket句柄  
+    　　            epoll_ctl(pTerminalServer->m_iEpollFd, EPOLL_CTL_ADD, client_socket, &ev);  
+    　　        }  
+    　　    }  
+    　　}  
+    　　  
+    　　void CEpollServer::Run()  
+    　　{  
+    　　    while ( true )  
+    　　    {  
+    　　        struct epoll_event    events[_MAX_SOCKFD_COUNT];  
+    　　        int nfds = epoll_wait( m_iEpollFd, events,  _MAX_SOCKFD_COUNT, -1 );  
+    　　        for (int i = 0; i < nfds; i++)  
+    　　        {  
+    　　            int client_socket = events[i].data.fd;  
+    　　            char buffer[1024];//每次收发的字节数小于1024字节  
+    　　            memset(buffer, 0, 1024);  
+    　　            if (events[i].events & EPOLLIN)//监听到读事件，接收数据  
+    　　            {  
+    　　                int rev_size = recv(events[i].data.fd,buffer, 1024,0);  
+    　　                if( rev_size <= 0 )  
+    　　                {  
+    　　                    cout << "recv error: recv size: " << rev_size << endl;  
+    　　                    struct epoll_event event_del;  
+    　　                    event_del.data.fd = events[i].data.fd;  
+    　　                    event_del.events = 0;  
+    　　                    epoll_ctl(m_iEpollFd, EPOLL_CTL_DEL, event_del.data.fd, &event_del);  
+    　　                }  
+    　　                else  
+    　　                {  
+    　　                    printf("Terminal Received Msg Content:%s\n",buffer);  
+    　　                    struct epoll_event    ev;  
+    　　                    ev.events = EPOLLOUT | EPOLLERR | EPOLLHUP;  
+    　　                    ev.data.fd = client_socket;     //记录socket句柄  
+    　　                    epoll_ctl(m_iEpollFd, EPOLL_CTL_MOD, client_socket, &ev);  
+    　　                }  
+    　　            }  
+    　　else if(events[i].events & EPOLLOUT)//监听到写事件，发送数据  
+    　　            {  
+    　　                char sendbuff[1024];  
+    　　                sprintf(sendbuff, "Hello, client fd: %d\n", client_socket);  
+    　　                int sendsize = send(client_socket, sendbuff, strlen(sendbuff)+1, MSG_NOSIGNAL);  
+    　　                if(sendsize <= 0)  
+    　　                {  
+    　　                    struct epoll_event event_del;  
+    　　                    event_del.data.fd = events[i].data.fd;  
+    　　                    event_del.events = 0;  
+    　　                    epoll_ctl(m_iEpollFd, EPOLL_CTL_DEL, event_del.data.fd, &event_del);  
+    　　                }  
+    　　                else  
+    　　                {  
+    　　                    printf("Server reply msg ok! buffer: %s\n", sendbuff);  
+    　　                    struct epoll_event    ev;  
+    　　                    ev.events = EPOLLIN | EPOLLERR | EPOLLHUP;  
+    　　                    ev.data.fd = client_socket;     //记录socket句柄  
+    　　                    epoll_ctl(m_iEpollFd, EPOLL_CTL_MOD, client_socket, &ev);  
+    　　                }  
+    　　            }  
+    　　            else  
+    　　            {  
+    　　                cout << "EPOLL ERROR\n" <<endl;  
+    　　                epoll_ctl(m_iEpollFd, EPOLL_CTL_DEL, events[i].data.fd, &events[i]);  
+    　　            }  
+    　　        }  
+    　　    }  
+    　　}  
 
-上面的示例代码中用到的与watcher相关的函数有ev_init，ev_io_set，ev_io_start，ev_io_stop。ev_init对一个watcher的与具体类型无关的部分进行初始化。ev_io_set对watcher的与io类型相关的部分进行初始化，显然如果是TYPE类型那么相应的函数就是ev_TYPE_set。可以采用ev_TYPE_init函数来替代ev_init和ev_TYPE_set。ev_io_start激活相应的watcher，watcher只有被激活的时候才能接收事件。ev_io_stop停止已经激活的watcher。
+**客户端代码：**
+说明：测试是两个并发进行测试，每一个客户端都是一个长连接。代码中在连接服务器（ConnectToServer）时将用户ID和socketid关联起来。用户ID和socketid是一一对应的关系。
 
-接下来看看event loop的概念。示例程序中的ev_run、ev_break以及ev_loop_default都是eventloop控制函数。event loop定义为struct ev_loop。有两种类型的eventloop，分别是default类型和dynamicallycreated类型，区别是前者支持子进程事件。ev_default_loop和ev_loop_new函数分别用于创建default类型或者dynamicallycreated类型的event loop。
+        #ifndef _DEFINE_EPOLLCLIENT_H_  
+        #define _DEFINE_EPOLLCLIENT_H_  
+        #define _MAX_SOCKFD_COUNT 65535  
+          
+        #include<iostream>  
+        #include <sys/epoll.h>  
+        #include <sys/socket.h>  
+        #include <netinet/in.h>  
+        #include <fcntl.h>  
+        #include <arpa/inet.h>  
+        #include <errno.h>  
+        #include <sys/ioctl.h>  
+        #include <sys/time.h>  
+        #include <string>  
+          
+        using namespace std;  
+          
+        /** 
+         * @brief 用户状态 
+         */  
+        typedef enum _EPOLL_USER_STATUS_EM  
+        {  
+                FREE = 0,  
+                CONNECT_OK = 1,//连接成功  
+                SEND_OK = 2,//发送成功  
+                RECV_OK = 3,//接收成功  
+        }EPOLL_USER_STATUS_EM;  
+          
+        /*@brief 
+         *@CEpollClient class 用户状态结构体 
+         */  
+        struct UserStatus  
+        {  
+                EPOLL_USER_STATUS_EM iUserStatus;//用户状态  
+                int iSockFd;//用户状态关联的socketfd  
+                char cSendbuff[1024];//发送的数据内容  
+                int iBuffLen;//发送数据内容的长度  
+                unsigned int uEpollEvents;//Epoll events  
+        };  
+          
+        class CEpollClient  
+        {  
+                public:  
+          
+                        /** 
+                         * @brief 
+                         * 函数名:CEpollClient 
+                         * 描述:构造函数 
+                         * @param [in] iUserCount  
+                         * @param [in] pIP IP地址 
+                         * @param [in] iPort 端口号 
+                         * @return 无返回 
+                         */  
+                        CEpollClient(int iUserCount, const char* pIP, int iPort);  
+          
+        /** 
+                         * @brief 
+                         * 函数名:CEpollClient 
+                         * 描述:析构函数 
+                         * @return 无返回 
+                         */  
+                        ~CEpollClient();  
+          
+                        /** 
+                         * @brief 
+                         * 函数名:RunFun 
+                         * 描述:对外提供的接口，运行epoll类 
+                         * @return 无返回值 
+                         */  
+                        int RunFun();  
+          
+                private:  
+          
+                        /** 
+                         * @brief 
+                         * 函数名:ConnectToServer 
+                         * 描述:连接到服务器 
+                         * @param [in] iUserId 用户ID 
+                         * @param [in] pServerIp 连接的服务器IP 
+                         * @param [in] uServerPort 连接的服务器端口号 
+                         * @return 成功返回socketfd,失败返回的socketfd为-1 
+                         */  
+                        int ConnectToServer(int iUserId,const char *pServerIp,unsigned short uServerPort);  
+          
+        /** 
+                         * @brief 
+                         * 函数名:SendToServerData 
+                         * 描述:给服务器发送用户(iUserId)的数据 
+                         * @param [in] iUserId 用户ID 
+                         * @return 成功返回发送数据长度 
+                         */  
+                        int SendToServerData(int iUserId);  
+          
+                        /** 
+                         * @brief 
+                         * 函数名:RecvFromServer 
+                         * 描述:接收用户回复消息 
+                         * @param [in] iUserId 用户ID 
+                         * @param [in] pRecvBuff 接收的数据内容 
+                         * @param [in] iBuffLen 接收的数据长度 
+                         * @return 成功返回接收的数据长度，失败返回长度为-1 
+                         */  
+                        int RecvFromServer(int iUserid,char *pRecvBuff,int iBuffLen);  
+          
+                        /** 
+                         * @brief 
+                         * 函数名:CloseUser 
+                         * 描述:关闭用户 
+                         * @param [in] iUserId 用户ID 
+                         * @return 成功返回true 
+                         */  
+                        bool CloseUser(int iUserId);  
+          
+        /** 
+                         * @brief 
+                         * 函数名:DelEpoll 
+                         * 描述:删除epoll事件 
+                         * @param [in] iSockFd socket FD 
+                         * @return 成功返回true 
+                         */  
+                        bool DelEpoll(int iSockFd);  
+                private:  
+          
+                        int    m_iUserCount;//用户数量；  
+                        struct UserStatus *m_pAllUserStatus;//用户状态数组  
+                        int    m_iEpollFd;//需要创建epollfd  
+                        int    m_iSockFd_UserId[_MAX_SOCKFD_COUNT];//将用户ID和socketid关联起来  
+                        int    m_iPort;//端口号  
+                        char   m_ip[100];//IP地址  
+        };  
+          
+        #endif  
+        #include "cepollclient.h"  
+      
+    CEpollClient::CEpollClient(int iUserCount, const char* pIP, int iPort)  
+    {  
+        strcpy(m_ip, pIP);  
+        m_iPort = iPort;  
+        m_iUserCount = iUserCount;  
+        m_iEpollFd = epoll_create(_MAX_SOCKFD_COUNT);  
+        m_pAllUserStatus = (struct UserStatus*)malloc(iUserCount*sizeof(struct UserStatus));  
+        for(int iuserid=0; iuserid<iUserCount ; iuserid++)  
+        {  
+            m_pAllUserStatus[iuserid].iUserStatus = FREE;  
+            sprintf(m_pAllUserStatus[iuserid].cSendbuff, "Client: %d send message \"Hello Server!\"\r\n", iuserid);  
+            m_pAllUserStatus[iuserid].iBuffLen = strlen(m_pAllUserStatus[iuserid].cSendbuff) + 1;  
+            m_pAllUserStatus[iuserid].iSockFd = -1;  
+        }  
+        memset(m_iSockFd_UserId, 0xFF, sizeof(m_iSockFd_UserId));  
+    }  
+      
+    CEpollClient::~CEpollClient()  
+    {  
+        free(m_pAllUserStatus);  
+    }  
+    int CEpollClient::ConnectToServer(int iUserId,const char *pServerIp,unsigned short uServerPort)  
+    {  
+        if( (m_pAllUserStatus[iUserId].iSockFd = socket(AF_INET,SOCK_STREAM,0) ) < 0 )  
+        {  
+            cout <<"[CEpollClient error]: init socket fail, reason is:"<<strerror(errno)<<",errno is:"<<errno<<endl;  
+            m_pAllUserStatus[iUserId].iSockFd = -1;  
+            return  m_pAllUserStatus[iUserId].iSockFd;  
+        }  
+      
+        struct sockaddr_in addr;  
+        bzero(&addr, sizeof(addr));  
+        addr.sin_family = AF_INET;  
+        addr.sin_port = htons(uServerPort);  
+        addr.sin_addr.s_addr = inet_addr(pServerIp);  
+      
+        int ireuseadd_on = 1;//支持端口复用  
+        setsockopt(m_pAllUserStatus[iUserId].iSockFd, SOL_SOCKET, SO_REUSEADDR, &ireuseadd_on, sizeof(ireuseadd_on));  
+      
+        unsigned long ul = 1;  
+        ioctl(m_pAllUserStatus[iUserId].iSockFd, FIONBIO, &ul); //设置为非阻塞模式  
+      
+        connect(m_pAllUserStatus[iUserId].iSockFd, (const sockaddr*)&addr, sizeof(addr));  
+        m_pAllUserStatus[iUserId].iUserStatus = CONNECT_OK;  
+        m_pAllUserStatus[iUserId].iSockFd = m_pAllUserStatus[iUserId].iSockFd;  
+      
+        return m_pAllUserStatus[iUserId].iSockFd;  
+    }  
+    int CEpollClient::SendToServerData(int iUserId)  
+    {  
+        sleep(1);//此处控制发送频率，避免狂打日志，正常使用中需要去掉  
+        int isendsize = -1;  
+        if( CONNECT_OK == m_pAllUserStatus[iUserId].iUserStatus || RECV_OK == m_pAllUserStatus[iUserId].iUserStatus)  
+        {  
+            isendsize = send(m_pAllUserStatus[iUserId].iSockFd, m_pAllUserStatus[iUserId].cSendbuff, m_pAllUserStatus[iUserId  
+    ].iBuffLen, MSG_NOSIGNAL);  
+            if(isendsize < 0)  
+            {  
+                cout <<"[CEpollClient error]: SendToServerData, send fail, reason is:"<<strerror(errno)<<",errno is:"<<errno<  
+    <endl;  
+            }  
+            else  
+            {  
+                printf("[CEpollClient info]: iUserId: %d Send Msg Content:%s\n", iUserId, m_pAllUserStatus[iUserId].cSendbuff  
+    );  
+                m_pAllUserStatus[iUserId].iUserStatus = SEND_OK;  
+            }  
+        }  
+        return isendsize;  
+    }  
+    int CEpollClient::RecvFromServer(int iUserId,char *pRecvBuff,int iBuffLen)  
+    {  
+        int irecvsize = -1;  
+        if(SEND_OK == m_pAllUserStatus[iUserId].iUserStatus)  
+        {  
+            irecvsize = recv(m_pAllUserStatus[iUserId].iSockFd, pRecvBuff, iBuffLen, 0);  
+            if(0 > irecvsize)  
+            {  
+                cout <<"[CEpollClient error]: iUserId: " << iUserId << "RecvFromServer, recv fail, reason is:"<<strerror(errn  
+    o)<<",errno is:"<<errno<<endl;  
+            }  
+            else if(0 == irecvsize)  
+            {  
+                cout <<"[warning:] iUserId: "<< iUserId << "RecvFromServer, STB收到数据为0，表示对方断开连接,irecvsize:"<<ire  
+    cvsize<<",iSockFd:"<< m_pAllUserStatus[iUserId].iSockFd << endl;  
+            }  
+            else  
+            {  
+                printf("Recv Server Msg Content:%s\n", pRecvBuff);  
+                m_pAllUserStatus[iUserId].iUserStatus = RECV_OK;  
+            }  
+        }  
+        return irecvsize;  
+    }  
+      
+    bool CEpollClient::CloseUser(int iUserId)  
+    {  
+        close(m_pAllUserStatus[iUserId].iSockFd);  
+        m_pAllUserStatus[iUserId].iUserStatus = FREE;  
+        m_pAllUserStatus[iUserId].iSockFd = -1;  
+        return true;  
+    }  
+          
+    int CEpollClient::RunFun()  
+    {  
+        int isocketfd = -1;  
+        for(int iuserid=0; iuserid<m_iUserCount; iuserid++)  
+        {  
+            struct epoll_event event;  
+            isocketfd = ConnectToServer(iuserid, m_ip, m_iPort);  
+            if(isocketfd < 0)  
+                cout <<"[CEpollClient error]: RunFun, connect fail" <<endl;  
+            m_iSockFd_UserId[isocketfd] = iuserid;//将用户ID和socketid关联起来  
+      
+            event.data.fd = isocketfd;  
+            event.events = EPOLLIN|EPOLLOUT|EPOLLERR|EPOLLHUP;  
+      
+            m_pAllUserStatus[iuserid].uEpollEvents = event.events;  
+            epoll_ctl(m_iEpollFd, EPOLL_CTL_ADD, event.data.fd, &event);  
+    　　}  
+    　　while(1)  
+    　　    {  
+    　　        struct epoll_event events[_MAX_SOCKFD_COUNT];  
+    　　        char buffer[1024];  
+    　　        memset(buffer,0,1024);  
+    　　        int nfds = epoll_wait(m_iEpollFd, events, _MAX_SOCKFD_COUNT, 100 );//等待epoll事件的产生  
+    　　        for (int ifd=0; ifd<nfds; ifd++)//处理所发生的所有事件  
+    　　        {  
+    　　            struct epoll_event event_nfds;  
+    　　            int iclientsockfd = events[ifd].data.fd;  
+    　　            cout << "events[ifd].data.fd: " << events[ifd].data.fd << endl;  
+    　　            int iuserid = m_iSockFd_UserId[iclientsockfd];//根据socketfd得到用户ID  
+    　　            if( events[ifd].events & EPOLLOUT )  
+    　　            {  
+    　　                int iret = SendToServerData(iuserid);  
+    　　                if( 0 < iret )  
+    　　                {  
+    　　                    event_nfds.events = EPOLLIN|EPOLLERR|EPOLLHUP;  
+    　　                    event_nfds.data.fd = iclientsockfd;  
+    　　                    epoll_ctl(m_iEpollFd, EPOLL_CTL_MOD, event_nfds.data.fd, &event_nfds);  
+    　　                }  
+    　　                else  
+    　　                {  
+    　　                    cout <<"[CEpollClient error:] EpollWait, SendToServerData fail, send iret:"<<iret<<",iuserid:"<<iuser  
+    　　id<<",fd:"<<events[ifd].data.fd<<endl;  
+    　　                    DelEpoll(events[ifd].data.fd);  
+    　　                    CloseUser(iuserid);  
+    　　                }  
+    　　            }  
+    　　else if( events[ifd].events & EPOLLIN )//监听到读事件，接收数据  
+    　　            {  
+    　　                int ilen = RecvFromServer(iuserid, buffer, 1024);  
+    　　                if(0 > ilen)  
+    　　                {  
+    　　                    cout <<"[CEpollClient error]: RunFun, recv fail, reason is:"<<strerror(errno)<<",errno is:"<<errno<<e  
+    　　ndl;  
+    　　                    DelEpoll(events[ifd].data.fd);  
+    　　                    CloseUser(iuserid);  
+    　　                }  
+    　　                else if(0 == ilen)  
+    　　                {  
+    　　                    cout <<"[CEpollClient warning:] server disconnect,ilen:"<<ilen<<",iuserid:"<<iuserid<<",fd:"<<events[  
+    　　ifd].data.fd<<endl;  
+    　　                    DelEpoll(events[ifd].data.fd);  
+    　　                    CloseUser(iuserid);  
+    　　                }  
+    　　                else  
+    　　                {  
+    　　                    m_iSockFd_UserId[iclientsockfd] = iuserid;//将socketfd和用户ID关联起来  
+    　　                    event_nfds.data.fd = iclientsockfd;  
+    　　                    event_nfds.events = EPOLLOUT|EPOLLERR|EPOLLHUP;  
+    　　                    epoll_ctl(m_iEpollFd, EPOLL_CTL_MOD, event_nfds.data.fd, &event_nfds);  
+    　　                }  
+    　　            }  
+    　　            else  
+    　　            {  
+    　　                cout <<"[CEpollClient error:] other epoll error"<<endl;  
+    　　                DelEpoll(events[ifd].data.fd);  
+    　　                CloseUser(iuserid);  
+    　　            }  
+    　　        }  
+    　　}  
+    　　}  
+    　　  
+    　　bool CEpollClient::DelEpoll(int iSockFd)  
+    　　{  
+    　　    bool bret = false;  
+    　　    struct epoll_event event_del;  
+    　　    if(0 < iSockFd)  
+    　　    {  
+    　　        event_del.data.fd = iSockFd;  
+    　　        event_del.events = 0;  
+    　　        if( 0 == epoll_ctl(m_iEpollFd, EPOLL_CTL_DEL, event_del.data.fd, &event_del) )  
+    　　        {  
+    　　            bret = true;  
+    　　        }  
+    　　        else  
+    　　        {  
+    　　            cout <<"[SimulateStb error:] DelEpoll,epoll_ctl error,iSockFd:"<<iSockFd<<endl;  
+    　　        }  
+    　　        m_iSockFd_UserId[iSockFd] = -1;  
+    　　    }  
+    　　    else  
+    　　    {  
+    　　        bret = true;  
+    　　  
+    　　    }  
+    　　    return bret;  
+    　　}  
+    　　
+服务器主程序：
 
-event_run函数告诉系统应用程序开始对事件进行处理，有事件发生时就调用watchercallbacks。除非调用了ev_break或者不再有active的watcher，否则会一直重复这个过程。
+    #include <iostream>  
+    #include "cepollserver.h"  
+      
+    using namespace std;  
+      
+    int main()  
+    {  
+            CEpollServer  theApp;  
+            theApp.InitServer("127.0.0.1", 8000);  
+            theApp.Run();  
+      
+            return 0;  
+    }  
 
-libev编程
+客户端主程序：
 
-先来看libev提供的例子。这段代码等待键盘事件的发生，或者超时，两个事件都会触发程序结束。操作系统环境是ubuntu server10.10，libev是下载的源码，并没有采用ubuntu server自己提供的版本，源码的地址是http://dist.schmorp.de/libev/libev-4.04.tar.gz。例子代码如下：
-
-// 只需include一个头文件
-
-    #include <ev.h>
-    #include <stdio.h> // for puts
-    
-    // every watcher type has its own typedef'd struct
-    // with the name ev_TYPE
-    ev_io stdin_watcher;
-    ev_timer timeout_watcher;
-    
-    // all watcher callbacks have a similar signature
-    // this callback is called when data is readable on stdin
-    static void
-    stdin_cb (EV_P_ ev_io *w, int revents)
-    {
-           puts ("stdin ready");
-           // for one-shot events, one must manually stop the watcher
-           // with its corresponding stop function.
-           ev_io_stop (EV_A_ w);
-  
-
-         // this causes all nested ev_run's to stop iterating
-           ev_break (EV_A_ EVBREAK_ALL);
-    }
-    
-    // another callback, this time for a time-out
-    static void
-    timeout_cb (EV_P_ ev_timer *w, int revents)
-    {
-           puts ("timeout");
-           // this causes the innermost ev_run to stop iterating
-           ev_break (EV_A_ EVBREAK_ONE);
-    }
-    
-    int
-    main (void)
-    {
-           // use the default event loop unless you have special needs
-           struct ev_loop *loop = EV_DEFAULT;
-    
-           // initialise an io watcher, then start it
-           // this one will watch for stdin to become readable
-           ev_io_init (&stdin_watcher, stdin_cb, 0,EV_READ);
-               ev_io_start (loop, &stdin_watcher);
-    
-           // initialise a timer watcher, then start it
-           // simple non-repeating 5.5 second timeout
-           ev_timer_init (&timeout_watcher, timeout_cb, 5.5,0.);
-           ev_timer_start (loop, &timeout_watcher);
-    
-           // now wait for events to arrive
-           ev_run (loop, 0);
-    
-           // break was called, so exit
-           return 0;
-    }
-
-用如下命令编译：
-
-gcc -lev -o samplesample.c
-
- 
-
-结束语
-
-libevent 和 libev 都提供灵活且强大的环境，支持为处理服务器端或客户端请求实现高性能网络（和其他 I/O）接口。目标是以高效（CPU/RAM 使用量低）的方式支持数千甚至数万个连接。在本文中，您看到了一些示例，包括 libevent 中内置的 HTTP 服务，可以使用这些技术支持基于 IBM Cloud、EC2 或 AJAX 的 web 应用程序。
-
-本文来自：
-
-http://www.ibm.com/developerworks/cn/aix/library/au-libev/index.html
-
-http://hi.baidu.com/hins_pan/item/d23fee117d997d8889a95678
-
-
-
-
-
-
-
-
+        　#include "cepollclient.h"  
+      
+    int main(int argc, char *argv[])  
+    {  
+            CEpollClient *pCEpollClient = new CEpollClient(2, "127.0.0.1", 8000);  
+            if(NULL == pCEpollClient)  
+            {  
+                    cout<<"[epollclient error]:main init"<<"Init CEpollClient fail"<<endl;  
+            }  
+      
+            pCEpollClient->RunFun();  
+      
+            if(NULL != pCEpollClient)  
+            {  
+                    delete pCEpollClient;  
+                    pCEpollClient = NULL;  
+            }  
+      
+            return 0;  
+    }  
