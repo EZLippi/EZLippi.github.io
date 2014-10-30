@@ -16,6 +16,9 @@ tags:		[android, 消息推送]
 
 **Android Cloud to Device Messaging (C2DM)**是一个用来帮助开发者从服务器向Android应用程序发送数据的服务。该服务提供了一个简单的、轻量级的机制，允许服务器可以通知移动应用程序直接与服务器进行通信，以便于从服务器获取应用程序更新和用户数据。C2DM服务负责处理诸如消息排队等事务并向运行于目标设备上的应用程序分发这些消息。 
 
+下面是C2DM操作过程示例图:
+![](/assets/images/image001.png)
+
 几种常见的方案： 
 
 - 1）**轮询(Pull)**：应用程序应当阶段性的与服务器进行连接并查询是否有新的消息到达，你必须自己实现与服务器之间的通信，例如消息排队等。而且你还要考虑轮询的频率，如果太慢可能导致某些消息的延迟，如果太快，则会大量消耗网络带宽和电池。 
@@ -28,6 +31,7 @@ tags:		[android, 消息推送]
 
 前两个方案存在明显的不足，第三个方案也有不足，不过我们可以通过良好的设计来弥补，以便于让该方案可以有效的工作。毕竟，我们要知道GMail，GTalk以及GoogleVoice都可以实现实时更新的。 
 
+
 **采用MQTT协议实现Android推送 **
 
 MQTT是一个轻量级的消息发布/订阅协议，它是实现基于手机客户端的消息推送服务器的理想解决方案。
@@ -36,6 +40,17 @@ wmqtt.jar 是IBM提供的MQTT协议的实现。你可以从如下站点下载它
 
 Really Small Message Broker (RSMB) ，他是一个简单的MQTT代理，同样由IBM提供。缺省打开1883端口，应用程序当中，它负责接收来自服务器的消息并将其转发给指定的移动设备。 
 
+　架构如下图所示：
+![](/assets/images/111.gif)
+
+**RSMB实现推送功能**
+
+`Really Small Message Broker (RSMB)` ，他是一个简单的MQTT代理，同样由IBM提供，其查看地址是：http://www.alphaworks.ibm.com/tech/rsmb。缺省打开1883端口，应用程序当中，它负责接收来自服务器的消息并将其转发给指定的移动设备。
+ 
+SAM是一个针对MQTT写的PHP库。我们可以从这个http://pecl.php.net/package/sam/download/0.2.0地址下载它.
+send_mqtt.php是一个通过POST接收消息并且通过SAM将消息发送给RSMB的PHP脚本。 
+
+ 
 **采用XMPP协议实现Android推送 **
 
 这是我在项目中采用的方案。事实上Google官方的C2DM服务器底层也是采用XMPP协议进行的封装。 
@@ -43,12 +58,16 @@ Really Small Message Broker (RSMB) ，他是一个简单的MQTT代理，同样�
 
 androidpn是一个基于XMPP协议的java开源**Android push notification**实现。它包含了完整的客户端和服务器端。经过源代码研究我发现，该服务器端基本是在另外一个开源工程**openfire**基础上修改实现的，不过比较郁闷的是androidpn的文档是由韩语写的，所以整个研究过程基本都是读源码。 
 
+androidpn实现如下图所示：
+！[](/assets/images/222.gif)
+
 androidpn客户端需要用到一个基于java的**开源XMPP协议包asmack**，这个包同样也是基于openfire下的另外一个开源项目smack，不过我们不需要自己编译，可以直接把androidpn客户端里面的**asmack.jar**拿来使用。客户端利用asmack中提供的XMPPConnection类与服务器建立持久连接，并通过该连接进行用户注册和登录认证，同样也是通过这条连接，接收服务器发送的通知。 
 
 androidpn服务器端也是java语言实现的，基于openfire开源工程，不过它的Web部分采用的是spring框架，这一点与openfire是不同的。
+服务器架构如下：
 
 Androidpn服务器包含两个部分，一个是**侦听在5222端口上的XMPP服务**，负责与客户端的XMPPConnection类进行通信，作用是用户注册和身份认证，并发送推送通知消息。另外一部分是Web服务器，采用一个轻量级的HTTP服务器，负责接收用户的Web请求。服务器架构如下： 
-
+！[](/assets/images/333.gif)
 最上层包含四个组成部分，分别是`SessionManager，Auth Manager，PresenceManager以及Notification Manager`。`SessionManager`负责管理客户端与服务器之间的会话，`Auth Manager`负责客户端用户认证管理，`Presence Manager`负责管理客户端用户的登录状态`NotificationManager`负责实现服务器向客户端推送消息功能。 
 
 这个解决方案的最大优势就是简单，我们不需要象C2DM那样依赖操作系统版本，也不会担心某一天Google服务器不可用。利用XMPP协议我们还可以进一步的对协议进行扩展，实现更为完善的功能。 
