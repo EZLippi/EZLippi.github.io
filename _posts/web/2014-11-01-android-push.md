@@ -66,8 +66,10 @@ androidpn客户端需要用到一个基于java的**开源XMPP协议包asmack**�
 androidpn服务器端也是java语言实现的，基于openfire开源工程，不过它的Web部分采用的是spring框架，这一点与openfire是不同的。
 服务器架构如下：
 
-Androidpn服务器包含两个部分，一个是**侦听在5222端口上的XMPP服务**，负责与客户端的XMPPConnection类进行通信，作用是用户注册和身份认证，并发送推送通知消息。另外一部分是Web服务器，采用一个轻量级的HTTP服务器，负责接收用户的Web请求。服务器架构如下： 
+Androidpn服务器包含两个部分，一个是**侦听在5222端口上的XMPP服务**，负责与客户端的XMPPConnection类进行通信，作用是用户注册和身份认证，并发送推送通知消息。另外一部分是Web服务器，采用一个轻量级的HTTP服务器，负责接收用户的Web请求。
+服务器架构如下： 
 ！[](/assets/images/333.gif)
+
 最上层包含四个组成部分，分别是`SessionManager，Auth Manager，PresenceManager以及Notification Manager`。`SessionManager`负责管理客户端与服务器之间的会话，`Auth Manager`负责客户端用户认证管理，`Presence Manager`负责管理客户端用户的登录状态`NotificationManager`负责实现服务器向客户端推送消息功能。 
 
 这个解决方案的最大优势就是简单，我们不需要象C2DM那样依赖操作系统版本，也不会担心某一天Google服务器不可用。利用XMPP协议我们还可以进一步的对协议进行扩展，实现更为完善的功能。 
