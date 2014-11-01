@@ -2,7 +2,7 @@
 layout:     post
 title:      值得推荐的android开源框架
 keywords:   Android, openSource
-category:   web 
+category:   Android
 tags:		[android, 开源]
 ---
  
