@@ -14,19 +14,19 @@ tags:		[java]
 **1. vector和hashtable**
 
 jdk很早的时候就支持vector和hashtable，vector内部是一个数组，它的同步是在所有对元素的存取操作上进行synchronized的，也就是说每个时刻只能由一个线程可以访问容器的元素，这种线程安全是比较粗粒度的。
-比如你在进行vector容器的迭代操作(eg vector.next())时再调用vector.put(object o)时会抛出ConcurrentModificationException
+比如你在进行vector容器的迭代操作(iterator.next())时再调用vector.put(object o)时会抛出ConcurrentModificationException
 
 ----------
 
 hashtable的内部实现：
-  首先回顾下hashmap的实现，我们初始化一个hashmap时有两个参数inital capacity用来定义hashmap的初始化buckets数，reload factor加载因子，初始值为0.75，当hashmap中entry的数量超过这个比值时hashmap就会进行扩容，然后所有的entry进行rehash，这两个初始参数都必须选择合适的值，如果inital capacity选择太小，由于容器是开链的，会给查找增加额外的负担，reload factor不能选的过大，否则插入元素时出现碰撞的几率会增大。
+  首先回顾下hashmap的实现，我们初始化一个hashmap时有两个参数inital capacity用来定义hashmap的初始化buckets数，reload factor加载因子，初始值为0.75，当hashmap中entry的数量超过这个比值时hashmap就会进行扩容，然后所有的entry进行rehash，这两个初始参数都必须选择合适的值，如果inital capacity选择太小，由于容器是开链的，会给查找元素增加额外的负担，reload factor不能选的过大，否则插入元素时出现碰撞的几率会增大。
 hashtable就是在hashmap的基础上对所有元素的访问和插入操作用synchronized关键字同步，同样，在对容器元素迭代访问时进行插入操作会抛出ConcurrentModificationException。
 
 ----------
 **2. collections.synchronizedXXX工厂方法创建**
 
   collections.synchronizedXXX是在jdk2引入的，和vector,hashtable一样，都是在整个容器上进行同步操作。
-举个例子，下面这个是jdk1.7种collections.synchronizedMap的实现，这里只列出部分代码：
+举个例子，下面这个是jdk7种collections.synchronizedMap的实现，这里只列出部分代码：
 
 	private static class SynchronizedMap<K,V>
         implements Map<K,V>, Serializable {
