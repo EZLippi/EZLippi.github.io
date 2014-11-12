@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:wb="http://open.weibo.com/wb">
+  <head profile="http://gmpg.org/xfn/11">
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <link rel="alternate" title="{{ site.title }}" href="/atom.xml" type="application/rss+xml" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+       
+    <!-- Le styles -->
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ ASSET_PATH }}/css/style.css?v=201312251006" rel="stylesheet" media="all" />
+
+    
+    <link rel="index" title="{{ site.title }}" href="{{ HOME_PATH }}" />
+    {% if page.previous %}
+    <link rel="prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}" />
+    <link href="{{ BASE_PATH }}{{ page.previous.url }}" rel="prerender" />
+    {% endif %}
+    {% if page.next %}
+    <link rel="next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}" />
+    <link href="{{ BASE_PATH }}{{ page.next.url }}" rel="prerender" />
+    {% endif %}
+    
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+  
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          <ul class="nav">
+            <li><a href="/categories.html">目录</a></li>
+            <li><a href="/categories.html#reprints-ref">它山之石</a></li>
+            <!--<li><a href="/tags.html">标签</a></li>
+            <li><a href="/archive.html">归档</a></li> -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+				  <li><a href="http://weibo.com/ouyanglip" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a></li>
+				  <li><a href="http://www.zhihu.com/people/lippi-ouyang" target="_blank"><img src="http://www.zhihu.com/favicon.ico" alt="" width="25"/></a></li>
+				  <li><a href="https://github.com/LippiOuYang" target="_blank"><img src="http://www.github.com/favicon.ico" alt="" width="25"/></a></li>
+				  <li><a href="http://www.douban.com/people/61479377/" target="_blank"><img src="http://www.douban.com/favicon.ico" alt="" width="25"/></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+     {{ content }}
+      </div>
+
+      <footer>
+        <p>&copy; <a href="http://coolshell.info/">{{ site.author.name }}</a> 2012 
+          基于 <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          和 <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> 构建, 
+          源码托管在 <a href="https://github.com/LippiOuYang/LippiOuYang.github.io" target="_blank">github</a> 上
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <a class="v-fork-me" href="https://github.com/LippiOuYang/LippiOuYang.github.io" target="_blank" rel="nofollow">
+      <img src="{{ ASSET_PATH }}/bootstrap/img/forkme_right_darkblue.png" alt="Fork me on GitHub">
+    </a>
+
+    {% include JB/analytics %}
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/jqueryui/1.9.0/jquery-ui.min.js "></script>
+    <script src="http://libs.baidu.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap-affix.js"></script>
+
+    <!-- UJian Button BEGIN -->
+    <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&uid=1514075"></script>
+    <a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+    <!-- UJian Button END -->
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=29485682" charset="UTF-8"></script>
+
+    <script type="text/javascript">
+    window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(a){return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(a),window.analytics.push(t),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(a){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+a+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},window.analytics.SNIPPET_VERSION="2.0.6",
+    window.analytics.load("yyj0z5yxji"),
+    window.analytics.page();
+    </script>    
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?5578a27c6c70bf44e7509eda26137f4c";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+       
+  </body>
+</html>
