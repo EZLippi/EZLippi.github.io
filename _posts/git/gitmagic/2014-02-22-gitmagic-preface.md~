@@ -84,6 +84,6 @@ François Marier维护Debian包，该Debian包起初由Daniel Baumann创建。
 
 或从以下镜像得到：
 
-  
+    $ git clone git://github.com/justjavac/gitmagic.git
     $ git clone git://gitorious.org/gitmagic/mainline.git
 

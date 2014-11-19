@@ -522,11 +522,7 @@ index.html
     <h1>Hello jekyll</h1>
     <p>This is the index page</p>
     <p>My post list:</p>
-    <ul>
-       {% for post in site.posts %}
-           <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-       {% endfor %}
-    </ul>
+    
 
 最终效果如下：
 
@@ -697,7 +693,7 @@ GitHub是一个伟大的产品，[GitHub Pages][]是他伟大的一部分，GitH
 
 Disqus是一个社会化的评论解决方案，请允许我使用这个烂透了的词，调用它的接口非常简单，在自己的页面加载他的一段JS代码即可，如果别人注册了Disqus，那么就可以方便的留言，交流，一处登录，处处方便，而且Disqus也提供了一些spam等策略，不用自己操心了，并且可以和一些现有的博客系统很好的转换对接。越来越多的网站开始使用Disqus的服务了，这是一个非常不错的趋势，Jekyll配合[Disqus][]实在是完美了。我别无所求了。
 
-## TL;DR
+------------------------------
 
 写到这里，基本的点已经介绍完毕，看看Jekyll生成的博客页面，我心满意足，虽然文笔很烂，语句多不通顺，但是这是一个新的开始了，我觉得心灵都纯洁了不少，这不是发一条微博什么能带来的快乐。
 [GoDaddy]:  http://godaddy.com  "Godaddy"

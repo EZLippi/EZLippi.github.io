@@ -8,14 +8,15 @@ tags: [python, list, 运算符]
 
 原文：[python - If x is list, why does x += "ha" work, while x = x + "ha" throw an exception? ](http://stackoverflow.com/q/3216706/343194)
 
-译文：[在 python 中，如果 x 是 list，为什么 x += "ha" 可以运行，而 x = x + "ha" 却抛出异常呢？]
+译文：[在 python 中，如果 x 是 list，为什么 x += "ha" 可以运行，而 x = x + "ha" 却抛出异常呢？](http://justjavac.com/python/2013/03/11/if-x-is-list-why-does-x-ha-work-while-x-x-ha-throw-an-exception.html)
 
+译者：[justjavac](http://weibo.com/justjavac)
 
 ----------------------------------------
 
 ## 问题
 
-众所周知，在 python 中，+ 运算符可以使用在列表上，+ 运算符只需要第二个操作数是可迭代的(原文：iterable。，那么 + 显然可以运算在 "ha" 上。
+众所周知，在 python 中，+ 运算符可以使用在列表上，+ 运算符只需要第二个操作数是可迭代的(原文：iterable。[@justjavac](http://weibo.com/justjavac))，那么 + 显然可以运算在 "ha" 上。
 
 代码如下：
 
