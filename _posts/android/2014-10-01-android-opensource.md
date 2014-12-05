@@ -55,29 +55,29 @@ FinalBitmap可以自定义下载器，用来扩展其他协议显示网络图片
 
  (1) 数据库模块：android中的orm框架，一行代码就可以进行增删改查；
 
-- 			 支持事务，默认关闭；
--             可通过注解自定义表名，列名，外键，唯一性约束，NOT NULL约束，CHECK约束等（需要混淆的时候请注解表名和列名）；
--             支持绑定外键，保存实体时外键关联实体自动保存或更新；
--             自动加载外键关联实体，支持延时加载；
--             支持链式表达查询，更直观的查询语义，参考下面的介绍或sample中的例子. 
--             
+-支持事务，默认关闭；
+-可通过注解自定义表名，列名，外键，唯一性约束，NOT NULL约束，CHECK约束等（需要混淆的时候请注解表名和列名）；
+-支持绑定外键，保存实体时外键关联实体自动保存或更新；
+-自动加载外键关联实体，支持延时加载；
+- 支持链式表达查询，更直观的查询语义，参考下面的介绍或sample中的例子. 
+           
          
  (2) 注解模块：android中的ioc框架，完全注解方式就可以进行UI，资源和事件绑定；
 
 - 新的事件绑定方式，使用混淆工具混淆后仍可正常工作；
--             目前支持常用的20种事件绑定，参见ViewCommonEventListener类和包com.lidroid.xutils.view.annotation.event。
+- 目前支持常用的20种事件绑定，参见ViewCommonEventListener类和包com.lidroid.xutils.view.annotation.event。
 
 (3) 网络模块：支持同步，异步方式的请求；
 
--  支持大文件上传，上传大文件不会oom；
--             支持GET，POST，PUT，MOVE，COPY，DELETE，HEAD，OPTIONS，TRACE，CONNECT请求；
--             下载支持301/302重定向，支持设置是否根据Content-Disposition重命名下载的文件；
--             返回文本内容的请求(默认只启用了GET请求)支持缓存，可设置默认过期时间和针对当前请求的过期时间。  
+- 支持大文件上传，上传大文件不会oom；
+- 支持GET，POST，PUT，MOVE，COPY，DELETE，HEAD，OPTIONS，TRACE，CONNECT请求；
+- 下载支持301/302重定向，支持设置是否根据Content-Disposition重命名下载的文件；
+- 返回文本内容的请求(默认只启用了GET请求)支持缓存，可设置默认过期时间和针对当前请求的过期时间。  
           
   (4) 图片缓存模块：加载bitmap的时候无需考虑bitmap加载过程中出现的oom和android容器快速滑动时候出现的图片错位等现象；
-            支持加载网络图片和本地图片；
-            内存管理使用lru算法，更好的管理bitmap内存；
-            可配置线程加载线程数量，缓存大小，缓存路径，加载显示动画等...
+-支持加载网络图片和本地图片；
+-内存管理使用lru算法，更好的管理bitmap内存；
+-可配置线程加载线程数量，缓存大小，缓存路径，加载显示动画等...
 
 ## 5、ThinkAndroid ##
 项目地址：[https://github.com/white-cat/ThinkAndroid](https://github.com/white-cat/ThinkAndroid)
