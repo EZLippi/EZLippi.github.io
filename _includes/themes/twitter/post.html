@@ -110,5 +110,19 @@ var duoshuoQuery = {short_name:"coolshell"};
 </iframe>
 </section>
 
+ <section>
+    {% unless site.categories == empty %}
+    <h3>分类</h3>
+    <ul class="tag_box">
+      {% assign categories_list = site.categories %}
+      {% include JB/categories_list %}
+    </ul>
+    {% endunless %}  
+    </section>
+    
+    <section>
+    <h3>版权申明</h3>
+	<a rel="license nofollow" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/cn/88x31.png" /></a><br />
+
   </aside>
 </div>
