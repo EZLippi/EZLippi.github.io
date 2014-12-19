@@ -113,3 +113,20 @@ FinalBitmap可以自定义下载器，用来扩展其他协议显示网络图片
 -   (10) 一系列工具类
 
 其中的 volley扩展性非常好，个人比较喜欢的风格。其他如 android-async-http、Afinal 也相当不错。 
+
+## 7、AndroidAnnotations ##
+项目地址：
+
+[AndroidAnnotations首页](http://androidannotations.org/)
+
+[github上的项目地址](https://github.com/excilys/androidannotations/wiki)
+
+主要有以下特点：
+
+- 使用依赖注入(DI)、控制反转(IOC)来简化开发过程
+- 简化的线程模型（Simplified  threading model)  
+- 事件绑定（Event binding）
+- REST Client
+- No Magic  
+- 类似框架：[Bufferknife](http://jakewharton.github.io/butterknife/)
+
