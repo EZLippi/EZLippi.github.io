@@ -2,7 +2,7 @@
 layout:     post
 title:      值得推荐的C/C++框架和库
 keywords:   c/c++, openSource
-category:   c
+category:   c/c++
 tags:		[框架, 开源]
 ---
 
