@@ -2,7 +2,7 @@
 layout: post
 title:  处理并发之一：LINUX Epoll机制介绍
 keywords: 并发， I/O多路复用
-categories : [c/c++]
+categories : [c]
 tags : [c++, concurrent]
 ---
 ##1. Epoll简单介绍

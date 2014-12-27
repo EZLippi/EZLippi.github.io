@@ -2,7 +2,7 @@
 layout:     post
 title:      也谈如何构建高性能服务端程序
 keywords:   Cache，Asynchronous，Concurrent
-category:   web，  
+category:   web  
 tags:		[web, 服务器]
 ---
 
