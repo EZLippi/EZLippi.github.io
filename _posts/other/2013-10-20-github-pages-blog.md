@@ -33,23 +33,22 @@ Github Pages有以下几个优点：
 
 我们选择DNSPod的服务，他们的产品做得不错，易用、免费，收费版有更高端的功能，暂不需要。注册登录之后，按照DNSPod的说法，只需三步（我们插入一步）：
 
-首先添加域名记录，可参考DNSPod的帮助文档：https://www.dnspod.cn/Support
-在DNSPod自己的域名下添加一条A记录，地址就是Github Pages的服务IP地址：192.30.252.153
-在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。如果你不明白在哪里修改，可以参考这里：Godaddy注册的域名如何使用DNSPod
-等待域名解析生效
-域名的配置部分完成，跪谢方校长。
+首先添加域名记录，可参考DNSPod的帮助文档：[https://www.dnspod.cn/Support](https://www.dnspod.cn/Support)
+在DNSPod自己的域名下添加一条A记录，地址就是Github Pages的服务IP地址：`192.30.252.153`
+在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址： `f1g1ns1.dnspod.net、f1g1ns2.dnspod.net`。
 
 **配置和使用Github**
 
 Git是版本管理的未来，他的优点我不再赘述，相关资料很多。推荐这本Git中文教程。
 
-要使用Git，需要安装它的客户端，推荐在Linux下使用Git，会比较方便。Windows版的下载地址在这里：http://code.google.com/p/msysgit/downloads/list。其他系统的安装也可以参考官方的安装教程。
+要使用Git，需要安装它的客户端，推荐在Linux下使用Git，会比较方便。Windows版的下载地址在这里：[http://code.google.com/p/msysgit/downloads/list](http://code.google.com/p/msysgit/downloads/list)。其他系统的安装也可以参考官方的安装教程。
 
 下载安装客户端之后，各个系统的配置就类似了，我们使用windows作为例子，Linux和Mac与此类似。
 
 在Windows下，打开Git Bash，其他系统下面则打开终端（Terminal）： Git Bash
 ![Git Bash](/assets/images/githubpages/bootcamp_1_win_gitbash.jpg)
-1、检查SSH keys的设置
+------------------------------
+**1. 检查SSH keys的设置**
 
 首先我们需要检查你电脑上现有的ssh key：
 
@@ -57,7 +56,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 
 如果显示“No such file or directory”，跳到第三步，否则继续。
 
-2、备份和移除原来的ssh key设置：
+**2、备份和移除原来的ssh key设置：**
 
 因为已经存在key文件，所以需要备份旧的数据并删除：
 
@@ -67,7 +66,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
     $ cp id_rsa* key_backup
     $ rm id_rsa*
 
-3、生成新的SSH Key：
+**3、生成新的SSH Key：**
 
 输入下面的代码，就可以生成新的key文件，我们只需要默认设置就好，所以当需要输入文件名的时候，回车就好。
 
@@ -82,7 +81,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 
 最后看到这样的界面，就成功设置ssh key了： ssh key success
 
-4、添加SSH Key到GitHub：
+**4、添加SSH Key到GitHub：**
 
 在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。
 
@@ -93,13 +92,13 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 选择SSH Keys项，把复制的内容粘贴进去，然后点击Add Key按钮即可： 
 ![set ssh keys](/assets/images/githubpages/bootcamp_1_ssh.jpg)
 
-PS：如果需要配置多个GitHub账号，可以参看这个多个github帐号的SSH key切换，不过需要提醒一下的是，如果你只是通过这篇文章中所述配置了Host，那么你多个账号下面的提交用户会是一个人，所以需要通过命令git config --global --unset user.email删除用户账户设置，在每一个repo下面使用git config --local user.email '你的github邮箱@mail.com' 命令单独设置用户账户信息
+PS：如果需要配置多个GitHub账号，可以参看这个多个github帐号的SSH key切换，不过需要提醒一下的是，如果你只是通过这篇文章中所述配置了Host，那么你多个账号下面的提交用户会是一个人，所以需要通过命令`git config --global --unset user.email`删除用户账户设置，在每一个repo下面使用`git config --local user.email '你的github邮箱@mail.com' `命令单独设置用户账户信息
 
-5、测试一下
+**5、测试一下**
 
 可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：
 
-   $ ssh -T git@github.com
+  ` $ ssh -T git@github.com`
 
 如果是下面的反应：
 
@@ -111,7 +110,7 @@ PS：如果需要配置多个GitHub账号，可以参看这个多个github帐号
 
     Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.
 
-6、设置你的账号信息
+**6、设置你的账号信息**
 
 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。
 
@@ -126,7 +125,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 有些工具没有通过SSH来链接GitHub。如果要使用这类工具，你需要找到然后设置你的API Token。
 
-在GitHub上，你可以点击Account Setting > Account Admin： 
+在GitHub上，你可以点击`Account Setting > Account Admin：` 
 ![set ssh keys](/assets/images/githubpages/bootcamp_1_token.jpg)
 
 
@@ -141,18 +140,20 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 好了，你已经可以成功连接GitHub了。
 
+---------------------------------
+
 ##快速开始
 
 ###帐号注册
 
-在创建博客之前，当然必须有GitHub的帐号，该帐号将用来创建项目，默认的域名username.github.com/projectName中的username也要用到这个帐号。
+在创建博客之前，当然必须有GitHub的帐号，该帐号将用来创建项目，默认的域名`username.github.com/projectName`中的username也要用到这个帐号。
 
 注意：下面涉及到的一些命令凡是更用户名和项目名有关的一律会用这里的username和projectName代替，注意替换
-访问：http://www.github.com/ sign up for free的意思就是“免费注册登录”，注册你的username和邮箱，邮箱十分重要，GitHub上很多通知都是通过邮箱的。比如你的主页上传并构建成功会通过邮箱通知，更重要的是，如果构建失败的话也会在邮件中说明原因。
+访问：[http://www.github.com/ ](http://www.github.com/ )sign up for free的意思就是“免费注册登录”，注册你的username和邮箱，邮箱十分重要，GitHub上很多通知都是通过邮箱的。比如你的主页上传并构建成功会通过邮箱通知，更重要的是，如果构建失败的话也会在邮件中说明原因。
 
  
 
-创建项目仓库
+**创建项目仓库**
 
 在创建博客之前，还需要用已有的帐号创建一个项目，上面那个链接的projectName将是这里即将创建的项目名称。在Git中，项目被称为仓库(Repository)，仓库顾名思义，当然可以包含代码或者非代码。将来我们的网页或者模板实际上都是保存在这个仓库中的。
 
@@ -168,7 +169,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
  
 
-本地编辑及上传
+**本地编辑及上传**
 
 在磁盘上创建一个目录，该目录与上面的项目名同名，在该目录下启用Git Bash命令行，并输入如下命令
 
@@ -189,12 +190,13 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 ![](/assets/images/githubpages/build-github-blog-page-02-img1.png)
 
-_includes：默认的在模板中可以引用的文件的位置，后面会提到
-_layouts：默认的公共页面的位置，后面会提到
-_posts：博客文章默认的存放位置
-.gitignore：git将忽略这个文件中列出的匹配的文件或文件夹，不将这些纳入源码管理
-_config.yml：关于jekyll模板引擎的配置文件
-index.html：默认的主页
+- _includes：默认的在模板中可以引用的文件的位置，后面会提到
+- _layouts：默认的公共页面的位置，后面会提到
+- _posts：博客文章默认的存放位置
+- .gitignore：git将忽略这个文件中列出的匹配的文件或文件夹，不将这些纳入源码管理
+- _config.yml：关于jekyll模板引擎的配置文件
+- index.html：默认的主页
+
 在_layouts目录下创建一个default.html，在其中输入如下内容，注意：文件本身要以UTF-8 without BOM的格式保存，以防止各种编码问题，建议使用notepad++编辑
 
 default.html
@@ -226,11 +228,13 @@ default.html
     $ git push origin gh-pages
 
 据网友反应，如果是初次安装git的话，在commit的时候会提示需要配置username和email，请读者注意根据提示配置一下，至于username和email可以随便填
-将当前的改动暂存在本地仓库
-将暂存的改动提交到本地仓库，并写入本次提交的注释是”first post“
-将远程仓库在本地添加一个引用：origin
-向origin推送gh-pages分支，该命令将会将本地分支gh-pages推送到github的远程仓库，并在远程仓库创建一个同名的分支。该命令后会提示输入用户名和密码。
-现在，你可以泡杯咖啡，并等大约10分钟的时间，访问http://username.github.com/projectName就可以看到生成的博客了
+
+- 将当前的改动暂存在本地仓库
+- 将暂存的改动提交到本地仓库，并写入本次提交的注释是”first post“
+- 将远程仓库在本地添加一个引用：origin
+- 向origin推送gh-pages分支，该命令将会将本地分支gh-pages推送到github的远程仓库，并在远程仓库创建一个同名的分支。该命令后会提示输入用户名和密码。
+
+现在，你可以泡杯咖啡，并等大约10分钟的时间，访问`http://username.github.com/projectName`就可以看到生成的博客了
 
 另外上面提到的，无论生成失败还是成功，Github会向你的邮箱发送一封邮件说明，请注意查收。
 
@@ -244,12 +248,12 @@ default.html
 
 ###CNAME
 
-也被称为规范名字。这种记录允许您将多个名字映射到同一台计算机。 通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为“host.mydomain.com”（A记录）。 它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名（CNAME）：WWW和MAIL。 这两个别名的全称就是“www.mydomain.com”和“mail.mydomain.com”。实际上他们都指向“host.mydomain.com”。 同样的方法可以用于当您拥有多个域名需要指向同一服务器IP，此时您就可以将一个域名做A记录指向服务器IP然后将其他的域名做别名到之前做A记录的域名上，那么当您的服务器IP地址变更时您就可以不必麻烦的一个一个域名更改指向了 只需要更改做A记录的那个域名其他做别名的那些域名的指向也将自动更改到新的IP地址上了。
+也被称为规范名字。这种记录允许您将多个名字映射到同一台计算机。 通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为`“host.mydomain.com”`（A记录）。 它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名（CNAME）：WWW和MAIL。 这两个别名的全称就是`“www.mydomain.com”`和`“mail.mydomain.com”`。实际上他们都指向`“host.mydomain.com”`。 同样的方法可以用于当您拥有多个域名需要指向同一服务器IP，此时您就可以将一个域名做A记录指向服务器IP然后将其他的域名做别名到之前做A记录的域名上，那么当您的服务器IP地址变更时您就可以不必麻烦的一个一个域名更改指向了 只需要更改做A记录的那个域名其他做别名的那些域名的指向也将自动更改到新的IP地址上了。
 
 ###TTL
 TTL值全称是“生存时间（Time To Live)”，简单的说它表示DNS记录在DNS服务器上缓存时间。要理解TTL值，请先看下面的一个例子：
-假设，有这样一个域名myhost.cnMonkey.com（其实，这就是一条DNS记录，通常表示在abc.com域中有一台名为myhost的主机）对应IP地 址为1.1.1.1，它的TTL为10分钟。这个域名或称这条记录存储在一台名为dns.cnMonkey.com的DNS服务器上。
-现在有一个用户键入一下地址（又称URL）：http://myhost.cnMonkey.com 这时会发生什么呢？
+假设，有这样一个域名`myhost.cnMonkey.com`（其实，这就是一条DNS记录，通常表示在abc.com域中有一台名为myhost的主机）对应IP地 址为1.1.1.1，它的TTL为10分钟。这个域名或称这条记录存储在一台名为dns.cnMonkey.com的DNS服务器上。
+现在有一个用户键入一下地址（又称URL）：`http://myhost.cnMonkey.com` 这时会发生什么呢？
 该 访问者指定的DNS服务器（或是他的ISP,互联网服务商, 动态分配给他的)8.8.8.8就会试图为他解释myhost.cnMonkey.com，当然8.8.8.8这台DNS服务器由于没有包含 myhost.cnMonkey.com这条信息，因此无法立即解析，但是通过全球DNS的递归查询后，最终定位到dns.cnMonkey.com这台DNS服务器， dns.cnMonkey.com这台DNS服务器将myhost.cnMonkey.com对应的IP地址1.1.1.1告诉8.8.8.8这台DNS服务器，然有再由 8.8.8.8告诉用户结果。8.8.8.8为了以后加快对myhost.cnMonkey.com这条记录的解析，就将刚才的1.1.1.1结果保留一段时间，这 就是TTL时间，在这段时间内如果用户又有对myhost.cnMonkey.com这条记录的解析请求，它就直接告诉用户1.1.1.1，当TTL到期则又会重复 上面的过程。
 
 ###域名分级
@@ -264,71 +268,73 @@ TTL值全称是“生存时间（Time To Live)”，简单的说它表示DNS记�
 
 ###域名购买
 
-众所周知，域名是要购买的，国内用域名访问主机大概是要备案的，有些麻烦。所以现在很多人从国外的域名注册商那儿买域名，比如goddady。如果是新手想在国外买域名的话，最好准备一张VISA信用卡，并用paypal来支付（可以省手续费）。goddady现在也支持支付宝，不过用支付宝也必须用美元支付。没什么在国外网站交易的经历，这里就不谈这些了，读者可以自己查。
+众所周知，域名是要购买的，国内用域名访问主机大概是要备案的，有些麻烦。所以现在很多人从国外的域名注册商那儿买域名，比如goddady。如果是新手想在国外买域名的话，最好准备一张VISA信用卡，并用paypal来支付（可以省手续费）。goddady现在也支持支付宝，支付起来也很方便。
 
  
 
 ###绑定域名到GitHub-Page
 
-其实十分简单，假设我们购买了域名pchou.info，想用pchou.info访问你的站点http://username.github.com/projectname，你可以参考这个链接：Setting up a custom domain with Pages
+其实十分简单，假设我们购买了域名[coolshell.info](coolshell.info)，想用coolshell.info访问你的站点`http://username.github.com/projectname`，你可以参考这个链接：[Setting up a custom domain with Pages](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/)
 
 在你的域名提供商那边，设置一条A记录：
 
-pchou.info  204.232.175.78（注意：这个IP难保不会变，所以要及时关注上面这个链接中给出的IP，并及时更新A记录）。下面这个截图是goddady上的A记录配置：
+colshell.info  204.232.175.78（注意：这个IP难保不会变，所以要及时关注上面这个链接中给出的IP，并及时更新A记录）。下面这个截图是goddady上的A记录配置：
 
 ![](/assets/images/githubpages/build-github-blog-page-03-img0.png)
 
 然后在你的gh-pages分支的根目录中创建一个CNAME文件，其中只能有一行，就是pchou.info，用Git客户端上传更改，大约等十几分钟就能生效了。
 
-可以先ping一下pchou.info，如果返回的IP地址更配置的A记录一样的话，说明域名已经注册好了，就等GitHub生效了。不过别急，你还需要把_config.yml中的baseurl设置如下
+可以先ping一下coolshell.info，如果返回的IP地址更配置的A记录一样的话，说明域名已经注册好了，就等GitHub生效了。不过别急，你还需要把_config.yml中的baseurl设置如下
 
-baseurl : /
+	baseurl : /
 或者是
 
-baseurl :
+	baseurl :
 这取决于你的模板如何引用baseurl，总之指向根目录就好了。
 
-刚开始的时候我比较困惑的是，为什么A记录都指向的是同一个IP，GitHub是如何知道应该返回哪个用户的页面的。其实很简单，秘密就是上面提到的CNAME文件，GitHub应该会缓存所有gh-pages分支中的CNAME文件，用户对域名的请求被定向到GitHub住服务器的IP地址后，再根据用户请求的域名，判断对应哪个gh-pages，而且它会自动带上项目名，所以baseurl需要改为更目录。
+刚开始的时候我比较困惑的是，为什么A记录都指向的是同一个IP，GitHub是如何知道应该返回哪个用户的页面的。其实很简单，秘密就是上面提到的CNAME文件，GitHub应该会缓存所有gh-pages分支中的CNAME文件，用户对域名的请求被定向到GitHub住服务器的IP地址后，再根据用户请求的域名，判断对应哪个gh-pages，而且它会自动带上项目名，所以baseurl需要改为根目录。
 
 ##jekyll的安装
 前几篇介绍了GitHub-Page的基本原理和使用方法，还介绍了如何将购买的域名绑定博客主页。然而，当需要正儿八经的将一个博客构建起来，不仅要知道如何上传我们的文件，还要能够高效的更好的设计博客。因此，必须能够在上传之前在本地完成测试；另一方面，完全靠html来编辑博客，显然工作量太大，随着博客越来越复杂，简直不可能维护，因此，需要用jekyll这个模板引擎来帮忙。本篇先介绍如何搭建一个本地的测试环境。
 
  
 
-更新
-1.根据网友的反应，需要注意的是Ruby的版本和RubyDevKit的版本要对应，不要装错；
-2.另外，目前新版的Ruby自带gem了，所以gem安装可以跳过；
-3.由于国内的网络（你们懂的），gem官方的源基本上是没法用了，参考文中的链接，使用淘宝的镜像比较靠谱；
-4.jekyll有一个问题，可能需要修改下面这个文件，否则会出现GBK错误
-D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.2.1\lib\jekyll\convertible.rb
+**更新**
+
+1. 根据网友的反应，需要注意的是Ruby的版本和RubyDevKit的版本要对应，不要装错；
+2. 另外，目前新版的Ruby自带gem了，所以gem安装可以跳过；
+3. 由于国内的网络（你们懂的），gem官方的源基本上是没法用了，参考文中的链接，使用淘宝的镜像比较靠谱；
+4. jekyll有一个问题，可能需要修改下面这个文件，否则会出现GBK错误
+`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.2.1\lib\jekyll\convertible.rb`
 将它改成
-self.content = File.read(File.join(base, name),:encoding => "utf-8")
-D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.2.1\lib\jekyll\tags\include.rb中的最后几行的地方改成
-File.read_with_options(file,:encoding => "utf-8")
+`self.content = File.read(File.join(base, name),:encoding => "utf-8")`
+`D:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.2.1\lib\jekyll\tags\include.rb`中的最后几行的地方改成
+`File.read_with_options(file,:encoding => "utf-8")`
 		
-5.最新的jekyll修改了命令行参数，需使用如下命令行 jekyll serve --safe --watch
-6.jekyll 1.4.3在windows下本地生成的时候可能会出现'fileutils.rb:247:in mkdir Invalid argument'的错误，详见 Jekyll 1.4.3 mkdir Invalid argument
-7.jekyll 1.4.3在--watch参数的情况下可能会出现'cannot load such file -- wdm (LoadError)'的错误，用gem安装wdm就好了： gem install wdm
-Ruby安装
+5. 最新的jekyll修改了命令行参数，需使用如下命令行 `jekyll serve --safe --watch`
+6. jekyll 1.4.3在windows下本地生成的时候可能会出现`'fileutils.rb:247:in mkdir Invalid argument'`的错误
+7. jekyll 1.4.3在--watch参数的情况下可能会出现`'cannot load such file -- wdm (LoadError)'`的错误，用gem安装wdm就好了： 	gem install wdm
+
+**Ruby安装**
 
 jekyll本身基于Ruby开发，因此，想要在本地构建一个测试环境需要具有Ruby的开发和运行环境。在windows下，可以使用Rubyinstaller安装
 
-ruby安装说明：http://www.ruby-lang.org/zh_cn/downloads/
+ruby安装说明：[http://www.ruby-lang.org/zh_cn/downloads/](http://www.ruby-lang.org/zh_cn/downloads/)
 
-ruby安装下载(windows)：http://rubyinstaller.org/downloads/
-
+ruby安装下载(windows)：[http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/
+)
 windows的安装还是一如既往的“无脑”，不多说了。
 
-如果想要快速体验ruby开发，可以参考：20分钟体验 Ruby
+如果想要快速体验ruby开发，可以参考：[20分钟体验 Ruby](https://www.ruby-lang.org/zh_cn/documentation/quickstart/)
  
 
-RubyDevKit安装
+**RubyDevKit安装**
 
-从这个页面下载DevKit：http://rubyinstaller.org/downloads/
+从这个页面下载DevKit：[http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)
 
 下载下来的是一个很有意思的sfx文件，如果你安装有7-zip吧，可以直接双击，它会自解压到你所选择的目录。
 
-解压完成之后，用cmd进入到刚才解压的目录下，运行下面命令，该命令会生成config.yml。（这种安装方式让我想起了，linux下安装三步走config->make->make install中的config）
+解压完成之后，用cmd进入到刚才解压的目录下，运行下面命令，该命令会生成config.yml。（这种安装方式让我想起了，linux下安装三步走`config->make->make install中的config`）
 
     $ruby dk.rb init
 
@@ -364,13 +370,13 @@ config.yml文件实际上是检测系统安装的ruby的位置并记录在这个
 
 Rubygems是类似Radhat的RPM、centOS的Yum、Ubuntu的apt-get的应用程序打包部署解决方案。Rubygems本身基于Ruby开发，在Ruby命令行中执行。我们需要它主要是因为jekyll的执行需要依赖很多Ruby应用程序，如果一个个手动安装比较繁琐。jekyll作为一个Ruby的应用，也实现了Rubygems打包标准。只要通过简单的命令就可以自动下载其依赖。
 
-gems下载地址：http://rubyforge.org/frs/?group_id=126
+gems下载地址：[http://rubyforge.org/frs/?group_id=126](http://rubyforge.org/frs/?group_id=126)
 
 解压后，用cmd进入到解压后的目录，执行命令即可：
 
     $ruby setup.rb
 
-就像yum仓库一样，仓库本身有很多，如果希望加快应用程序的下载速度，特别绕过“天朝”的网络管理制度，可以选择国内的仓库镜像，taobao有一个：http://ruby.taobao.org/。配置方法这个链接里面很完全。
+就像yum仓库一样，仓库本身有很多，如果希望加快应用程序的下载速度，特别绕过“天朝”的网络管理制度，可以选择国内的仓库镜像，taobao有一个：[http://ruby.taobao.org/](http://ruby.taobao.org/)。配置方法这个链接里面很完全。
 
  
 
@@ -378,13 +384,15 @@ gems下载地址：http://rubyforge.org/frs/?group_id=126
 
 有了上面的基础，安装jekyll就十分轻松了，执行下面gem命令即可全自动搞定：
 
-$gem install jekyll
+	$gem install jekyll
 jekyll依赖的组件如下：
-directory_watcher
-liquid
-open4
-maruku
-classifier
+
+- directory_watcher
+- liquid
+- open4
+- maruku
+- classifier
+
 测试jekyll服务
 
 安装好之后就可以测试我们的环境了。用cmd进入到上一节我们创建的目录，执行下面命令：
@@ -393,10 +401,11 @@ classifier
 
 ![](/assets/images/githubpages/build-github-blog-page-04-img0.png)
 
-jekyll此时会在localhost的4000端口监听http请求，用浏览器访问http://localhost:4000/index.html，之前的页面出现了！
+jekyll此时会在localhost的4000端口监听http请求，用浏览器访问[http://localhost:4000/index.html](http://localhost:4000/index.html)，之前的页面出现了！
 
-更新
+**更新**
 jekyll最新的动态和文档现在可以在[jekyllrb](http://jekyllrb.com/)上找到
+
 ##jekyll介绍
 
 在前几篇中，多多少少对jekyll有所涉及，在这篇中将带读者进一步了解jekyll以及模板引擎liquid。
@@ -424,19 +433,19 @@ jekyll是一个基于ruby开发的，专用于构建静态网站的程序。它�
            |-- style.css
        |-- javascripts
 
-_config.yml：保存配置，该配置将影响jekyll构造网站的各种行为。关于配置的详细文档在这里
+-  _config.yml：保存配置，该配置将影响jekyll构造网站的各种行为。关于配置的详细文档在这里
 
-_includes：该目录下的文件可以用来作为公共的内容被其他文章引用，就跟C语言include头文件的机制完全一样，jekyll在解析时会对`{ % include file.ext %}`标记扩展成对应的在_includes文件夹中的文件
+- _includes：该目录下的文件可以用来作为公共的内容被其他文章引用，就跟C语言include头文件的机制完全一样，jekyll在解析时会对`{ % include file.ext %}`标记扩展成对应的在_includes文件夹中的文件
 
-_layouts：该目录下的文件作为主要的模板文件
+- _layouts：该目录下的文件作为主要的模板文件
 
-_posts：文章或网页应当放在这个目录中，但需要注意的是，文章的文件名必须是YYYY-MM-DD-title
+- _posts：文章或网页应当放在这个目录中，但需要注意的是，文章的文件名必须是YYYY-MM-DD-title
 
-_site：上面提到过，这是jekyll默认的转化结果存放的目录
+- _site：上面提到过，这是jekyll默认的转化结果存放的目录
 
-assets：这个目录没有强制的要求，主要目的是存放你的资源文件，图片、样式表、脚本等。
+- assets：这个目录没有强制的要求，主要目的是存放你的资源文件，图片、样式表、脚本等。
 
-一个例子
+**一个例子**
 
 完成一个例子总是最快的入门方式。
 
@@ -496,7 +505,7 @@ layout变量表示该文章应当使用_layouts/default这个文件作为父模�
 在windows中，为了甄别UTF-8编码格式的文本文件，默认会在文件头插入两个字节的标识，被称为BOM。事实证明这是个“歪门邪道”，jekyll不识别这种特殊的标记，所以可以使用Notepad++或其他的工具将UTF-8编码文件开头的BOM去掉。
  
 
-第一篇文章
+**第一篇文章**
 
 现在我们来创建一篇博客文章，并在index.html页面添加文章的链接。
 
@@ -530,8 +539,8 @@ index.html
 
 这个是略微复杂的例子，这里涉及到两个主要的对象
 
-site：全局站点对象。比如site.posts返回当前站点所有在_post目录下的文章，上面的例子结合for循环来罗列所有的文章
-page：文章对象。比如page.url将返回page对象的url，上面的例子用该对象和属性返回了文章的链接
+1. site：全局站点对象。比如site.posts返回当前站点所有在_post目录下的文章，上面的例子结合for循环来罗列所有的文章
+2. page：文章对象。比如page.url将返回page对象的url，上面的例子用该对象和属性返回了文章的链接
 另外要补充的是site.baseurl，该值就是我们在_config.yml中配置的baseurl啦！
 
 这些对象被称为“模板数据API”，更多API文档请参见[这里](http://jekyllbootstrap.com/api/template-data-api.html)
@@ -611,8 +620,8 @@ liquid内置了一些filter，并且该机制可以被扩展，jekyll便扩展�
 
     $git clone https://github.com/plusjade/jekyll-bootstrap.git
 
-下载的目录里面是一个完整的网站，可以使用我们本地的jekyll --server启动。另外，作者的网站：http://jekyllbootstrap.com/
-
+下载的目录里面是一个完整的网站，可以使用我们本地的jekyll --server启动。另外，作者的网站：[http://jekyllbootstrap.com/
+](http://jekyllbootstrap.com/)
  
 
 ###评论功能
@@ -633,13 +642,15 @@ DISQUS还有一个Dashboard，可以用来管理评论，这里就不再详述�
 
 blog当然不能缺少站内搜索功能。主流的站内搜索都是主流的搜索引擎提供的。作为一个google控，当然必须选择google啊。当然你必须拥有一个google帐号。
 
-google的站内搜索叫：custome search engine：http://www.google.com/cse
+google的站内搜索叫：custome search engine：[http://www.google.com/cse](http://www.google.com/cse)
 
 创建一个自定义搜索与添加评论类似只要三步：
 
-+填写自定义搜索的名字、描述、语言、站点信息，这些信息中唯一需要注意的是站点信息，建议使用mydomain.com作为搜索范围，因为这样的话，会自动转化成*.mydomain.com/*，能包含全站的内容
-+选择样式和尝试搜索。尝试搜索有时不能成功，但是不要紧
-+将生成脚本写到网页中
+
+
+1. 填写自定义搜索的名字、描述、语言、站点信息，这些信息中唯一需要注意的是站点信息，建议使用mydomain.com作为搜索范围，因为这样的话，会自动转化成*.mydomain.com/*，能包含全站的内容
+2. 选择样式和尝试搜索。尝试搜索有时不能成功，但是不要紧
+3. 将生成脚本写到网页中
 
 这时，可能搜索功能仍然无法使用，尤其是你的网站没有什么名气，也没有什么外链。因为google的爬虫不可能很快的抓到你的网站。但这里有个技巧可以让你的网站立刻被google收录（姑且不论排名），那就是google的Webmaster Tools工具，该工具是免费的，而且还集成了站点流量统计功能，十分强大。
 
@@ -696,6 +707,7 @@ Disqus是一个社会化的评论解决方案，请允许我使用这个烂透�
 ------------------------------
 
 写到这里，基本的点已经介绍完毕，看看Jekyll生成的博客页面，我心满意足，虽然文笔很烂，语句多不通顺，但是这是一个新的开始了，我觉得心灵都纯洁了不少，这不是发一条微博什么能带来的快乐。
+
 [GoDaddy]:  http://godaddy.com  "Godaddy"
 [GitHub]: http://github.com "Github:social coding"
 [Jekyll]:   https://github.com/mojombo/jekyll
