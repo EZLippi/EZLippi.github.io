@@ -88,7 +88,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 用文本编辑工具打开id_rsa.pub文件，如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。
 
 在GitHub的主页上点击设置按钮： github account setting
-![github account setting](/assets/images/githubpages/github-account-setting.png)
+
 选择SSH Keys项，把复制的内容粘贴进去，然后点击Add Key按钮即可： 
 ![set ssh keys](/assets/images/githubpages/bootcamp_1_ssh.jpg)
 
@@ -715,7 +715,7 @@ Disqus是一个社会化的评论解决方案，请允许我使用这个烂透�
 [DNSPod]: http://dnspod.cn "DNSPod"
 [GitHub Pages]: http://pages.github.com "GitHub Pages"
 [WordPress]:    http://wordpress.org    "WordPress"
-[LippiOuYang]:coolshell.info "coolshell"
+[LippiOuYang]: coolshell.info  "coolshell"
 [1]:    {{ page.url}}  ({{ page.title }})
 [2]:  http://stevelosh.com/blog/2011/09/writing-vim-plugins/ "Write Vim Plugins"
 [3]: http://sivers.org/sharing   "The co-op business model: share whatever you've got"
