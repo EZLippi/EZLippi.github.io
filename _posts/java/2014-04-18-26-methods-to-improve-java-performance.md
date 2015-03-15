@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Java编程中“为了性能”尽量要做到的一些地方
+title: Java编程Tips
 description: Java编程中“为了性能”尽量要做到的一些地方
 keywords: java
-categories : [java, reprints]
+categories : [java]
 tags : [java, 性能]
 ---
 

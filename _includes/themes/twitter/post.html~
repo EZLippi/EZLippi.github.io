@@ -33,7 +33,11 @@
       </ul>
     </div>
     
-   
+   <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F085fc257cb1e774f7764a2cf527c393d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
    
     <script type="text/javascript" id="wumiiRelatedItems"></script>
     <script type="text/javascript">
@@ -83,6 +87,7 @@ var duoshuoQuery = {short_name:"coolshell"};
     <section>
     <h3>推荐阅读</h3>
     <ul id="recent_posts">
+	  <li><a href="http://coolshell.info/web/2014/12/22/about-web-transmission.html" target="_blank">网络传输那些事儿</a></li>
       <li><a href="http://coolshell.info/codepuzzle/2013/11/02/codepuzzle-float-from-surprised-to-ponder.html" target="_blank">代码陷阱-浮点数</a></li>
       <li><a href="http://coolshell.info/other/programming/reprints/2013/07/15/qualified-programmer-should-read-what-books.html" target="_blank">一个合格的程序员应该读过哪些书</a></li>
       <li><a href="http://coolshell.info/other/programming/reprints/2013/06/15/whats-wrong-with-the-for-loop.html" target="_blank">for 循环为何可恨？</a></li>
@@ -105,6 +110,20 @@ var duoshuoQuery = {short_name:"coolshell"};
 <iframe width="320" height="350" frameborder="0" scrolling="no" src="http://app.wumii.com/ext/widget/hot?prefix=http%3A%2F%2Fcoolshell.info%2F&num=10&t=1">
 </iframe>
 </section>
+
+ <section>
+    {% unless site.categories == empty %}
+    <h3>分类</h3>
+    <ul class="tag_box">
+      {% assign categories_list = site.categories %}
+      {% include JB/categories_list %}
+    </ul>
+    {% endunless %}  
+    </section>
+    
+    <section>
+    <h3>版权申明</h3>
+	<a rel="license nofollow" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/cn/88x31.png" /></a><br />
 
   </aside>
 </div>
