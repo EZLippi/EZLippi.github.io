@@ -15,7 +15,7 @@ tags : [http,dns,web]
  4. 服务器发回一个HTTP响应
  5. 浏览器渲染HTML到页面。
  比如我们从[http://www.joes-hardware.com:80/power-tools.html](http://www.joes-hardware.com:80/power-tools.html)获取资源的时候，整个过程如下图所示：
- ![](/assets/images/http/1.jpeg)
+ ![](/images/images/http/1.jpeg)
 	开始时我们输入的是URI(统一资源标识符,Uniform Resource Identifier)，我们用的比较多的是URI的一个子集叫统一资源定位符(URL,Uniform Resource Locator)。
 	
 URL组成
@@ -26,7 +26,7 @@ URL组成
     <scheme>://<user>:<password>@<host>:<port>/<path>;<params>?<query>#<frgs>
 
 各个部分的介绍如下表：
-![](/assets/images/http/0.jpeg)
+![](/images/images/http/0.jpeg)
 以一个实际例子来说：
 当我们在浏览器中输入[http://b.phodal.com/athome/1](http://b.phodal.com/athome/1)按下回车
 
@@ -100,7 +100,7 @@ http客户端向http服务器发送请求报文，请求报文格式如下：
      
      Hi,I'm a message!
 下面是一个POST方法示例：
-   ![](/assets/images/http/2.jpeg)
+   ![](/images/images/http/2.jpeg)
 
 连接管理
 ----
@@ -115,9 +115,9 @@ IP首部包括源和目的的的IP地址，长度和其他一些标记，TCP首�
 TCP连接是通过4个值来识别的：
 `<源IP地址、源端口号、目地IP地址、目地端口号>`这4个值唯一定义了一条TCP连接。
  一个TCP分组如下：
-  ![](/assets/images/http/3.jpeg)
+  ![](/images/images/http/3.jpeg)
 一个典型的TCP客户端和服务器的通信过程如下：
- ![](/assets/images/http/4.jpeg)
+ ![](/images/images/http/4.jpeg)
  
 待续...
 参考书目：HTTP权威指南

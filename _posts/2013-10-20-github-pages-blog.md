@@ -46,7 +46,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 下载安装客户端之后，各个系统的配置就类似了，我们使用windows作为例子，Linux和Mac与此类似。
 
 在Windows下，打开Git Bash，其他系统下面则打开终端（Terminal）： Git Bash
-![Git Bash](/assets/images/githubpages/bootcamp_1_win_gitbash.jpg)
+![Git Bash](/images/images/githubpages/bootcamp_1_win_gitbash.jpg)
 ------------------------------
 **1. 检查SSH keys的设置**
 
@@ -90,7 +90,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 在GitHub的主页上点击设置按钮： github account setting
 
 选择SSH Keys项，把复制的内容粘贴进去，然后点击Add Key按钮即可： 
-![set ssh keys](/assets/images/githubpages/bootcamp_1_ssh.jpg)
+![set ssh keys](/images/images/githubpages/bootcamp_1_ssh.jpg)
 
 PS：如果需要配置多个GitHub账号，可以参看这个多个github帐号的SSH key切换，不过需要提醒一下的是，如果你只是通过这篇文章中所述配置了Host，那么你多个账号下面的提交用户会是一个人，所以需要通过命令`git config --global --unset user.email`删除用户账户设置，在每一个repo下面使用`git config --local user.email '你的github邮箱@mail.com' `命令单独设置用户账户信息
 
@@ -126,7 +126,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 有些工具没有通过SSH来链接GitHub。如果要使用这类工具，你需要找到然后设置你的API Token。
 
 在GitHub上，你可以点击`Account Setting > Account Admin：` 
-![set ssh keys](/assets/images/githubpages/bootcamp_1_token.jpg)
+![set ssh keys](/images/images/githubpages/bootcamp_1_token.jpg)
 
 
 然后在你的命令行中，输入下面的命令，把token添加进去：
@@ -158,7 +158,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 在创建博客之前，还需要用已有的帐号创建一个项目，上面那个链接的projectName将是这里即将创建的项目名称。在Git中，项目被称为仓库(Repository)，仓库顾名思义，当然可以包含代码或者非代码。将来我们的网页或者模板实际上都是保存在这个仓库中的。
 
 登录后，访问https://github.com/new，创建仓库如下图：
-![image1](/assets/images/githubpages/build-github-blog-page-02-img0.png)
+![image1](/images/images/githubpages/build-github-blog-page-02-img0.png)
 
 
 创建了仓库后，我们就需要管理它，无论是管理本地仓库还是远程仓库都需要Git客户端。Git客户端实际上十分强大，它本身就可以offline的创建本地仓库，而本地仓库和远程仓库之间的同步也是通过Git客户端完成的。
@@ -188,7 +188,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 在该目录下手动创建如下文件和文件夹，最终形成这样的结构：
 
-![](/assets/images/githubpages/build-github-blog-page-02-img1.png)
+![](/images/images/githubpages/build-github-blog-page-02-img1.png)
 
 - _includes：默认的在模板中可以引用的文件的位置，后面会提到
 - _layouts：默认的公共页面的位置，后面会提到
@@ -280,7 +280,7 @@ TTL值全称是“生存时间（Time To Live)”，简单的说它表示DNS记�
 
 colshell.info  204.232.175.78（注意：这个IP难保不会变，所以要及时关注上面这个链接中给出的IP，并及时更新A记录）。下面这个截图是goddady上的A记录配置：
 
-![](/assets/images/githubpages/build-github-blog-page-03-img0.png)
+![](/images/images/githubpages/build-github-blog-page-03-img0.png)
 
 然后在你的gh-pages分支的根目录中创建一个CNAME文件，其中只能有一行，就是pchou.info，用Git客户端上传更改，大约等十几分钟就能生效了。
 
@@ -399,7 +399,7 @@ jekyll依赖的组件如下：
 
     $jekyll --server --safe
 
-![](/assets/images/githubpages/build-github-blog-page-04-img0.png)
+![](/images/images/githubpages/build-github-blog-page-04-img0.png)
 
 jekyll此时会在localhost的4000端口监听http请求，用浏览器访问[http://localhost:4000/index.html](http://localhost:4000/index.html)，之前的页面出现了！
 
@@ -428,7 +428,7 @@ jekyll是一个基于ruby开发的，专用于构建静态网站的程序。它�
     |   |-- 20011-04-26-hello-world.html
     |-- _site
     |-- index.html
-    |-- assets
+    |-- images
        |-- css
            |-- style.css
        |-- javascripts
@@ -443,7 +443,7 @@ jekyll是一个基于ruby开发的，专用于构建静态网站的程序。它�
 
 - _site：上面提到过，这是jekyll默认的转化结果存放的目录
 
-- assets：这个目录没有强制的要求，主要目的是存放你的资源文件，图片、样式表、脚本等。
+- images：这个目录没有强制的要求，主要目的是存放你的资源文件，图片、样式表、脚本等。
 
 **一个例子**
 
@@ -483,7 +483,7 @@ layout变量表示该文章应当使用_layouts/default这个文件作为父模�
 
 在根目录中启动jekyll --server，并访问http://localhost:4000/index.html，你将得到下面页面
 
-![](/assets/images/githubpages/build-github-blog-page-05-img0.png)
+![](/images/images/githubpages/build-github-blog-page-05-img0.png)
 
 该页面的Html源码如下，可以看到，index.html中的内容替换了default.html中的`{ { content }}`
 
@@ -535,7 +535,7 @@ index.html
 
 最终效果如下：
 
-![](/assets/images/githubpages/build-github-blog-page-05-img1.png)
+![](/images/images/githubpages/build-github-blog-page-05-img1.png)
 
 这个是略微复杂的例子，这里涉及到两个主要的对象
 
@@ -628,9 +628,9 @@ liquid内置了一些filter，并且该机制可以被扩展，jekyll便扩展�
 
 静态的网站不可能自己存放评论，于是只能考虑外挂评论了，查了一下比较靠谱和广泛的就是DISQUS了;
 
-点击![](/assets/images/githubpages/build-github-blog-page-06-img0.png)，在下面的页面中填写相关的信息，注意先在右侧注册登录信息，然后再在左侧增加一个站点：
+点击![](/images/images/githubpages/build-github-blog-page-06-img0.png)，在下面的页面中填写相关的信息，注意先在右侧注册登录信息，然后再在左侧增加一个站点：
 
-![](/assets/images/githubpages/build-github-blog-page-06-img1.png)
+![](/images/images/githubpages/build-github-blog-page-06-img1.png)
 
 填写完成后点击“Continue”，在接下来的页面中选择Universal Code，然后根据提示完成接下来的操作，后面的操作就十分简单了：主要就是把产生的脚本文件复制到你的站点页面中即可。
 
@@ -656,15 +656,15 @@ google的站内搜索叫：custome search engine：[http://www.google.com/cse](h
 
 进入地址：[https://www.google.com/webmasters/tools/home](https://www.google.com/webmasters/tools/home)
 
-![](/assets/images/githubpages/build-github-blog-page-06-img5.png)
+![](/images/images/githubpages/build-github-blog-page-06-img5.png)
 它会要你认证你对网站的所有权，下载一个HTML文件，把它上传到你的网站上，
 设置完成之后基本上立刻就生效了，无需等待一天。
 
 认证成功后，进入[sitemaps网站](http://www.xml-sitemaps.com/),在下面填入你的网站后点击start，
-![](/assets/images/githubpages/sitemap.jpg)
+![](/images/images/githubpages/sitemap.jpg)
 接下来下载sitemap文件，把它上传到你的域名根目录，
 打开Optimization->Sitemaps，点击Add/TEST SITEMAP，输入指向你的站点的sitemap地址，本博客的sitemap是：[http://lippiouyangonline.info/sitemap.xml](http://lippiouyangonline.info/sitemap.xml),过几分钟就看到下面的结果：
-！[](/assets/images/githubpages/sitemap2.jpg)
+！[](/images/images/githubpages/sitemap2.jpg)
 
 
 

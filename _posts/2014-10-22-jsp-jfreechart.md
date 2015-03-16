@@ -8,7 +8,7 @@ tags : [jsp，servlet，html，jfreechart]
 
 项目中需要弄一个服务器，从数据库中读取数据，然后根据http请求显示制定的数据在曲线中，这里用到一个曲线库，[Jfreechart](http://www.jfree.org/jfreechart/)，用java写的，用来生成柱状图，饼状图，时间序列等。
 整个流程如下：
-![](/assets/images/chart.png)
+![](/images/images/chart.png)
 
 jsp代码如下：
 
