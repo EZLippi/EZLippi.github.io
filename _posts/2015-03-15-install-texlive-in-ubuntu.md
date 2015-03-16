@@ -7,8 +7,7 @@ description: LaTeX 是由美国计算机学家Lamport博士于1985年开发成�
 tags : [编程, 学习]
 ---
 
-</section>
-<section class="post">
+
 <p><strong>LaTex简介?</strong>
 <p>1、LaTeX 是由美国计算机学家Lamport博士于1985年开发成功的。</p>
 <p>2、它是当今世界上最流行和使用最为广泛,
@@ -142,16 +141,13 @@ INFOPATH=/usr/local/texlive/2014/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 
 <p>系统会报错，大致信息如下：</p>
 
-<blockquote><p>  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br/>
-    !<br/>
-    ! fontspec error: "font-not-found"<br/>
-    !<br/>
-    ! The font "SimSun" cannot be found.<br/>
-    !<br/>
-    ! See the fontspec documentation for further information.<br/>
-    !<br/>
-    ! For immediate help type H <return>.<br/>
-    !...............................................</p></blockquote>
+    ! fontspec error: "font-not-found"
+
+    ! The font "SimSun" cannot be found.
+    ! See the fontspec documentation for further information.
+ 
+    ! For immediate help type H 
+    !...............................................
 
 <p>下面就要解决这个问题，错误里说了，"font-not-found"!</p>
 
@@ -184,13 +180,11 @@ $ sudo fc-cache -fsv
 
 <p>输出大约如下</p>
 
-<blockquote><p>NSimSun,新宋体:style=Regular  
-KaiTi,楷体:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta  
-SimSun,宋体:style=RegularUnibit:style=Regular  
+    NSimSun,新宋体:style=Regular  
+    KaiTi,楷             体:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta  
+    SimSun,宋体:style=RegularUnibit:style=Regular  
 WenQuanYi Zen Hei,文泉驛正黑,文泉驿正黑:style=Regular  
-SimHei,黑体:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta  
-WenQuanYi Zen Hei Mono,文泉驛等寬正黑,文泉驿等宽正黑:style=Regular  
-WenQuanYi Zen Hei Sharp,文泉驛點陣正黑,文泉驿点阵正黑:style=Regular</p></blockquote>
+    ......
 
 <p>下面需要做的就是将 ctex-xecjk-winfonts.def 中的字体名字改成上面四行的行首的内容，注意，要将原文件中的 [SIMKAI.TTF] 中括号同时删去。</p>
 
@@ -202,13 +196,11 @@ WenQuanYi Zen Hei Sharp,文泉驛點陣正黑,文泉驿点阵正黑:style=Regula
 
 <p>在上边添加了 Windows 字体的基础之上可以为 pdfLaTeX 添加中文字体支持</p>
 
-<p>在 /usr/local/texlive/2014/texmf.cnf 文件中设置 OSFONTDIR 变量，即添加如下信息：</p>
-
-<blockquote><p>%自己为pdflatex设置的OSFONTDIR变量指向中文字体文件</p>
-    <p>OSFONTDIR=/usr/share/fonts/winfonts</p></blockquote>
+<p>在 /usr/local/texlive/2014/texmf.cnf 文件中设置 OSFONTDIR 变量，即添加如下信息：
+    自己为pdflatex设置的OSFONTDIR变量指向中文字体文件
+    OSFONTDIR=/usr/share/fonts/winfonts
 <h2>LaTeX 学习文档下载：</h2>
 [http://download.csdn.net/detail/longerzone/4703133](http://download.csdn.net/detail/longerzone/4703133)
-</section>
 
 <h2>Linux 配置环境变量后无法登录的解决方案</h2>
 <section>
@@ -246,4 +238,4 @@ INFOPATH=/usr/local/texlive/2014/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 
 <p>若命令行下打开文件乱码，可考虑新建用户并登录，然后以 root 权限修改之前用户的配置文件，关于如何新建用户此处不再赘述。</p>
 
-</section>
+

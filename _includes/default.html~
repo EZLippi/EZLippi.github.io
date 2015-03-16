@@ -7,7 +7,7 @@
 	<title>{{ page.title }} | {% if page.tagline %}{{page.tagline}}{% else %}{{ site.title }}{% endif %}</title>
 
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="{{ site.author.name }}">
+    <meta name="author" content="Lippi">
 
 <!--<meta name="google-site-verification" content="Mfl8lf6NN0DWPluv8lQpBL-mrKi22ZOcnlKXYURni1Y" /> 
   <meta name="baidu-site-verification" content="EfohsDsVrB" />
@@ -50,43 +50,51 @@
   <body>
 
     <div class="wrapper">
-      <header class="main">
 
+      <header class="main">
+<!--
         <hgroup>
-          <h1 id="logo"><a href="/">{{ site.title }}</a></h1>
+          <h1 id="logo"><a href="/">Lippi</a></h1>
           {% if site.tagline %}
             <p id="tagline">Draw my life with code</p>
           {% endif %}
-        </hgroup>
-        <ul class="buttons">
-          <!-- <li><a href="http://github.com/{{ site.author.github }}/" rel="me">Code <strong>GitHub</strong></a></li> -->
-        <li><a href="http://weibo.com/ouyanglip" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a></li>
-				  <li><a href="http://www.zhihu.com/people/lippi-ouyang" target="_blank"><img src="http://www.zhihu.com/favicon.ico" alt="" width="25"/></a></li>
-				  <li><a href="https://github.com/LippiOuYang" target="_blank"><img src="http://www.github.com/favicon.ico" alt="" width="25"/></a></li>			 
-        </ul>
+        </hgroup>  -->
+
 <!--
         <p class="about text-justify">
           {{ site.about }}
         </p>
--->
-      </header>
 
+      </header>
+-->
       <section class="main" id="container">
 		<!--^frag-->{{ content }}<!--$frag -->
       </section>
-
+ 
       <aside>
         <nav>
-		<h3>Navigation</h3>
+		<h3>导航</h3>
           <ul>
-      			<li><a href="/">Home</a></li>
-				<li><a href="/about.html">About</a></li>
-      			<li><a href="/archive.html">Archive</a></li>
-      			<li><a href="/tags.html">Tag List</a></li>
-      			<li><a href="/categories.html">Categories</a></li>
+      		<li><a href="/">主页</a></li>			
+      		<li><a href="/archive.html">归档</a></li>
+      		<li><a href="/tags.html">标签</a></li>
+      		<li><a href="/categories.html">分类</a></li>
+		<li><a href="/about.html">关于我</a></li>
           </ul>
         </nav>
-       <ul>
+
+   
+
+       <h3>联系我</h3>
+        <p class="contact">
+ <a href="http://weibo.com/ouyanglip" title="微博联系我"><img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_32x32.png" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
+        <a href="http://www.zhihu.com/people/lippi-ouyang" title="知乎联系我"><img src="http://www.zhihu.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
+ <a href="https://github.com/LippiOuYang" title="Github联系我"><img src="http://www.github.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
+        <a href="tel:+86159****2225">159****2225</a> <a href='mailto:ouyanglip@gmail.com'>ouyanglip@gmail.com</a><br/>   
+
+<!--         	<div class="media-grid"><a class="various fancybox.iframe" href="http://map.naver.com/index.nhn?dlevel=11&lat=37.5711873&lng=126.9823252&query=&menu=location&searchCoord=&tab=1&pinId=30858388&pinType=site&pinTitle=7Jyg7Iqk7ZKA7Yyo65%2Bs64uk7J6E&mapMode=0&enc=b64"><img src="http://prt.map.naver.com/mashupmap/print?key=p1345437335473_983733216" width="270" height="160" alt="地图" title="地图" border="0" style="vertical-align:top;"/></a></div> -->
+
+      <ul>
           <li class="search"><script>
   (function() {
     var cx = '015104026998727815951:bza74imjgds';
@@ -100,14 +108,7 @@
   })();
 </script>
 <gcse:searchbox-only resultsUrl="/search.html"></gcse:searchbox-only></li>
-        </ul>  
-
-       <h3>Contact</h3>
-        <p class="contact">
-        <a href="http://weibo.com/ouyanglip" title="微博联系我"><img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_32x32.png" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
-        <a href="tel:+86159****2225">159****2225</a> <a href='mailto:ouyanglip@gmail.com'>ouyanglip@gmail.com</a><br/>   
-
-<!--         	<div class="media-grid"><a class="various fancybox.iframe" href="http://map.naver.com/index.nhn?dlevel=11&lat=37.5711873&lng=126.9823252&query=&menu=location&searchCoord=&tab=1&pinId=30858388&pinType=site&pinTitle=7Jyg7Iqk7ZKA7Yyo65%2Bs64uk7J6E&mapMode=0&enc=b64"><img src="http://prt.map.naver.com/mashupmap/print?key=p1345437335473_983733216" width="270" height="160" alt="地图" title="地图" border="0" style="vertical-align:top;"/></a></div> -->
+        </ul> 
         </p>
       </aside>
       <footer class="main">

@@ -17,11 +17,13 @@ sitemap:
 
 ## 个人简介：
 
-欧阳利平 来自江西 现居广州
+欧阳利平
+Web后台开发、Android应用开发爱好者
+来自江西 现居广州
 
 ## 联系方式
 
-*Email:ouyanglip@gmail.com
+* Email:ouyanglip@gmail.com
 
 ### 关于本站：
 
