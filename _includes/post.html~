@@ -1,0 +1,40 @@
+<article class="post">
+	<header>
+    {% include navtabs.html %}
+	<div class="page-header">
+		  <h1>{{ page.title }}</h1>
+    </div>
+		<p><b>发布于：</b> <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+			{{ page.date | date: "%Y年%-m月%-d日 %H时%M分%S秒" }}</time>
+     <!-- <a href="https://plus.google.com/{{ site.author.googleplus }}?rel=author">{{ site.author.name }}</a> -->
+    </p>
+	</header>
+
+	{{ content }}
+
+	<p>
+		{% include shares.html %}
+	</p>
+
+	<footer>
+    <section>
+      {% unless page.tags == empty %}
+        <h1><b>标签：</b></h1>
+        <ul>
+        {% assign tags_list = page.tags %}
+        {% include JB/tags_list %}
+        </ul>
+      {% endunless %}
+
+      {% unless page.categories == empty %}
+        <h1><b>归档于：</b></h1>
+        <ul>
+        {% assign categories_list = page.categories %}
+        {% include JB/categories_list %}
+        </ul>
+      {% endunless %}
+    </section>
+	</footer>
+
+	{% include disqus.html %}
+</article>
