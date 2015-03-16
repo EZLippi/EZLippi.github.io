@@ -7,18 +7,8 @@
 	<title>{{ page.title }} | {% if page.tagline %}{{page.tagline}}{% else %}{{ site.title }}{% endif %}</title>
 
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="Lippi">
+    <meta name="author" content="{{ site.author.name }}">
 
-<!--<meta name="google-site-verification" content="Mfl8lf6NN0DWPluv8lQpBL-mrKi22ZOcnlKXYURni1Y" /> 
-  <meta name="baidu-site-verification" content="EfohsDsVrB" />
-  <meta property="wb:webmaster" content="e0287cd04d1775d9" />
-  -->
-  
-  <!-- <html xmlns:wb=“http://open.weibo.com/wb”>
-	<link href="http://feeds.feedburner.com/{{ site.author.feedburner }}/" rel="alternate" title="{{ site.sitename }} Feed" type="application/atom+xml">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">  -->
-  
-	<!-- <link rel="author" href="https://plus.google.com/+ChenJun"> -->
 
     <link rel="stylesheet" href="{{ site.JB.ASSET_PATH }}/css/bootstrap.min.css">
     
@@ -28,8 +18,8 @@
 
     <link rel="stylesheet" href="{{ site.JB.ASSET_PATH }}/fancyBox/jquery.fancybox.css">
 <link rel="stylesheet" href="{{ site.JB.ASSET_PATH }}/css/style.css" type="text/css" media="screen" charset="utf-8">
-
-    <link rel="stylesheet" href="{{ site.JB.ASSET_PATH }}/css/pygment.css" media="all">
+<!--
+    <link rel="stylesheet" href="{{ site.JB.ASSET_PATH }}/css/pygment.css" media="all"> -->
     </style>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -70,10 +60,10 @@
       <section class="main" id="container">
 		<!--^frag-->{{ content }}<!--$frag -->
       </section>
- 
+  </div>
       <aside>
         <nav>
-		<h3>导航</h3>
+	<h3>导航</h3>
           <ul>
       		<li><a href="/">主页</a></li>			
       		<li><a href="/archive.html">归档</a></li>
@@ -118,20 +108,20 @@
 			Themed with <a href="http://github.com/orderedlist/minimal/">minimal</a>.
 		</small></p>
       </footer>
-    </div>
+   
     <script src="{{ site.JB.ASSET_PATH }}/js/scale.fix.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script>
-	<!--script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script-->
-  <!--script src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script-->
-  <!--script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.5.0/ember.js"></script-->
-  <!--script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.min.js"></script-->
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <script src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
+  <!script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.5.0/ember.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.min.js"></script>
 
 	<script src="{{ site.JB.ASSET_PATH }}/fancyBox/jquery.fancybox.pack.js"></script>
 	<script src="{{ site.JB.ASSET_PATH }}/js/application.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="{{ site.JB.ASSET_PATH }}/js/go-top.js"></script>  
-    <!--{% include ga.html %}  -->
+    
   </body>
 </html>

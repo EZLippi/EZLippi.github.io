@@ -263,14 +263,14 @@ hr {
     margin: 0 0 20px;
 }
 footer.main {
-    width: 570px;
-    float: left;
+    width: 500px;
+    float: right;
     position: fixed;
     bottom: 50px;
     text-align: right;
 }
 aside {
-    width: 270px;
+    width: 570px;
     float: left;
     position: fixed;
     bottom: 115px;

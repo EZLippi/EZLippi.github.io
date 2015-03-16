@@ -35,7 +35,7 @@ a small {
 }
 a:hover small { color: #777 }
 .wrapper {
-    width: 260px;
+    width: 860px;
     margin: 0 auto;
 }
 blockquote {
@@ -73,7 +73,7 @@ dt {
 th { color: #444 }
 img { max-width: 100% }
 header.main {
-    width: 660px;
+    width: 270px;
     float: left;
     position: fixed;
 }
@@ -158,15 +158,18 @@ header.main ul.buttons a {
     text-align: center;
 }
 header.main ul.buttons li.twitter a {
+    background: url({{ site.JB.IMAGE_PATH }}/ico_twitter.png) no-repeat left center;
     margin-left: 13px;
     padding-left: 15px;
     width: 70px;
 }
 header.main ul.buttons li.facebook a {
+    background: url({{ site.JB.IMAGE_PATH }}/ico_facebook.png) no-repeat left center;
     padding-left: 18px;
     width: 82px;
 }
 header.main ul.buttons li.google a {
+    background: url({{ site.JB.IMAGE_PATH }}/ico_google.png) no-repeat left center;
     padding-left: 5px;
 }
 strong {
