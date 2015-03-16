@@ -3,6 +3,7 @@ layout:     post
 title:      java同步容器与并发容器
 keywords:   java,同步，并发
 category:   java
+description: 在编程的时候经常会用到容器，当容器被多线程读取的时候我们就要考虑线程安全的问题，哪些容器是线程是线程安全的，容器的哪些操作又是线程安全的，这些安全机制是怎么实现的，本文将一一介绍。
 tags:		[java]
 ---
 

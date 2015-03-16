@@ -37,4 +37,38 @@
 	</footer>
 
 	{% include disqus.html %}
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F085fc257cb1e774f7764a2cf527c393d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+   
+    <script type="text/javascript" id="wumiiRelatedItems"></script>
+    <script type="text/javascript">
+    var wumiiPermaLink = ""; //请用代码生成文章永久的链接
+    var wumiiTitle = {{ page.title | jsonify }}; //请用代码生成文章标题
+    var wumiiTags = {{ page.tags | join:"," | jsonify }}; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = {{ page.categories | jsonify }};
+    var wumiiSitePrefix = "http://coolshell.info/";
+    var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.com/ext/relatedItemsWidget"></script>
+<a rel="nofollow" href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅相关文章插件，快速提升流量" style="border:0;padding:0;margin:0;" />
+</a>    
+    <hr>
+    <!-- Duoshuo Comment BEGIN 
+    <div id="comments" class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"coolshell"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- Duoshuo Comment END -->
 </article>

@@ -3,6 +3,7 @@ layout:     post
 title:      谈谈如何提高web服务器并发性能
 keywords:   Java,  并发, 线程， 事件驱动
 category:   java
+description: 任何一名web工程师都希望自己做的web应用能被越来越多的人使用，如果我们所做的web应用随着用户的增多而宕机了，那么越来越多的人就会变得越来越少了，为了让我们的web应用能有更多人使用，我们就得提升web应用服务端的并发能力。
 tags:		[java, 并发， 服务器]
 ---
 
