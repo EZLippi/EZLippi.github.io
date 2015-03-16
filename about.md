@@ -13,13 +13,13 @@ sitemap:
   lastmod: 2015-03-016
 ---
 
-<img src="{{ site.JB.IMAGE_PATH }}/pages/ashenna.png" class="right" style="float: right;" />
+
 
 ## 个人简介：
 
-欧阳利平
-Web后台开发、Android应用开发爱好者
-来自江西 现居广州
+* 欧阳利平
+* Web后台开发、Android应用开发爱好者
+* 来自江西 现居广州
 
 ## 联系方式
 
@@ -33,5 +33,5 @@ Web后台开发、Android应用开发爱好者
 
 ## 其他流言
 > * 未**女昏**人士；
-> * 如**题图**所示，阿森纳球迷；
+> * 阿森纳球迷；
 > * 实况足球忠实粉丝；
