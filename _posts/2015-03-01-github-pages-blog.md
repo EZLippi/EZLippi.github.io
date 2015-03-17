@@ -2,7 +2,8 @@
 layout:     post
 title:      利用github-pages建立个人博客 
 keywords:	blog
-categories : [other, programming, reprints]
+description: Github很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如jQuery、Twitter等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了Github Pages的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。
+categories : [other, programming,]
 tags:		[blog]
 ---
 
@@ -168,7 +169,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 下面的步骤假设您已经安装好了Git客户端，安装和使用技巧请参见：Git学习资源
 
  
-
+--------------------------------------
 **本地编辑及上传**
 
 在磁盘上创建一个目录，该目录与上面的项目名同名，在该目录下启用Git Bash命令行，并输入如下命令
@@ -197,7 +198,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 - _config.yml：关于jekyll模板引擎的配置文件
 - index.html：默认的主页
 
-在_layouts目录下创建一个default.html，在其中输入如下内容，注意：文件本身要以UTF-8 without BOM的格式保存，以防止各种编码问题，建议使用notepad++编辑
+在_layouts目录下创建一个default.html，在其中输入如下内容，注意：文件本身要以UTF-8 without BOM的格式保存，以防止各种编码问题，建议使用notepad++或者VIM编辑
 
 default.html
     	
@@ -237,7 +238,7 @@ default.html
 现在，你可以泡杯咖啡，并等大约10分钟的时间，访问`http://username.github.com/projectName`就可以看到生成的博客了
 
 另外上面提到的，无论生成失败还是成功，Github会向你的邮箱发送一封邮件说明，请注意查收。
-
+----------------------------------------------
 ##域名扫盲
 
 说实话，虽然明白什么是域名以及域名解析的原理，但是在实际的互联网环境中，域名的问题其实比理论上说的要复杂些。这里对一些概念稍作整理。
@@ -270,7 +271,7 @@ TTL值全称是“生存时间（Time To Live)”，简单的说它表示DNS记�
 
 众所周知，域名是要购买的，国内用域名访问主机大概是要备案的，有些麻烦。所以现在很多人从国外的域名注册商那儿买域名，比如goddady。如果是新手想在国外买域名的话，最好准备一张VISA信用卡，并用paypal来支付（可以省手续费）。goddady现在也支持支付宝，支付起来也很方便。
 
- 
+ ----------------------------------
 
 ###绑定域名到GitHub-Page
 
@@ -293,7 +294,7 @@ colshell.info  204.232.175.78（注意：这个IP难保不会变，所以要及�
 这取决于你的模板如何引用baseurl，总之指向根目录就好了。
 
 刚开始的时候我比较困惑的是，为什么A记录都指向的是同一个IP，GitHub是如何知道应该返回哪个用户的页面的。其实很简单，秘密就是上面提到的CNAME文件，GitHub应该会缓存所有gh-pages分支中的CNAME文件，用户对域名的请求被定向到GitHub住服务器的IP地址后，再根据用户请求的域名，判断对应哪个gh-pages，而且它会自动带上项目名，所以baseurl需要改为根目录。
-
+-----------------------------------
 ##jekyll的安装
 前几篇介绍了GitHub-Page的基本原理和使用方法，还介绍了如何将购买的域名绑定博客主页。然而，当需要正儿八经的将一个博客构建起来，不仅要知道如何上传我们的文件，还要能够高效的更好的设计博客。因此，必须能够在上传之前在本地完成测试；另一方面，完全靠html来编辑博客，显然工作量太大，随着博客越来越复杂，简直不可能维护，因此，需要用jekyll这个模板引擎来帮忙。本篇先介绍如何搭建一个本地的测试环境。
 
@@ -327,7 +328,7 @@ windows的安装还是一如既往的“无脑”，不多说了。
 
 如果想要快速体验ruby开发，可以参考：[20分钟体验 Ruby](https://www.ruby-lang.org/zh_cn/documentation/quickstart/)
  
-
+----------------------------------
 **RubyDevKit安装**
 
 从这个页面下载DevKit：[http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)
@@ -365,7 +366,7 @@ config.yml文件实际上是检测系统安装的ruby的位置并记录在这个
 	$ruby dk.rb install
 
  
-
+-----------------------------------------
 ###Rubygems
 
 Rubygems是类似Radhat的RPM、centOS的Yum、Ubuntu的apt-get的应用程序打包部署解决方案。Rubygems本身基于Ruby开发，在Ruby命令行中执行。我们需要它主要是因为jekyll的执行需要依赖很多Ruby应用程序，如果一个个手动安装比较繁琐。jekyll作为一个Ruby的应用，也实现了Rubygems打包标准。只要通过简单的命令就可以自动下载其依赖。
@@ -379,10 +380,13 @@ gems下载地址：[http://rubyforge.org/frs/?group_id=126](http://rubyforge.org
 就像yum仓库一样，仓库本身有很多，如果希望加快应用程序的下载速度，特别绕过“天朝”的网络管理制度，可以选择国内的仓库镜像，taobao有一个：[http://ruby.taobao.org/](http://ruby.taobao.org/)。配置方法这个链接里面很完全。
 
  
-
+-------------------------------------------
 ###安装jekyll
 
-有了上面的基础，安装jekyll就十分轻松了，执行下面gem命令即可全自动搞定：
+有了上面的基础，安装jekyll就十分轻松了，在此之前，建议国内用户换成淘宝服务器，速度更快：
+    $ sudo gem sources --remove http://rubygems.org/
+    $ sudo gem sources -a http://ruby.taobao.org/
+执行下面gem命令即可全自动搞定：
 
 	$gem install jekyll
 jekyll依赖的组件如下：
@@ -402,7 +406,7 @@ jekyll依赖的组件如下：
 ![](/images/images/githubpages/build-github-blog-page-04-img0.png)
 
 jekyll此时会在localhost的4000端口监听http请求，用浏览器访问[http://localhost:4000/index.html](http://localhost:4000/index.html)，之前的页面出现了！
-
+---------------------------------------
 **更新**
 jekyll最新的动态和文档现在可以在[jekyllrb](http://jekyllrb.com/)上找到
 
@@ -413,6 +417,7 @@ jekyll最新的动态和文档现在可以在[jekyllrb](http://jekyllrb.com/)上
 jekyll是一个基于ruby开发的，专用于构建静态网站的程序。它能够将一些动态的组件：模板、liquid代码等构建成静态的页面集合，Github-Page全面引入jekyll作为其构建引擎，这也是学习jekyll的主要动力。同时，除了jekyll引擎本身，它还提供一整套功能，比如web server。我们用jekyll --server启动本地调试就是此项功能。读者可能已经发现，在启动server后，之前我们的项目目录下会多出一个_site目录。jekyll默认将转化的静态页面保存在_site目录下，并以某种方式组织。使用jekyll构建博客是十分适合的，因为其内建的对象就是专门为blog而生的，在后面的逐步介绍中读者会体会到这一点。但是需要强调的是，jekyll并不是博客软件，跟workpress之类的完全两码事，它仅仅是个一次性的模板解析引擎，它不能像动态服务端脚本那样处理请求。
 
 更多关于jekyll请看[这里](https://github.com/jekyll/jekyll/wiki/Liquid-Extensions)
+-----------------------------------
 ##jekyll是如何工作的
 
 在jekyll解析你的网站结构前，需要确保网站目录像下面那样：
@@ -433,7 +438,7 @@ jekyll是一个基于ruby开发的，专用于构建静态网站的程序。它�
            |-- style.css
        |-- javascripts
 
--  _config.yml：保存配置，该配置将影响jekyll构造网站的各种行为。关于配置的详细文档在这里
+-  _config.yml：保存配置，该配置将影响jekyll构造网站的各种行为。
 
 - _includes：该目录下的文件可以用来作为公共的内容被其他文章引用，就跟C语言include头文件的机制完全一样，jekyll在解析时会对`{ % include file.ext %}`标记扩展成对应的在_includes文件夹中的文件
 
@@ -444,7 +449,7 @@ jekyll是一个基于ruby开发的，专用于构建静态网站的程序。它�
 - _site：上面提到过，这是jekyll默认的转化结果存放的目录
 
 - images：这个目录没有强制的要求，主要目的是存放你的资源文件，图片、样式表、脚本等。
-
+---------------------------------------
 **一个例子**
 
 完成一个例子总是最快的入门方式。
@@ -504,7 +509,7 @@ layout变量表示该文章应当使用_layouts/default这个文件作为父模�
 
 在windows中，为了甄别UTF-8编码格式的文本文件，默认会在文件头插入两个字节的标识，被称为BOM。事实证明这是个“歪门邪道”，jekyll不识别这种特殊的标记，所以可以使用Notepad++或其他的工具将UTF-8编码文件开头的BOM去掉。
  
-
+----------------------------------------
 **第一篇文章**
 
 现在我们来创建一篇博客文章，并在index.html页面添加文章的链接。
@@ -545,7 +550,7 @@ index.html
 
 这些对象被称为“模板数据API”，更多API文档请参见[这里](http://jekyllbootstrap.com/api/template-data-api.html)
 
- 
+--------------------------
 
 ###liquid
 
@@ -583,7 +588,7 @@ liquid内置了一些filter，并且该机制可以被扩展，jekyll便扩展�
 更多关于liquid的使用方法，请参见[这里](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
 
 更多关于jekyll对liquid的扩展，请参见[这里](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
-
+------------------------------------
 ##样式、分类、标签
 
 在前一篇中我们实际使用jekyll做了一个略微“复杂”的模板。并用它生成了站点。但是这样的blog显然太粗糙了，别说不能吸引别人了，自己都看不下去啊。作为自己的“门户”，当然要把美化工作放在第一位啦。
@@ -622,11 +627,42 @@ liquid内置了一些filter，并且该机制可以被扩展，jekyll便扩展�
 
 下载的目录里面是一个完整的网站，可以使用我们本地的jekyll --server启动。另外，作者的网站：[http://jekyllbootstrap.com/
 ](http://jekyllbootstrap.com/)
- 
+-------------------------------------- 
+###代码高亮
+考<a href="http://jekyllrb.com/docs/templates/">Jekyll官网文档</a>里<em>Code snippet highlighting</em>一节。玩颜色魔法的大魔术师是<a href="http://pygments.org/">Pygments</a>。
+###安装Python Pygments
+Ubtuntu下：sudo apt-get install python-pygments
+###设置代码高亮的样式
+
+通过下面的命令可以查看当前支持的样式
+>>> from pygments.styles import STYLE_MAP
+>>> STYLE_MAP.keys()
+输出：
+    ['monokai', 'manni', 'rrt', 'perldoc', 'borland', 'colorful', 'default', 'murphy', 'vs', 'trac', 'tango', 'fruity', 'autumn', 'bw', 'emacs', 'vim', 'pastie', 'friendly', 'native']  
+###生成指定样式的css文件
+    pygmentize -S native -f html > pygments.css
+将生成的css文件拷贝到主题的css目录下，如：
+    %github pages project folder%\assets\themes\twitter\css\
+引入default.html中引入css文件：
+    // default目录如
+    %github pages project folder%\includes\themes\twitter\
+
+    // 引入如下代码
+    <link href='/css/pygments.css' rel="stylesheet" media="all">
+在文章中高亮代码：
+    {% highlight java %} 
+    public class HelloWorld { 
+    public static void main(String args[]) { 
+        System.out.println("Hello World!"); 
+    } 
+    } 
+    {% endhighlight %}    
+------------------------------------
 
 ###评论功能
 
 静态的网站不可能自己存放评论，于是只能考虑外挂评论了，查了一下比较靠谱和广泛的就是DISQUS了;
+Disqus是一个社会化的评论解决方案，请允许我使用这个烂透了的词，调用它的接口非常简单，在自己的页面加载他的一段JS代码即可，如果别人注册了Disqus，那么就可以方便的留言，交流，一处登录，处处方便，而且Disqus也提供了一些spam等策略，不用自己操心了，并且可以和一些现有的博客系统很好的转换对接。越来越多的网站开始使用Disqus的服务了，这是一个非常不错的趋势，Jekyll配合[Disqus][]实在是完美了。我别无所求了。
 
 点击![](/images/images/githubpages/build-github-blog-page-06-img0.png)，在下面的页面中填写相关的信息，注意先在右侧注册登录信息，然后再在左侧增加一个站点：
 
@@ -634,8 +670,8 @@ liquid内置了一些filter，并且该机制可以被扩展，jekyll便扩展�
 
 填写完成后点击“Continue”，在接下来的页面中选择Universal Code，然后根据提示完成接下来的操作，后面的操作就十分简单了：主要就是把产生的脚本文件复制到你的站点页面中即可。
 
-DISQUS还有一个Dashboard，可以用来管理评论，这里就不再详述了。最后的效果就是本blog文章下方的评论咯，还是挺好看的，如果您觉得文章对您有帮助也可以留下您的意见哦～呵呵
-
+DISQUS还有一个Dashboard，可以用来管理评论，这里就不再详述了。最后的效果就是本blog文章下方的评论咯，还是挺好看的，国内的还有个多说的评论引擎，支持国内的各大网站帐号。
+-------------------------------
  
 
 ###站内搜索
@@ -672,19 +708,19 @@ sitemap是网站所有链接的集合，最简单的sitemap可以是一个文本
 完成站点认证和sitemap测试后，我们回到自定义搜索的页面，进入到control panel->Indexing，在其中使用sitemap来迫使google索引你的网站。这样，你的网站就算被google收录了。
 
 至于我们的站内搜索应该是可以用的了，试试本站点上方的搜索就知道啦～
-
+----------------------------
  
 
 ###站点统计
 
 这里介绍的站点统计是google的analytics，analytics的使用十分简单，同样的原理，利用注入脚本来实现流量统计的外挂，统计功能十分强大，谁用谁知道。这里就不再唠叨了。。
-
+----------------------------------
 ### GoDaddy & DNSPod
-
+---------------------------------
 [GoDaddy][]是一家非常不错的域名注册商，良好的用户体验，飞快的生效速度，给力的优惠码，也支持支付宝，永远不用担心国内那些流氓厂商的流氓行为，注册了域名，就可以放心不会被别人抢走。在Godaddy注册域名是一件很简单的事情，按照提示走就完全没有问题，唯一需要动脑筋的可能是，你要想一个既有个人标识，又没有被别人注册的域名了，我觉得我的[LippiOuYang][]还是不错的，呵呵。
 
 Godaddy一切都很完美，直到遇到了GFW，原因你肯定懂。前段时间推上风传Godaddy的DNS服务器被墙，导致域名不能解析，看起来好像自己的站被墙了一样，这个确实是个闹心的事情，还好国内有DNS服务的替代产品，而且做得还非常的不错，也是免费的，功能强大，速度快，不用担心被和谐，所以隆重推荐[DNSPod][]给大家，可以试用一下，把DNS服务迁移到DNSPod来，解决后顾之忧，配置比较简单，不懂的可以等我后面的博客啦，哈。
-
+---------------------------------------
 ### GitHub & Jekyll
 
 [GitHub][]是一个非常优秀的产品，爆发式的增长，各大优质开源软件的蜂涌而至，只能说明人们太需要他了。**Social Coding**是他的Slogan，产品的设计确实解决了很多代码交流的难题，让世界更平，让交流更畅，关于Git的学习，大家可以移步这里[Pro Git中文版][7]，这也是一个本身就在Github维护的一个项目，高质量的翻译了Git入门书，讲解详细，是学习Git的好资料。
@@ -698,15 +734,87 @@ GitHub是一个伟大的产品，[GitHub Pages][]是他伟大的一部分，GitH
 <li>博客静态化，速度快</li>
 - [Jekyll][]是完美的 
 
-### Disqus
 
-[Jekyll][]都很不错，但是可能有些童鞋会不满意于他不提供评论功能，这个时候，[Disqus][]的出现就显得是雪中送炭了。
 
-Disqus是一个社会化的评论解决方案，请允许我使用这个烂透了的词，调用它的接口非常简单，在自己的页面加载他的一段JS代码即可，如果别人注册了Disqus，那么就可以方便的留言，交流，一处登录，处处方便，而且Disqus也提供了一些spam等策略，不用自己操心了，并且可以和一些现有的博客系统很好的转换对接。越来越多的网站开始使用Disqus的服务了，这是一个非常不错的趋势，Jekyll配合[Disqus][]实在是完美了。我别无所求了。
 
 ------------------------------
 
-写到这里，基本的点已经介绍完毕，看看Jekyll生成的博客页面，我心满意足，虽然文笔很烂，语句多不通顺，但是这是一个新的开始了，我觉得心灵都纯洁了不少，这不是发一条微博什么能带来的快乐。
+写到这里，基本的点已经介绍完毕，现在介绍下怎么获取别人的博客模板来建立自己的博客。
+<h2 id="section">获取并修改别人的博客</h2>
+
+<p>Jekyll官方建立了一个<a href="https://github.com/mojombo/jekyll/wiki/sites">页面</a>，里面有许多的模板可供参考。接下来我们就要奉行“拿来主义”了，将别人的模板为我们所用。</p>
+
+<p>我自己用了Yukang’s Page</a>，他采用了一个叫做<a href="http://themes.jekyllbootstrap.com/preview/twitter/">twitter</a>的Jekyll Bootstrap的模板。下面假设你已经安装了git，我们把他人的网站代码clone下来，为了举例方便，还是选取了Yukang’s Page：</p>
+
+<pre><code>git clone https://github.com/chenyukang/chenyukang.github.com.git
+</code></pre>
+
+<p>然后删去别人的.git文件夹：</p>
+
+<pre><code>rm -rf .git
+</code></pre>
+
+<p>接着，我们参考<a href="http://jekyllrb.com/docs/structure/">jekyll的文件目录</a>，可以把他人的博客删去，并且做一些小的调整。接下来，我们把改头换面的博客上传到自己的GitHub帐号中去。一般情况下，假设你的帐号名是USERNAME，你需要建一个名为USERNAME.github.io的帐号，分支为master。这样，在你将本地的网站push上去之后，不到10分钟，访问USERNAME.github.io，就可以看到你新鲜出炉的网站了：</p>
+
+<pre><code>git init
+git add -A
+git commit -m "first commit"
+git remote add origin https://github.com/USERNAME/USERNAME.github.io.git
+git push -u origin master
+</code></pre>
+
+<p>Git博大精深，我还没有熟练掌握。具体的命令可以参考下面一些参考资料：</p>
+
+<ul>
+  <li>
+    <p>入门：<a href="http://rogerdudler.github.io/git-guide/index.zh.html">git - 简易指南</a></p>
+  </li>
+  <li>
+    <p>进阶：<a href="http://think-like-a-git.net/epic.html">Think Like (a) Git</a></p>
+  </li>
+  <li>
+    <p>参考图解：<a href="http://marklodato.github.io/visual-git-guide/index-en.html">A Visual Git Reference</a></p>
+  </li>
+</ul>
+
+<p>如果你想要在push之前就在本地预览一下网站，可以使用
+<code>jekyll serve --watch</code>
+命令。默认设置下，可以在浏览器中访问localhost:4000预览。详细情况请<a href="http://jekyllrb.com/docs/usage/">点击这里</a>。</p>
+
+<p>那么，我们如何撰写新的博客呢？下面，我们隆重推出Markdown。</p>
+
+<h2 id="markdown">Markdown语法</h2>
+
+<p>根据<a href="http://zh.wikipedia.org/zh-cn/Markdown">维基百科上的介绍</a></p>
+
+<blockquote>
+  <p>Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）和亚伦·斯沃茨（Aaron Swartz）。</p>
+</blockquote>
+
+<p>想到<a href="http://zh.wikipedia.org/wiki/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8">Aaron Swartz</a>已经故去，不禁一阵伤感。</p>
+
+<p>Markdown的介绍有许多，个人推荐：</p>
+
+<ul>
+  <li>
+    <p>入门：<a href="http://jianshu.io/p/q81RER">献给写作者的 Markdown 新手指南</a></p>
+  </li>
+  <li>
+    <p>另一份入门文档：<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
+  </li>
+  <li>
+    <p>进阶：<a href="http://wowubuntu.com/markdown/">Markdown 语法说明 (简体中文版) </a></p>
+  </li>
+  <li>
+    <p>kramdown使用心得：<a href="http://mindspill.net/computing/web-development-notes/kramdown-notes/">Kramdown notes</a></p>
+  </li>
+</ul>
+
+<p>备注：如何在Markdown中写注释呢？<a href="https://twitter.com/denialduan/status/180532937358454784">这里</a>提供了最原始的一种解决方法：</p>
+
+<blockquote>
+  <p>看来在Markdown文件里写注释的唯一方法就是用&lt;!– –&gt;了，好吧。</p>
+</blockquote>
 
 [GoDaddy]:  http://godaddy.com  "Godaddy"
 [GitHub]: http://github.com "Github:social coding"
