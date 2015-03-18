@@ -73,7 +73,7 @@
           {{ site.about }}
         </p> -->
 <p>
-<a href="http://www.coolshell.info" title={{ site.title }}><img src="http://www.coolshell.info/images/logo.png" width="160" height="60" style="display:inline-block;vertical-align:middle"></a><br/>
+<a href="http://www.coolshell.info" title={{ site.title }}><img src="http://www.coolshell.info/images/logo.png" width="260" height="60" style="display:inline-block;vertical-align:middle"></a><br/>
 </p>
 <p class="about text-justify">
           {{ site.about }}
