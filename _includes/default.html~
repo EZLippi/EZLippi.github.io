@@ -71,7 +71,9 @@
 	<!--<p class="about text-justify">
           {{ site.about }}
         </p> -->
-
+<p>
+<a href="http://www.coolshell.info" title={{ site.title }}><img src="http://www.zhihu.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
+</p>
         <nav>
 	<h3>导航</h3>
           <ul>
