@@ -39,7 +39,7 @@
   </head>
   <body>
 
-    
+    <div class="wrapper">
 <!--
       <header class="main">
 
@@ -60,7 +60,7 @@
       <section class="main" id="container">
 		<!--^frag-->{{ content }}<!--$frag -->
       </section>
- 
+  </div>
       <aside>
         <nav>
 	<h3>导航</h3>
@@ -108,7 +108,7 @@
 			Themed with <a href="http://github.com/orderedlist/minimal/">minimal</a>.
 		</small></p>
       </footer>
-     
+   
     <script src="{{ site.JB.ASSET_PATH }}/js/scale.fix.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>

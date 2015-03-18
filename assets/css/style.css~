@@ -35,7 +35,7 @@ a small {
 }
 a:hover small { color: #777 }
 .wrapper {
-    width: 860px;
+    width: 360px;
     margin: 0 auto;
 }
 blockquote {
@@ -266,7 +266,7 @@ hr {
     margin: 0 0 20px;
 }
 footer.main {
-    width: 270px;
+    width: 170px;
     float: left;
     position: fixed;
     bottom: 50px;
