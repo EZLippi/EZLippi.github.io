@@ -700,7 +700,7 @@ input.span4, textarea.span4, select.span4 {
 input.span5, textarea.span5, select.span5 {
   display: inline-block;
   float: none;
-  width: 270px;
+  width: 170px;
   margin-left: 0; }
 input.span6, textarea.span6, select.span6 {
   display: inline-block;

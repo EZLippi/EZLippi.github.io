@@ -273,7 +273,7 @@ footer.main {
     text-align: right;
 }
 aside {
-    width: 170px;
+    width: 270px;
     float: left;
     position: fixed;
     bottom: 115px;
