@@ -73,7 +73,7 @@ dt {
 th { color: #444 }
 img { max-width: 100% }
 header.main {
-    width: 270px;
+    width: 170px;
     float: left;
     position: fixed;
 }
