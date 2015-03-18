@@ -35,7 +35,7 @@ a small {
 }
 a:hover small { color: #777 }
 .wrapper {
-    width: 860px;
+    width: 360px;
     margin: 0 auto;
 }
 blockquote {
@@ -195,8 +195,8 @@ header.main h1 a {
 }
 header.main h1 a:link { color: inherit }
 section.main {
-    width: 500px;
-    float: right;
+    width: 600px;
+    float: left;
     padding-bottom: 50px;
 }
 section.main .jumbotron {
@@ -273,7 +273,7 @@ footer.main {
     text-align: right;
 }
 aside {
-    width: 270px;
+    width: 170px;
     float: left;
     position: fixed;
     bottom: 115px;
