@@ -60,7 +60,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 **2、备份和移除原来的ssh key设置：**
 
 因为已经存在key文件，所以需要备份旧的数据并删除：
-    {% highlight java%}
+    {% highlight Bash shell scripts%}
     $ ls
     config  id_rsa  id_rsa.pub  known_hosts
     $ mkdir key_backup
@@ -71,15 +71,19 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 
 输入下面的代码，就可以生成新的key文件，我们只需要默认设置就好，所以当需要输入文件名的时候，回车就好。
 
+    {% highlight Bash shell scripts%}
     $ ssh-keygen -t rsa -C "邮件地址@youremail.com"
     Generating public/private rsa key pair.
     Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):<回车就好>
 
+    {% endhighlight %}
 然后系统会要你输入加密串（Passphrase）：
 
+    {% highlight Bash shell scripts%}
     Enter passphrase (empty for no passphrase):<输入加密串>
     Enter same passphrase again:<再次输入加密串>
 
+    {% endhighlight %}
 最后看到这样的界面，就成功设置ssh key了： ssh key success
 
 **4、添加SSH Key到GitHub：**
@@ -99,27 +103,35 @@ PS：如果需要配置多个GitHub账号，可以参看这个多个github帐号
 
 可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：
 
+    {% highlight Bash shell scripts%}
   ` $ ssh -T git@github.com`
 
+    {% endhighlight %}
 如果是下面的反应：
 
+    {% highlight Bash shell scripts%}
     The authenticity of host 'github.com (207.97.227.239)' can't be established.
     RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
     Are you sure you want to continue connecting (yes/no)?
 
+    {% endhighlight %}
 不要紧张，输入yes就好，然后会看到：
 
+    {% highlight Bash shell scripts%}
     Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.
 
+    {% endhighlight %}
 **6、设置你的账号信息**
 
 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。
 
 Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。
 
+    {% highlight Bash shell scripts%}
     $ git config --global user.name "你的名字"
     $ git config --global user.email "your_email@youremail.com"
 
+    {% endhighlight %}
 设置GitHub的token
 
 2012-4-28补充：新版的接口已经不需要配置token了，所以下面这段可以跳过了
@@ -132,9 +144,11 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 然后在你的命令行中，输入下面的命令，把token添加进去：
 
+    {% highlight Bash shell scripts%}
     $ git config --global user.name "你的名字"
     $ git config --global user.token 0123456789your123456789token
 
+    {% endhighlight %}
 如果你改了GitHub的密码，需要重新设置token。
 
 成功了
@@ -176,15 +190,19 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 	
 
+    {% highlight Bash shell scripts%}
     $git init
 
+    {% endhighlight %}
 该命令实际上是在该目录下初始化一个本地的仓库，会在目录下新建一个.git的隐藏文件夹，可以看成是一个仓库数据库。
 
 创建一个没有父节点的分支gh-pages，并自动切换到这个分支上。
 
     	
+    {% highlight Bash shell scripts%}
     $git checkout --orphan gh-pages
 
+    {% endhighlight %}
 在Git中，分支(branch)的概念非常重要，Git之所以强大，很大程度上就是因为它强大的分支体系。这里的分支名字必须是gh-pages，因为github规定，只有该分支中的页面，才会生成网页文件。
 
 在该目录下手动创建如下文件和文件夹，最终形成这样的结构：
@@ -223,11 +241,13 @@ default.html
 
 再次打开Git Bash，先后输入如下命令：
 
+    {% highlight Bash shell scripts%}
     $ git add .
     $ git commit -m "first post"
     $ git remote add origin https://github.com/username/projectName.git
     $ git push origin gh-pages
 
+    {% endhighlight %}
 据网友反应，如果是初次安装git的话，在commit的时候会提示需要配置username和email，请读者注意根据提示配置一下，至于username和email可以随便填
 
 - 将当前的改动暂存在本地仓库
@@ -287,10 +307,14 @@ colshell.info  204.232.175.78（注意：这个IP难保不会变，所以要及�
 
 可以先ping一下coolshell.info，如果返回的IP地址更配置的A记录一样的话，说明域名已经注册好了，就等GitHub生效了。不过别急，你还需要把_config.yml中的baseurl设置如下
 
+    {% highlight Bash shell scripts%}
 	baseurl : /
+    {% endhighlight %}
 或者是
 
+    {% highlight Bash shell scripts%}
 	baseurl :
+    {% endhighlight %}
 这取决于你的模板如何引用baseurl，总之指向根目录就好了。
 
 刚开始的时候我比较困惑的是，为什么A记录都指向的是同一个IP，GitHub是如何知道应该返回哪个用户的页面的。其实很简单，秘密就是上面提到的CNAME文件，GitHub应该会缓存所有gh-pages分支中的CNAME文件，用户对域名的请求被定向到GitHub住服务器的IP地址后，再根据用户请求的域名，判断对应哪个gh-pages，而且它会自动带上项目名，所以baseurl需要改为根目录。
@@ -337,10 +361,13 @@ windows的安装还是一如既往的“无脑”，不多说了。
 
 解压完成之后，用cmd进入到刚才解压的目录下，运行下面命令，该命令会生成config.yml。（这种安装方式让我想起了，linux下安装三步走`config->make->make install中的config`）
 
+    {% highlight Bash shell scripts%}
     $ruby dk.rb init
+    {% endhighlight %}
 
 config.yml文件实际上是检测系统安装的ruby的位置并记录在这个文件中，以便稍后使用。但上面的命令只针对使用rubyinstall安装的ruby有效，如果是其他方式安装的话，需要手动修改config.yml。我生成的config.yml文件内容如下：（注意路径用的是linux的斜杠方向）
 
+    {% highlight Bash shell scripts%}
     # This configuration file contains the absolute path locations of all
     # installed Rubies to be enhanced to work with the DevKit. This config
     # file is generated by the 'ruby dk.rb init' step and may be modified
@@ -356,14 +383,19 @@ config.yml文件实际上是检测系统安装的ruby的位置并记录在这个
     #
     ---
     - C:/Ruby193
+    {% endhighlight %}
 
 最后，执行如下命令，执行安装：
 
+    {% highlight Bash shell scripts%}
     $ruby setup.rb
+    {% endhighlight %}
 
 如果没有setup.rb的话，执行：
 
+    {% highlight Bash shell scripts%}
 	$ruby dk.rb install
+    {% endhighlight %}
 
  
 
@@ -375,7 +407,9 @@ gems下载地址：[http://rubyforge.org/frs/?group_id=126](http://rubyforge.org
 
 解压后，用cmd进入到解压后的目录，执行命令即可：
 
+    {% highlight Bash shell scripts%}
     $ruby setup.rb
+    {% endhighlight %}
 
 就像yum仓库一样，仓库本身有很多，如果希望加快应用程序的下载速度，特别绕过“天朝”的网络管理制度，可以选择国内的仓库镜像，taobao有一个：[http://ruby.taobao.org/](http://ruby.taobao.org/)。配置方法这个链接里面很完全。
 
@@ -384,11 +418,16 @@ gems下载地址：[http://rubyforge.org/frs/?group_id=126](http://rubyforge.org
 ###安装jekyll
 
 有了上面的基础，安装jekyll就十分轻松了，在此之前，建议国内用户换成淘宝服务器，速度更快：
+
+    {% highlight Bash shell scripts%}
     $ sudo gem sources --remove http://rubygems.org/
     $ sudo gem sources -a http://ruby.taobao.org/
+    {% endhighlight %}
 执行下面gem命令即可全自动搞定：
 
+    {% highlight Bash shell scripts%}
 	$gem install jekyll
+    {% endhighlight %}
 jekyll依赖的组件如下：
 
 - directory_watcher
@@ -401,7 +440,9 @@ jekyll依赖的组件如下：
 
 安装好之后就可以测试我们的环境了。用cmd进入到上一节我们创建的目录，执行下面命令：
 
+    {% highlight Bash shell scripts%}
     $jekyll --server --safe
+    {% endhighlight %}
 
 ![](/images/images/githubpages/build-github-blog-page-04-img0.png)
 
@@ -562,6 +603,7 @@ liquid包含两种标记，理解他们的机理是十分重要的：
 `{ % … %}`：操作标记，通常包含控制流代码
 例如：
 
+    {% highlight Bash shell scripts%}
      {% if user.age > 18 %}
        Login here
      {% else %}
@@ -571,14 +613,17 @@ liquid包含两种标记，理解他们的机理是十分重要的：
      {% for item in array %}
      {{item }}
      {% endfor %}
+    {% endhighlight %}
 
 另外liquid还包含一种叫filter的机制。这是种对输出标记的扩展，通过它可以对输出标记中的内容进行更细致的处理，例如：
 
  
 
+    {% highlight Bash shell scripts%}
     Hello {{'tobi' | upcase }}
      Hello tobi has {{'tobi' | size }} letters!
      Hello {{'now' | date: "%Y %h" }}
+    {% endhighlight %}
 
 返回字符串大写的结果：TOBI
 返回字符串的长度：4
@@ -635,8 +680,8 @@ Ubtuntu下：sudo apt-get install python-pygments
 ###设置代码高亮的样式
 
 通过下面的命令可以查看当前支持的样式
->>> from pygments.styles import STYLE_MAP
->>> STYLE_MAP.keys()
+	from pygments.styles import STYLE_MAP
+	STYLE_MAP.keys()
 输出：
     ['monokai', 'manni', 'rrt', 'perldoc', 'borland', 'colorful', 'default', 'murphy', 'vs', 'trac', 'tango', 'fruity', 'autumn', 'bw', 'emacs', 'vim', 'pastie', 'friendly', 'native']  
 ###生成指定样式的css文件
@@ -649,14 +694,14 @@ Ubtuntu下：sudo apt-get install python-pygments
 
     // 引入如下代码
     <link href='/css/pygments.css' rel="stylesheet" media="all">
-在文章中高亮代码：
-    {% highlight java %} 
+在文章中高亮代码:
+	{% highlight java %}
     public class HelloWorld { 
     public static void main(String args[]) { 
         System.out.println("Hello World!"); 
     } 
     } 
-    {% endhighlight %}    
+	{% endhighlight %}  
 
 
 ###评论功能
