@@ -475,7 +475,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         # Application classes that will be serialized/deserialized over Gson
         -keep class com.google.gson.examples.android.model.** { *; }
 
-    {% endhighlight %}
+    {% endhighlight %} 
 
 -------------------------------
 
