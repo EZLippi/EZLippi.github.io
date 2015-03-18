@@ -57,7 +57,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
     <img src="http://static.wumii.cn/images/pixel.png" alt="无觅相关文章插件，快速提升流量" style="border:0;padding:0;margin:0;" />
 </a>    
     <hr>
-    <!-- Duoshuo Comment BEGIN -->
+    <!-- Duoshuo Comment BEGIN 
     <div id="comments" class="ds-thread"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"coolshell"};
