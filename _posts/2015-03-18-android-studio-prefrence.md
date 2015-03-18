@@ -240,7 +240,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
      <meta-data
     android:name="UMENG_CHANNEL"
     android:value="${UMENG_CHANNEL_VALUE}" />
-      {{% endhighlight %}}
+      {% endhighlight %}
 *   第二步 在build.gradle  设置productFlavors
     {% highlight Ruby %}
     android {  
