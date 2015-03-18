@@ -276,7 +276,7 @@ aside {
     width: 270px;
     float: left;
     position: fixed;
-    bottom: 25px;
+    bottom: 100px;
     text-align: right;
 }
 aside ul {
