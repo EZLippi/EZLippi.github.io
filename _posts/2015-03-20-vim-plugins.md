@@ -212,14 +212,14 @@ category:   other
 使用surround，你将很容易添加和修改配对符号，比如：
 
         {% highlight Vim Script%}
-     Old text                  Command     New text ~
-      "Hello *world!"           ds"         Hello world!
-      [123+4*56]/2              cs])        (123+456)/2
-      "Look ma, I'm *HTML!"     cs"<q>      <q>Look ma, I'm HTML!</q>
-      if *x>3 {                 ysW(        if ( x>3 ) {
-      my $str = *whee!;         vlllls'     my $str = 'whee!';
-      <div>Yo!*</div>           dst         Yo!
-      <div>Yo!*</div>           cst<p>      <p>Yo!</p>
+	     Old text                  Command		 New text ~
+      "Hello *world!"				 ds"         Hello world!
+      [123+4*56]/2					cs])        (123+456)/2
+      "Look ma, I'm *HTML!"			cs"<q>      <q>Look ma, I'm HTML!</q>
+      if *x>3 {						ysW(        if ( x>3 ) {
+      my $str = *whee!;				vlllls'     my $str = 'whee!';
+      <div>Yo!*</div>				dst         Yo!
+      <div>Yo!*</div>				cst<p>      <p>Yo!</p>
           {% endhighlight %}
           
 上面*代表当前光标位置，添加替换时使用后半括号)]}，添加的括号和内容间就没有空格（如第2个示例），反之会在内容前后添加一个空格（如第4个实例）。第6个示例中的t代表一对HTML或者xml tag。其他表示范围的符号：w代表word, W代表WORD(被空格分开的连续的字符窜），p代表paragraph。
@@ -289,7 +289,7 @@ fugitive.vim插件是由Tim Pope创建的VIM插件。该插件与命令行git工
 
         {% highlight Vim Script%}
 
-        git	             fugitive	      action
+      git	             fugitive	      action
     :Git add %	        :Gwrite  	     Stage the current file to the index
     :Git checkout %	    :Gread	         Revert current file to last checked in version
     :Git rm %	        :Gremove	     Delete the current file and the corresponding Vim buffer
