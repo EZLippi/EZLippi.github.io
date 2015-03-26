@@ -199,6 +199,13 @@ WenQuanYi Zen Hei,文泉驛正黑,文泉驿正黑:style=Regular
 <p>在 /usr/local/texlive/2014/texmf.cnf 文件中设置 OSFONTDIR 变量，即添加如下信息：
     自己为pdflatex设置的OSFONTDIR变量指向中文字体文件
     OSFONTDIR=/usr/share/fonts/winfonts
+
+####使用中文写论文
+
+新建一个.tex文件，在文件里面添加下面两句就能正常显示中文了：
+	\usepackage{xeCJK}
+	\setCJKmainfont{STSong}
+	
 <h2>LaTeX 学习文档下载：</h2>
 [http://download.csdn.net/detail/longerzone/4703133](http://download.csdn.net/detail/longerzone/4703133)
 
