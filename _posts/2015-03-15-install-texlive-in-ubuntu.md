@@ -244,5 +244,5 @@ INFOPATH=/usr/local/texlive/2014/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 <h2>解决方法二</h2>
 
 <p>若命令行下打开文件乱码，可考虑新建用户并登录，然后以 root 权限修改之前用户的配置文件，关于如何新建用户此处不再赘述。</p>
-
-
+ 
+  
