@@ -200,7 +200,7 @@ WenQuanYi Zen Hei,文泉驛正黑,文泉驿正黑:style=Regular
     自己为pdflatex设置的OSFONTDIR变量指向中文字体文件
     OSFONTDIR=/usr/share/fonts/winfonts
 
-####使用中文写论文
+	<h4>论文中正常显示中文</h4>
 
 新建一个.tex文件，在文件里面添加下面两句就能正常显示中文了：
 	\usepackage{xeCJK}
