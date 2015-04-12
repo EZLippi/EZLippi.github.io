@@ -1,10 +1,11 @@
 ---
-layout:     post
-title:      优化java代码建议(1)
-keywords:   java
-tags:       java
-category：   java
-date:   2015-04-12 21:30:05
+title: 优化java代码建议(1)
+date: 2015-04-12 21:05:13 +0800
+layout: post
+categories:
+  - java
+tags:
+  - java
 ---
 
 假设你要统计一个地区的人口平均年龄，你可能写出下面这段代码：
