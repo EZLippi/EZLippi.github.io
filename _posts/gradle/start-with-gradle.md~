@@ -1,0 +1,122 @@
+ADLE_HOME 环境变量并将 GRADLE_HOME/bin 加到 PATH 环境变量中，安装就完成了。用户可以运行<strong>gradle -v</strong>命令验证安装，这些初始的步骤和Maven没什么两样。Gradle目前的版本是1.0-milestone-1，根据<a href="http://wiki.gradle.org/display/GRADLE/Roadmap">其Wiki上的Roadmap</a>，在1.0正式版发布之前，还至少会有3个里程碑版本，而1.0的发布日期最快也不会早于6月份。而正是这样一个看起来似乎还不怎么成熟的项目，却有着<a href="http://gradle.org/documentation.html">让很多成熟项目都汗颜的文档</a>，其包括了安装指南、基本教程、以及一份近300页的全面用户指南。这对于用户来说是非常友好的，同时也说明了Gradle的开发者对这个项目非常有信心，要知道编写并维护文档可不是件轻松的工作，对于Gradle这样未来仍可能发生很大变动的项目来说尤为如此。</p>
+
+<p>类似于Maven的<code>pom.xml</code>文件，每个Gradle项目都需要有一个对应的<code>build.gradle</code>文件，该文件定义一些任务（task）来完成构建工作，当然，每个任务是可配置的，任务之间也可以依赖，用户亦能配置缺省任务，就像这样：</p>
+
+<pre>
+
+defaultTasks 'taskB'
+
+
+
+task taskA &lt;&lt; {
+
+	    println &quot;i'm task A&quot;
+
+}
+
+
+
+task taskB &lt;&lt; {
+
+	    println &quot;i'm task B, and I depend on &quot; + taskA.name
+
+}
+
+
+
+taskB.dependsOn taskA
+
+</pre>
+
+<p>运行命令<strong>$ gradle -q</strong>之后（参数q让Gradle不要打印错误之外的日志），就能看到如下的预期输出：</p>
+
+<pre>
+
+i'm task A
+
+i'm task B, and I depend on taskA
+
+</pre>
+
+<p>这不是和Ant如出一辙么？的确是这样，这种&ldquo;任务&rdquo;的概念与用法与Ant及其相似。Ant任务是Gradle世界的第一公民，Gradle对Ant做了很好的集成。除此之外，由于Gradle使用的Grovvy脚本较XML更为灵活，因此，即使我自己不是Ant用户，我也仍然觉得Ant用户会喜欢上Gradle。</p>
+
+<h2>依赖管理和集成Maven仓库</h2>
+
+<p>我们知道依赖管理、仓库、约定优于配置等概念是Maven的核心内容，抛开其实现是否最优不谈，概念本身没什么问题，并且已经被广泛学习和接受。那Gradle实现了这些优秀概念了么？答案是肯定的。</p>
+
+<p>先看依赖管理，我有一个简单的项目依赖于一些第三方类库包括SpringFramework、JUnit、Kaptcha等等。原来的Maven POM配置大概是这样的（篇幅关系，省略了部分父POM配置）：</p>
+
+<pre>
+
+    &lt;properties&gt;
+
+	        &lt;kaptcha.version&gt;2.3&lt;/kaptcha.version&gt;
+
+			    &lt;/properties&gt;
+
+
+
+				    &lt;dependencies&gt;
+
+					        &lt;dependency&gt;
+
+							            &lt;groupId&gt;com.google.code.kaptcha&lt;/groupId&gt;
+
+										            &lt;artifactId&gt;kaptcha&lt;/artifactId&gt;
+
+													            &lt;version&gt;${kaptcha.version}&lt;/version&gt;
+
+																            &lt;classifier&gt;jdk15&lt;/classifier&gt;
+
+																			        &lt;/dependency&gt;
+
+																					        &lt;dependency&gt;
+
+																							            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+
+																										            &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+
+																													        &lt;/dependency&gt;
+
+																															        &lt;dependency&gt;
+
+																																	            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+
+																																				            &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;
+
+																																							        &lt;/dependency&gt;
+
+																																									        &lt;dependency&gt;
+
+																																											            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+
+																																														            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+
+																																																	        &lt;/dependency&gt;
+
+																																																			        &lt;dependency&gt;
+
+																																																					            &lt;groupId&gt;junit&lt;/groupId&gt;
+
+																																																								            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+
+																																																											        &lt;/dependency&gt;
+
+																																																													    &lt;/dependencies&gt;</pre>
+
+																																																														<p>然后我将其转换成Gradle脚本，结果是惊人的：</p>
+
+																																																														<pre>
+
+																																																														dependencies {
+
+																																																															    compile('org.springframework:spring-core:2.5.6')
+
+																																																																	    compile('org.springframework:spring-beans:2.5.6')
+
+																																																																		    compile('org.springframework:spring-context:2.5.6')
+
+
+																																																														}
+}
+}
