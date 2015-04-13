@@ -38,8 +38,7 @@ date:   2015-04-13 15:32:05 +800
 ---
 ### 贡献者列表
 
-成员 | 联系方式  | Github
-:------|:------|:------
+
 LippiOuYang  | ouyanglip@gmail.com | [Github](https://github.com/LippiOuYang)
 
 
