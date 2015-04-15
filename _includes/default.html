@@ -58,10 +58,25 @@
           {{ site.about }}
         </p> 
 -->
+ <ul>
+          <li class="search"><script>
+  (function() {
+    var cx = '015104026998727815951:bza74imjgds';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search></li>
+        </ul> 
 <nav>
 	<h3>最近文章</h3>
           <ul>
-      		{% for post in site.posts limit:10 %}
+      		{% for post in site.posts limit:8 %}
 	<li><h5><a href="{{ post.url }}">{{ post.title }}</a> </li>
 	{% endfor %}
           </ul>
@@ -70,11 +85,13 @@
 	<h3>热门文章</h3>
           <ul>
       	<li><a href="/blog/2015/03/github-pages-blog.html">利用Github-pages建立个人博客</li>	
-<li><a href="/blog/2015/04/gradle-in-action-cn.html">Gradle实战中文版</li>
+<li><a href="/blog/2014/07/qualified-programmer-should-read-what-books.html">一个合格的程序员应该读过哪些书</li>
 <li><a href="/blog/2014/12/c-open-project.html">值得推荐的C/C++框架和库</li>
 <li><a href="/blog/2014/12/c-code-opt.html">C代码优化小贴士</li>	
 <li><a href="/blog/2014/06/26-methods-to-improve-java-performance.html">Java编程Tips</li>	
-<li><a href="/blog/2015/04/gradle-in-action-cn.html">Gradle实战中文版</li>	 
+<li><a href="/blog/2015/04/gradle-in-action-cn.html">Gradle实战中文版</li>
+<li><a href="/blog/2014/10/android-opensource.html">值得推荐的android开源框架</li>	 
+<li><a href="/blog/2014/11/how-to-evaluate-the-hackers-and-painters.html">如何评价『黑客与画家</li>	
 	 
           </ul>
         </nav>
@@ -101,28 +118,15 @@
 
 <!--         	<div class="media-grid"><a class="various fancybox.iframe" href="http://map.naver.com/index.nhn?dlevel=11&lat=37.5711873&lng=126.9823252&query=&menu=location&searchCoord=&tab=1&pinId=30858388&pinType=site&pinTitle=7Jyg7Iqk7ZKA7Yyo65%2Bs64uk7J6E&mapMode=0&enc=b64"><img src="http://prt.map.naver.com/mashupmap/print?key=p1345437335473_983733216" width="270" height="160" alt="地图" title="地图" border="0" style="vertical-align:top;"/></a></div> -->
 
-      <ul>
-          <li class="search"><script>
-  (function() {
-    var cx = '015104026998727815951:bza74imjgds';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox-only resultsUrl="/search.html"></gcse:searchbox-only></li>
-        </ul> 
+     
         </p>
       </aside>
       <footer class="main">
 	<!--  <h3>Misc...</h3>  -->
         <p><small>
-			Powered by <a href="http://pages.github.com/">GitHub Pages</a>.
-			Themed with <a href="http://github.com/orderedlist/minimal/">minimal</a>.
+			Powered by <a href="http://pages.github.com/">GitHub Pages</a></small></p>
+
+			<p><small> Themed with <a href="http://github.com/orderedlist/minimal/">minimal
 		</small></p>
       </footer>
    
