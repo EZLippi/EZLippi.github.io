@@ -14,6 +14,15 @@ sitemap:
 ---
 
 
+<ul class="nav nav-pills nav-justifiedx">
+    <li><a href="/">主页</a></li>
+      		<li><a href="/archive.html">归档</a></li>
+      		<li><a href="/tags.html">标签</a></li>
+      		<li><a href="/categories.html">分类</a></li>
+		<li><a href="/about.html">关于我</a></li>
+
+</ul>
+
 
 ## 个人简介：
 
@@ -37,6 +46,6 @@ sitemap:
 * 折腾开始于2014年6月1日，基本在2014年6月15日完工。
 
 ## 其他流言
-> * 未**女昏**人士；
-> * 阿森纳球迷；
-> * 实况足球忠实粉丝；
+* 未**女昏**人士；
+* 阿森纳球迷；
+* 实况足球忠实粉丝；
