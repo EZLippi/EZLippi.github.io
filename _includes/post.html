@@ -20,6 +20,15 @@ var _hmt = _hmt || [];
 
 	</header>
 
+<aside>
+ <nav>
+	<h3>最近文章</h3>
+          <ul>
+      		{% for post in site.posts limit:15 %}
+	<li> {post.title} </li>
+          </ul>
+        </nav>
+</aside>
 	{{ content }}
 	<p>分享到：</p>
 	<p>
