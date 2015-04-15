@@ -7,6 +7,8 @@ description: LaTeX 是由美国计算机学家Lamport博士于1985年开发成�
 tags : [编程, 学习]
 ---
 
+*  目录
+{:toc}
 
 <p><strong>LaTex简介?</strong>
 <p>1、LaTeX 是由美国计算机学家Lamport博士于1985年开发成功的。</p>

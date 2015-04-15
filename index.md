@@ -13,4 +13,7 @@ jumbotron__:
     <li class=""><a href="/archive.html">Archive | 归档</a></li>
     <li class=""><a href="/categories.html">Categories | 分类</a></li>
 </ul>
-{% include articles.html %}
+ {% include articles.html %} 
+
+ 
+

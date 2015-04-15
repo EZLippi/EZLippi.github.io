@@ -11,6 +11,27 @@ jumbotron__:
 <ul class="nav nav-pills nav-justifiedx">
     <li class="active"><a href="/">Home | 首页</a></li>
     <li class=""><a href="/archive.html">Archive | 归档</a></li>
-    <li class=""><a href="/about.html">About | 关于</a></li>
+    <li class=""><a href="/categories.html">Categories | 分类</a></li>
 </ul>
-{% include articles.html %}
+<!-- {% include articles.html %} -->
+
+{% for post in paginator.posts %}
+    <a href="{{ post.url }}">{{ post.title }}</a>
+{% endfor %}
+
+{% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"上一页</a>
+{% endif %}
+{% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="active">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+{% endfor %}
+
+{% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+{% endif %}

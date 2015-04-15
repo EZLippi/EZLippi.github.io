@@ -8,6 +8,16 @@
 			{{ page.date | date: "%Y年%-m月%-d日 %H时%M分%S秒" }}</time>
      <!-- <a href="https://plus.google.com/{{ site.author.googleplus }}?rel=author">{{ site.author.name }}</a> -->
     </p>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?085fc257cb1e774f7764a2cf527c393d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 	</header>
 
 	{{ content }}
@@ -37,10 +47,7 @@
 	</footer>
 
 	{% include disqus.html %}
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F085fc257cb1e774f7764a2cf527c393d' type='text/javascript'%3E%3C/script%3E"));
-</script>
+
 
    
     <script type="text/javascript" id="wumiiRelatedItems"></script>

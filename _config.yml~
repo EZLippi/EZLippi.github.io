@@ -10,6 +10,9 @@ lsi: false
 timezone: Asia/Shanghai
 safe: false
 
+paginate: 15
+paginate_path: "page:num"
+
 JB :
   ASSET_PATH : http://coolshell.info/assets
   IMAGE_PATH : http://coolshell.info/images

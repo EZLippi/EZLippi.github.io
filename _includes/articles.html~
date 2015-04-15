@@ -4,7 +4,7 @@
 </div>
 
 <ul class="posts list-unstyled">
-  {% for post in site.posts limit:25 %}
+  {% for post in paginator.posts %}
     <!-- <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li> -->
     {% if forloop.index == 1 %}
     <li>
@@ -39,4 +39,20 @@
   {% endfor %}
 </ul>
 
+{% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"上一页</a>
+{% endif %}
+{% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="active">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+{% endfor %}
+
+{% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+{% endif %}
 <div class="homepage-archive"><a href="/archive.html" class="btn btn-default btn-sm">More @ THE <strong>Archive</strong> Page.</a></div>

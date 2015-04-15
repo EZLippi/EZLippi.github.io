@@ -5,10 +5,14 @@ permalink: /blog/:year/:month/:title.html
 include: ['.htaccess']
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
 markdown: redcarpet
+markdown: kramdown
 highlights: pygments
 lsi: false
 timezone: Asia/Shanghai
 safe: false
+
+paginate: 15
+paginate_path: "page:num"
 
 JB :
   ASSET_PATH : http://coolshell.info/assets

@@ -7,6 +7,9 @@ date: 2015-03-20 09:20:26 +800
 category:   other
 ---
 
+*  目录
+{:toc}
+
 除了一些常用的插件比如ctags，taglist，bufexplorer,winmamager之外，这里介绍一些很强大的插件。
 
 1.*Vundle* [Github主页](https://github.com/gmarik/Vundle.vim)，一个强大的插件管理器
