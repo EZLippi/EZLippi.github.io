@@ -9,9 +9,12 @@ jumbotron__:
 ---
 <!-- Nav tabs -->
 <ul class="nav nav-pills nav-justifiedx">
-    <li class="active"><a href="/">Home | 首页</a></li>
-    <li class=""><a href="/archive.html">Archive | 归档</a></li>
-    <li class=""><a href="/categories.html">Categories | 分类</a></li>
+    <li><a href="/">主页</a></li>
+      		<li><a href="/archive.html">归档</a></li>
+      		<li><a href="/tags.html">标签</a></li>
+      		<li><a href="/categories.html">分类</a></li>
+		<li><a href="/about.html">关于我</a></li>
+
 </ul>
  {% include articles.html %} 
 
