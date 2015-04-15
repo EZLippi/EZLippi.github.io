@@ -67,17 +67,25 @@
 	<hgroup>
           <h1 id="logo"><a href="/">{{ site.title}}</a></h1>
           {% if site.tagline %}
-            <p id="tagline">{{ }}</p>
+            <p id="tagline">{{ site.tagline }}</p>
           {% endif %}
         </hgroup> 
+<!--
 	<p class="about text-justify">
           {{ site.about }}
         </p>  
+-->
 
+ <nav>
+	<h3>最近文章</h3>
+          <ul>
+      		{% for post in site.posts limit:15 %}
+	<li><h5><a href="{{ post.url }}">{{ post.title }}</a> </li>
+	{% endfor %}
+          </ul>
+        </nav>
 
-<p class="about text-justify">
-          {{ site.about }}
-        </p> 
+<!--
         <nav>
 	<h3>导航</h3>
           <ul>
@@ -99,7 +107,7 @@
  <a href="https://github.com/LippiOuYang" title="Github联系我"><img src="http://www.github.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
          <a href='mailto:ouyanglip@gmail.com'>ouyanglip@gmail.com</a><br/>   
 
-  
+ -->
 <!--
       <ul>
           <li class="search"><script>
@@ -119,6 +127,7 @@
 -->
         </p>
       </aside>
+
       <footer class="main">
 	 
         <p><small>

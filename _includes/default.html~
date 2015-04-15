@@ -74,10 +74,6 @@
           {{ site.about }}
         </p>  
 
-
-<p class="about text-justify">
-          {{ site.about }}
-        </p> 
         <nav>
 	<h3>导航</h3>
           <ul>
@@ -100,7 +96,7 @@
          <a href='mailto:ouyanglip@gmail.com'>ouyanglip@gmail.com</a><br/>   
 
   
-
+<!--
       <ul>
           <li class="search"><script>
   (function() {
@@ -116,9 +112,10 @@
 </script>
 <gcse:searchbox-only resultsUrl="/search.html"></gcse:searchbox-only></li>
         </ul> 
-
+-->
         </p>
       </aside>
+
       <footer class="main">
 	 
         <p><small>
