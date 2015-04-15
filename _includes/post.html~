@@ -25,7 +25,8 @@ var _hmt = _hmt || [];
 	<h3>最近文章</h3>
           <ul>
       		{% for post in site.posts limit:15 %}
-	<li> {post.title} </li>
+	<li><h5><a href="{{ post.url }}">{{ post.title }}</a> </li>
+	{% endfor %}
           </ul>
         </nav>
 </aside>
