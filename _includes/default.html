@@ -50,18 +50,35 @@
 	<hgroup>
           <h1 id="logo"><a href="/">{{ site.title}}</a></h1>
           {% if site.tagline %}
-            <p id="tagline">{{ }}</p>
+            <p id="tagline">{{ site.tagline}}</p>
           {% endif %}
         </hgroup> 
+<!--
 	<p class="about text-justify">
           {{ site.about }}
         </p> 
-
-<!--
-<p class="about text-justify">
-          {{ site.about }}
-        </p> 
 -->
+<nav>
+	<h3>最近文章</h3>
+          <ul>
+      		{% for post in site.posts limit:10 %}
+	<li><h5><a href="{{ post.url }}">{{ post.title }}</a> </li>
+	{% endfor %}
+          </ul>
+        </nav>
+ <nav>
+	<h3>热门文章</h3>
+          <ul>
+      	<li><a href="/blog/2015/03/github-pages-blog.html">利用Github-pages建立个人博客</li>	
+<li><a href="/blog/2015/04/gradle-in-action-cn.html">Gradle实战中文版</li>
+<li><a href="/blog/2014/12/c-open-project.html">值得推荐的C/C++框架和库</li>
+<li><a href="/blog/2014/12/c-code-opt.html">C代码优化小贴士</li>	
+<li><a href="/blog/2014/06/26-methods-to-improve-java-performance.html">Java编程Tips</li>	
+<li><a href="/blog/2015/04/gradle-in-action-cn.html">Gradle实战中文版</li>	 
+	 
+          </ul>
+        </nav>
+<!--
         <nav>
 	<h3>导航</h3>
           <ul>
