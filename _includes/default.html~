@@ -38,13 +38,14 @@
   
   </head>
   <body>
-
+<!--
     <div class="wrapper">
   
       <section class="main" id="container">
-		<!--^frag-->{{ content }}<!--$frag -->
+		 {{ content }} 
       </section>
   </div>
+-->
       <aside>
 
 	<hgroup>
