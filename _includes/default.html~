@@ -38,22 +38,22 @@
   
   </head>
   <body>
-<!--
+
     <div class="wrapper">
   
       <section class="main" id="container">
-		 {{ content }} 
+		<!--^frag-->{{ content }}<!--$frag -->
       </section>
-  </div>
--->
-      <aside>
-
-	<hgroup>
+<hgroup>
           <h1 id="logo"><a href="/">{{ site.title}}</a></h1>
           {% if site.tagline %}
             <p id="tagline">{{ site.tagline}}</p>
           {% endif %}
         </hgroup> 
+  </div>
+      <aside>
+
+	
 <!--
 	<p class="about text-justify">
           {{ site.about }}
