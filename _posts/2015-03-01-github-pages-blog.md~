@@ -726,13 +726,37 @@ Ubtuntu下：sudo apt-get install python-pygments
 在文章中高亮代码:
 
 	{% highlight java %}
+
     	public class HelloWorld { 
-     		 public static void main(String args[]) { 
-        System.out.println("Hello World!"); 
+        public static void main(String args[]) { 
+       	 System.out.println("Hello World!"); 
 		} 
     	} 
-	{% endhighlight %}  
 
+	{% endhighlight %} 
+
+###给文章添加目录
+
+如你所见，我的这个博客里，稍长点的文章，都会生成目录树（Table of Content），并且配合有Bootstrap的[affix](http://www.zfanw.com/blog/twitter-bootstrap-affix-js.html)、[ScrollSpy](http://www.zfanw.com/blog/bootstrap-scrollspy.html) 效果。同样地，在Jekyll构建的静态博客上，我一样想生成目录树。
+Jekyll的Plugins页面中有提到一个插件 [jekyll-toc-generator](https://github.com/dafi/jekyll-toc-generator)，但其实没有必要使用插件，因为 Jekyll 的 Markdown 渲染器 [kramdown](http://kramdown.gettalong.org/converter/html.html#toc) 已经具备这个功能。我们只需要启用它即可。
+
+**启用 kramdown**
+
+打开 _config.yml 文件，确保以下一行存在：
+	markdown: kramdown
+
+**生成 TOC**
+
+接下来是在文章中标识 toc 的生成位置：
+	* 目录
+	{:toc}
+	# 陈三
+	## 陈三的博客
+
+1. 请注意，`* 目录`这一行是必需的，它表示目录树列表，至于星号后面写什么请随意
+2. 如果要把某标题从目录树中排除，则在该标题的下一行写上 `{:.no_toc}`
+3. 目录深度可以通过 config.yml 文件中添加 `toc_levels` 选项来定制，默认为 `1..6`，表示标题一至标题六全部渲染
+4. {:toc} 默认生成的目录列表会添加 id 值 `markdown-toc`，我们可以自定义 id 值，比如 {:toc #chen}，生成的目录列表添加的 id 将会是 chen。
 
 ###评论功能
 
@@ -790,13 +814,13 @@ sitemap是网站所有链接的集合，最简单的sitemap可以是一个文本
 
 这里介绍的站点统计是google的analytics，analytics的使用十分简单，同样的原理，利用注入脚本来实现流量统计的外挂，统计功能十分强大，谁用谁知道。这里就不再唠叨了。。
 
-### GoDaddy & DNSPod
+##GoDaddy & DNSPod
 
 [GoDaddy][]是一家非常不错的域名注册商，良好的用户体验，飞快的生效速度，给力的优惠码，也支持支付宝，永远不用担心国内那些流氓厂商的流氓行为，注册了域名，就可以放心不会被别人抢走。在Godaddy注册域名是一件很简单的事情，按照提示走就完全没有问题，唯一需要动脑筋的可能是，你要想一个既有个人标识，又没有被别人注册的域名了，我觉得我的[LippiOuYang][]还是不错的，呵呵。
 
 Godaddy一切都很完美，直到遇到了GFW，原因你肯定懂。前段时间推上风传Godaddy的DNS服务器被墙，导致域名不能解析，看起来好像自己的站被墙了一样，这个确实是个闹心的事情，还好国内有DNS服务的替代产品，而且做得还非常的不错，也是免费的，功能强大，速度快，不用担心被和谐，所以隆重推荐[DNSPod][]给大家，可以试用一下，把DNS服务迁移到DNSPod来，解决后顾之忧，配置比较简单，不懂的可以等我后面的博客啦，哈。
 
-### GitHub & Jekyll
+##GitHub & Jekyll
 
 [GitHub][]是一个非常优秀的产品，爆发式的增长，各大优质开源软件的蜂涌而至，只能说明人们太需要他了。**Social Coding**是他的Slogan，产品的设计确实解决了很多代码交流的难题，让世界更平，让交流更畅，关于Git的学习，大家可以移步这里[Pro Git中文版][7]，这也是一个本身就在Github维护的一个项目，高质量的翻译了Git入门书，讲解详细，是学习Git的好资料。
 
@@ -854,7 +878,7 @@ git push -u origin master
 
 <p>那么，我们如何撰写新的博客呢？下面，我们隆重推出Markdown。</p>
 
-<h2 id="markdown">Markdown语法</h2>
+##Markdown语法
 
 <p>根据<a href="http://zh.wikipedia.org/zh-cn/Markdown">维基百科上的介绍</a></p>
 
