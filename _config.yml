@@ -19,6 +19,9 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
+JB :
+  IMAGE_PATH : http://coolshell.info/images
+
 # presonal config
 domain: http://coolshell.info
 title: Lippi-浮生志
