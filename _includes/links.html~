@@ -1,0 +1,47 @@
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://github.com/">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://bitbucket.org/">
+                  Bitbucket.org
+                </a>
+              </li> 
+               <li>
+                <a href="https://news.ycombinator.com/">
+                  Hacker News
+                </a>
+              </li>        
+              <li>
+                <a href="http://www.stackoverflow.com/">
+                  Stack Overflow
+                </a>
+              </li>
+              <li>
+                <a href="http://developer.android.com/">
+                  Android Developer
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.jobbole.com/">
+                  Jobbole
+                </a>
+              </li>
+              <li>
+                <a href="http://99u.com/">
+                  99U
+                </a>
+              </li>
+              <li>
+                <a href="http://www.ruanyifeng.com/blog/">
+                  Ruanyifeng's Blog
+                </a>
+              </li>
+              <li>
+                <a href="http://www.panxuewen.com">
+                  Panxw's Blog
+                </a>
+              </li>				  
+            </ul>

@@ -1,28 +1,7 @@
 ---
-layout: page
-title: About Lippi
-permalink: /about.html
-thumbnail: /img/pages/ManUtd.png
-description: 
-group: listable
-shares: true
-comments: no
-sitemap:
-  priority: 1
-  changefreq: weekly
-  lastmod: 2015-03-016
+layout: default
+title: "关于：About"
 ---
-
-
-<ul class="nav nav-pills nav-justifiedx">
-    <li><a href="/">主页</a></li>
-      		<li><a href="/archive.html">归档</a></li>
-      		<li><a href="/tags.html">标签</a></li>
-      		<li><a href="/categories.html">分类</a></li>
-		<li><a href="/about.html">关于我</a></li>
-
-</ul>
-
 
 ## 个人简介：
 

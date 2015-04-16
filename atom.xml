@@ -6,24 +6,21 @@ title : Atom Feed
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>{{ site.title }}</title>
- <link href="{{ site.production_url }}" rel="self"/>
- <link href="{{ site.production_url }}"/>
+ <link href="http://{{ site.domain }}/atom.xml" rel="self"/>
+ <link href="http://{{ site.domain }}"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.production_url }}</id>
  <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <name>{{ site.author }}</name>
+   <email>{{ site.email }}</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="{{ site.production_url }}{{ post.url }}"/>
+   <link href="http://{{ site.domain }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.production_url }}{{ post.id }}</id>
-   <content type="html">
-   	{{ post.content | xml_escape }}
-   </content>
+   <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
  

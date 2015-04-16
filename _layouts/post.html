@@ -1,5 +1,39 @@
----
-layout: default
----
-
-{% include post.html %}
+--- 
+layout: default 
+--- 
+<!-- Blog Post -->
+<!-- Title -->
+<h2>
+  {{ page.title }}
+  <div class="post-date"><a href="https://github.com/{{ site.github }}/{{ site.github }}.github.com/edit/master/{{ page.path }}" target="_blank">纠错</a>&nbsp;&nbsp;
+	<span class="glyphicon glyphicon-time"></span>
+	{{ page.date | date_to_string }}
+  </div>
+</h2>
+<!-- Author -->
+<hr>
+{{ content }}
+<br/>
+<div style="margin-top:10px;margin-bottom:10px">
+  {%if page.previous%}
+  <span class="next">
+    上篇：
+    <a href="{{page.previous.url}}">
+      {{page.previous.title}}
+    </a>
+  </span>
+  {%endif%} 
+  {%if page.next%}
+  <span class="prev">
+    下篇：
+    <a href="{{page.next.url}}">
+      {{page.next.title}}
+    </a>
+  </span>
+  {%endif%}
+</div>
+<hr>
+<!-- Blog Comments -->
+<div class="media">
+  {% include comment.html %} 
+</div>

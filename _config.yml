@@ -1,17 +1,15 @@
-# This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-# permalink: /:categories/:year/:month/:day/:title 
 permalink: /blog/:year/:month/:title.html 
 include: ['.htaccess']
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
-# markdown: redcarpet
 markdown: kramdown
 highlights: pygments
+url: 
 lsi: false
+safe: true
 timezone: Asia/Shanghai
-safe: false
+auto: false 
 
-paginate: 15
+paginate: 8
 paginate_path: "page:num"
 
 kramdown:
@@ -21,19 +19,15 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-JB :
-  ASSET_PATH : http://coolshell.info/assets
-  IMAGE_PATH : http://coolshell.info/images
-# auto: true # deprecated
-
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
-#
-url: http://coolshell.info
+# presonal config
+domain: http://coolshell.info
 title: Lippi-浮生志
-tagline: Draw my life with code
-about: <a href="http://coolshell.info/"><strong>Lippi</strong></a>，江西人士，Web后端、Android应用开发爱好者，欢迎<strong>Fork</strong>本站@<a href="https://github.com/LippiOuYang/LippiOuYang.github.io/fork">Github</a>。
-author:
-  name: Lippi.OuYang
-  email: ouyanglip@gmail.com
-  github: LippiOuYang
+description: Draw my life with code
+author: Lippi.OuYang
+email: ouyanglip@gmail.com
+github: LippiOuYang
+
+config:
+  js_dir:
+  img_dir:
+  css_dir:

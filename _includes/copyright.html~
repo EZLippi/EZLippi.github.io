@@ -1,0 +1,5 @@
+            <p align="center">
+				Copyright &copy; {{ site.domain }}, hosted on <a href="https://github.com">GitHub</a>, powered by Jekyll, designed by <a href="https://github.com/panxw">panxw</a>. <a href="https://github.com/{{site.github}}/{{site.github}}.github.com">[source]</a>
+				<br/>
+				 <a href="/atom.xml">[Feed]</a>
+            </p>
