@@ -10,6 +10,8 @@ tags:		[blog]
 *  目录
 {:toc}
 
+##前言
+
 Github很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如jQuery、Twitter等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了Github Pages的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。
 
 Github Pages有以下几个优点：
@@ -43,7 +45,7 @@ Github Pages有以下几个优点：
 
 ##配置和使用Github 
 
-Git是版本管理的未来，他的优点我不再赘述，相关资料很多。推荐这本Git中文教程。
+Git是版本管理的未来，他的优点我不再赘述，相关资料很多。推荐这本[Git中文教程](http://git-scm.com/book/zh)。
 
 要使用Git，需要安装它的客户端，推荐在Linux下使用Git，会比较方便。Windows版的下载地址在这里：[http://code.google.com/p/msysgit/downloads/list](http://code.google.com/p/msysgit/downloads/list)。其他系统的安装也可以参考官方的安装教程。
 
@@ -65,10 +67,10 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 ###备份和移除原来的ssh key设置
 
 因为已经存在key文件，所以需要备份旧的数据并删除：
-    {% highlight Bash shell scripts%}
+    {% highlight Bash shell scripts %}
 
     $ ls
-    config  id_rsa  id_rsa.pub  known_hosts
+   	 config  id_rsa  id_rsa.pub  known_hosts
     $ mkdir key_backup
     $ cp id_rsa* key_backup
     $ rm id_rsa*
@@ -82,10 +84,11 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
     {% highlight Bash shell scripts%}
 
     $ ssh-keygen -t rsa -C "邮件地址@youremail.com"
-    Generating public/private rsa key pair.
-    Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):<回车就好>
+  	 Generating public/private rsa key pair.
+   	 Enter file in which to save the key (/Users/	your_user_directory/.ssh/id_rsa):<回车就好>
 
     {% endhighlight %}
+
 然后系统会要你输入加密串（Passphrase）：
 
     {% highlight Bash shell scripts%}
@@ -94,7 +97,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
     Enter same passphrase again:<再次输入加密串>
 
     {% endhighlight %}
-最后看到这样的界面，就成功设置ssh key了： ssh key success
+最后看到ssh key success，就成功设置ssh key了. 
 
 ###添加SSH Key到GitHub 
 
@@ -107,7 +110,7 @@ Git是版本管理的未来，他的优点我不再赘述，相关资料很多�
 选择SSH Keys项，把复制的内容粘贴进去，然后点击Add Key按钮即可： 
 ![set ssh keys](/images/images/githubpages/bootcamp_1_ssh.jpg)
 
-PS：如果需要配置多个GitHub账号，可以参看这个多个github帐号的SSH key切换，不过需要提醒一下的是，如果你只是通过这篇文章中所述配置了Host，那么你多个账号下面的提交用户会是一个人，所以需要通过命令`git config --global --unset user.email`删除用户账户设置，在每一个repo下面使用`git config --local user.email '你的github邮箱@mail.com' `命令单独设置用户账户信息
+PS：如果需要配置多个GitHub账号，可以参看这个[多个github帐号的SSH key切换](http://ju.outofmemory.cn/entry/16775)，不过需要提醒一下的是，如果你只是通过这篇文章中所述配置了Host，那么你多个账号下面的提交用户会是一个人，所以需要通过命令`git config --global --unset user.email`删除用户账户设置，在每一个repo下面使用`git config --local user.email '你的github邮箱@mail.com' `命令单独设置用户账户信息
 
 ###测试一下 
 
@@ -115,7 +118,7 @@ PS：如果需要配置多个GitHub账号，可以参看这个多个github帐号
 
     {% highlight Bash shell scripts%}
 
-  ` $ ssh -T git@github.com`
+    $ ssh -T git@github.com
 
     {% endhighlight %}
 
@@ -137,7 +140,7 @@ PS：如果需要配置多个GitHub账号，可以参看这个多个github帐号
 
     {% endhighlight %}
 
-###6、设置你的账号信息 
+###设置你的账号信息 
 
 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。
 
@@ -149,27 +152,6 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
     $ git config --global user.email "your_email@youremail.com"
 
     {% endhighlight %}
-设置GitHub的token
-
-2012-4-28补充：新版的接口已经不需要配置token了，所以下面这段可以跳过了
-
-有些工具没有通过SSH来链接GitHub。如果要使用这类工具，你需要找到然后设置你的API Token。
-
-在GitHub上，你可以点击`Account Setting > Account Admin：` 
-![set ssh keys](/images/images/githubpages/bootcamp_1_token.jpg)
-
-
-然后在你的命令行中，输入下面的命令，把token添加进去：
-
-    {% highlight Bash shell scripts%}
-
-    $ git config --global user.name "你的名字"
-    $ git config --global user.token 0123456789your123456789token
-
-    {% endhighlight %}
-如果你改了GitHub的密码，需要重新设置token。
-
-成功了
 
 好了，你已经可以成功连接GitHub了。
 
@@ -190,7 +172,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 在创建博客之前，还需要用已有的帐号创建一个项目，上面那个链接的projectName将是这里即将创建的项目名称。在Git中，项目被称为仓库(Repository)，仓库顾名思义，当然可以包含代码或者非代码。将来我们的网页或者模板实际上都是保存在这个仓库中的。
 
-登录后，访问https://github.com/new，创建仓库如下图：
+登录后，访问[https://github.com/new](https://github.com/new)，创建仓库如下图：
 ![image1](/images/images/githubpages/build-github-blog-page-02-img0.png)
 
 
@@ -263,7 +245,7 @@ default.html
 
 再次打开Git Bash，先后输入如下命令：
 
-    {% highlight Bash shell scripts%}
+    {% highlight Bash shell scripts %}
 
     $ git add .
     $ git commit -m "first post"
@@ -279,9 +261,9 @@ default.html
 - 将远程仓库在本地添加一个引用：origin
 - 向origin推送gh-pages分支，该命令将会将本地分支gh-pages推送到github的远程仓库，并在远程仓库创建一个同名的分支。该命令后会提示输入用户名和密码。
 
-现在，你可以泡杯咖啡，并等大约10分钟的时间，访问`http://username.github.com/projectName`就可以看到生成的博客了
+现在，你只需要稍等半分钟时间，访问`http://username.github.com/projectName`就可以看到生成的博客了
 
-另外上面提到的，无论生成失败还是成功，Github会向你的邮箱发送一封邮件说明，请注意查收。
+另外上面提到的，如果生成失败，Github会向你的邮箱发送一封邮件说明，请注意查收。
 
 ##域名扫盲
 
@@ -825,7 +807,7 @@ sitemap是网站所有链接的集合，最简单的sitemap可以是一个文本
 
 ##GoDaddy & DNSPod
 
-[GoDaddy][]是一家非常不错的域名注册商，良好的用户体验，飞快的生效速度，给力的优惠码，也支持支付宝，永远不用担心国内那些流氓厂商的流氓行为，注册了域名，就可以放心不会被别人抢走。在Godaddy注册域名是一件很简单的事情，按照提示走就完全没有问题，唯一需要动脑筋的可能是，你要想一个既有个人标识，又没有被别人注册的域名了，我觉得我的[LippiOuYang][]还是不错的，呵呵。
+[GoDaddy][]是一家非常不错的域名注册商，良好的用户体验，飞快的生效速度，给力的优惠码，也支持支付宝，永远不用担心国内那些流氓厂商的流氓行为，注册了域名，就可以放心不会被别人抢走。在Godaddy注册域名是一件很简单的事情，按照提示走就完全没有问题，唯一需要动脑筋的可能是，你要想一个既有个人标识，又没有被别人注册的域名了。
 
 Godaddy一切都很完美，直到遇到了GFW，原因你肯定懂。前段时间推上风传Godaddy的DNS服务器被墙，导致域名不能解析，看起来好像自己的站被墙了一样，这个确实是个闹心的事情，还好国内有DNS服务的替代产品，而且做得还非常的不错，也是免费的，功能强大，速度快，不用担心被和谐，所以隆重推荐[DNSPod][]给大家，可以试用一下，把DNS服务迁移到DNSPod来，解决后顾之忧，配置比较简单，不懂的可以等我后面的博客啦，哈。
 
@@ -844,7 +826,8 @@ GitHub是一个伟大的产品，[GitHub Pages][]是他伟大的一部分，GitH
 
 
 写到这里，基本的点已经介绍完毕，现在介绍下怎么获取别人的博客模板来建立自己的博客。
-<h2 id="section">获取并修改别人的博客</h2>
+
+**获取并修改别人的博客**
 
 <p>Jekyll官方建立了一个<a href="https://github.com/mojombo/jekyll/wiki/sites">页面</a>，里面有许多的模板可供参考。接下来我们就要奉行“拿来主义”了，将别人的模板为我们所用。</p>
 
