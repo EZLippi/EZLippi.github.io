@@ -85,22 +85,6 @@
             </div>
             <!-- /.row -->
           </div>
- 	<div class="well">
-            <h4>
-              热门文章
-            </h4>
-              <ul>
-      	<li><a href="/blog/2015/03/github-pages-blog.html">利用Github-pages建立个人博客</li>	
-<li><a href="/blog/2014/07/qualified-programmer-should-read-what-books.html">一个合格的程序员应该读过哪些书</li>
-<li><a href="/blog/2014/12/c-open-project.html">值得推荐的C/C++框架和库</li>
-<li><a href="/blog/2014/12/c-code-opt.html">C代码优化小贴士</li>	
-<li><a href="/blog/2014/06/26-methods-to-improve-java-performance.html">Java编程Tips</li>	
-<li><a href="/blog/2015/04/gradle-in-action-cn.html">Gradle实战中文版</li>
-<li><a href="/blog/2014/10/android-opensource.html">值得推荐的android开源框架</li>	 
-<li><a href="/blog/2014/11/how-to-evaluate-the-hackers-and-painters.html">如何评价『黑客与画家</li>	
-	 
-          </ul>
-          </div>
           <!-- Blog Links Well -->
           <div class="well">
             <h4>
