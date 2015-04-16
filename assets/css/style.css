@@ -35,9 +35,10 @@ a small {
 }
 a:hover small { color: #777 }
 .wrapper {
-    width: 360px;
+    width: 160px;
     margin: 0 auto;
 }
+
 blockquote {
     /*  border-left: 1px solid #e5e5e5;;
     margin: 0;
@@ -342,6 +343,7 @@ article footer p.gotop {
         width: auto;
         margin: 0;
     }
+    
     header.main, section.main, footer.main, aside {
         float: none;
         position: static;

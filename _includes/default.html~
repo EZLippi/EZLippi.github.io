@@ -39,20 +39,15 @@
   </head>
   <body>
 
-    <div class="wrapper">
-  
+     
+  	<div class="wrapper">  
       <section class="main" id="container">
-<hgroup>
-          <h1 id="logo"><a href="/">{{ site.title}}</a></h1>
-          {% if site.tagline %}
-            <p id="tagline">{{ site.tagline}}</p>
-          {% endif %}
-        </hgroup> 
 		<!--^frag-->{{ content }}<!--$frag -->
       </section>
 
   </div>
       <aside>
+<!--
 <hgroup>
           <h1 id="logo"><a href="/">{{ site.title}}</a></h1>
           {% if site.tagline %}
@@ -60,11 +55,12 @@
           {% endif %}
         </hgroup> 
 	
-<!--
+
 	<p class="about text-justify">
           {{ site.about }}
         </p> 
 -->
+<!--
  <ul>
           <li class="search"><script>
   (function() {
@@ -80,6 +76,7 @@
 </script>
 <gcse:search></gcse:search></li>
         </ul> 
+-->
 <nav>
 	<h3>最近文章</h3>
           <ul>
@@ -123,10 +120,11 @@
  <a href="https://github.com/LippiOuYang" title="Github联系我"><img src="http://www.github.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
          <a href='mailto:ouyanglip@gmail.com'>ouyanglip@gmail.com</a><br/>   
 
-<!--         	<div class="media-grid"><a class="various fancybox.iframe" href="http://map.naver.com/index.nhn?dlevel=11&lat=37.5711873&lng=126.9823252&query=&menu=location&searchCoord=&tab=1&pinId=30858388&pinType=site&pinTitle=7Jyg7Iqk7ZKA7Yyo65%2Bs64uk7J6E&mapMode=0&enc=b64"><img src="http://prt.map.naver.com/mashupmap/print?key=p1345437335473_983733216" width="270" height="160" alt="地图" title="地图" border="0" style="vertical-align:top;"/></a></div> -->
+<!--         	<div class="media-grid"><a class="various fancybox.iframe" href="http://map.naver.com/index.nhn?dlevel=11&lat=37.5711873&lng=126.9823252&query=&menu=location&searchCoord=&tab=1&pinId=30858388&pinType=site&pinTitle=7Jyg7Iqk7ZKA7Yyo65%2Bs64uk7J6E&mapMode=0&enc=b64"><img src="http://prt.map.naver.com/mashupmap/print?key=p1345437335473_983733216" width="270" height="160" alt="地图" title="地图" border="0" style="vertical-align:top;"/></a></div> 
 
      
         </p>
+-->
       </aside>
       <footer class="main">
 	<!--  <h3>Misc...</h3>  -->

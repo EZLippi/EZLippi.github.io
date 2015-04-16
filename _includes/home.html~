@@ -8,11 +8,11 @@
 </div>
 {% endif %}
 
-<!--
+
 <div class="page-header">
   <h2>最新微博 | Recent Weibo</h2>
 </div>
--->
+
 <ul class="services list-unstyled">
 {% for service in page.services %}
 <li>{{ service.emblem }}</li>

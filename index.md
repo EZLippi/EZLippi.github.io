@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 title: Lippi的个人网站
 tagline: 
 description: Lippi的个人网站
@@ -16,6 +16,9 @@ jumbotron__:
 		<li><a href="/about.html">关于我</a></li>
 
 </ul>
+
+{% include home.html %} 
+
  {% include articles.html %} 
 
  

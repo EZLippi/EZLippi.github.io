@@ -35,9 +35,10 @@ a small {
 }
 a:hover small { color: #777 }
 .wrapper {
-    width: 360px;
+    width: 160px;
     margin: 0 auto;
 }
+
 blockquote {
     /*  border-left: 1px solid #e5e5e5;;
     margin: 0;
@@ -266,7 +267,7 @@ hr {
     margin: 0 0 20px;
 }
 footer.main {
-    width: 170px;
+    width: 270px;
     float: left;
     position: fixed;
     bottom: 50px;
@@ -274,10 +275,10 @@ footer.main {
 }
 aside {
     width: 270px;
-    float: left;
+    float: right;
     position: fixed;
-    bottom: 100px;
-    text-align: right;
+    bottom: 50px;
+    text-align: left;
 }
 aside ul {
     list-style: none;
@@ -342,6 +343,7 @@ article footer p.gotop {
         width: auto;
         margin: 0;
     }
+    
     header.main, section.main, footer.main, aside {
         float: none;
         position: static;
