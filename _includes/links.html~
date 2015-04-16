@@ -4,11 +4,7 @@
                   GitHub
                 </a>
               </li>
-              <li>
-                <a href="https://bitbucket.org/">
-                  Bitbucket.org
-                </a>
-              </li> 
+               
                <li>
                 <a href="https://news.ycombinator.com/">
                   Hacker News
@@ -24,24 +20,27 @@
                   Android Developer
                 </a>
               </li>
-              <li>
-                <a href="http://blog.jobbole.com/">
-                  Jobbole
-                </a>
-              </li>
-              <li>
-                <a href="http://99u.com/">
-                  99U
-                </a>
-              </li>
+              
               <li>
                 <a href="http://www.ruanyifeng.com/blog/">
                   Ruanyifeng's Blog
                 </a>
               </li>
-              <li>
-                <a href="http://www.panxuewen.com">
-                  Panxw's Blog
+
+<li>
+                <a href="http://ifeve.com/">
+                  并发编程网
                 </a>
-              </li>				  
+              </li>
+  <li>
+                <a href="http://www.importnew.com/">
+                  ImportNew
+                </a>
+              </li>
+<li>
+                <a href="http://guides.codepath.com/android">
+                  CodePath Android Cliffnotes
+                </a>
+              </li>
+              				  
             </ul>
