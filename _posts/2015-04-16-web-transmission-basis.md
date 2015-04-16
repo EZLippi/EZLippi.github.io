@@ -15,7 +15,7 @@ tags:		[web, 网络传输]
  
 在详细阐述网络传输过程之前，先来看一个最常见的例子，下图显示了一个网络服务器向客户端传送数据的完整过程：
 
-！[](https://community.emc.com/servlet/JiveServlet/showImage/2-831148-90201/image002.jpg)
+![](https://community.emc.com/servlet/JiveServlet/showImage/2-831148-90201/image002.jpg)
 
     
 1. 需要传送的数据是网络服务器的HTML页面。
