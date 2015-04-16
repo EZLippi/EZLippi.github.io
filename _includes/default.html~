@@ -99,6 +99,8 @@
 	 
           </ul>
         </nav>
+
+ </aside>
 <!--
         <nav>
 	<h3>导航</h3>
@@ -125,7 +127,7 @@
      
         </p>
 -->
-      </aside>
+     
       <footer class="main">
 	<!--  <h3>Misc...</h3>  -->
         <p><small>
