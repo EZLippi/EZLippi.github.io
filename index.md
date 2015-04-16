@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lippi的个人网站
-tagline:  
+tagline: 
 description: Lippi的个人网站
 jumbotron__:
     title: Lippi的个人网站

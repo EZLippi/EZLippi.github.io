@@ -105,6 +105,6 @@ date:   2015-04-16 9:52:18 +800
 
 原文作者:[http://blog.danlew.net/about/](http://blog.danlew.net/about/)
 
-原文地址：[http://androidperformance.com/2015/03/15/android-tips/](http://androidperformance.com/2015/03/15/android-tips-round-up-5/)
+原文地址：[http://coolshell.info/blog/2015/04/android-tips.html](http://coolshell.info/blog/2015/04/android-tips.html)
 
 本文地址：[http://coolshell.info/blog/2015/04/android-tips.html](http://coolshell.info/blog/2015/04/android-tips.html)
