@@ -726,37 +726,13 @@ Ubtuntu下：sudo apt-get install python-pygments
 在文章中高亮代码:
 
 	{% highlight java %}
-
     	public class HelloWorld { 
-        public static void main(String args[]) { 
-       	 System.out.println("Hello World!"); 
+     		 public static void main(String args[]) { 
+        System.out.println("Hello World!"); 
 		} 
     	} 
+	{% endhighlight %}  
 
-	{% endhighlight %} 
-
-###给文章添加目录
-
-如你所见，我的这个博客里，稍长点的文章，都会生成目录树（Table of Content），并且配合有Bootstrap的[affix](http://www.zfanw.com/blog/twitter-bootstrap-affix-js.html)、[ScrollSpy](http://www.zfanw.com/blog/bootstrap-scrollspy.html) 效果。同样地，在Jekyll构建的静态博客上，我一样想生成目录树。
-Jekyll的Plugins页面中有提到一个插件 [jekyll-toc-generator](https://github.com/dafi/jekyll-toc-generator)，但其实没有必要使用插件，因为 Jekyll 的 Markdown 渲染器 [kramdown](http://kramdown.gettalong.org/converter/html.html#toc) 已经具备这个功能。我们只需要启用它即可。
-
-**启用 kramdown**
-
-打开 _config.yml 文件，确保以下一行存在：
-	markdown: kramdown
-
-**生成 TOC**
-
-接下来是在文章中标识 toc 的生成位置：
-	* 目录
-	{:toc}
-	# 陈三
-	## 陈三的博客
-
-1. 请注意，`* 目录`这一行是必需的，它表示目录树列表，至于星号后面写什么请随意
-2. 如果要把某标题从目录树中排除，则在该标题的下一行写上 `{:.no_toc}`
-3. 目录深度可以通过 config.yml 文件中添加 `toc_levels` 选项来定制，默认为 `1..6`，表示标题一至标题六全部渲染
-4. {:toc} 默认生成的目录列表会添加 id 值 `markdown-toc`，我们可以自定义 id 值，比如 {:toc #chen}，生成的目录列表添加的 id 将会是 chen。
 
 ###评论功能
 
@@ -878,7 +854,7 @@ git push -u origin master
 
 <p>那么，我们如何撰写新的博客呢？下面，我们隆重推出Markdown。</p>
 
-###Markdown语法
+<h2 id="markdown">Markdown语法</h2>
 
 <p>根据<a href="http://zh.wikipedia.org/zh-cn/Markdown">维基百科上的介绍</a></p>
 
