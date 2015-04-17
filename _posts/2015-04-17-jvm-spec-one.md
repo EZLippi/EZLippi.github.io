@@ -2,7 +2,8 @@
 layout: post
 title:  Java虚拟机简介（一）
 tags:   java, JVM
-categoried: java
+categories: java
+keywords:   java, 虚拟机
 date:   2015-04-17 9:58:50 +800
 ---
 
