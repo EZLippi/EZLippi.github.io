@@ -1,13 +1,15 @@
 ---
 layout:     post
-title:      Java虚拟机简介
+title:      Java虚拟机简介（一）
 keywords:   java
 category:   java 
-tags:	[javas, 虚拟机]
+tags:		[javas, 虚拟机]
 ---
 
-* 目录
+*  目录
 {:toc}
+
+
 
 Java虚拟机是整个Java平台的基础，是Java语言用于实现与硬件、操作系统无关的关键，Java虚拟机类似一个微型的计算机，它有自己的指令集和运行时的内存区域。java虚拟机和java语言并没有必然的联系，它只与特定的二进制文件--class文件相关联，只要符合java虚拟机规范的class文件都能在虚拟机上运行。
 
