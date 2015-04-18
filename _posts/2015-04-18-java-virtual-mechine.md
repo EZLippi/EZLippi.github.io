@@ -88,7 +88,7 @@ Java虚拟机有三种引用类型：类类型、数组类型和接口类型，�
     
     } 
     
-    {% end highlight %} 
+    {% endhighlight %} 
     
 运行一段时间后，产生StackOverflowError异常。Java虚拟机栈溢出一般会产生在方法递归调用过多而java虚拟机栈内存不够的情况下。
 
@@ -122,7 +122,7 @@ Java虚拟机有三种引用类型：类类型、数组类型和接口类型，�
     }  
     
     
-    {% end highlight %} 
+    {% endhighlight %} 
  
 
 运行一段时间之后，java虚拟机栈就会因为内存太小无法创建线程而产生OutOfMemoryError。
@@ -148,7 +148,7 @@ Java虚拟机有三种引用类型：类类型、数组类型和接口类型，�
     }  
     }  
     
-    {% end highlight %} 
+    {% endhighlight %} 
     
 ###方法区&&运行时常量池
 
@@ -168,7 +168,7 @@ String的intern()方法用于检查常量池中如果有等于此String对象的
     }  
     }  
     
-     {% end highlight %} 
+     {% endhighlight %} 
      
 运行一段时间，永久代内存不够，运行时常量池因无法再添加常量而产生OutOfMemoryError。
 
