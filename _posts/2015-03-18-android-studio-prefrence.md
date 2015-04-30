@@ -202,7 +202,8 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 3.gradle目录下有个 wrapper 文件夹，里面可以看到有两个文件，我们主要看下 gradle-wrapper.properties 这个文件的内容：
 
      {% highlight Groovy %}
-     #Fri Dec 19 21:59:01 CST 2014
+     
+    #Fri Dec 19 21:59:01 CST 2014
     distributionBase=GRADLE_USER_HOME
     distributionPath=wrapper/dists
     zipStoreBase=GRADLE_USER_HOME
@@ -229,6 +230,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 以友盟统计为例，在AndroidManifest.xml里面会有这么一段：
 
       {% highlight Groovy %}
+      
       <meta-data
     android:name="UMENG_CHANNEL"
     android:value="Channel_ID" />
@@ -284,7 +286,8 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 
 下面是我目前一个项目用的proguard.cfg配置文件：
 
-      {% highlight Groovy %}
+        {% highlight Groovy %}
+        
         #指定代码的压缩级别
         -optimizationpasses 5
         
@@ -328,7 +331,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         #忽略警告
         -ignorewarning
         
-        #####################记录生成的日志数据,gradle build时在本项目根目录输出################
+        ##记录生成的日志数据,gradle build时在本项目根目录输出##
         
         #apk 包内所有 class 的内部结构
         -dump class_files.txt
