@@ -8,7 +8,6 @@ description:  gradle是一种依赖管理工具，基于groovy语言，面向Jav
 tags: android
 ---
 
-## Gradle 基础 
 
 ###什么是Gradle
 Gradle是一种依赖管理工具，基于Ruby语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Ruby的内部领域特定（DSL）语言。Android Studio中新建项目成功后自动下载Gradle。

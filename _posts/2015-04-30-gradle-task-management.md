@@ -9,8 +9,6 @@ tags:	[Gradle, 项目构建]
 * 目录
 {:toc}
 
-
-
 Gradle有两个最基本的概念：project和task,Gradle里面的所有东西都基于这两个概念。project通常指一个项目，而task指构建过程中的任务。一次构建可以有1到n个project，每个project有1到n个task，这篇文章主要介绍Gradle任务的创建和管理。
 
 #管理任务
