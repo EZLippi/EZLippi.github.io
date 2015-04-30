@@ -17,7 +17,8 @@ date:   2015-04-13 15:32:05 +800
 * [Github托管地址](https://github.com/LippiOuYang/GradleInActionZh)
 
 * 我会开放权限给每一个加入的伙伴 (翻译或者校对)，请提前邮箱联系 ouyanglip@gmail.com
-----
+
+----------------
 
 ### 如何参与
 
@@ -36,12 +37,8 @@ date:   2015-04-13 15:32:05 +800
 7. 然后等待其他人的审核
 8 审核修改完成之后你翻译的部分就会被合并到书里
 
----
+-----------------
 
-### 贡献者列表
-
-
-LippiOuYang  | ouyanglip@gmail.com | [Github](https://github.com/LippiOuYang)
 
 
 
