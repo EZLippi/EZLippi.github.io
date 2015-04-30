@@ -4,19 +4,18 @@ title:      Android Studio多渠道打包和代码混淆教程
 keywords:	Android Studio, 打包, 混淆
 data:   2015-03-18 18:30:20 +800
 categories : [android]
-description:  Gradle是一种依赖管理工具，基于Groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的内部领域特定（DSL）语言。
+description:  gradle是一种依赖管理工具，基于groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Ruby的内部领域特定（DSL）语言。
 tags: android
 ---
 
 
 ###什么是Gradle
-
 Gradle是一种依赖管理工具，基于Groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的领域特定（DSL）语言。Android Studio中新建项目成功后自动下载Gradle。
 Gradle有几个基本组件：
 
 1.整个项目的gradle配置文件build.gradle
 
-    {% highlight Groovy %}
+    {% highlight Ruby %}
     
     // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
@@ -46,9 +45,9 @@ Gradle有几个基本组件：
 
 2.app文件夹下这个Module的gradle配置文件，也可以算是整个项目最主要的gradle配置文件
 
-     {% highlight Groovy %}
-
+     {% highlight Ruby %}
     apply plugin: 'com.android.application'
+
 
     buildscript {
         repositories {
@@ -202,7 +201,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 
 3.gradle目录下有个 wrapper 文件夹，里面可以看到有两个文件，我们主要看下 gradle-wrapper.properties 这个文件的内容：
 
-     {% highlight Groovy %}
+     {% highlight Ruby %}
      #Fri Dec 19 21:59:01 CST 2014
     distributionBase=GRADLE_USER_HOME
     distributionPath=wrapper/dists
@@ -229,27 +228,27 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 由于国内Android市场众多渠道，为了统计每个渠道的下载及其它数据统计，就需要我们针对每个渠道单独打包，如果让你打几十个市场的包岂不烦死了，不过有了Gradle，这再也不是事了。
 以友盟统计为例，在AndroidManifest.xml里面会有这么一段：
 
-      {% highlight Groovy %}
+      {% highlight Ruby %}
       <meta-data
     android:name="UMENG_CHANNEL"
     android:value="Channel_ID" />
       {% endhighlight %}
 里面的Channel_ID就是渠道标示。我们的目标就是在编译的时候这个值能够自动变化。
 *   第一步 在AndroidManifest.xml里配置PlaceHolder
-     {% highlight Groovy %}
+     {% highlight Ruby %}
      <meta-data
     android:name="UMENG_CHANNEL"
     android:value="${UMENG_CHANNEL_VALUE}" />
       {% endhighlight %}
 *   第二步 在build.gradle  设置productFlavors
-    {% highlight Groovy %}
-    android { 
+    {% highlight Ruby %}
+    android {  
     productFlavors {
         xiaomi {}
         _360 {}
         baidu {}
         wandoujia {}
-    } 
+    }  
 
     productFlavors.all { 
         flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] 
@@ -285,7 +284,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 
 下面是我目前一个项目用的proguard.cfg配置文件：
 
-    {% highlight Groovy %}
+    {% highlight Ruby %}
     #指定代码的压缩级别
         -optimizationpasses 5
         
