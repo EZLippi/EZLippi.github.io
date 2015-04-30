@@ -285,8 +285,8 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 
 下面是我目前一个项目用的proguard.cfg配置文件：
 
-    {% highlight Groovy %}
-    #指定代码的压缩级别
+      {% highlight Groovy %}
+        #指定代码的压缩级别
         -optimizationpasses 5
         
         #包明不混合大小写
@@ -340,13 +340,14 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         #混淆前后的映射
         -printmapping mapping.txt
         
-        #####################记录生成的日志数据，gradle build时 在本项目根目录输出-end################
+        ########记录生成的日志数据，gradle build时 在本项目根目录输出-end######
         
         
-        ################<span></span>混淆保护自己项目的部分代码以及引用的第三方jar包library#########################
+        #####混淆保护自己项目的部分代码以及引用的第三方jar包library#######
+        
         #-libraryjars libs/umeng-analytics-v5.2.4.jar
-        #-libraryjars libs/alipaysd<span></span>k.jar
-        #<span></span>-libraryjars libs/alipaysecsdk.jar
+        #-libraryjars libs/alipaysdk.jar
+        #-libraryjars libs/alipaysecsdk.jar
         #-libraryjars libs/alipayutdid.jar
         #-libraryjars libs/wup-1.0.0-SNAPSHOT.jar
         #-libraryjars libs/weibosdkcore.jar
@@ -389,7 +390,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         #如果引用了v4或者v7包
         -dontwarn android.support.**
         
-        ############<span></span>混淆保护自己项目的部分代码以及引用的第三方jar包library-end##################
+        ####混淆保护自己项目的部分代码以及引用的第三方jar包library-end####
         
         -keep public class * extends android.view.View {
             public <init>(android.content.Context);
