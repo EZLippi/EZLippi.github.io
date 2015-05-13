@@ -1,48 +1,49 @@
               <div class="col-lg-6">
                 <ul class="list-unstyled">
                   <li>
-                    <a href="/categories.html#reading">
-                      阅读摘要
+                    <a href="/categories.html#java">
+                      Java
                     </a>
                   </li>
                   <li>
-                    <a href="/categories.html#linux">
-                      Linux
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/categories.html#embedded">
-                      嵌入式
+                    <a href="/categories.html#web">
+                      Web
                     </a>
                   </li>
                   <li>
                     <a href="/categories.html#android">
-                      Android开发
+                      android
                     </a>
                   </li>
+                  <li>
+                    <a href="/categories.html#algorithm">
+                      算法
+                    </a>
+                  </li>
+		
                 </ul>
               </div>
               <!-- /.col-lg-6 -->
               <div class="col-lg-6">
                 <ul class="list-unstyled">
-                  <li>
-                    <a href="/categories.html#java">
-                      Java开发
+                 <li>
+                    <a href="/categories.html#Programming">
+                      Programming
                     </a>
-                  </li>                  
-		  <li>
-                    <a href="/categories.html#cocos2d">
-                      Cocos2d开发
+                  </li>
+<li>
+                    <a href="/categories.html#reprints">
+                      Reprints
                     </a>
                   </li>
                   <li>
-                    <a href="/categories.html#web">
-                      Web开发
+                    <a href="/categories.html#jekyll">
+                      Jekyll
                     </a>
                   </li>
                   <li>
-                    <a href="/categories.html#network">
-                      网络相关
+                    <a href="/categories.html#other">
+                      Other
                     </a>
                   </li>
                 </ul>
