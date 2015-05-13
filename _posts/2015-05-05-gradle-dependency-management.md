@@ -227,6 +227,7 @@ Gradle的dependencies任务可以清晰的看到选择了哪个版本，这里�
     
 运行这个任务之后你就可以在依赖中声明Cargo库了，下面这段代码展示了怎么给cargo配置添加JAR文件依赖：
 
+    {% highlight Groovy %}
 	dependencies {
 		cargo fileTree(dir: "${System.properties['user.home']}/libs/cargo",include: '*.jar')
 	}
