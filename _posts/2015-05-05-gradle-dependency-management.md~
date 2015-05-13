@@ -92,16 +92,7 @@ DSL配置block dependencies用来给配置添加一个或多个依赖，你的�
 		configurationName dependencyNotation1, 	dependencyNotation2, ...
 	}
 
-你先声明你要给哪个配置添加依赖，
-Java插件指定了若干依赖配置项，其描述如下：当项目的源代码被编译时，compile配置项中的依赖是必须的。
-
-* runtime配置项中包含的依赖在运行时是必须的。
-* testCompile配置项中包含的依赖在编译项目的测试代码时是必须的。
-* testRuntime配置项中包含的依赖在运行测试代码时是必须的。
-* archives配置项中包含项目生成的文件（如Jar文件）。
-* default配置项中包含运行时必须的依赖。
-
-然后添加依赖列表，你可以用map的形式来注明，你也可以直接用冒号来分隔属性，比如这样的：
+你先声明你要给哪个配置添加依赖，然后添加依赖列表，你可以用map的形式来注明，你也可以直接用冒号来分隔属性，比如这样的：
 	
 ![](/images/5-5.png)
 
