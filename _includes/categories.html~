@@ -32,6 +32,11 @@
                     </a>
                   </li>
 <li>
+                    <a href="/categories.html#c">
+                      C
+                    </a>
+                  </li>
+<li>
                     <a href="/categories.html#reprints">
                       Reprints
                     </a>
@@ -39,6 +44,11 @@
                   <li>
                     <a href="/categories.html#jekyll">
                       Jekyll
+                    </a>
+                  </li>
+<li>
+                    <a href="/categories.html#gradle">
+                      Gradle
                     </a>
                   </li>
                   <li>
