@@ -5,11 +5,11 @@ categories:	android
 tags:	android, view
 ---
 
-Android的UI元素都是基于View(屏幕中当个元素)和ViewGroup(元素的集合),Android有许多自带的组件和布局，比如Button、TextView、RelativeLayout。在app开发过程中我们需要自定义视图组件来满足我们的需求。通过继承自View或者View的子类，覆写onDraw或者onTouchEvent等方法来覆盖视图的行为。
+Android的UI元素都是基于View(屏幕中单个元素)和ViewGroup(元素的集合),Android有许多自带的组件和布局，比如Button、TextView、RelativeLayout。在app开发过程中我们需要自定义视图组件来满足我们的需求。通过继承自View或者View的子类，覆写onDraw或者onTouchEvent等方法来覆盖视图的行为。
 
 ##创建完全自定义的组件
 
-创建自定义的组件主要围绕着控制或者修改以下五个方面：
+创建自定义的组件主要围绕着以下五个方面：
 
 * 绘图(Drawing)： 控制视图的渲染，通常通过覆写onDraw方法来实现
 * 交互(Interaction)： 控制用户和视图的交互方式，比如OnTouchEvent,gestures
@@ -56,7 +56,7 @@ Android的UI元素都是基于View(屏幕中当个元素)和ViewGroup(元素的�
 
 ###自定义属性
 
-视图可以通过XML来配置属性和样式，你需要想清楚要添加那些自定义的属性，比如我们想让用户可以选择形状的颜色、显示形状的名称，比如我们想让视图可以像下面一样配置：
+视图可以通过XML来配置属性和样式，你需要想清楚要添加那些自定义的属性，比如我们想让用户可以选择形状的颜色、是否显示形状的名称，比如我们想让视图可以像下面一样配置：
 
 	{% highlight XML %}
 	<com.codepath.example.customviewdemo.ShapeSelectorView
@@ -155,7 +155,7 @@ Android的UI元素都是基于View(屏幕中当个元素)和ViewGroup(元素的�
 	}
 	{% endhighlight %}
 
-当视图属性发生改变的时候可能需要重新绘图，你需要调用invalidate和requestLayout来刷新显示。
+当视图属性发生改变的时候可能需要重新绘图，你需要调用invalidate()和requestLayout()来刷新显示。
 
 ###画图
 
