@@ -108,13 +108,7 @@ tags:	android
 <p><strong></strong>Cyril Mottier 是<a  href="https://github.com/cyrilmottier/GreenDroid" class="external" rel="nofollow" target="_blank">GreenDroid</a>和常规<a  href="http://cyrilmottier.com/" class="external" rel="nofollow" target="_blank">blogger</a>的开发者。你可以在<a  href="https://plus.google.com/+CyrilMottier/posts" class="external" rel="nofollow" target="_blank">Google+</a>和<a  href="https://twitter.com/cyrilmottier" class="external" rel="nofollow" target="_blank">Twitter</a>上找到他。</p>
 <p><strong>片尾备注</strong></p>
 <p>我希望这些链接都是有用的，我也相信它们会让你忙活一阵子的。我尝试在适合初学者的内容和高级内容之间找到一个平衡点，并将二者均匀地结合起来。如果你有任何更多的评论或者建议，如果你发现了任何错误，或者你想让我知道哪些链接对你来说是最重要的，请给通过留言告诉我。</p>
-<p><strong> 关注作者 — Mikail：</strong></p>
-<ul>
-<li>https://www.facebook.com/mikail.sheikh.90</li>
-<li>https://twitter.com/MikailSheikh</li>
-<li>https://plus.google.com/https://plus.google.com/+MikailSheikh/posts</li>
-</ul>
 
         
-        原文链接： <a  target="_blank" href="http://cogitolearning.co.uk/?p=858" class="external" rel="nofollow">cogitolearning</a>    翻译： <a  href="http://www.importnew.com"> ImportNew.com </a> - <a  href="http://www.importnew.com/author/lijuanlong">汤米猫</a><br/>译文链接： <a  href="http://www.importnew.com/8229.html">http://www.importnew.com/8229.html</a><br/>
+原文链接： <a  target="_blank" href="http://cogitolearning.co.uk/?p=858" class="external" rel="nofollow">cogitolearning</a>    翻译： <a  href="http://www.importnew.com"> ImportNew.com </a> - <a  href="http://www.importnew.com/author/lijuanlong">汤米猫</a><br/>译文链接： <a  href="http://www.importnew.com/8229.html">http://www.importnew.com/8229.html</a><br/>
 
