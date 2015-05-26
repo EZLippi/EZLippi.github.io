@@ -218,7 +218,9 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 4.settings.gradle
 
 这个文件是全局的项目配置文件，里面主要声明一些需要加入gradle的module
+
     include ':recorder'
+
 文件中recorder是项目的module，如果还有其他module按照相同的格式加上去。
 
 ----------------------------
@@ -258,7 +260,8 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
     }
    {% endhighlight %}
 
-然后直接执行 ./gradlew assembleRelease ， 然后就等待打包完成吧。
+然后直接执行` ./gradlew assembleRelease `然后就等待打包完成吧。
+ 
  assemble 这个命令，会结合 Build Type 创建自己的task，如:
 
 * ./gradlew assembleDebug
@@ -270,14 +273,17 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 如果我们想打包wandoujia渠道的release版本，执行如下命令就好了：
 
     ./gradlew assembleWandoujiaRelease
+
 如果我们只打wandoujia渠道版本，则：
 
     ./gradlew assembleWandoujia
+
 此命令会生成wandoujia渠道的Release和Debug版本
 
 同理我想打全部Release版本：
 
     ./gradlew assembleRelease
+
 这条命令会把Product Flavor下的所有渠道的Release版本都打出来。
 
 ----------------------------------
@@ -286,7 +292,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 
 下面是我目前一个项目用的proguard.cfg配置文件：
 
-        {% highlight Groovy %}
+        {% highlight java %}
         
         #指定代码的压缩级别
         -optimizationpasses 5
