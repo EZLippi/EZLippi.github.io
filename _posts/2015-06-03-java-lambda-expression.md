@@ -7,7 +7,7 @@ tags:	java
 
 #Lambda表达式背景
 
-许多热门的编程语言如今都有一个叫做lambda或者闭包的语言特性，包括比较经典的函数式编程语言Lisp,Scheme,也有稍微年轻的语言比如JavaScript,Python,Ruby,Groovy,Scale,C#,甚至C++也有Lambda表达式。一些语言是运行在java虚拟机上，作为虚拟机最句代表的语言java当然也不想落后。
+许多热门的编程语言如今都有一个叫做lambda或者闭包的语言特性，包括比较经典的函数式编程语言Lisp,Scheme,也有稍微年轻的语言比如JavaScript,Python,Ruby,Groovy,Scale,C#,甚至C++也有Lambda表达式。一些语言是运行在java虚拟机上，作为虚拟机最具代表的语言java当然也不想落后。
 
 #究竟什么是Lambda表达式?
 
