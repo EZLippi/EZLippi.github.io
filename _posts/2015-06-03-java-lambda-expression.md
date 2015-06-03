@@ -7,7 +7,7 @@ tags:	java
 
 #Lambda表达式背景
 
-许多热门的编程语言如今都有一个叫做lambda或者闭包的语言特性，包活比较经典的函数式编程语言Lisp,Scheme,也有稍微年轻的语言比如JavaScript,Python,Ruby,Groovy,Scale,C#,甚至C++也有Lambda表达式。一些语言是运行在java虚拟机上，作为虚拟机最句代表的语言java当然也不想落后。
+许多热门的编程语言如今都有一个叫做lambda或者闭包的语言特性，包括比较经典的函数式编程语言Lisp,Scheme,也有稍微年轻的语言比如JavaScript,Python,Ruby,Groovy,Scale,C#,甚至C++也有Lambda表达式。一些语言是运行在java虚拟机上，作为虚拟机最句代表的语言java当然也不想落后。
 
 #究竟什么是Lambda表达式?
 
@@ -21,7 +21,7 @@ Lambda表达式的概念来自于Lambda演算，下面是一个java lambda的简
 
 #Lambda表达式和匿名内部类
 
-从上面的分析可以看出lambda和java内部类的特性有点相似，匿名内部类不只是一个方法，而是一个包含一个或多个方法的类，他们的作用都是一样的，都是作为方法的参数传递，我从JDK源码中提取出来listFiles(FileFilter) 方法：
+从上面的分析可以看出lambda和java内部类的特性有点相似，匿名内部类不只是一个方法，而是一个包含一个或多个方法的类，他们的作用都是一样的，都是作为方法的参数传递，我从JDK源码中提取出来`listFiles(FileFilter)` 方法：
 
 	{% highlight java %}
 	public File[] listFiles(FileFilter filter) {
@@ -38,7 +38,7 @@ Lambda表达式的概念来自于Lambda演算，下面是一个java lambda的简
 	}
 	{% endhighlight %}
 
-listFilter方法接收一个功能接口作为参数，在这里是FileFilter接口：
+`listFilter`方法接收一个功能接口作为参数，在这里是FileFilter接口：
 
 	{% highlight java %}
 	public interface FileFilter {
@@ -46,7 +46,7 @@ listFilter方法接收一个功能接口作为参数，在这里是FileFilter接
 	}
 	{% endhighlight %}
 
-fileFilter接收一个File对象返回一个boolean值，listFiles方法把Filter应用到所有的File对象接收 那些accept返回true的文件。对于listFiles方法来讲我们必须传递一个函数式接口给他，这是FileFileter的一个实现，一般我们通过匿名类来完成：
+`fileFilter`接收一个`File`对象返回一个`boolean`值，`listFiles`方法把`Filter`应用到所有的`File`对象接收 那些`accept`返回`true`的文件。对于`listFiles`方法来讲我们必须传递一个函数式接口给他，这是`FileFileter`的一个实现，一般我们通过匿名类来完成：
 
 	{% highlight java %}
 	File myDir = new File("／home/user/files");
@@ -83,23 +83,23 @@ fileFilter接收一个File对象返回一个boolean值，listFiles方法把Filte
 在之前的例子，我们使用lambda表达式定义了一个函数，我们可以把它作为参数传递给一个方法，方法把它当成一个对象来使用，lambda表达式有函数和对象的一些属性，看你从什么角度来看：
 
 * 从概念来讲，lambda表达式是一个匿名函数，它有签名和方法体但是没有名字
-* 当lambda表达式作为参数传递给方法时，接收方法把它当对象使用，在listFiles方法内部，lambda表达式是一个对象的引用，在这里lambda表达式是一种常规的对象，比如有地址和类型。
+* 当lambda表达式作为参数传递给方法时，接收方法把它当对象使用，在`listFiles`方法内部，lambda表达式是一个对象的引用，在这里lambda表达式是一种常规的对象，比如有地址和类型。
 
-从实际的角度来分析，lambda对象是由编译期和运行时系统来创建的，这就允许编译期进行优化而使用者不需要关心具体细节，编译器从lambda表达式的上下文环境来获取lambda对象的语义类型，但是编译期并不创建那个对象而是直到运行时由虚拟机动态创建，这里说的动态创建是指调用invokedynamic字节码指令来创建。使用动态创建可以推迟对象的创建到对象第一次被使用时，如果你只是定义了lambda表达式而从未使用，它的类型和对象都不会创建。
+从实际的角度来分析，lambda对象是由编译期和运行时系统来创建的，这就允许编译期进行优化而使用者不需要关心具体细节，编译器从lambda表达式的上下文环境来获取lambda对象的语义类型，但是编译期并不创建那个对象而是直到运行时由虚拟机动态创建，这里说的动态创建是指调用`invokedynamic`字节码指令来创建。使用动态创建可以推迟对象的创建到对象第一次被使用时，如果你只是定义了lambda表达式而从未使用，它的类型和对象都不会创建。
 
 #函数式接口
 
-整个魔幻之处就在于类型的推导，这个类型称为目标类型，运行时系统动态创建的类型是目标类型的子类型。之前的那个例子我们看到目标类型是FileFilter,在例子中我们定义了一个lambda表达式把它传递给listFiles方法，然后listFiles方法把它作为FileFilter子类的一个对象来使用。这里看起来好像有点神奇，我们并没有声明lambda表达式实现了FileFilter接口，listFiles方法也没有表明它很愉快的接收了lambda表达式，它只是需要一个FileFilter的子类的对象，这是如何工作的？
+整个魔幻之处就在于类型的推导，这个类型称为目标类型，运行时系统动态创建的类型是目标类型的子类型。之前的那个例子我们看到目标类型是`FileFilter`,在例子中我们定义了一个lambda表达式把它传递给listFiles方法，然后listFiles方法把它作为`FileFilter`子类的一个对象来使用。这里看起来好像有点神奇，我们并没有声明lambda表达式实现了`FileFilter`接口，`listFiles`方法也没有表明它很愉快的接收了lambda表达式，它只是需要一个`FileFilter`的子类的对象，这是如何工作的？
 
-这里面的魔术在于编译期执行了类型推导，编译器根据lambda表达式的上下文来决定需要什么类型的对象，然后编译器观察lambda表达式是否兼容需要的类型。如果Java是一种函数式编程语言的话lambda表达式最自然的类型就是某种函数式类型，用来描述函数的一种特殊类型。函数式类型仅仅描述了函数的签名比如(int,int)->boolean.但是Java不是函数式编程语言因此没有函数式类型，语言的设计者可以选择添加一种新的类型，由于他们不想给Java的类型系统引入太多的改变，因此他们尝试寻找一种办法来集成lambda表达式到语言中而不需要添加函数式类型。
+这里面的魔术在于编译期执行了类型推导，编译器根据lambda表达式的上下文来决定需要什么类型的对象，然后编译器观察lambda表达式是否兼容需要的类型。如果Java是一种函数式编程语言的话lambda表达式最自然的类型就是某种函数式类型，用来描述函数的一种特殊类型。函数式类型仅仅描述了函数的签名比如`(int,int)->boolean`.但是Java不是函数式编程语言因此没有函数式类型，语言的设计者可以选择添加一种新的类型，由于他们不想给Java的类型系统引入太多的改变，因此他们尝试寻找一种办法来集成lambda表达式到语言中而不需要添加函数式类型。
 
-结果他们使用函数式接口来代替，函数式接口是只有一个方法的接口，这样的接口在JDK里有很多，比如经典的Runnable接口，它只有一个方法`void run()`,还有很多其他的，比如Readable,Callable,Iterable,closeable,Flushnable,Formattable,Comparable,Comparator,或者我们前面提到的FileFilter接口。函数是接口和lambda表达式奕扬都只有一个方法，语言的设计者决定让编译器把lambda表达式转换成匹配的函数式接口。这种转换通常是自动的。比如我们前面提到的`(File f) -> { return f.isFile(); }`,编译器知道listFiles方法的签名，因此我们需要的类型就是FileFilter,FileFilter是这样的：
+结果他们使用函数式接口来代替，函数式接口是只有一个方法的接口，这样的接口在JDK里有很多，比如经典的Runnable接口，它只有一个方法`void run()`,还有很多其他的，比如`Readable,Callable,Iterable,closeable,Flushnable,Formattable,Comparable,Comparator`,或者我们前面提到的`FileFilter`接口。函数是接口和lambda表达式奕扬都只有一个方法，语言的设计者决定让编译器把lambda表达式转换成匹配的函数式接口。这种转换通常是自动的。比如我们前面提到的`(File f) -> { return f.isFile(); }`,编译器知道listFiles方法的签名，因此我们需要的类型就是`FileFilter`,`FileFilter`是这样的：
 
 	{% highlight java %}
 	public interface FileFilter { boolean accept(File pathname); }
 	{% endhighlight %}
 
-FileFilter仅仅需要一个方法因此它是函数式接口类型，我们定义的lambda表达式有一个相匹配的签名，接收一个File对象，返回一个boolean值，不抛出检查的异常，因此编译器把lambda表达式转换成函数式接口FileFilter类型。
+FileFilter仅仅需要一个方法因此它是函数式接口类型，我们定义的lambda表达式有一个相匹配的签名，接收一个`File`对象，返回一个`boolean`值，不抛出检查的异常，因此编译器把lambda表达式转换成函数式接口`FileFilter`类型。
 
 假如我们有下面两个函数式接口：
 
@@ -164,11 +164,11 @@ Lambda表达式出现在我们通常需要匿名内部类的地方，在很多�
 * 内存分配、对象初始化
 * 调用非静态方法
 
-Lambda表达式需要函数式接口的转换和最终的调用，类型推导发生在编译期，不需要运行时消耗，之前提到过，lambda对象的创建是通过字节码指令invokedynamic来完成的，减少了类型和实例的创建消耗。
+Lambda表达式需要函数式接口的转换和最终的调用，类型推导发生在编译期，不需要运行时消耗，之前提到过，lambda对象的创建是通过字节码指令`invokedynamic`来完成的，减少了类型和实例的创建消耗。
 
 ###变量绑定
 
-匿名类可以访问外部域的final变量，如下所示：
+匿名类可以访问外部域的`final`变量，如下所示：
 
 	{% highlight java %}
 	void method() {
@@ -186,7 +186,7 @@ Lambda表达式需要函数式接口的转换和最终的调用，类型推导�
 	}
 	{% endhighlight %}
 	
-对于lambda表达式，cnt变量不需要显式声明为final的，一旦变量在lambda中使用编译期会自动把它当成是final的变量，换句话说在lambda中使用的外部域变量是隐式final的，
+对于lambda表达式，cnt变量不需要显式声明为final的，一旦变量在lambda中使用编译期会自动把它当成是`final`的变量，换句话说在lambda中使用的外部域变量是隐式final的，
 
 	{% highlight java %}
 	void method() {
@@ -232,7 +232,7 @@ lambda表达式：
 	}
 	{% endhighlight %}
 
-不同的作用域规则对于this和super关键字有不同的效果，在匿名类中this表示匿名类对象本身的引用，super表示匿名类的父类。在lambda表达式this和super关键字意思和外部域中this和super的意思一样，this一般是包含它的那个对象，super表示包含它的类的父类。
+不同的作用域规则对于`this`和`super`关键字有不同的效果，在匿名类中`this`表示匿名类对象本身的引用，`super`表示匿名类的父类。在lambda表达式`this`和`super`关键字意思和外部域中`this`和`super`的意思一样，`this`一般是包含它的那个对象，`super`表示包含它的类的父类。
 
 
 
