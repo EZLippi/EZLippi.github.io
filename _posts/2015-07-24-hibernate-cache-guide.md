@@ -16,6 +16,7 @@ Hibernate中提供了两级Cache，第一级别的缓存是Session级别的缓�
 **使用二级缓存**
 
 这里以EhCache作为二级缓存的插件为例介绍Hibernate二级缓存的配置。
+
 （1）打开二级缓存：
 
 为Hibernate配置二级缓存：
@@ -30,11 +31,13 @@ Hibernate3.3以上：
 
 Hibernate4.0以上,使用`org.hibernate.cache.ehcache.EhCacheRegionFactory `代替`net.sf.ehcache.hibernate.EhCacheRegionFactory`
 	
+	{% highlight XML %}
 	<!--二级缓存-->
 	<property name="hibernate.cache.use_second_level_cache">true</property>
 	<!--查询缓存-->
 	<property name="hibernate.cache.use_query_cache">true</property>
 	在查询定义的地方加入setCacheable(true)，这次查询就被缓存起来了 
+	{% endhighlight %}
 
 （2）配置ehcache.xml
 
