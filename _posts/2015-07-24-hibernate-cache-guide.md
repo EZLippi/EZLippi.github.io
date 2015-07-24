@@ -11,6 +11,7 @@ Hibernate中提供了两级Cache，第一级别的缓存是Session级别的缓�
 
 ![](/images/hibernate1.png)
 ![](/images/hibernate2.png)
+![](/images/hibernate3.png)
 
 **使用二级缓存**
 

@@ -22,7 +22,10 @@ Hibernate中提供了两级Cache，第一级别的缓存是Session级别的缓�
 在主配置文件中hibernate.cfg.xml ：
 	
 Hibernate3.3以上：
+
+	{% highlight XML %}
 	<property 	name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property>
+	{% endhighlight %}
 
 Hibernate4.0以上,使用`org.hibernate.cache.ehcache.EhCacheRegionFactory `代替`net.sf.ehcache.hibernate.EhCacheRegionFactory`
 	
