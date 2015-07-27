@@ -8,272 +8,392 @@
 
 <url>
   <loc>http://coolshell.info/</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/archive.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/index.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://coolshell.info/categories.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2015/03/android-studio-prefrence.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2015/03/install-texlive-in-ubuntu.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2015/03/github-pages-blog.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2015/02/cache.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/12/c-code-opt.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/12/about-web-transmission.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/12/skip-list.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/12/c-open-project.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/12/improve-webServer-performance.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/11/graph.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/11/web-server.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/11/leveldb.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/11/java-inner-class.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/11/java-concurrent-collections.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/11/java-nio.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://coolshell.info/tags.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/archives.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/faqs.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://coolshell.info/about.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/07/gradle-tasks-guide.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/11/android-push.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/07/hibernate-cache-guide.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/10/xmpp-analise.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/06/java-lambda-expression.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/10/androidDP-project.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/05/android-links.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/10/how%20to%20use%20smack.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/05/define-custom-view.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/10/androidDP-introduction.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/05/gradle-dependency-management.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/10/xmpp.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/04/gradle-task-management.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/10/jsp-jfreechart.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/04/java-virtual-mechine.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/10/how-http-works.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/page2/</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2015/03/github-pages-blog.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/07/qualified-programmer-should-read-what-books.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/12/c-open-project.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/12/c-code-opt.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/06/26-methods-to-improve-java-performance.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://coolshell.info/blog/2014/10/android-opensource.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/06/15/in-the-rain.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2015/04/java-code-opt-one.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2015/02/cache.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/12/improve-webServer-performance.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/11/java-inner-class.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/11/java-concurrent-collections.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://coolshell.info/blog/2014/09/returning-null.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://coolshell.info/blog/2014/08/why-jdk-string-is-final.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/08/libevent.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/08/linux-epoll.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://coolshell.info/blog/2014/08/78-golden-rules-of-the-java-programming.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://coolshell.info/blog/2014/08/java-multithread.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://coolshell.info/blog/2014/07/android-UI-Thread.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://coolshell.info/blog/2014/07/android-networkOnMainThreadException.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/07/use-jekyll-build-blog-on-github.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2014/08/libevent.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/07/qualified-programmer-should-read-what-books.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/07/markdown-syntax.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://coolshell.info/blog/2014/07/markdown-basics.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2014/08/linux-epoll.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://coolshell.info/blog/2014/07/c-advaced-programming.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/06/26-methods-to-improve-java-performance.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2015/03/install-texlive-in-ubuntu.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://coolshell.info/blog/2014/06/15/in-the-rain.html</loc>
-  <lastmod>2015-03-18T10:34:01+00:00</lastmod>
+  <loc>http://coolshell.info/blog/2014/07/use-jekyll-build-blog-on-github.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/07/markdown-syntax.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/07/markdown-basics.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2015/03/vim-plugins.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2015/03/android-studio-prefrence.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2015/04/web-transmission-basis.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/11/web-server.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/10/xmpp-analise.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/10/androidDP-project.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/10/how%20to%20use%20smack.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/10/androidDP-introduction.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/10/xmpp.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/10/jsp-jfreechart.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/10/how-http-works.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/12/skip-list.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/11/graph.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/11/leveldb.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2015/04/gradle-in-action-cn.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2015/04/android-tips.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/11/java-nio.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/blog/2014/11/android-push.html</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/page3/</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/page4/</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/page5/</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/page6/</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://coolshell.info/page7/</loc>
+  <lastmod>2015-07-27T07:52:22+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.26</priority>
 </url>
 </urlset>
