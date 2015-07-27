@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: Java Lambda简明教程(一)
+title: Java Lambda简明教程
 categories:	java, lambda
 tags:	java
 ---
@@ -236,7 +236,6 @@ lambda表达式：
 
 
 
-下一篇我将介绍lambda表达式在集合中的使用。
 
 
 

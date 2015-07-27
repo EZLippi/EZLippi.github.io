@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 彻底理解Gradle的任务
-categories:     java, gradle
+categories:	gradle
 tags:   java, gradle
 ---
 
