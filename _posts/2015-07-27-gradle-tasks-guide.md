@@ -12,6 +12,7 @@ tags:   java, gradle
 声明任务很简单，你只需要一个任务名：
 
 	{% highlight Groovy %}
+    
     task hello
     {% endhighlight %}
 你可以在命令行中使用`gradle tasks`来查看所有的任务：
@@ -36,6 +37,7 @@ tags:   java, gradle
 很显然执行`gradle hello`不会有任何结果，因为你没有给这个任务添加动作，我们可以通过左移操作符给任务添加一个动作(在Groovy语言中左移操作符可以重载成在任务的最后添加一个动作)：
 	
     {% highlight Groovy %}
+    
     task hello <<{
     	println 'hello,world'
     }
@@ -44,6 +46,7 @@ tags:   java, gradle
 我们可以在任务的后面引用前面声明的任务:
 
 	{% highlight Groovy %}
+    
     task hello
     
     hello << {
@@ -66,6 +69,7 @@ tags:   java, gradle
 Gradle新手可能会很容易混淆任务的动作和配置，看下面这个例子：
 
     {% highlight Groovy %}
+    
     task initializeDatabase
     initializeDatabase << { println 'connect to database' }
     initializeDatabase << { println 'update database schema' }
@@ -89,6 +93,7 @@ Gradle的构建生命周期分为三部分，初始化、配置和执行阶段�
 和动作闭包一样，配置闭包也具有可加性，你可以像下面这样编写构建脚本：
 
 	{% highlight Groovy %}
+    
     task initializeDatabase
     initializeDatabase << { println 'connect to database' }
     initializeDatabase << { println 'update database schema' }
@@ -109,6 +114,7 @@ Gradle的构建生命周期分为三部分，初始化、配置和执行阶段�
 用于给任务添加一个依赖的任务，被依赖的任务总是在依赖它的任务之前运行，你可以有多种方式声明这种依赖关系，如下所示：
 
     {% highlight Groovy %}
+    
     //最简单的方法
     task loadTestData {
    		dependsOn createSchema
@@ -136,6 +142,7 @@ Gradle的构建生命周期分为三部分，初始化、配置和执行阶段�
 任务可以依赖多个任务，如下所示：
 
      {% highlight Groovy %}
+     
     //每次声明一个任务
     task loadTestData {
     	dependsOn << compileTestClasses
@@ -162,6 +169,7 @@ Gradle的构建生命周期分为三部分，初始化、配置和执行阶段�
 你可以使用任务对象调用doFirst方法，传递一个闭包给这个方法，如下所示：
 
     {% highlight Groovy %}
+    
     task setupDatabaseTests << {
         // 任务现有的代码
         println 'load test data'
@@ -183,6 +191,7 @@ Gradle的构建生命周期分为三部分，初始化、配置和执行阶段�
 你也可以在任务的配置块里面调用doFirst方法，不过要记住配置块里的代码在任务的动作之前执行：
 
 	{% highlight Groovy %}
+    
     task setupDatabaseTests << {
     	println 'load test data'
     }
@@ -196,6 +205,7 @@ Gradle的构建生命周期分为三部分，初始化、配置和执行阶段�
 doFirst方法也是可加的，你可以多次调用这个方法在任务的最前面添加代码块，如下所示：
 
     {% highlight Groovy %}
+    
     task setupDatabaseTests << {
     	println 'load test data'
     }
@@ -227,6 +237,7 @@ doLast方法和doFirst方法很类似，它用于在任务的最后面添加一�
 onlyIf方法用于决定是否执行一个任务，这里使用闭包返回的值来作为onlyIf的判断依据，在Groovy语言中，一个闭包的最后一个表达式用来作为这个闭包的返回值，即使你没有声明return语句，看一个例子：
  
     {% highlight Groovy %}
+    
     task createSchema << {
     	println 'create database schema'
     }
@@ -263,6 +274,7 @@ onlyIf方法用于决定是否执行一个任务，这里使用闭包返回的�
 一个用来标识任务是否成功完成的boolean属性，不是所有的任务都是在完成之后设置didWork变量，一些自带的任务比如Compile,Copy和Delete会根据动作是否执行成功来设置这个变量，JavaCompiler任务的实现是只要有一个文件成功编译就返回true,你可以在你自己的任务中设置didWork属性来反映构建代码的执行结果，举例如下：
 
     {% highlight Groovy %}
+    
     apply plugin: 'java'
     
     task emailMe(dependsOn: compileJava) << {
@@ -283,6 +295,7 @@ onlyIf方法用于决定是否执行一个任务，这里使用闭包返回的�
 一个用来设置任务是否会执行的一个属性，你可以设置enabled为false不让它运行，但是它依赖的任务依然会运行。
 
     {% highlight Groovy %}
+    
     task templates << {
     	println 'process email templates'
     }
@@ -307,6 +320,7 @@ onlyIf方法用于决定是否执行一个任务，这里使用闭包返回的�
 一个字符串属性包含任务的全限定路径名，默认是一个冒号加上任务名，如下所示：
 
      {% highlight Groovy %}
+     
     task echoMyPath << {
         println "THIS TASK'S PATH IS ${path}"
     }
@@ -317,6 +331,7 @@ onlyIf方法用于决定是否执行一个任务，这里使用闭包返回的�
     $ gradle -b path.gradle echoMyPath
     THIS TASK'S PATH IS :echoMyPath
     $
+    
 最开始的冒号表示这个任务在最顶级的构建文件里面，由于Gradle支持多项目构建，一个项目里面可能有多个子项目，假如echoMyPath在子项目subProject构建文件中,那它的全限定路径名就是:subProject:echoMyPath。
 
 ###description
@@ -324,6 +339,7 @@ onlyIf方法用于决定是否执行一个任务，这里使用闭包返回的�
 正如它的名字一样，这个用来给一个任务添加一段容易阅读的描述，你可以使用如下几种方法给任务添加描述。
 
     {% highlight Groovy %}
+    
     task helloWorld(description: 'Says hello to the world') << {
         println 'hello, world'
     }
@@ -349,6 +365,7 @@ onlyIf方法用于决定是否执行一个任务，这里使用闭包返回的�
 Copy任务用于把文件从一个地方复制到另一个地方，你可以设置源目录、目标目录和要复制的文件类型，如下所示：
 
     {% highlight Groovy %}
+    
     task copyFiles(type: Copy) {
     	from 'resources'
     	into 'target'
@@ -363,6 +380,7 @@ Copy任务用于把文件从一个地方复制到另一个地方，你可以设�
 Jar任务用于打包源代码生成Jar文件，Java插件就自带这种类型，任务类型就叫做jar,这个任务把源代码文件和资源文件打包成Jar文件，并保存在build/libs目录下，文件名默认是用项目的名称。
 
     {% highlight Groovy %}
+    
     apply plugin: 'java'
     task customJar(type: Jar) {
     manifest {
@@ -383,6 +401,7 @@ Jar任务用于打包源代码生成Jar文件，Java插件就自带这种类型�
 用于执行一个Java类的main()方法。举例说明：
 
     {% highlight Groovy %}
+    
     apply plugin: 'java'
     //maven中央仓库
     repositories {
@@ -413,6 +432,7 @@ Jar任务用于打包源代码生成Jar文件，Java插件就自带这种类型�
 假设你的构建脚本需要对MySQL数据库执行一些随机的查询，下面我们来编写一个任务执行数据库查询：
 
     {% highlight Groovy %}
+    
     task createDatabase(type: MySqlTask) {
     	sql = 'CREATE DATABASE IF NOT EXISTS example'
     }
@@ -463,6 +483,7 @@ Jar任务用于打包源代码生成Jar文件，Java插件就自带这种类型�
 前面你在build文件中定义了一个自定义的MySqlTask类型，这样的缺点就是你无法在其他构建文件中使用它，只能把它的源码复制过去。我们可以在源码树的buildSrc目录下定义自定义任务类型，这个目录下的文件会被自动编译然后添加到项目的classpath中，如下所示：
 
  	{% highlight Groovy %}
+    
     //任务MySqlTask并没有定义在构建脚本中
     task createDatabase(type: MySqlTask) {
     	sql = 'CREATE DATABASE IF NOT EXISTS example'
@@ -485,6 +506,7 @@ Jar任务用于打包源代码生成Jar文件，Java插件就自带这种类型�
 在buildSrc目录下新建一个文件MysqlTask.groovy,然后添加下面的代码：
 
 	{% highlight Groovy %}
+    
     import org.gradle.api.DefaultTask
 	import org.gradle.api.tasks.TaskAction
     
