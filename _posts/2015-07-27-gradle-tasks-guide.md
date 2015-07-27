@@ -504,9 +504,7 @@ Jar任务用于打包源代码生成Jar文件，Java插件就自带这种类型�
 	{% endhighlight %}
     
 在buildSrc目录下新建一个文件MysqlTask.groovy,然后添加下面的代码：
-
 	{% highlight Groovy %}
-    
     import org.gradle.api.DefaultTask
 	import org.gradle.api.tasks.TaskAction
     
