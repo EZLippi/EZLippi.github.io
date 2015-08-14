@@ -139,4 +139,20 @@ Dagger在编译时使用注解处理工具(APT)对所有的类进行扫描，这
 	}
 	{% endhighlight %}
 
-这样在运行中Dagger会自动注入CoffeeMaker实例以及它依赖的对象．
+CoffeeMaker的定义如下：
+
+	{% highlight java %}
+	class CoffeeMaker {
+	  @Inject Lazy<Heater> heater; 
+	  @Inject Pump pump;
+
+		 public void brew() {
+		 heater.get().on();
+		 pump.pump();
+		 System.out.println(" [_]P coffee! [_]P ");
+		 heater.get().off();
+		 }
+	}
+	{% endhighlight %}
+
+	这样在运行中Dagger会自动注入CoffeeMaker实例以及它依赖的对象heater和pump.
