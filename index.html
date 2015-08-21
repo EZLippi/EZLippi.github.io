@@ -19,7 +19,7 @@ title: "首页：Home"
   </div>
 </h2>
 <hr>
-{{ post.excerpt }}
+<p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
 	<p> <a href="{{ post.url }}"><span >阅读全文 &raquo; </span></a></p>
 <hr>
 {% endfor %}

@@ -1,37 +1,48 @@
 ---
 layout: default
-title: Lippi的个人网站
-tagline:  
-description: Lippi的个人网站
-jumbotron__:
-    title: Lippi的个人网站
-    body: 我也不知道这是干啥的，擦！
+title: "首页：Home"
 ---
-<!-- Nav tabs -->
-<ul class="nav nav-pills nav-justifiedx">
-    <li class="active"><a href="/">Home | 首页</a></li>
-    <li class=""><a href="/archive.html">Archive | 归档</a></li>
-    <li class=""><a href="/categories.html">Categories | 分类</a></li>
-</ul>
-<!-- {% include articles.html %} -->
-
+<h1 class="page-header">
+  <small>
+    {{ site.description }}
+  </small>
+</h1>
+<!-- Loop output paged posts -->
 {% for post in paginator.posts %}
-    <a href="{{ post.url }}">{{ post.title }}</a>
+<h2>
+  <a href="{{ post.url }}">
+    {{ post.title }}
+  </a> 
+  <div class="post-date">
+	<span class="glyphicon glyphicon-time"></span>
+	{{ post.date | date_to_string }}
+  </div>
+</h2>
+<hr>
+{{ post.excerpt }}
+	<p> <a href="{{ post.url }}"><span >阅读全文 &raquo; </span></a></p>
+<hr>
 {% endfor %}
 
-{% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"上一页</a>
-{% endif %}
-{% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="active">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-{% endfor %}
-
-{% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
-{% endif %}
+<!-- Pager indicator -->
+<ul class="pager">
+  {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
+  <li class="previous">
+    <a href="{{ site.url }}/">
+      &larr; Older
+    </a>
+  </li>
+  {% else %}
+  <li class="previous">
+    <a href="{{ site.url }}/page{{ paginator.previous_page }}">
+      &larr; Older
+    </a>
+  </li>
+  {% endif %} {% endif %} {% if paginator.next_page %}
+  <li class="next">
+    <a href="{{ site.url }}/page{{ paginator.next_page }}">
+      Newer &rarr;
+    </a>
+  </li>
+  {% endif %}
+</ul>
