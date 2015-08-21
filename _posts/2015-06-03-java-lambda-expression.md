@@ -1,7 +1,7 @@
 ---
 layout:	post
 title: Java Lambda简明教程
-categories:	java, lambda
+categories:	[java, lambda]
 tags:	java
 ---
 
