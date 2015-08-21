@@ -5,6 +5,9 @@ layout: default
 <!-- Title -->
 <div class="row">
   <div class="post-area post">
+
+ 	<div class="post-list-body">
+        	<div class="all-posts" post-cate="All">
  		<header>
 		<h1>
 		  {{ page.title }}
@@ -38,9 +41,30 @@ layout: default
 	  </span>
 	  {%endif%}
 	</div>
+	</div>
+	<!-- <div class="posts-in-categories"> -->
+        {% for category in site.categories %}
+          <div post-cate="{{category | first}}">
+            {% for posts in category  %}
+              {% for post in posts %}
+                {% if post.url %}
+                  <a href="{{ post.url }}" class="post-list-item">
+                    <h2>
+                    {{ post.title }}
+                    </h2>
+                    <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+	 </div>
 
 <hr>
 </div>
+
+
 <!-- Blog Comments -->
 <div class="media">
   {% include comment.html %} 

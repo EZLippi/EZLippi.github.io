@@ -82,33 +82,7 @@
 	    </div>
 
         <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
-          <!-- Blog Search Well -->
-          <div class="well">
-            <h4>
-              站内搜索
-            </h4>
-            {% include search.html %}
-          </div>
-          <!-- Blog Categories Well -->
-              {% include categories.html %} 
-             
- 	<div class="well">
-            <h4>
-              热门文章
-            </h4>
-              {% include hot.html %} 
-          </div>
-          <!-- Blog Links Well -->
-          <div class="well">
-            <h4>
-              相关链接
-            </h4>
-            {% include links.html %} 
-          </div>
-          <!-- Side Widget Well -->
-           
-        </div>
+        
       </div>
 
 

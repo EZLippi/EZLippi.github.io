@@ -4,7 +4,7 @@ layout: default
 <!-- Blog Post -->
 <!-- Title -->
 <div class="row">
-   
+  <div class="post-area post">
  		<header>
 		<h1>
 		  {{ page.title }}
@@ -41,8 +41,10 @@ layout: default
 
 <hr>
 </div>
+
+
 <!-- Blog Comments -->
 <div class="media">
   {% include comment.html %} 
-
+</div> 
 </div>
