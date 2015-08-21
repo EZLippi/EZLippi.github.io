@@ -5,7 +5,10 @@ Thumbs.db
 .DS_Store
 
 !.gitkeep
-
+*~
+_posts/*~
 .rbenv-version
 .rvmrc
 run.bat
+push
+serve

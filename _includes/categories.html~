@@ -1,61 +1,19 @@
-              <div class="col-lg-6">
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="/categories.html#java">
-                      Java
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/categories.html#web">
-                      Web
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/categories.html#android">
-                      android
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/categories.html#algorithm">
-                      算法
-                    </a>
-                  </li>
-		
-                </ul>
-              </div>
-              <!-- /.col-lg-6 -->
-              <div class="col-lg-6">
-                <ul class="list-unstyled">
-                 <li>
-                    <a href="/categories.html#Programming">
-                      Programming
-                    </a>
-                  </li>
-<li>
-                    <a href="/categories.html#c">
-                      C
-                    </a>
-                  </li>
-<li>
-                    <a href="/categories.html#reprints">
-                      Reprints
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/categories.html#jekyll">
-                      Jekyll
-                    </a>
-                  </li>
-<li>
-                    <a href="/categories.html#gradle">
-                      Gradle
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/categories.html#other">
-                      Other
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /.col-lg-6 -->
+
+<div class="col-sm-3">
+    <div class="shadow-corner-curl hidden-xs">
+      <div class="categories-list-header">
+        Categories
+      </div>
+      
+      <a href="{{'/index.html' | prepend: site.baseurl}}" class="categories-list-item" cate="All">
+        All<span class="my-badge"> {{site.posts | size}}</span>
+      </a>
+      {% for category in site.categories order:ascending %}
+        <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
+          {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+

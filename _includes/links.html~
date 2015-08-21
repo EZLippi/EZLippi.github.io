@@ -1,7 +1,21 @@
-            <ul class="list-unstyled">
+       <div class="shadow-corner-curl hidden-xs">
+      <div class="categories-list-header">
+        相关链接
+      </div>    
+ <ul class="list-unstyled">
               <li>
                 <a href="https://github.com/">
                   GitHub
+                </a>
+              </li>
+<li>
+                <a href="http://www.stackoverflow.com/">
+                  Stack Overflow
+                </a>
+              </li>
+<li>
+                <a href="http://jekyllrb.com/docs/posts/">
+                  Jekyll文档
                 </a>
               </li>
                
@@ -10,11 +24,7 @@
                   Hacker News
                 </a>
               </li>        
-              <li>
-                <a href="http://www.stackoverflow.com/">
-                  Stack Overflow
-                </a>
-              </li>
+              
               <li>
                 <a href="http://developer.android.com/">
                   Android Developer
@@ -27,11 +37,7 @@
                 </a>
               </li>
 
-<li>
-                <a href="http://ifeve.com/">
-                  并发编程网
-                </a>
-              </li>
+
   <li>
                 <a href="http://www.importnew.com/">
                   ImportNew
@@ -42,5 +48,22 @@
                   CodePath Android Cliffnotes
                 </a>
               </li>
-              				  
+<li>
+                <a href="http://androidweekly.net/">
+                  Androidweekly	
+                </a>
+              </li>
+<li>
+			<a href="http://mvnrepository.com/">
+                  Mvnrepository
+                </a>
+              </li>
+<li>
+			<a href="http://www.iteye.com/">
+                  Iteye
+                </a>
+              </li>
+              		
             </ul>
+
+</div>

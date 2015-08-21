@@ -1,4 +1,7 @@
-<!--         
+        <div class="shadow-corner-curl hidden-xs">
+      <div class="categories-list-header">
+        站内搜索
+      </div>
    <form action="https://google3.azurewebsites.net/search" method="get">
               <div class="input-group">
                 <input type="text" name="q" class="form-control">
@@ -13,21 +16,9 @@
               </div>
             </form>
 
--->
 
-<script>
-  (function() {
-    var cx = '015104026998727815951:bza74imjgds';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
+
+
 
 
 
