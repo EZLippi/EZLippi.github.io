@@ -10,7 +10,7 @@ Latex默认是不支持中文的,后来有人开发了XeLatex来支持非英文�
 安装完TexLive后,编写下面的tex文件：
 
 	{% highlight TeX %}
-		\documentclass[12pt,a4paper]{article}
+    &ensp &ensp &ensp &ensp \documentclass[12pt,a4paper]{article}
 	\usepackage{xltxtra,fontspec,xunicode}
 
 	\setmainfont{WenQuanYi Zen Hei} % 设置文档默认字体
