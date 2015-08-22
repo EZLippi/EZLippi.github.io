@@ -10,7 +10,7 @@ Latex默认是不支持中文的,后来有人开发了XeLatex来支持非英文�
 安装完TexLive后,编写下面的tex文件：
 
 	{% highlight TeX %}
-	\documentclass[12pt,a4paper]{article}
+		\documentclass[12pt,a4paper]{article}
 	\usepackage{xltxtra,fontspec,xunicode}
 
 	\setmainfont{WenQuanYi Zen Hei} % 设置文档默认字体
@@ -18,11 +18,11 @@ Latex默认是不支持中文的,后来有人开发了XeLatex来支持非英文�
 	\title{\XeTeX{} 中英文环境测试}
 
 	\begin{document}
-	  \maketitle
-		\XeTeX{} is a \TeX{} typesetting engine using Unicode and supporting modern font technologies.\\
-	 \XeTeX{} 是一个使用Unicode的\TeX{}排版系统，并支持一些现代字体技术.\\
-	 \end{document}
-	 {% endhighlight %}
+	\maketitle
+	\XeTeX{} is a \TeX{} typesetting engine using Unicode and supporting modern font technologies.\\
+	\XeTeX{} 是一个使用Unicode的\TeX{}排版系统，并支持一些现代字体技术.\\
+	\end{document}
+	{% endhighlight %}
 
 使用下面命令编译:`XeLatex test.tex`
 
@@ -37,7 +37,7 @@ Latex默认是不支持中文的,后来有人开发了XeLatex来支持非英文�
 下面是测试文件：
 
 	{% highlight TeX %}
-	\documentclass[12pt,a4paper]{article}
+		\documentclass[12pt,a4paper]{article}
 	\usepackage{xltxtra,fontspec,xunicode}
 	\usepackage[slantfont,boldfont]{xeCJK}
 	\setCJKmainfont{WenQuanYi Zen Hei}   % 设置缺省中文字体
@@ -50,11 +50,11 @@ Latex默认是不支持中文的,后来有人开发了XeLatex来支持非英文�
 	\title{\XeTeX{} 中英文环境测试}
 
 	\begin{document}
-	  \maketitle
-		\XeTeX{} is a \TeX{} typesetting engine using Unicode and supporting modern font technologies.\\
+	\maketitle
+	\XeTeX{} is a \TeX{} typesetting engine using Unicode and supporting modern font technologies.\\
 
-	  \XeTeX{} 是一个使用Unicode的\TeX{}排版系统，并支持一些现代字体技术.\\
-	  \end{document}
+	\XeTeX{} 是一个使用Unicode的\TeX{}排版系统，并支持一些现代字体技术.\\
+	\end{document}
 
 	 {% endhighlight %}
 
