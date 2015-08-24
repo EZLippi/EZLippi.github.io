@@ -178,3 +178,16 @@ ActiveAndroid是一个活跃的记录风格的ORM（对象关系映射）库。A
 项目地址：[https://github.com/nostra13/Android-Universal-Image-Loader](https://github.com/nostra13/Android-Universal-Image-Loader)
 
 Android-Universal-Image-Loader是一个开源的UI组件程序，该项目的目的是提供一个可重复使用的仪器为异步图像加载，缓存和显示。所以，如果你的程序里需要这个功能的话，那么不妨试试它。因为已经封装好了一些类和方法。我们 可以直接拿来用了。而不用重复去写了。其实，写一个这方面的程序还是比较麻烦的，要考虑多线程，缓存，内存溢出等很多方面。但是，你也可以参考这个例子来自己写出更好的程序。 
+
+## 12、KJFrameForAndroid ##
+项目地址：[https://github.com/kymjs/KJFrameForAndroid](https://github.com/kymjs/KJFrameForAndroid)  
+一个强大的Android开发库，KJFrameForAndroid的设计思想是通过封装Android原生SDK中复杂的复杂操作而达到简化Android应用级开发，最终实现快速而又安全的开发APP。功能包含
+* 数据库： javabean直接转换为sqlite表存储  
+* Activity继承链：用最快捷的方法实现MVC分层  
+* KJHttp：自带缓存功能的网络请求库，同时可选用HttpurlConnection(默认)或HttpClient实现
+* KJBitmap：加载网络图片只需要一行代码，使用内存+磁盘双缓存，完美适配任何版本系统不会出现OOM。
+
+## 13、CJFrameForAndroid ##  
+项目地址：[https://github.com/kymjs/CJFrameForAndroid](https://github.com/kymjs/CJFrameForAndroid)  
+一个完善的Android插件化开发框架的开源实现，只需要一行代码就可以启动一个存在于asset目录或sd卡上的没有安装的apk。  
+对于插件apk没有任何的编码限制。
