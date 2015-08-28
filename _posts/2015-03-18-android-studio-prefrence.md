@@ -294,7 +294,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 
 下面是常见的的proguard.cfg配置项：
 
-        {% highlight Groovy %}
+       
         
         #指定代码的压缩级别
         -optimizationpasses 5
@@ -332,7 +332,6 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         -keep public class com.android.vending.licensing.ILicensingService
         #如果有引用v4包可以添加下面这行
         -keep public class * extends android.support.v4.app.Fragment
-        
         
         
         
@@ -462,7 +461,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         # Application classes that will be serialized/deserialized over Gson
         -keep class com.google.gson.examples.android.model.** { *; }
 
-         {% endhighlight %} 
+        
 
 -------------------------------
 
