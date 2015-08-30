@@ -13,8 +13,8 @@ title: "首页：Home"
 <div id="index" class="row">
     <div class="post-area">
      	 <div class="post-list-body">
-        <div class="all post">
-        <ul class="posts" post-cate="All">
+        <div class="all post" post-cate="All">
+        <ul class="posts" >
 	{% for post in paginator.posts %}
 	<li>	
 	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
