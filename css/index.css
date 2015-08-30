@@ -41,10 +41,10 @@ table td{
 }
 
 
-#index a:link {color: #000048}		/* 未访问的链接 */
-#index a:visited {color: #069}	/* 已访问的链接 */
-#index a:hover {color: #336;text-decoration: none;}	/* 鼠标移动到链接上 */
-#index a:active {color: #99b}	/* 选定的链接 */
+#index a:link {color: #12C}		/* 未访问的链接 */
+#index a:visited {color: #609}	/* 已访问的链接 */
+#index a:hover {color: #336;text-decoration: underline;}	/* 鼠标移动到链接上 */
+#index a:active {color: #dd4b39}	/* 选定的链接 */
 
 /* navbar */
 nav{
