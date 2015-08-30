@@ -236,8 +236,14 @@ ul.posts .date {
 	border-bottom:none; 
 }
 .categories-list-item:hover{
-	background-color: rgba(0,0,10,0.075);
-	color: #983;
+	/*background-color: rgba(0,0,10,0.075);
+	color: #983;*/
+	 padding-left: 30px;
+   	 border-left: 15px solid #CE2323;
+
+    	-webkit-transition: all .3s linear;
+    	-o-transition: all .3s linear;
+    	transition: all .3s linear;
 }
 .categories-list-item .my-badge{
 	font-size: 12px;
