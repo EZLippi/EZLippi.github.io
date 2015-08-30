@@ -45,20 +45,20 @@ layout: default
 	</div>
 	<!-- <div class="posts-in-categories"> -->
         {% for category in site.categories %}
-          <div post-cate="{{category | first}}">
+          <ul class="posts" post-cate="{{category | first}}">
             {% for posts in category  %}
               {% for post in posts %}
                 {% if post.url %}
+		<li>
                   <a href="{{ post.url }}" class="post-list-item">
-                    <h2>
-                    {{ post.title }}
-                    </h2>
-                    <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <h2>{{ post.title }}</h2>
+                    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
                   </a>
+		</li>
                 {% endif %}
               {% endfor %}
             {% endfor %}
-          </div>
+          </ul>
         {% endfor %}
 	 </div>
 
