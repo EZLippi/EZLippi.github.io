@@ -2,10 +2,67 @@
  * Reset some basic elements
  */
 /* commom */
+@font-face{font-family:'MuseoSans';src:url('../fonts/museosans_300-webfont.eot');src:url('../fonts/museosans_300-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/museosans_300-webfont.woff') format('woff'),url('../fonts/museosans_300-webfont.ttf') format('truetype'),url('../fonts/museosans_300-webfont.svg#MuseoSans300Regular') format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'MuseoSans';src:url('../fonts/museosans_100_italic-webfont.eot');src:url('../fonts/museosans_100_italic-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/museosans_100_italic-webfont.woff') format('woff'),url('../fonts/museosans_100_italic-webfont.ttf') format('truetype'),url('../fonts/museosans_100_italic-webfont.svg#MuseoSans100Italic') format('svg');font-weight:normal;font-style:italic}
+@font-face{font-family:'MuseoSans';src:url('../fonts/museosans_700-webfont.eot');src:url('../fonts/museosans_700-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/museosans_700-webfont.woff') format('woff'),url('../fonts/museosans_700-webfont.ttf') format('truetype'),url('../fonts/museosans_700-webfont.svg#MuseoSans700Regular') format('svg');font-weight:bold;font-style:normal}
+@font-face{font-family:'MuseoSans_light';src:url('../fonts/museosans_100-webfont.eot');src:url('../fonts/museosans_100-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/museosans_100-webfont.woff') format('woff'),url('../fonts/museosans_100-webfont.ttf') format('truetype'),url('../fonts/museosans_100-webfont.svg#MuseoSans100') format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'MuseoSans_bold';src:url('../fonts/museosans_900-webfont.eot');src:url('../fonts/museosans_900-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/museosans_900-webfont.woff') format('woff'),url('../fonts/museosans_900-webfont.ttf') format('truetype'),url('../fonts/museosans_900-webfont.svg#MuseoSans900') format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'museo_300regular';src:url('../fonts/museo300-regular-webfont.eot');src:url('../fonts/museo300-regular-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/museo300-regular-webfont.woff') format('woff'),url('../fonts/museo300-regular-webfont.ttf') format('truetype'),url('../fonts/museo300-regular-webfont.svg#museo_300regular') format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'museo_500regular';src:url('../fonts/museo500-regular-webfont.eot');src:url('../fonts/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/museo500-regular-webfont.woff') format('woff'),url('../fonts/museo500-regular-webfont.ttf') format('truetype'),url('../fonts/museo500-regular-webfont.svg#museo_500regular') format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'museo_700regular';src:url('../fonts/museo700-regular-webfont.eot');src:url('../fonts/museo700-regular-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/museo700-regular-webfont.woff') format('woff'),url('../fonts/museo700-regular-webfont.ttf') format('truetype'),url('../fonts/museo700-regular-webfont.svg#museo_700regular') format('svg');font-weight:normal;font-style:normal}
+
 body {
-	padding-top: 70px;
-	/*background-image: url(http://7q5cdt.com1.z0.glb.clouddn.com/bg-canvas_bg.jpg);*/
-    font-family: 'Microsoft YaHei', 'SimHei', sans-serif;
+    padding-top: 70px;
+    font-size:16px;word-spacing:1px;
+    margin-left:auto;
+    margin-right:auto;
+    font-family:MuseoSans,Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",Verdana,sans-serif;
+    color:#000000;
+    background-color:#ffffff;
+}
+body>div {
+    width: 70%;
+    min-width: 32em;
+    max-width: 50em;
+    padding: 3em 3em 1.5em;
+    margin: 3em auto;
+    background-color: #fff;
+    -moz-box-shadow: 0 0 10px 0 #cfcfcf;
+    -webkit-box-shadow: 0 0 10px 0 #cfcfcf;
+    box-shadow: 0 0 10px 0 #cfcfcf;
+    border-top: 6px solid #EE0000;
+}
+h1 {
+    font-size: 28px;
+    line-height: 28px;
+    margin: 0 0 28px 0;
+	background-color: rgb(185, 34, 31);
+	color: #fff;
+	display: inline-block;
+	padding: 12px;
+}
+h2 {
+    font-size: 26px;
+    line-height: 48px;
+    margin: 0 0 24px 0;
+	font-weight: bold;
+}
+h2 i {
+	font-size: 18px;
+	color: #ccc;
+}
+h3 {
+    font-size: 18px;
+    line-height: 24px;
+	font-weight: bold;
+}
+section>h3 {
+    margin: 0 0 24px 0;
+}
+h4 {
+    font-size: 16px;
+    line-height: 12px;
+	font-weight: bold;
 }
 article p{
 	/*text-indent: 2em;*/
