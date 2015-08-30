@@ -6,7 +6,6 @@ category:   web
 tags:		[android, 消息推送]
 ---
 
-# Androidpn 开源项目 #
 
 Androidpn 开源项目托管地址：http://sourceforge.net/projects/androidpn/
 

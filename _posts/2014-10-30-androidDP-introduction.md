@@ -6,7 +6,6 @@ category:   web
 tags:		[android, 消息推送， server， client]
 ---
 
-## 通信机制 ##
 Androidpn是韩国Sehwan No写的开源消息推送项目，很多大公司都用这个消息推送方式构建自己的消息推送服务，缺点是导致客户端比较耗电。通信机制分别由客户端和服务器完成。
 
 客户端采用基于java的XMPP协议包asmack（该包依赖于openfire下的开源项目smack）。通过该协议包提供的XMPPConnetcion类与服务器建立持久连接，并通过该连接进行用户注册和登录认证，以及接受服务器消息。

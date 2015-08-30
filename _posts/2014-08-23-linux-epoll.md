@@ -5,7 +5,6 @@ keywords: 并发， I/O多路复用
 categories : [c]
 tags : [c++, concurrent]
 ---
-##1. Epoll简单介绍
 
 Epoll可是当前在Linux下开发大规模并发网络程序的热门人选，Epoll 在Linux2.6内核中正式引入，和select相似，其实都I/O多路复用技术而已，并没有什么神秘的。
 

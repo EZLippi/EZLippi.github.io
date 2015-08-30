@@ -5,7 +5,6 @@ keywords:   [java, thread， Service]
 category:   java
 tags:       [java, android]
 ---
-##Service的基本用法
 关于Service最基本的用法自然就是如何启动一个Service了，启动Service的方法和启动Activity很类似，都需要借助Intent来实现，下面我们就通过一个具体的例子来看一下。
 
 新建一个Android项目，项目名就叫ServiceTest，这里我选择使用4.0的API。
