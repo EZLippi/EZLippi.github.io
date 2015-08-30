@@ -413,6 +413,18 @@ blockquote:last-child {
 	text-align: right;
 }
 
+.post-comment{
+    margin-top: 80px;
+}
+.post-comment span{
+    display: inline-block;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 5px solid #CE2323;
+}
 /**
  * demo
  * 瀑布流
