@@ -41,8 +41,8 @@ table td{
 }
 
 
-#index a:link {color: #005}		/* 未访问的链接 */
-#index a:visited {color: #669}	/* 已访问的链接 */
+#index a:link {color: #F99}		/* 未访问的链接 */
+#index a:visited {color: #C99}	/* 已访问的链接 */
 #index a:hover {color: #336;text-decoration: none;}	/* 鼠标移动到链接上 */
 #index a:active {color: #99b}	/* 选定的链接 */
 
