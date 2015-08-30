@@ -19,6 +19,15 @@ pre code{
 	font-size: 14px;
 }
 
+pre::-webkit-scrollbar {width:10px;height:10px;background:#F6F6F6;border-top:1px solid #CCC;padding-top:1px;}
+pre::-webkit-scrollbar-thumb {background:#EEE;border-radius:5px;border:1px solid #CCC;border-bottom:0px;}
+pre::-webkit-scrollbar-thumb:hover {background:#DDD;}
+pre::-webkit-scrollbar {width:10px;height:10px;background:#CCC;}
+pre::-webkit-scrollbar-thumb {background:#999;border-radius:5px;}
+pre::-webkit-scrollbar-thumb:hover {background:#666;}
+pre::-webkit-scrollbar-corner {background:#CCC;}
+pre::-webkit-color-swatch {border:none;}
+
 table{
 	border-top:2px solid #777;
 	border-bottom: 2px solid #777;
@@ -485,6 +494,7 @@ blockquote:last-child {
     	font-size: 14px;
 	}
 	pre code{
+  
 		font-size: 12px;
 	}
 	.post article ul{
