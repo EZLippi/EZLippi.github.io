@@ -204,10 +204,10 @@ nav{
 	font-size: 13px;
 	font-weight:bold 
 
-	transition:0.4s ease;
+	/*transition:0.4s ease;
 	-webkit-transition:0.4s ease;
 	-moz-transition:0.4s ease;
-	-o-transition:0.4s ease;
+	-o-transition:0.4s ease;*/
 }
 .categories-list-item:last-of-type{
 	border-bottom:none; 
