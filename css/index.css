@@ -278,6 +278,9 @@ ul.posts .date {
 	-o-box-shadow: 0 1px 5px rgba(0,0,0,0.4),0 0 20px rgba(0,0,0,0.1) inset;
 	box-shadow: 0 1px 5px rgba(0,0,0,0.4),0 0 20px rgba(0,0,0,0.1) inset;
 }
+.shadow-corner-curl h3{
+	color: #16c
+}
 .shadow-corner-curl:before{
 	content:"";
 	position: absolute;
