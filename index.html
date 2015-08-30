@@ -13,8 +13,8 @@ title: "首页：Home"
 <div id="index" class="row">
     <div class="post-area">
      	 <div class="post-list-body">
-        <div class="all post" post-cate="All">
-        <ul class="posts" >
+        <div post-cate="All">
+        <ul class="posts">
 	{% for post in paginator.posts %}
 	<li>	
 	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -54,7 +54,9 @@ title: "首页：Home"
 
 	 
        {% for category in site.categories %}
-          <ul class="posts" post-cate="{{category | first}}">
+	<div post-cate="{{category | first}}">
+
+          <ul class="posts">
             {% for posts in category  %}
               {% for post in posts %}
                 {% if post.url %}
@@ -69,6 +71,7 @@ title: "首页：Home"
             {% endfor %}
           </ul>
         {% endfor %}
+	</div>
 	 </div>
 
 </div>

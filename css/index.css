@@ -191,6 +191,8 @@ ul.posts li:hover {
     -o-transition: all .3s linear;
     transition: all .3s linear;
 }
+
+
 ul.posts .date {
     display: block;
     margin: 8px 0;
