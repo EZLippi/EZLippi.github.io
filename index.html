@@ -53,7 +53,7 @@ title: "首页：Home"
 
 
         {% for category in site.categories %}
-          <ul class="posts post-cate="{{category | first}}">
+          <ul class="posts" post-cate="{{category | first}}">
             {% for posts in category  %}
               {% for post in posts %}
                 {% if post.url %}
