@@ -10,24 +10,33 @@ body {
 article p{
 	/*text-indent: 2em;*/
 }
-pre{
-	padding: 0;
-	background: none;
+
+pre {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 95%;
+    line-height: 140%;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}       
+
+code {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 95%;
+    line-height: 140%;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    background: #faf8f0;
 }
 
-pre code{
-	font-size: 14px;
+#content code {
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid #bebab0;
 }
-
-pre::-webkit-scrollbar {width:10px;height:10px;background:#F6F6F6;border-top:1px solid #CCC;padding-top:1px;}
-pre::-webkit-scrollbar-thumb {background:#EEE;border-radius:5px;border:1px solid #CCC;border-bottom:0px;}
-pre::-webkit-scrollbar-thumb:hover {background:#DDD;}
-pre::-webkit-scrollbar {width:10px;height:10px;background:#CCC;}
-pre::-webkit-scrollbar-thumb {background:#999;border-radius:5px;}
-pre::-webkit-scrollbar-thumb:hover {background:#666;}
-pre::-webkit-scrollbar-corner {background:#CCC;}
-pre::-webkit-color-swatch {border:none;}
-
 table{
 	border-top:2px solid #777;
 	border-bottom: 2px solid #777;
