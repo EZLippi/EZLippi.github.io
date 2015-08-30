@@ -45,7 +45,8 @@ layout: default
 	</div>
 	
         {% for category in site.categories %}
-          <ul class="posts" post-cate="{{category | first}}">
+	<div post-cate="{{category | first}}">
+          <ul class="posts">
             {% for posts in category  %}
               {% for post in posts %}
                 {% if post.url %}
@@ -59,6 +60,7 @@ layout: default
               {% endfor %}
             {% endfor %}
           </ul>
+	</div>
         {% endfor %}
 	 </div>
 
