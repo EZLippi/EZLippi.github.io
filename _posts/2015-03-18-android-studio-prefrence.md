@@ -237,6 +237,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
     android:name="UMENG_CHANNEL"
     android:value="Channel_ID" />
       {% endhighlight %}
+      
 里面的Channel_ID就是渠道标示。我们的目标就是在编译的时候这个值能够自动变化。
 *   第一步 在AndroidManifest.xml里配置PlaceHolder
      {% highlight Groovy %}
@@ -244,6 +245,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
     android:name="UMENG_CHANNEL"
     android:value="${UMENG_CHANNEL_VALUE}" />
       {% endhighlight %}
+
 *   第二步 在build.gradle  设置productFlavors
     {% highlight Groovy %}
     android { 
@@ -290,9 +292,9 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 
 ##代码混淆
 
-下面是我目前一个项目用的proguard.cfg配置文件：
+下面是常见的的proguard.cfg配置项：
 
-        {% highlight java %}
+       
         
         #指定代码的压缩级别
         -optimizationpasses 5
@@ -333,7 +335,6 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         
         
         
-        
         #忽略警告
         -ignorewarning
         
@@ -354,36 +355,16 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         #####混淆保护自己项目的部分代码以及引用的第三方jar包library#######
         
         #-libraryjars libs/umeng-analytics-v5.2.4.jar
-        #-libraryjars libs/alipaysdk.jar
-        #-libraryjars libs/alipaysecsdk.jar
-        #-libraryjars libs/alipayutdid.jar
-        #-libraryjars libs/wup-1.0.0-SNAPSHOT.jar
-        #-libraryjars libs/weibosdkcore.jar
-        
         
         #三星应用市场需要添加:sdk-v1.0.0.jar,look-v1.0.1.jar
         #-libraryjars libs/sdk-v1.0.0.jar
         #-libraryjars libs/look-v1.0.1.jar
         
-        #我是以libaray的形式引用了一个图片加载框架,如果不想混淆 keep 掉
-        -keep class com.nostra13.universalimageloader.** { *; }
+        #如果不想混淆 keep 掉
         -keep class com.lippi.recorder.iirfilterdesigner.** {*; }
         #友盟
         -keep class com.umeng.**{*;}
-        
-        #支付宝
-        -keep class com.alipay.android.app.IAliPay{*;}
-        -keep class com.alipay.android.app.IAlixPay{*;}
-        -keep class com.alipay.android.app.IRemoteServiceCallback{*;}
-        -keep class com.alipay.android.app.lib.ResourceMap{*;}
-        
-        
-        #信鸽推送
-        -keep class com.tencent.android.tpush.**  {* ;}
-        -keep class com.tencent.mid.**  {* ;}
-        
-        
-        #自己项目特殊处理代码
+        #项目特殊处理代码
         
         #忽略警告
         -dontwarn com.lippi.recorder.utils**
@@ -417,10 +398,6 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
             public <init>(android.content.Context, android.util.AttributeSet);
         }
         
-        #保持自定义控件类不被混淆
-        -keepclasseswithmembers class * {
-            public <init>(android.content.Context, android.util.AttributeSet, int);
-        }
         #保持自定义控件类不被混淆
         -keepclassmembers class * extends android.app.Activity {
            public void *(android.view.View);
@@ -484,7 +461,7 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
         # Application classes that will be serialized/deserialized over Gson
         -keep class com.google.gson.examples.android.model.** { *; }
 
-    {% endhighlight %} 
+        
 
 -------------------------------
 
