@@ -16,8 +16,7 @@ http://www.coolshell.info
 
 ####本项目使用了
 1,CNZZ的网站统计服务，官网：http://cnzz.com  
-2,友言的网友评论服务，官网：http://www.uyan.cc  
-
+2,多说的评论功能，官网:![](http://duoshuo.com/)
 ####联系方式
 联系方式：qq(934107508), Email(ouyanglip@gmail.com)  
 
