@@ -14,23 +14,19 @@ title: "首页：Home"
     <div class="post-area">
      	 <div class="post-list-body">
         
-        <div class="all-posts" post-cate="All">
+        <ul class="posts" post-cate="All">
 	{% for post in paginator.posts %}
-	<h2>
-	  <a href="{{ post.url }}">
-	    {{ post.title }}
-	  </a> 
-	  <div class="post-date">
-		<span class="glyphicon glyphicon-time"></span>
-		{{ post.date | date_to_string }}
-	  </div>
-	</h2>
+	<li>	
+	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<span class="date">{{ post.date | date_to_string }}</span>
+	
 	<hr>
 	<p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
 		<p> <a href="{{ post.url }}"><span >阅读全文 &raquo; </span></a></p>
 	<hr>
+	</li>
 	{% endfor %}
-
+	</ul>
 	<!-- Pager indicator -->
 	<ul class="pager">
 	  {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
@@ -53,9 +49,9 @@ title: "首页：Home"
 	  </li>
 	  {% endif %}
 	</ul>
-	</div>
+	
 
- <!-- <div class="posts-in-categories"> -->
+
         {% for category in site.categories %}
           <div post-cate="{{category | first}}">
             {% for posts in category  %}
