@@ -1,21 +1,15 @@
         <div class="shadow-corner-curl hidden-xs">
 	  <div class="categories-list-header">站内搜索</div>
-   <form action="https://google3.azurewebsites.net/search" method="get">
-	  <div class="input-group">
-								                 <input type="text" name="q" class="form-control">
-								                             <input type="hidden" name="ie" value="UTF-8" />
-								   
- <input type="hidden" name="sitesearch" value="{{ site.domain }}" />
-								            
- <span class="input-group-btn">
-									                    <button class="btn btn-default" type="submit">
-										                     <span class="glyphicon glyphicon-search">
-											                  </span>
-										                  </button>
- </span>
-	  </div>
-	  </form>
-						      
+<!-- 使用该代码即表示您同意接受 Google 自定义搜索服务条款。 -->
+<!-- 有关服务条款，请访问 http://www.google.com/cse/docs/tos.html?hl=zh-CN -->
+<form name="cse" id="searchbox_demo" action="/search.html">
+  <input type="hidden" name="cref" value="" />
+  <input type="hidden" name="ie" value="utf-8" />
+  <input type="hidden" name="hl" value="zh-CN" />
+  <input name="q" type="text" size="40" />
+  <input type="submit" name="sa" value="搜索" />
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox_demo&lang=zh-CN"></script>			      
      
             
 </div>
