@@ -1,20 +1,25 @@
         <div class="shadow-corner-curl hidden-xs">
       <div class="categories-list-header">
         站内搜索
-      </div>
-               <script>
-  (function() {
-    var cx = '015104026998727815951:bza74imjgds';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
+      </div
+	  <div class="categories-list-header">站内搜索</div>
+   <form action="https://google3.azurewebsites.net/search" method="get">
+	  <div class="input-group">
+								                 <input type="text" name="q" class="form-control">
+								                             <input type="hidden" name="ie" value="UTF-8" />
+								   
+ <input type="hidden" name="sitesearch" value="{{ site.domain }}" />
+								            
+ <span class="input-group-btn">
+									                    <button class="btn btn-default" type="submit">
+										                     <span class="glyphicon glyphicon-search">
+											                  </span>
+										                  </button>
+ </span>
+	  </div>
+	  </form>
+						      
+     
             
 </div>
 
