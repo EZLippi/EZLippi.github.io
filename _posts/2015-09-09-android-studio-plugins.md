@@ -78,7 +78,7 @@ Android中的序列化有两种方式，分别是实现Serializable接口和Parc
 ![](/images/parcelable_generator.png)
 
 
-8.[](https://github.com/konifar/android-material-design-icon-generator-plugin)
+8.[android-material-design-icon-generator](https://github.com/konifar/android-material-design-icon-generator-plugin)
 
 ![](/images/capture.gif)
 
