@@ -26,10 +26,10 @@ ButterKnife视图注入插件,如果你的Activity布局里面有很多组件，
 它可以减少导入缩放图像到Android项目所需的工作量,Android  Drawable Importer添加了一个在不同分辨率导入画板或缩放指定图像到定义分辨率的选项,该插件包含三个主要功能，可以在New下的Android module的任意地方通过右键访问它们：
 1、引入AndroidIcons Drawable
 选择资源，指定颜色，改变目标资源名字以及选中所有你想引入的资源。然后会自动创建所有缺失的文件夹，如果已经存在相同名字的drawable，则会进行警告。
- 
+
 2、Scaled Drawable
 选择资源并指定分辨率。如果你想缩放引入的图片，你应该选择“其他”选项，然后填充目标分辨率和目标宽度/高度。
- 
+
 3、Multisource-Drawable
 引入不同资源的Drawable，设计者根据如下结构设计不同资源的Drawable zip文件，引入一个zip文件即可引入不同分辨率的Drawable。
 	root/
