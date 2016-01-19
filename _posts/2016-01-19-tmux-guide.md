@@ -20,7 +20,7 @@ tag: [shell, linux]
 * Window：会话中一个可见的窗口。
 * Pane:一个窗口可以分成多个面板。
 
-![](/images/images/tmux.png)
+![](/images/images/tmux.jpg)
 
 图中左下角的3显示为当前会话，随后1 vim,2 bash,3 ssh 分别是3个窗口，蓝色bash表示当前窗口，图中用蓝色数字标记的1,2,3分别是bash窗口的三个面板。你还可以在tmux配置文件中给状态栏添加时间、天气等信息。
 
@@ -106,7 +106,7 @@ Tmux的所有操作必须使用一个前缀进入命令模式，默认前缀为<
 
 美化之后的效果是这样的：
 
-![](/images/images/tmux2.png)
+![](/images/images/tmux2.jpg)
 
 最后附上我的tmux配置文件：[.tmux.conf](https://github.com/LippiOuYang/Profiles/blob/master/tmux.conf)
 
