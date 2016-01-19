@@ -100,14 +100,12 @@ Tmux的所有操作必须使用一个前缀进入命令模式，默认前缀为<
 
 添加如下命令到配置文件后后可以使用HJKL来调整窗口大小:
 
-{% highlight Vim Script %}
-	
-	# resize panes using PREFIX H, J, K, L
-	bind H resize-pane -L 5
-	bind J resize-pane -D 5
-	bind K resize-pane -U 5
-	bind L resize-pane -R 5
-	
+{% highlight Vim Script %}	
+# resize panes using PREFIX H, J, K, L
+bind H resize-pane -L 5
+bind J resize-pane -D 5
+bind K resize-pane -U 5
+bind L resize-pane -R 5	
 {% endhighlight Vim Script %}
 	 
 其他操作：
