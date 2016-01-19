@@ -98,6 +98,12 @@ NetBSD是一个免费的，具有高度移植性的 UNIX-like 操作系统，是
 
 下载地址：[http://www.netbsd.org/](http://www.netbsd.org/)
 
+11.**Redis**
+
+Redis 是一个使用 C 语言写成的，开源的 key-value 数据库。Redis支持的操作和数据类型比Memcached要多，现在主要用于缓存，支持主从同步机制，Redis的学习可以参考<<Redis设计与实现>>一书。
+
+下载地址：[http://redis.io/](http://redis.io/)
+
 ## C++ 资源大全 ##
 
 <p>关于 C++ 框架、库和资源的一些汇总列表，内容包括：标准库、Web应用框架、人工智能、数据库、图片处理、机器学习、日志、代码分析等。</p>
