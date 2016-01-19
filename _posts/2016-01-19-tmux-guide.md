@@ -29,36 +29,36 @@ tag: [shell, linux]
 
 Tmux的所有操作必须使用一个前缀进入命令模式，默认前缀为<Ctrl-b>，很多人会改为<Ctrl-a>,你可以修改tmux.conf配置文件来修改默认前缀：
 
-	{% highlight Vim Script %}
-	#前缀设置为<Ctrl-a>
-	set -g prefix C-a
-	#解除<Ctrl-b>
-	ubind C-b
-	{% endhighlight Vim Script %}
+{% highlight Vim Script %}
+#前缀设置为<Ctrl-a>
+set -g prefix C-a
+#解除<Ctrl-b>
+ubind C-b
+{% endhighlight Vim Script %}
 
 
 修改之后重启Tmux生效，或者先按<Ctrl-b>，然后输入：，进入命令行模式， 在命令行模式下输入：
-	
-	{% highlight Vim Script %}
-	source-file ~/.tmux.conf
-	{% endhighlight Vim Script %}
+
+{% highlight Vim Script %}
+source-file ~/.tmux.conf
+{% endhighlight Vim Script %}
 
 你也可以在配置文件中加入下面这句话，以后改了配置文件只需要按前缀+r了。
-	
-	{% highlight Vim Script %}
-	#将r 设置为加载配置文件，并显示"reloaded!"信息
-	bind r source-file ~/.tmux.conf \; display "Reloaded!"
-	{% endhighlight Vim Script %}
+
+{% highlight Vim Script %}
+#将r 设置为加载配置文件，并显示"reloaded!"信息
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+{% endhighlight Vim Script %}
 	
 加入如下几条语句， 现在切换面板就和vim一样了：
-	
-	{% highlight Vim Script %}
-	# map Vi movement keys as pane movement keys
-	bind h select-pane -L
-    bind j select-pane -D
-    bind k select-pane -U
-    bind l select-pane -R
-	{% endhighlight Vim Script %}
+
+{% highlight Vim Script %}
+# map Vi movement keys as pane movement keys
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+{% endhighlight Vim Script %}
 
 ##复制/粘贴
 
@@ -68,11 +68,11 @@ Tmux的所有操作必须使用一个前缀进入命令模式，默认前缀为<
 4. 将光标移动到指定位置，按前缀+ ] 粘贴
 
 如果把tmux比作vim的话，那么我们大部分时间都是处于编辑模式，只需要在配置文件(~/.tmux.conf)中加入如下行即可以像 vim一样使用hjkl移动:
-	
-	{% highlight Vim Script %}
-	#copy-mode 将快捷键设置为vi 模式
-	setw -g mode-keys vi
-	{% endhighlight Vim Script %}
+
+{% highlight Vim Script %}
+#copy-mode 将快捷键设置为vi 模式
+setw -g mode-keys vi
+{% endhighlight Vim Script %}
 
 ##会话的创建和保存
 
@@ -92,11 +92,11 @@ Tmux的所有操作必须使用一个前缀进入命令模式，默认前缀为<
 
 在配置文件中添加下面两行就可以使用`前缀+ |-`来水平和垂直分割窗口：
 
-	{% highlight Vim Script %}
-	# use PREFIX | to split window horizontally and PREFIX - to split vertically
-	bind | split-window -h
-    bind - split-window -v
-	{% endhighlight Vim Script %}
+{% highlight Vim Script %}
+# use PREFIX | to split window horizontally and PREFIX - to split vertically
+bind | split-window -h
+bind - split-window -v
+{% endhighlight Vim Script %}
 
 添加如下命令到配置文件后后可以使用HJKL来调整窗口大小:
 
