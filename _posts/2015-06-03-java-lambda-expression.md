@@ -12,9 +12,9 @@ tags:	java
 
 Lambda表达式的概念来自于Lambda演算，下面是一个java lambda的简单例子，
 
-	{% highlight java %}
-	(int x) -> { return x+1; }
-	{% endhighlight %}
+{% highlight java %}
+(int x) -> { return x+1; }
+{% endhighlight %}
 
 简单来看lambda像一个没有名字的方法，它具有一个方法应该有的部分：参数列表`int x`，方法body　`return x+1`,和方法相比lambda好像缺少了一个返回值类型、异常抛出和名字。返回值类型和异常是通过编译器在方法体中推导出来，在上面这个例子中返回值类型是int,没有抛出异常。真正缺少的就是一个名字，从这个角度来看，lambda表达式是一种匿名方法。
 
@@ -22,60 +22,60 @@ Lambda表达式的概念来自于Lambda演算，下面是一个java lambda的简
 
 从上面的分析可以看出lambda和java内部类的特性有点相似，匿名内部类不只是一个方法，而是一个包含一个或多个方法的类，他们的作用都是一样的，都是作为方法的参数传递，我从JDK源码中提取出来`listFiles(FileFilter)` 方法：
 
-	{% highlight java %}
-	public File[] listFiles(FileFilter filter) {
-		String ss[] = list();
-		if (ss == null) return null;
-		
-		ArrayList<File> files = new ArrayList<>();
-		for (String s : ss) {
-			File f = new File(s, this);
-			if ((filter == null) || filter.accept(f))
-			files.add(f);
-		}
-		return files.toArray(new File[files.size()]);
+{% highlight java %}
+public File[] listFiles(FileFilter filter) {
+	String ss[] = list();
+	if (ss == null) return null;
+	
+	ArrayList<File> files = new ArrayList<>();
+	for (String s : ss) {
+		File f = new File(s, this);
+		if ((filter == null) || filter.accept(f))
+		files.add(f);
 	}
-	{% endhighlight %}
+	return files.toArray(new File[files.size()]);
+}
+{% endhighlight %}
 
 `listFilter`方法接收一个功能接口作为参数，在这里是FileFilter接口：
 
-	{% highlight java %}
-	public interface FileFilter {
-		boolean accept(File pathname);
-	}
-	{% endhighlight %}
+{% highlight java %}
+public interface FileFilter {
+	boolean accept(File pathname);
+}
+{% endhighlight %}
 
 `fileFilter`接收一个`File`对象返回一个`boolean`值，`listFiles`方法把`Filter`应用到所有的`File`对象接收 那些`accept`返回`true`的文件。对于`listFiles`方法来讲我们必须传递一个函数式接口给他，这是`FileFileter`的一个实现，一般我们通过匿名类来完成：
 
-	{% highlight java %}
-	File myDir = new File("／home/user/files");
-	if (myDir.isDirectory()) {
-		File[] files = myDir.listFiles(
-		new FileFilter() {
-		 public boolean accept(File f) { return f.isFile(); }
-		 }
-		);
-	}
-	{% endhighlight %}
+{% highlight java %}
+File myDir = new File("／home/user/files");
+if (myDir.isDirectory()) {
+	File[] files = myDir.listFiles(
+	new FileFilter() {
+	 public boolean accept(File f) { return f.isFile(); }
+	 }
+	);
+}
+{% endhighlight %}
 
 　我们现在可以用lambda来实现：
 
-	{% highlight java %}
-	File myDir = new File("／home/user/files");
-	if (myDir.isDirectory()) {
-		File[] files = myDir.listFiles(
-		(File f) -> { return f.isFile(); }
-		);
-	}
-	{% endhighlight %}
+{% highlight java %}
+File myDir = new File("／home/user/files");
+if (myDir.isDirectory()) {
+	File[] files = myDir.listFiles(
+	(File f) -> { return f.isFile(); }
+	);
+}
+{% endhighlight %}
 
 这两种情况我们都是传递了一个函数式接口给方法就像传递对象一样，我们使用代码就像使用数据一样，使用匿名类我们实际上传递了一个对象给方法，使用lambda不再需要创建对象，我们只需要把lambda代码传递给方法。
 
 除了传递lambda之外我们还可以传递一个方法引用，比如：
 
-	{% highlight java %}
-	File[] files = myDir.listFiles( File::isFile );
-	{% endhighlight %}
+{% highlight java %}
+File[] files = myDir.listFiles( File::isFile );
+{% endhighlight %}
 
 #Lambda表达式的表示
 
@@ -94,42 +94,42 @@ Lambda表达式的概念来自于Lambda演算，下面是一个java lambda的简
 
 结果他们使用函数式接口来代替，函数式接口是只有一个方法的接口，这样的接口在JDK里有很多，比如经典的Runnable接口，它只有一个方法`void run()`,还有很多其他的，比如`Readable,Callable,Iterable,closeable,Flushnable,Formattable,Comparable,Comparator`,或者我们前面提到的`FileFilter`接口。函数是接口和lambda表达式奕扬都只有一个方法，语言的设计者决定让编译器把lambda表达式转换成匹配的函数式接口。这种转换通常是自动的。比如我们前面提到的`(File f) -> { return f.isFile(); }`,编译器知道listFiles方法的签名，因此我们需要的类型就是`FileFilter`,`FileFilter`是这样的：
 
-	{% highlight java %}
-	public interface FileFilter { boolean accept(File pathname); }
-	{% endhighlight %}
+{% highlight java %}
+public interface FileFilter { boolean accept(File pathname); }
+{% endhighlight %}
 
 FileFilter仅仅需要一个方法因此它是函数式接口类型，我们定义的lambda表达式有一个相匹配的签名，接收一个`File`对象，返回一个`boolean`值，不抛出检查的异常，因此编译器把lambda表达式转换成函数式接口`FileFilter`类型。
 
 假如我们有下面两个函数式接口：
 
 	
-	{% highlight java %}
-	public interface FileFilter { boolean accept(File pathname); }
+{% highlight java %}
+public interface FileFilter { boolean accept(File pathname); }
 　
-	public interface Predicate<T> { boolean test(T t); }
-	{% endhighlight %}
+public interface Predicate<T> { boolean test(T t); }
+{% endhighlight %}
 
 我们的lambda表达式兼容两种函数式接口类型：
 
-	{% highlight java %}
-	FileFilter filter = (File f) -> { return f.isFile(); };
+{% highlight java %}
+FileFilter filter = (File f) -> { return f.isFile(); };
 
-	Predicate<File> predicate = (File f) -> { return f.isFile(); };
+Predicate<File> predicate = (File f) -> { return f.isFile(); };
 
-	filter = predicate;//错误，不兼容的类型
-	{% endhighlight %}
+filter = predicate;//错误，不兼容的类型
+{% endhighlight %}
 
 当我们试图给两个变量相互赋值时编译器会报错，虽然两个变量都是同一个lambda表达式，原因很简单两个变量是不同的类型。也有可能出现编译器无法判断匹配的函数式接口类型，比如这个例子：
 
-	{% highlight java %}
-	Object ref　= (File f) -> { return f.isFile(); };
-	{% endhighlight %}
+{% highlight java %}
+Object ref　= (File f) -> { return f.isFile(); };
+{% endhighlight %}
 
 这个赋值语句的上下文没有提供足够的信息来转换，因此编译器会报错，解决这个问题最简单的方法就是添加一个类型转换：
 
-	{% highlight java %}
+{% highlight java %}
 　	Object ref　= (FileFilter) (File f) -> { return f.isFile(); };
-	{% endhighlight %}
+{% endhighlight %}
 
 #Lambda表达式和匿名内部类的区别
 
@@ -139,21 +139,21 @@ Lambda表达式出现在我们通常需要匿名内部类的地方，在很多�
 
 匿名类一般这样编写：
 
-	{% highlight java %}
-	Fi le[] fs = myDir.lis tFiles(
-		new FileFilter() {
-		public boolean accept(File f) { return f.isFile(); }
-		}
-	);
-	{% endhighlight %}
+{% highlight java %}
+Fi le[] fs = myDir.lis tFiles(
+	new FileFilter() {
+	public boolean accept(File f) { return f.isFile(); }
+	}
+);
+{% endhighlight %}
 
 而Lambda表达式有多种形式：
 
-	{% highlight java %}
-	File[] files = myDir.listFiles( (File f) -> {return f.isFile();} );
-	File[] files = myDir.listFiles( f -> f.isFile() );
-	F ile[] fil e s = myDir.listFiles( File::isFile );
-	{% endhighlight %}
+{% highlight java %}
+File[] files = myDir.listFiles( (File f) -> {return f.isFile();} );
+File[] files = myDir.listFiles( f -> f.isFile() );
+F ile[] fil e s = myDir.listFiles( File::isFile );
+{% endhighlight %}
 
 ###运行时成本
 
@@ -169,36 +169,36 @@ Lambda表达式需要函数式接口的转换和最终的调用，类型推导�
 
 匿名类可以访问外部域的`final`变量，如下所示：
 
-	{% highlight java %}
-	void method() {
-		final int cnt = 16;
+{% highlight java %}
+void method() {
+	final int cnt = 16;
 
-		Runnable r = new Runnable() {
-			public void run() {
-			System.out.println("count: " + cnt);
-			}
-		};
-		Thread t = new Thread(r);
-		t.start();
+	Runnable r = new Runnable() {
+		public void run() {
+		System.out.println("count: " + cnt);
+		}
+	};
+	Thread t = new Thread(r);
+	t.start();
 
-		cnt++;// error: cnt is final
-	}
-	{% endhighlight %}
+	cnt++;// error: cnt is final
+}
+{% endhighlight %}
 	
 对于lambda表达式，cnt变量不需要显式声明为final的，一旦变量在lambda中使用编译期会自动把它当成是`final`的变量，换句话说在lambda中使用的外部域变量是隐式final的，
 
-	{% highlight java %}
-	void method() {
-		int cnt = 16;
+{% highlight java %}
+void method() {
+	int cnt = 16;
 
-		Runnable r = () -> { System.out.println("count: " + cnt);
-		};
-		Thread t = new Thread(r);
-		t.start();
+	Runnable r = () -> { System.out.println("count: " + cnt);
+	};
+	Thread t = new Thread(r);
+	t.start();
 
-		cnt++;// error: cnt is implicitly final
-	}
-	{% endhighlight %}
+	cnt++;// error: cnt is implicitly final
+}
+{% endhighlight %}
 
 从java8开始匿名内部类也不需要再显式声明final类，编译器会自动把它当成是final。
 
@@ -208,28 +208,28 @@ Lambda表达式需要函数式接口的转换和最终的调用，类型推导�
 
 匿名内部类是一个类，也就是说它自己引入了一个作用域，你可以在里面定义变量，而lambda表达式没有自己的作用域。
 
-	{% highlight java %}
-	void method() {
-		int cnt = 16;
-		Runnable r = new Runnable() {
-		public void run() { int cnt = 0; // fine
-			System.out.println("cnt is: " + cnt); }
-			};
-	　
-	}
-	{% endhighlight %}
+{% highlight java %}
+void method() {
+	int cnt = 16;
+	Runnable r = new Runnable() {
+	public void run() { int cnt = 0; // fine
+		System.out.println("cnt is: " + cnt); }
+		};
+　
+}
+{% endhighlight %}
 
 lambda表达式：
 
-	{% highlight java %}
-	void method() {
-		int cnt = 16;
-		Runnable r = () -> { int cnt = 0; // error: cnt has already been defined
-			System.out.println("cnt is: " + cnt);
-		};
-	　
-	}
-	{% endhighlight %}
+{% highlight java %}
+void method() {
+	int cnt = 16;
+	Runnable r = () -> { int cnt = 0; // error: cnt has already been defined
+		System.out.println("cnt is: " + cnt);
+	};
+　
+}
+{% endhighlight %}
 
 不同的作用域规则对于`this`和`super`关键字有不同的效果，在匿名类中`this`表示匿名类对象本身的引用，`super`表示匿名类的父类。在lambda表达式`this`和`super`关键字意思和外部域中`this`和`super`的意思一样，`this`一般是包含它的那个对象，`super`表示包含它的类的父类。
 
