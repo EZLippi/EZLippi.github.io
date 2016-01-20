@@ -7,10 +7,10 @@ tag: [web, linux]
 
 ##安装Apache
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 sudo apt-get update
 sudo apt-get install apache2
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
 打开浏览器输入你的IP地址或者localhost,就会进入到Apache服务器的默认Index页面。结果如下所示：
 
@@ -22,10 +22,10 @@ sudo apt-get install apache2
 
 在Ubuntu系统下Apache的主要配置文件在/etc/apache2文件夹下：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 cd /etc/apache2
 ls -F
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
 > apache2.conf  envvars     magic            mods-enabled/  sites-available/
 > conf.d/       httpd.conf  mods-available/  ports.conf     sites-enabled/
@@ -69,25 +69,25 @@ Include语句允许Apache读取其他配置文件的内容到当前位置，结�
 
 Ubuntu 14.04下MPM(Multi-Processing Module)配置默认采用了event module,如果你系统采用的是prefork module,可以通过如下方法来切换：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 sudo a2dismod mpm_prefork
 sudo a2enmod mpm_event
 sudo service apache2 restart
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
 ##配置虚拟主机
 
-1. 首先禁用默认的Apache虚拟主机：
+1.首先禁用默认的Apache虚拟主机：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files%}
 sudo a2dissite 000-default.conf
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
-2. 在/etc/apache2/sites-available目录下创建一个example.com.conf文件，把example.com替换成你的域名：
+2.在/etc/apache2/sites-available目录下创建一个example.com.conf文件，把example.com替换成你的域名：
 
 文件：/etc/apache2/sites-available/example.com.conf
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 <VirtualHost *:80> 
   ServerAdmin webmaster@example.com
   ServerName example.com
@@ -96,26 +96,26 @@ sudo a2dissite 000-default.conf
   ErrorLog /var/www/example.com/logs/error.log 
   CustomLog /var/www/example.com/logs/access.log combined
  </VirtualHost>
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
- 3. 给你的网站内容和日志文件创建目录，把example.com替换成你的域名：
+ 3.给你的网站内容和日志文件创建目录，把example.com替换成你的域名：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 sudo mkdir -p /var/www/example.com/public_html
 sudo mkdir /var/www/example.com/logs
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
- 4. 启用这个站点：
+ 4.启用这个站点：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 sudo a2ensite example.com.conf
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
- 5. 重启Apache
+ 5.重启Apache
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 sudo service apache2 restart
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
 
  *安装对脚本语言的支持*
@@ -140,29 +140,29 @@ sudo apt-get install libapache2-mod-php5 php5 php-pear php5-xcache
 
  ###Apache中启用和禁用网站和模块
 
-1. 启用和禁用网站：
+1.启用和禁用网站：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 sudo a2ensite 虚拟主机文件名(example.com.conf)
 sudo a2dissite 虚拟主机文件名(example.com.conf)
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
-2. 启用和禁用模块
+2.启用和禁用模块
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 sudo a2enmod 模块配置文件名
 sudo a2dismod  模块配置文件名
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
 ##启用用户文件夹实现文件服务器的功能
 
-1. 使用如下命令启用userdir模块:
+1.使用如下命令启用userdir模块:
 
 {% highlight Bash shell scripts %}
 sudo a2enmod userdir
 {% endhighlight Bash shell scripts %}
 
-2. 编辑userdir.conf配置userdir模块:
+2.编辑userdir.conf配置userdir模块:
 
 {% highlight Bash shell scripts %}
 sudo vim /etc/apache2/mods-enabled/userdir.conf
@@ -198,7 +198,7 @@ sudo vim /etc/apache2/mods-enabled/userdir.conf
 </IfModule>
 {% endhighlight Bash shell scripts %}
 
-3. 创建个人文件夹并重启APache
+3.创建个人文件夹并重启APache
 
 {% highlight Bash shell scripts %}
 sudo service apache2 restart
@@ -211,16 +211,16 @@ mkdir /home/$USER/public_html
 
 把上面的AllowOverride All改为AllowOverride AuthConfig,然后给你的服务器添加认证用户，认证用户保存在/var/www/passwd/中，需要使用htpasswd命令来添加用户，如下所示：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 htpasswd -c /var/www/passwd/public_html lippi 
 New password: mypassword
 Re-type new password: mypassword
 Adding password for user lippi 
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
 最后的userdir.conf是这样的：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 <IfModule mod_userdir.c>
 	UserDir public_html 
 	UserDir disabled root
@@ -240,5 +240,5 @@ Adding password for user lippi
 		</LimitExcept>
 	</Directory>
 </IfModule>
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
