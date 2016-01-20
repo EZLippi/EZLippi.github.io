@@ -140,7 +140,7 @@ Lambda表达式出现在我们通常需要匿名内部类的地方，在很多�
 匿名类一般这样编写：
 
 {% highlight java %}
-Fi le[] fs = myDir.lis tFiles(
+File[] fs = myDir.lis tFiles(
 	new FileFilter() {
 	public boolean accept(File f) { return f.isFile(); }
 	}
