@@ -170,7 +170,7 @@ sudo vim /etc/apache2/mods-enabled/userdir.conf
 
 内容如下，把public_html改为你的个人文件夹名称，如果不存在则创建：
 
-{% highlight Bash shell scripts %}
+{% highlight Apache config files %}
 <IfModule mod_userdir.c>
         UserDir public_html
         UserDir disabled root
@@ -196,7 +196,7 @@ sudo vim /etc/apache2/mods-enabled/userdir.conf
 		</LimitExcept>
         </Directory>
 </IfModule>
-{% endhighlight Bash shell scripts %}
+{% endhighlight Apache config files %}
 
 3.创建个人文件夹并重启APache
 
