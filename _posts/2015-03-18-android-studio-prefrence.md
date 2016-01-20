@@ -15,29 +15,29 @@ Gradle有几个基本组件：
 
 1.整个项目的gradle配置文件build.gradle
 
-    {% highlight Groovy %}
-    
-    // Top-level build file where you can add configuration options common to all sub-projects/modules.
+{% highlight Groovy %}
 
-    buildscript {
-     repositories {
-            mavenCentral()
-        }
-        dependencies {
-            classpath 'com.android.tools.build:gradle:1.1.0'
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-        }
+buildscript {
+ repositories {
+        mavenCentral()
     }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.0'
 
-    allprojects {
-        repositories {
-            mavenCentral()
-        }
+    // NOTE: Do not place your application dependencies here; they belong
+    // in the individual module build.gradle files
     }
+}
 
-    {% endhighlight %}
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+{% endhighlight %}
 
 内容主要包含了两个方面：一个是声明仓库的源，我这里用的是mavenCentral(), jcenter可以理解成是一个新的中央远程仓库，兼容maven中心仓库，而且性能更优。另一个是声明了android gradle plugin的版本，android studio 1.1正式版必须要求支持gradle plugin 1.1的版本。
 
@@ -45,144 +45,144 @@ Gradle有几个基本组件：
 
 2.app文件夹下这个Module的gradle配置文件，也可以算是整个项目最主要的gradle配置文件
 
-     {% highlight Groovy %}
+ {% highlight Groovy %}
 
-    apply plugin: 'com.android.application'
+apply plugin: 'com.android.application'
 
-    buildscript {
-        repositories {
-            mavenCentral()
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.0'
+
+    }
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.lippi.recorder"
+        minSdkVersion 15
+        targetSdkVersion 17
+        versionCode 1
+        versionName '1.4'
+
+        // dex突破65535的限制
+        multiDexEnabled true
+        // AndroidManifest.xml 里面UMENG_CHANNEL的value为 ${UMENG_CHANNEL_VALUE}
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "channel_name"]
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/resources']
+            aidl.srcDirs = ['src/main/aidl']
+            renderscript.srcDirs = ['src/maom']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDir 'src/main/jniLibs'
         }
-        dependencies {
-            classpath 'com.android.tools.build:gradle:1.1.0'
 
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file("/home/lippi/.android/debug.keystore")
+        }
+        relealse {
+            //这样写就得把demo.jk文件放在项目目录
+            storeFile file("recorder.jks")
+            storePassword "recorder"
+            keyAlias "recorder"
+            keyPassword "recorder"
         }
     }
 
-    android {
-        compileSdkVersion 17
-        buildToolsVersion "21.1.2"
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
 
-        defaultConfig {
-            applicationId "com.lippi.recorder"
-            minSdkVersion 15
-            targetSdkVersion 17
-            versionCode 1
-            versionName '1.4'
-
-            // dex突破65535的限制
-            multiDexEnabled true
-            // AndroidManifest.xml 里面UMENG_CHANNEL的value为 ${UMENG_CHANNEL_VALUE}
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "channel_name"]
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
         }
 
-        sourceSets {
-            main {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
-                java.srcDirs = ['src/main/java']
-                resources.srcDirs = ['src/main/resources']
-                aidl.srcDirs = ['src/main/aidl']
-                renderscript.srcDirs = ['src/maom']
-                res.srcDirs = ['src/main/res']
-                assets.srcDirs = ['src/main/assets']
-                jniLibs.srcDir 'src/main/jniLibs'
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+
+            // 移除无用的resource文件
+            shrinkResources true
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+            //签名
+            signingConfig signingConfigs.relealse
+        }
+    }
+    //渠道Flavors，配置不同风格的app
+    productFlavors {
+        GooglePlay {}
+        xiaomi {}
+        umeng {}
+        _360 {}
+        baidu {}
+        wandoujia {}
+    }
+    //批量配置
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace(".apk", "-${defaultConfig.versionName}.apk")
+                output.outputFile = new File(outputFile.parent, fileName)
             }
-
-            // Move the tests to tests/java, tests/res, etc...
-            instrumentTest.setRoot('tests')
-
-            // Move the build types to build-types/<type>
-            // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
-            // This moves them out of them default location under src/<type>/... which would
-            // conflict with src/ being used by the main source set.
-            // Adding new build types or product flavors should be accompanied
-            // by a similar customization.
-            debug.setRoot('build-types/debug')
-            release.setRoot('build-types/release')
-        }
-        //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
-        lintOptions {
-            abortOnError false
-        }
-
-        //签名
-        signingConfigs {
-            debug {
-                storeFile file("/home/lippi/.android/debug.keystore")
-            }
-            relealse {
-                //这样写就得把demo.jk文件放在项目目录
-                storeFile file("recorder.jks")
-                storePassword "recorder"
-                keyAlias "recorder"
-                keyPassword "recorder"
-            }
-        }
-
-        buildTypes {
-            debug {
-                // 显示Log
-                buildConfigField "boolean", "LOG_DEBUG", "true"
-
-                versionNameSuffix "-debug"
-                minifyEnabled false
-                zipAlignEnabled false
-                shrinkResources false
-                signingConfig signingConfigs.debug
-            }
-
-            release {
-                // 不显示Log
-                buildConfigField "boolean", "LOG_DEBUG", "false"
-                //混淆
-                minifyEnabled true
-                //Zipalign优化
-                zipAlignEnabled true
-
-                // 移除无用的resource文件
-                shrinkResources true
-                //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
-                //签名
-                signingConfig signingConfigs.relealse
-            }
-        }
-        //渠道Flavors，配置不同风格的app
-        productFlavors {
-            GooglePlay {}
-            xiaomi {}
-            umeng {}
-            _360 {}
-            baidu {}
-            wandoujia {}
-        }
-        //批量配置
-        productFlavors.all { flavor ->
-            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
-        }
-
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_7
-            targetCompatibility JavaVersion.VERSION_1_7
-        }
-        applicationVariants.all { variant ->
-            variant.outputs.each { output ->
-                def outputFile = output.outputFile
-                if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                    def fileName = outputFile.name.replace(".apk", "-${defaultConfig.versionName}.apk")
-                    output.outputFile = new File(outputFile.parent, fileName)
-                }
-            }
-        }
-
-        dependencies {
-            compile fileTree(include: ['*.jar'], dir: 'libs')
-            compile 'org.apache.commons:commons-math:2.1'
-            compile 'org.slf4j:slf4j-log4j12:1.7.5'
         }
     }
 
-    {% endhighlight %}
+    dependencies {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+        compile 'org.apache.commons:commons-math:2.1'
+        compile 'org.slf4j:slf4j-log4j12:1.7.5'
+    }
+}
+
+{% endhighlight %}
 
 *   文件开头apply plugin是最新gradle版本的写法，以前的写法是apply plugin: ‘android’, 如果还是以前的写法，请改正过来。
 
@@ -201,15 +201,15 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 
 3.gradle目录下有个 wrapper 文件夹，里面可以看到有两个文件，我们主要看下 gradle-wrapper.properties 这个文件的内容：
 
-     {% highlight Groovy %}
-     
-    #Fri Dec 19 21:59:01 CST 2014
-    distributionBase=GRADLE_USER_HOME
-    distributionPath=wrapper/dists
-    zipStoreBase=GRADLE_USER_HOME
-    zipStorePath=wrapper/dists
-    distributionUrl=https\://services.gradle.org/distributions/gradle-2.2.1-all.zip
-     {% endhighlight %}
+ {% highlight Groovy %}
+ 
+#Fri Dec 19 21:59:01 CST 2014
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-2.2.1-all.zip
+ {% endhighlight %}
      
 可以看到里面声明了gradle的目录与下载路径以及当前项目使用的gradle版本，这些默认的路径我们一般不会更改的，这个文件里指明的gradle版本不对也是很多导包不成功的原因之一
 
@@ -231,36 +231,36 @@ compile project(‘:extras:ShimmerAndroid’)这一行是因为项目中存在�
 由于国内Android市场众多渠道，为了统计每个渠道的下载及其它数据统计，就需要我们针对每个渠道单独打包，如果让你打几十个市场的包岂不烦死了，不过有了Gradle，这再也不是事了。
 以友盟统计为例，在AndroidManifest.xml里面会有这么一段：
 
-      {% highlight Groovy %}
-      
-      <meta-data
-    android:name="UMENG_CHANNEL"
-    android:value="Channel_ID" />
-      {% endhighlight %}
+{% highlight Groovy %}
+
+<meta-data
+android:name="UMENG_CHANNEL"
+android:value="Channel_ID" />
+{% endhighlight %}
       
 里面的Channel_ID就是渠道标示。我们的目标就是在编译的时候这个值能够自动变化。
 *   第一步 在AndroidManifest.xml里配置PlaceHolder
-     {% highlight Groovy %}
-     <meta-data
-    android:name="UMENG_CHANNEL"
-    android:value="${UMENG_CHANNEL_VALUE}" />
-      {% endhighlight %}
+{% highlight Groovy %}
+<meta-data
+android:name="UMENG_CHANNEL"
+android:value="${UMENG_CHANNEL_VALUE}" />
+{% endhighlight %}
 
 *   第二步 在build.gradle  设置productFlavors
-    {% highlight Groovy %}
-    android { 
-    productFlavors {
-        xiaomi {}
-        _360 {}
-        baidu {}
-        wandoujia {}
-    } 
+{% highlight Groovy %}
+android { 
+productFlavors {
+    xiaomi {}
+    _360 {}
+    baidu {}
+    wandoujia {}
+} 
 
-    productFlavors.all { 
-        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] 
-        }
+productFlavors.all { 
+    flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] 
     }
-   {% endhighlight %}
+}
+{% endhighlight %}
 
 然后直接执行` ./gradlew assembleRelease `然后就等待打包完成吧。
  
