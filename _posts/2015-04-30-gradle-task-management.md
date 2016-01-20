@@ -33,15 +33,15 @@ doFirst和doLast，当任务执行的时候，定义在闭包里的动作逻辑�
 接下来我们会写一个简单的任务printVersion,任务的作用就是打印项目的版本号，在任务
 的最后一个动作定义这个逻辑。
 
-    {% highlight Groovy %}
-	version = '0.1-SNAPSHOT'
+{% highlight Groovy %}
+version = '0.1-SNAPSHOT'
 
-	task printVersion {
-		doLast {
-		println "Version: $version"
-		}
+task printVersion {
+	doLast {
+	println "Version: $version"
 	}
-	{% endhighlight Groovy %}
+}
+{% endhighlight Groovy %}
 
 前面我们讲过左移操作符是方法doLast的快捷键，他们的作用是一样的，当你执行gradle printVersion,你应该得到下面的输出：
 	
@@ -51,37 +51,37 @@ doFirst和doLast，当任务执行的时候，定义在闭包里的动作逻辑�
 
 如果你用doFirst方法的话输出的结果是一样的：
 
-    {% highlight Groovy %}
-	task printVersion {
-		doFirst {
-		println "Version: $version"
-		}
+{% highlight Groovy %}
+task printVersion {
+	doFirst {
+	println "Version: $version"
 	}
-    {% endhighlight Groovy %}
+}
+{% endhighlight Groovy %}
     
 **给已经存在的任务添加动作**
 
 到目前为止，你只是给printVersion这个任务添加了单个动作，要么是第一个或者最后一个，对于每个任务可以有多个动作，实际上，当任务创建的时候你可以添加任意多个动作，每一个任务都有一个动作清单，他们在运行的时候是执行的，接下来我们来修改之前的例子：
 
-    {% highlight Groovy %}
-	task printVersion {
-	//任务的初始声明可以添加first和last动作
-		doFirst {
-		println "Before reading the project version"
-		}
-
-		doLast {
-		println "Version: $version"
-		}
+{% highlight Groovy %}
+task printVersion {
+//任务的初始声明可以添加first和last动作
+	doFirst {
+	println "Before reading the project version"
 	}
-	{% endhighlight Groovy %}
+
+	doLast {
+	println "Version: $version"
+	}
+}
+{% endhighlight Groovy %}
 	
 
 //你可以在任务的动作列表的最前面添加其他任务，比如：
 
-     {% highlight Groovy %}
-	printVersion.doFirst { println "First action" }
-	{% endhighlight Groovy %}
+{% highlight Groovy %}
+printVersion.doFirst { println "First action" }
+{% endhighlight Groovy %}
 	
 
 由此可知，我们可以添加额外的动作给已经存在的任务，当你想添加动作的那个任务不是你自己写的时候这会非常有用，你可以添加一些自定义的逻辑，比如你可以添加doFirst动作到compile-Java任务来检查项目是否包含至少一个source文件。
@@ -90,32 +90,32 @@ doFirst和doLast，当任务执行的时候，定义在闭包里的动作逻辑�
 
 接下来我们来改善一下输出版本号的方法，Gradle提供一个基于SLF4J库的日子实现，除了实现了基本的日子级别（DEBUG, ERROR, INFO, TRACE, WARN)）外，还添加了额外的级别，日子实例可以通过任务的方法来直接访问，接下来，你将用QUIET级别打印项目的版本号：
 
-     {% highlight Groovy %}
-	task printVersion << {
-		logger.quiet "Version: $version"
-	}
-	{% endhighlight Groovy %}
+{% highlight Groovy %}
+task printVersion << {
+	logger.quiet "Version: $version"
+}
+{% endhighlight Groovy %}
 	
 
 访问任务的属性是不是很容易？接下来我将给你展示两个其他的属性，group和description，两个都是documentation任务的一部分，description属性简短的表示任务的目的，group表示任务的逻辑分组。
 
-     {% highlight Groovy %}
-	task printVersion(group: 'versioning', description: 	'Prints project version.') << {
-		logger.quiet "Version: $version"
-	}
-	{% endhighlight Groovy %}
+{% highlight Groovy %}
+task printVersion(group: 'versioning', description: 	'Prints project version.') << {
+	logger.quiet "Version: $version"
+}
+{% endhighlight Groovy %}
 
 你也可以通过setter方法来设置属性：
 
-     {% highlight Groovy %}
-	task printVersion {
-		group = 'versioning'
-		description = 'Prints project version.'
-		doLast {
-		logger.quiet "Version: $version"
-		}
+{% highlight Groovy %}
+task printVersion {
+	group = 'versioning'
+	description = 'Prints project version.'
+	doLast {
+	logger.quiet "Version: $version"
 	}
-	{% endhighlight Groovy %}
+}
+{% endhighlight Groovy %}
 
 当你运行gradle tasks,你会看到任务显示在正确的分组里和它的描述信息：
 
@@ -132,19 +132,19 @@ doFirst和doLast，当任务执行的时候，定义在闭包里的动作逻辑�
 
 dependsOn方法用来声明一个任务依赖于一个或者多个任务，接下来通过一个例子来讲解运用不同的方法来应用依赖：
 
-    {% highlight Groovy %}
-	task first << { println "first" }
-	task second << { println "second" }
-	
-	//声明多个依赖
-	task printVersion(dependsOn: [second, first]) << {
-	logger.quiet "Version: $version"
-	}
+{% highlight Groovy %}
+task first << { println "first" }
+task second << { println "second" }
 
-	task third << { println "third" }
-	//通过任务名称来声明依赖
-	third.dependsOn('printVersion')
-    {% endhighlight Groovy %}
+//声明多个依赖
+task printVersion(dependsOn: [second, first]) << {
+logger.quiet "Version: $version"
+}
+
+task third << { println "third" }
+//通过任务名称来声明依赖
+third.dependsOn('printVersion')
+{% endhighlight Groovy %}
     
 你可以通过命令行调用third任务来执行这个任务依赖链：
 
@@ -164,12 +164,12 @@ Gradle并不保证依赖的任务能够按顺序执行，dependsOn方法只是�
 
 在实际情况中，你可能需要在一个任务执行之后进行一些清理工作，一个典型的例子就是Web容器在部署应用之后要进行集成测试，Gradle提供了一个finalizer任务来实现这个功能，你可以用finalizedBy方法来结束一个指定的任务：
     
-     {% highlight Groovy %}
-	task first << { println "first" }
-	task second << { println "second" }
-	//声明first结束后执行second任务
-	first.finalizedBy second
-    {% endhighlight Groovy %}
+{% highlight Groovy %}
+task first << { println "first" }
+task second << { println "second" }
+//声明first结束后执行second任务
+first.finalizedBy second
+{% endhighlight Groovy %}
     
 你会发现任务first结束后自动触发任务second：
 
@@ -181,32 +181,32 @@ Gradle并不保证依赖的任务能够按顺序执行，dependsOn方法只是�
 
 接下来我们来学习怎么在build脚本中定义一些随机的代码，在实际情况下，如果你熟悉Groovy的语法你可以编写一些类或者方法，接下来你将会创建一个表示版本的类，在Java中一个class遵循bean的约定（POJO），就是添加setter和getter方法来访问类的域，到后面发现手工写这些方法很烦人，Groovy有个对应的概念叫POGO(plain-old Groovy object),他们的setter和getter方法在生成字节码的时候自动添加，因此运行的时候可以直接访问，看下面这个例子：
 
-     {% highlight Groovy %}
-	version = new ProjectVersion(0, 1)
+{% highlight Groovy %}
+version = new ProjectVersion(0, 1)
 
-	class ProjectVersion {
-		Integer major
-		Integer minor
-		Boolean release
+class ProjectVersion {
+	Integer major
+	Integer minor
+	Boolean release
 
-		ProjectVersion(Integer major, Integer minor) {
-			this.major = major
-			this.minor = minor
-			this.release = Boolean.FALSE
-		}
-
-		ProjectVersion(Integer major, Integer minor, 	Boolean release) {
-			this(major, minor)
-			this.release = release
-		}
-
-		@Override
-		String toString() {
-			//只有release为false的时候才添加后缀SNAPSHOT
-			"$major.$minor${release ? '' : '-SNAPSHOT'}"
-		}
+	ProjectVersion(Integer major, Integer minor) {
+		this.major = major
+		this.minor = minor
+		this.release = Boolean.FALSE
 	}
-    {% endhighlight Groovy %}
+
+	ProjectVersion(Integer major, Integer minor, 	Boolean release) {
+		this(major, minor)
+		this.release = release
+	}
+
+	@Override
+	String toString() {
+		//只有release为false的时候才添加后缀SNAPSHOT
+		"$major.$minor${release ? '' : '-SNAPSHOT'}"
+	}
+}
+{% endhighlight Groovy %}
     
 当运行这个修改的脚本之后，你可以看到printVersion的输出和之前一样，但是你还是得手工修改build脚本来更改版本号，接下来你将学习如何把版本号存储在一个文件里然后配置你的脚本去读取这个配置。
 
@@ -222,32 +222,32 @@ Gradle并不保证依赖的任务能够按顺序执行，dependsOn方法只是�
 
 接下来我们将声明一个任务loadVersion来从属性文件中读取版本号并赋给ProjectVersion实例，第一眼看起来和其他定义的任务一样，仔细一看你会主要到你没有定义动作或者使用左移操作符，在Gradle里称之为task configuration。
 
-     {% highlight Groovy %}
-	ext.versionFile = file('version.properties')
-	//配置任务没有左移操作符
-	task loadVersion {
-	project.version = readVersion()
+{% highlight Groovy %}
+ext.versionFile = file('version.properties')
+//配置任务没有左移操作符
+task loadVersion {
+project.version = readVersion()
+}
+
+ProjectVersion readVersion() {
+	logger.quiet 'Reading the version file.'
+	//如果文件不存在抛出异常
+	if(!versionFile.exists()) {
+		throw new GradleException("Required version file does not exist:$versionFile.canonicalPath")
 	}
-	
-	ProjectVersion readVersion() {
-		logger.quiet 'Reading the version file.'
-		//如果文件不存在抛出异常
-		if(!versionFile.exists()) {
-			throw new GradleException("Required version file does not exist:$versionFile.canonicalPath")
-		}
-	
-	Properties versionProps = new Properties()
-	
-	//groovy的file实现了添加方法通过新创建的流来读取
-	
-	versionFile.withInputStream { stream ->
-	versionProps.load(stream)
-	}
-	//在Groovy中如果这是最后一个语句你可以省略return关键字
-	new ProjectVersion(versionProps.major.toInteger(),
-	 versionProps.minor.toInteger(), versionProps.release.toBoolean())
-	}
-	{% endhighlight Groovy %}
+
+Properties versionProps = new Properties()
+
+//groovy的file实现了添加方法通过新创建的流来读取
+
+versionFile.withInputStream { stream ->
+versionProps.load(stream)
+}
+//在Groovy中如果这是最后一个语句你可以省略return关键字
+new ProjectVersion(versionProps.major.toInteger(),
+ versionProps.minor.toInteger(), versionProps.release.toBoolean())
+}
+{% endhighlight Groovy %}
 
 接下来运行printVersion，你会看到loadVersion任务先执行了：
 	
