@@ -27,7 +27,7 @@ tag: [shell, linux]
 
 ##Tmux基本操作
 
-Tmux的所有操作必须使用一个前缀进入命令模式，默认前缀为<Ctrl-b>，很多人会改为<Ctrl-a>,你可以修改tmux.conf配置文件来修改默认前缀：
+Tmux的所有操作必须使用一个前缀进入命令模式，默认前缀为Ctrl+b，很多人会改为Ctrl+a,你可以修改tmux.conf配置文件来修改默认前缀：
 
 {% highlight Vim Script %}
 #前缀设置为<Ctrl-a>
@@ -37,7 +37,7 @@ ubind C-b
 {% endhighlight Vim Script %}
 
 
-修改之后重启Tmux生效，或者先按<Ctrl-b>，然后输入：，进入命令行模式， 在命令行模式下输入：
+修改之后重启Tmux生效，或者先按Ctrl+b，然后输入：，进入命令行模式， 在命令行模式下输入：
 
 {% highlight Vim Script %}
 source-file ~/.tmux.conf
