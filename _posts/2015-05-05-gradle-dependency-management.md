@@ -88,11 +88,11 @@ DSL配置block dependencies用来给配置添加一个或多个依赖，你的�
 
 你可以使用下面的语法在项目中声明依赖：
 
-    {% highlight Groovy %}
-	dependencies {
-		configurationName dependencyNotation1, 	dependencyNotation2, ...
-	}
-    {% endhighlight Groovy %}
+{% highlight Groovy %}
+dependencies {
+	configurationName dependencyNotation1, 	dependencyNotation2, ...
+}
+{% endhighlight Groovy %}
     
 你先声明你要给哪个配置添加依赖，
 Java插件指定了若干依赖配置项，其描述如下：当项目的源代码被编译时，compile配置项中的依赖是必须的。
@@ -107,18 +107,18 @@ Java插件指定了若干依赖配置项，其描述如下：当项目的源代�
 	
 ![](/images/5-5.png)
 
-     {% highlight Groovy %}
-	//声明外部属性
-	ext.cargoGroup = 'org.codehaus.cargo'
-	ext.cargoVersion = '1.3.1'
+{% highlight Groovy %}
+//声明外部属性
+ext.cargoGroup = 'org.codehaus.cargo'
+ext.cargoVersion = '1.3.1'
 
-	dependencies {
-		//使用映射声明依赖
-		compile group: cargoGroup, name: 'cargo-core-uberjar',version: cargoVersion
-		//用快捷方式来声明，引用了前面定义的外部属性
-		cargo "$cargoGroup:cargo-ant:$cargoVersion"
-	}
-    {% endhighlight Groovy %}
+dependencies {
+	//使用映射声明依赖
+	compile group: cargoGroup, name: 'cargo-core-uberjar',version: cargoVersion
+	//用快捷方式来声明，引用了前面定义的外部属性
+	cargo "$cargoGroup:cargo-ant:$cargoVersion"
+}
+{% endhighlight Groovy %}
     
 如果你项目中依赖比较多，你把一些共同的依赖属性定义成外部属性可以简化build脚本。
 
@@ -142,11 +142,11 @@ Gradle没有给项目选择默认的仓库，当你没有配置仓库的时候�
 
 到目前为止还没讲到怎么配置不同类型的仓库，比如你想使用MavenCentral仓库，添加下面的配置代码到你的build脚本中：
 
-     {% highlight Groovy %}
-	repositories {
-		mavenCentral()
-	}
-    {% endhighlight Groovy %}
+{% highlight Groovy %}
+repositories {
+	mavenCentral()
+}
+{% endhighlight Groovy %}
     
 **检查依赖报告**
 
@@ -161,39 +161,39 @@ Gradle没有给项目选择默认的仓库，当你没有配置仓库的时候�
 
 Gradle允许你完全控制传递依赖，你可以选择排除全部的传递依赖也可以排除指定的依赖，假设你不想使用UberJar传递的xml-api的版本而想声明一个不同版本，你可以使用exclude方法来排除它：
 
-     {% highlight Groovy %}
-	dependencies {
-		cargo('org.codehaus.cargo:cargo-ant:1.3.1') {
-			exclude group: 'xml-apis', module: 'xml-apis'
-		}
-		cargo 'xml-apis:xml-apis:2.0.2'
+{% highlight Groovy %}
+dependencies {
+	cargo('org.codehaus.cargo:cargo-ant:1.3.1') {
+		exclude group: 'xml-apis', module: 'xml-apis'
 	}
-    {% endhighlight Groovy %}
+	cargo 'xml-apis:xml-apis:2.0.2'
+}
+{% endhighlight Groovy %}
         
 exclude属性值和正常的依赖声明不太一样，你只需要声明group和(或)module，Gradle不允许你只排除指定版本的依赖。
 
 有时候仓库中找不到项目依赖的传递依赖，这会导致构建失败，Gradle允许你使用transitive属性来排除所有的传递依赖：
 
-     {% highlight Groovy %}
-	dependencies {
-		cargo('org.codehaus.cargo:cargo-ant:1.3.1') {
-		transitive = false
-		}
-		// 选择性的声明一些需要的库
+{% highlight Groovy %}
+dependencies {
+	cargo('org.codehaus.cargo:cargo-ant:1.3.1') {
+	transitive = false
 	}
-    {% endhighlight Groovy %}
+	// 选择性的声明一些需要的库
+}
+{% endhighlight Groovy %}
     
 **动态版本声明**
 
 如果你想使用一个依赖的最新版本，你可以使用latest.integration，比如声明 Cargo Ant tasks的最新版本，你可以这样写 `org.codehaus
 .cargo:cargo-ant:latest-integration`，你也可以用一个+号来动态的声明：
 
-     {% highlight Groovy %}
-	dependencies {
-		//依赖最新的1.x版本
-		cargo 'org.codehaus.cargo:cargo-ant:1.+'
-	}
-    {% endhighlight Groovy %}
+{% highlight Groovy %}
+dependencies {
+	//依赖最新的1.x版本
+	cargo 'org.codehaus.cargo:cargo-ant:1.+'
+}
+{% endhighlight Groovy %}
     
 Gradle的dependencies任务可以清晰的看到选择了哪个版本，这里选择了1.3.1版本：
 
@@ -217,21 +217,21 @@ Gradle的dependencies任务可以清晰的看到选择了哪个版本，这里�
 
 如果你没有使用自动的依赖管理工具，你可能会把外部库作为源代码的一部分或者保存在本地文件系统中，当你想把项目迁移到Gradle的时候，你不想去重构，Gradle很简单就能配置文件依赖。下面这段代码复制从Maven中央仓库解析的依赖到libs/cargo目录。
 
-     {% highlight Groovy %}
-	task copyDependenciesToLocalDir(type: Copy) {
-		//Gradle提供的语法糖
-		from configurations.cargo.asFileTree
-		into "${System.properties['user.home']}/libs/cargo"
-	}
-    {% endhighlight Groovy %}
+{% highlight Groovy %}
+task copyDependenciesToLocalDir(type: Copy) {
+	//Gradle提供的语法糖
+	from configurations.cargo.asFileTree
+	into "${System.properties['user.home']}/libs/cargo"
+}
+{% endhighlight Groovy %}
     
 运行这个任务之后你就可以在依赖中声明Cargo库了，下面这段代码展示了怎么给cargo配置添加JAR文件依赖：
 
-    {% highlight Groovy %}
-	dependencies {
-		cargo fileTree(dir: "${System.properties['user.home']}/libs/cargo",include: '*.jar')
-	}
-    {% endhighlight Groovy %}
+{% highlight Groovy %}
+dependencies {
+	cargo fileTree(dir: "${System.properties['user.home']}/libs/cargo",include: '*.jar')
+}
+{% endhighlight Groovy %}
     
 ##配置远程仓库
 
@@ -254,33 +254,33 @@ RepositoryHandler接口提供了两个方法来定义Maven仓库，mavenCentral�
 
 要使用Maven仓库你只需要调用mavenCentral方法，如下所示：
 
-     {% highlight Groovy %}
-	repositories {
-		mavenCentral()
-	}
-    {% endhighlight Groovy %}
+{% highlight Groovy %}
+repositories {
+	mavenCentral()
+}
+{% endhighlight Groovy %}
 
 **添加本地仓库**
 
 本地仓库默认在 <USER_HOME>/.m2/repository目录下，只需要添加如下脚本来引用它：
 
-     {% highlight Groovy %}
-	repositories {
-		mavenLocal()
-	}
-    {% endhighlight Groovy %}
+{% highlight Groovy %}
+repositories {
+	mavenLocal()
+}
+{% endhighlight Groovy %}
     
 **添加自定义Maven仓库**
 
 如果指定的依赖不存在与Maven仓库或者你想通过建立自己的企业仓库来确保可靠性，你可以使用自定义的仓库。仓库管理器允许你使用Maven布局来配置一个仓库，这意味着你要遵守artifact的存储模式。你也可以添加验证凭证来提供访问权限，Gradle的API提供两种方法配置自定义的仓库：maven()和mavenRepo()。下面这段代码添加了一个自定义的仓库，如果Maven仓库中不存在相应的库会从自定义仓库中查找：
 
-     {% highlight Groovy %}
-	repositories {
-		mavenCentral()
-		maven {
-		name 'Custom Maven Repository',
-		url 'http://repository.forge.cloudbees.com/release/')
-		}
+{% highlight Groovy %}
+repositories {
+	mavenCentral()
+	maven {
+	name 'Custom Maven Repository',
+	url 'http://repository.forge.cloudbees.com/release/')
 	}
-    {% endhighlight Groovy %}
+}
+{% endhighlight Groovy %}
 
