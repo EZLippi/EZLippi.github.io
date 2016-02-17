@@ -40,6 +40,7 @@ To https://gitcafe.com/ezlippi/ezlippi.git
 * DNS的配置中增加一项 CNAME.
  
 我使用 dnspod 这个提供商来管理DNS.CNAME一般可以按解析路线或者网络类型来单独配置,网络类型选择国内或者联通，设置之后等待一段时间百度的抓取就 恢复正常了，如下图所示：
+
 ![](/images/dnspod.png)
 
 
