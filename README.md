@@ -3,7 +3,7 @@
 
 ####博客地址
 
-http://coolshell.info
+http://www.ezlippi.com
 
 ####使用本项目作为博客模板，仅需如下几步：
 
