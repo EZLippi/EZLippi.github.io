@@ -45,58 +45,54 @@ Github Pages有以下几个优点：
 
 ##配置和使用Github 
 
-Git是版本管理的未来，他的优点我不再赘述，相关资料很多。推荐这本[Git中文教程](http://git-scm.com/book/zh)。
+git是版本管理的未来，他的优点我不再赘述，相关资料很多。推荐这本[Git中文教程](http://git-scm.com/book/zh)。
 
-要使用Git，需要安装它的客户端，推荐在Linux下使用Git，会比较方便。Windows版的下载地址在这里：[http://code.google.com/p/msysgit/downloads/list](http://code.google.com/p/msysgit/downloads/list)。其他系统的安装也可以参考官方的安装教程。
+要使用Git，需要安装它的客户端，推荐在Linux下使用Git，会比较方便。下载地址在这里：[http://code.google.com/p/msysgit/downloads/lis
+](http://code.google.com/p/msysgit/downloads/list)。其他系统的安装也可以参考官方的安装教程。
 
-下载安装客户端之后，各个系统的配置就类似了，我们使用windows作为例子，Linux和Mac与此类似。
+安装完成后，还需要最后一步设置，在命令行输入：
 
-在Windows下，打开Git Bash，其他系统下面则打开终端（Terminal）： Git Bash
-![Git Bash](/images/images/githubpages/bootcamp_1_win_gitbash.jpg)
+	$ git config --global user.name "Your Name"
+	$ git config --global user.email "email@example.com"
 
 ###检查SSH keys的设置
 
 首先我们需要检查你电脑上现有的ssh key：
-    {% highlight java%}
+{% highlight java%}
+$ cd ~/.ssh
+{% endhighlight %}
 
-    $ c d ~/.ssh
-
-    {% endhighlight %}
 如果显示“No such file or directory”，跳到第三步，否则继续。
 
 ###备份和移除原来的ssh key设置
 
 因为已经存在key文件，所以需要备份旧的数据并删除：
-    {% highlight Bash shell scripts %}
 
-    $ ls
-   	 config  id_rsa  id_rsa.pub  known_hosts
-    $ mkdir key_backup
-    $ cp id_rsa* key_backup
-    $ rm id_rsa*
-
-    {% endhighlight %} 
+{% highlight Bash shell scripts %}
+ls
+config  id_rsa  id_rsa.pub  known_hosts
+mkdir key_backup
+cp id_rsa* key_backup
+rm id_rsa*
+{% endhighlight %} 
 
 ###生成新的SSH Key 
 
 输入下面的代码，就可以生成新的key文件，我们只需要默认设置就好，所以当需要输入文件名的时候，回车就好。
 
-    {% highlight Bash shell scripts%}
-
-    $ ssh-keygen -t rsa -C "邮件地址@youremail.com"
-  	 Generating public/private rsa key pair.
-   	 Enter file in which to save the key (/Users/	your_user_directory/.ssh/id_rsa):<回车就好>
-
-    {% endhighlight %}
+{% highlight Bash shell scripts%}
+$ ssh-keygen -t rsa -C "邮件地址@youremail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/	your_user_directory/.ssh/id_rsa):<回车就好>
+{% endhighlight %}
 
 然后系统会要你输入加密串（Passphrase）：
 
-    {% highlight Bash shell scripts%}
+{% highlight Bash shell scripts%}
+Enter passphrase (empty for no passphrase):<输入加密串>
+Enter same passphrase again:<再次输入加密串>
+{% endhighlight %}
 
-    Enter passphrase (empty for no passphrase):<输入加密串>
-    Enter same passphrase again:<再次输入加密串>
-
-    {% endhighlight %}
 最后看到ssh key success，就成功设置ssh key了. 
 
 ###添加SSH Key到GitHub 
@@ -124,21 +120,14 @@ PS：如果需要配置多个GitHub账号，可以参看这个[多个github帐�
 
 如果是下面的反应：
 
-    {% highlight Bash shell scripts%}
-
     The authenticity of host 'github.com (207.97.227.239)' can't be established.
     RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
     Are you sure you want to continue connecting (yes/no)?
 
-    {% endhighlight %}
 
 不要紧张，输入yes就好，然后会看到：
 
-    {% highlight Bash shell scripts%}
-
     Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.
-
-    {% endhighlight %}
 
 ###设置你的账号信息 
 
@@ -146,12 +135,10 @@ PS：如果需要配置多个GitHub账号，可以参看这个[多个github帐�
 
 Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。
 
-    {% highlight Bash shell scripts %}
-
-    $ git config --global user.name "你的名字"
-    $ git config --global user.email "your_email@youremail.com"
-
-    {% endhighlight %}
+{% highlight Bash shell scripts %}
+$ git config --global user.name "你的名字"
+$ git config --global user.email "your_email@youremail.com"
+{% endhighlight %}
 
 好了，你已经可以成功连接GitHub了。
 
@@ -245,14 +232,12 @@ default.html
 
 再次打开Git Bash，先后输入如下命令：
 
-    {% highlight Bash shell scripts %}
-
-    $ git add .
-    $ git commit -m "first post"
-    $ git remote add origin https://github.com/username/projectName.git
-    $ git push origin gh-pages
-
-    {% endhighlight %}
+{% highlight Bash shell scripts %}
+$ git add .
+$ git commit -m "first post"
+$ git remote add origin https://github.com/username/projectName.git
+$ git push origin gh-pages
+{% endhighlight %}
 
 据网友反应，如果是初次安装git的话，在commit的时候会提示需要配置username和email，请读者注意根据提示配置一下，至于username和email可以随便填
 
@@ -375,24 +360,23 @@ windows的安装还是一如既往的“无脑”，不多说了。
 
 config.yml文件实际上是检测系统安装的ruby的位置并记录在这个文件中，以便稍后使用。但上面的命令只针对使用rubyinstall安装的ruby有效，如果是其他方式安装的话，需要手动修改config.yml。我生成的config.yml文件内容如下：（注意路径用的是linux的斜杠方向）
 
-    {% highlight Bash shell scripts %}
-
-    # This configuration file contains the absolute path locations of all
-    # installed Rubies to be enhanced to work with the DevKit. This config
-    # file is generated by the 'ruby dk.rb init' step and may be modified
-    # before running the 'ruby dk.rb install' step. To include any installed
-    # Rubies that were not automagically discovered, simply add a line below
-    # the triple hyphens with the absolute path to the Ruby root directory.
-    #
-    # Example:
-    #
-    # ---
-    # - C:/ruby19trunk
-	# - C:/ruby192dev
-    #
-    ---
-    - C:/Ruby193
-    {% endhighlight %}
+{% highlight Bash shell scripts %}
+# This configuration file contains the absolute path locations of all
+# installed Rubies to be enhanced to work with the DevKit. This config
+# file is generated by the 'ruby dk.rb init' step and may be modified
+# before running the 'ruby dk.rb install' step. To include any installed
+# Rubies that were not automagically discovered, simply add a line below
+# the triple hyphens with the absolute path to the Ruby root directory.
+#
+# Example:
+#
+# ---
+# - C:/ruby19trunk
+# - C:/ruby192dev
+#
+---
+- C:/Ruby193
+{% endhighlight %}
 
 最后，执行如下命令，执行安装：
 
@@ -453,7 +437,6 @@ jekyll依赖的组件如下：
     $jekyll --server --safe
     {% endhighlight %}
 
-![](/images/images/githubpages/build-github-blog-page-04-img0.png)
 
 jekyll此时会在localhost的4000端口监听http请求，用浏览器访问[http://localhost:4000/index.html](http://localhost:4000/index.html)，之前的页面出现了！
 
