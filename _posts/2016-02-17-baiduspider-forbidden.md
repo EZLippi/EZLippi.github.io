@@ -2,7 +2,7 @@
 layout: post
 title: 解决百度爬虫无法抓取github pages 
 category: Unix/Linux
-tag: [github, pages, linux]
+tag: [github]
 ---
 
 由于Github Pages禁止了百度爬虫，导致自己的博客无法被百度索引到，使用七牛云和又拍云做镜像存储能解决问题，但是要求域名要备案，由于我的域名从Godaddy上购买的，国内备案手续太复杂，故放弃了CDN的办法，琢磨了一段时间找到了Gitcafe的解决办法。
@@ -12,7 +12,7 @@ tag: [github, pages, linux]
 既然不想放弃Github，唯一的办法就是不让百度爬虫直接抓取GIthub的内容，而是抓取自己网站的一个镜像，将网站的内容镜像到[gitcafe](www.gitcafe.com),步骤如下：
 
 * 注册 gitcafe 帐号
-* 创建一个跟用户名一样的项目,比如我的[](https://gitcafe.com/ezlippi/ezlippi)
+* 创建一个跟用户名一样的项目,比如我的[https://gitcafe.com/ezlippi/ezlipp](https://gitcafe.com/ezlippi/ezlippi)
 * 把 github 的项目推到 gitcafe 上面去，步骤如下：
 
 {% highlight bash shell %}
@@ -35,7 +35,7 @@ To https://gitcafe.com/ezlippi/ezlippi.git
 
 1. 点击项目的右上角的 项目配置
 2. 在项目的 基础设置 中配置项目主页
-3. 在 page服务 中添加自己的域名，比如我这里是coolshell.info和www.coolshell.info.
+3. 在 page服务 中添加自己的域名，比如我这里是[coolshell.info](coolshell.info)和[www.coolshell.info](www.coolshell.info).
 
 * DNS的配置中增加一项 CNAME.
  
