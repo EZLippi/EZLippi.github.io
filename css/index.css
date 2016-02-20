@@ -327,6 +327,7 @@ ul.posts .date {
 /* footer */
 footer{
 display:block;
+text-align: center;
 border-top: 1px dashed #CCC;
 }
 
