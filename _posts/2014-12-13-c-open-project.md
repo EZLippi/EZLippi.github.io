@@ -4,31 +4,58 @@ title:      值得推荐的C/C++框架和库
 keywords:   c/c++, openSource
 category:   c/c++
 description: Webbench是一个在linux下使用的非常简单的网站压测工具。它使用fork()模拟多个客户端同时访问我们设定的URL，测试网站在压力下工作的性能，最多可以模拟3万个并发连接去测试网站的负载能力。Webbench使用C语言编写, 代码实在太简洁，源码加起来不到600行。
-tags:		[框架, 开源]
+tags:		[C, C++, OpenSource, 框架, 开源]
 ---
 
-*  目录
+* 目录
 {:toc}
 
 ## 值得学习的C语言开源项目 ##
 
 
+**Libev**
+ 
 
-1.**Webbench**
+libev是一个开源的事件驱动库，基于epoll，kqueue等OS提供的基础设施。其以高效出名，它可以将IO事件，定时器，和信号统一起来，统一放在事件处理这一套框架下处理。基于Reactor模式，效率较高，并且代码精简（4.15版本8000多行），是学习事件驱动编程的很好的资源。
 
+下载链接：[http://software.schmorp.de/pkg/libev.html](http://software.schmorp.de/pkg/libev.html)
+
+**Memcached**
+
+
+Memcached 是一个高性能的分布式内存对象缓存系统，用于动态Web应用以减轻数据库负载。它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提供动态数据库驱动网站的速度。Memcached 基于一个存储键/值对的 hashmap。Memcached-1.4.7的代码量还是可以接受的，只有10K行左右。
+
+下载地址：[http://memcached.org/](http://memcached.org/)
+
+**Redis**
+
+
+Redis 是一个使用 C 语言写成的，开源的 key-value 数据库。Redis支持的操作和数据类型比Memcached要多，现在主要用于缓存，支持主从同步机制，Redis的学习可以参考<<Redis设计与实现>>一书。
+
+下载地址：[http://redis.io/](http://redis.io/)
+
+**Webbench**
 
 Webbench是一个在linux下使用的非常简单的网站压测工具。它使用fork()模拟多个客户端同时访问我们设定的URL，测试网站在压力下工作的性能，最多可以模拟3万个并发连接去测试网站的负载能力。Webbench使用C语言编写, 代码实在太简洁，源码加起来不到600行。
 
 下载链接：[https://github.com/LippiOuYang/WebBenchl](https://github.com/LippiOuYang/WebBench)
 
-2.**Tinyhttpd**
+**APR（Apache Portable Runtime）**
+
+
+这是由 Apache 社区维护的 C 开源库，主要提供操作系统相关的功能（文件系统、进程、线程、用户、IPC）。此外还提供了一些网络相关的功能。
+
+APR 原先是 Apache Web 服务器的一个组成部分，后来独立出来，成为一个单独的开源项目。
+主页：[https://apr.apache.org](https://apr.apache.org/)
+
+**Tinyhttpd**
  
 
 tinyhttpd是一个超轻量型Http Server，使用C语言开发，全部代码只有502行(包括注释)，附带一个简单的Client，可以通过阅读这段代码理解一个 Http Server 的本质。
 
 下载链接：[https://github.com/LippiOuYang/Tinyhttpd](https://github.com/LippiOuYang/Tinyhttpd)
 
-3.**cJSON**
+**cJSON**
  
 
 cJSON是C语言中的一个JSON编解码器，非常轻量级，C文件只有500多行，速度也非常理想。
@@ -38,7 +65,7 @@ cJSON也存在几个弱点，虽然功能不是非常强大，但cJSON的小身�
 项目主页:[http://sourceforge.net/projects/cjson/](http://sourceforge.net/projects/cjson/
 )
 
-4.**CMockery**
+**CMockery**
 
 
 cmockery是google发布的用于C单元测试的一个轻量级的框架。它很小巧，对其他开源包没有依赖，对被测试代码侵入性小。cmockery的源代码行数不到3K，你阅读一下will_return和mock的源代码就一目了然了。
@@ -52,21 +79,9 @@ cmockery是google发布的用于C单元测试的一个轻量级的框架。它�
 
 下载链接：[http://code.google.com/p/cmockery/downloads/list](http://code.google.com/p/cmockery/downloads/list)
 
-5.**Libev**
- 
-
-libev是一个开源的事件驱动库，基于epoll，kqueue等OS提供的基础设施。其以高效出名，它可以将IO事件，定时器，和信号统一起来，统一放在事件处理这一套框架下处理。基于Reactor模式，效率较高，并且代码精简（4.15版本8000多行），是学习事件驱动编程的很好的资源。
-
-下载链接：[http://software.schmorp.de/pkg/libev.html](http://software.schmorp.de/pkg/libev.html)
-
-6.**Memcached**
 
 
-Memcached 是一个高性能的分布式内存对象缓存系统，用于动态Web应用以减轻数据库负载。它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提供动态数据库驱动网站的速度。Memcached 基于一个存储键/值对的 hashmap。Memcached-1.4.7的代码量还是可以接受的，只有10K行左右。
-
-下载地址：[http://memcached.org/](http://memcached.org/)
-
-7.**Lua**
+**Lua**
  
 
 Lua很棒，Lua是巴西人发明的，这些都令我不爽，但是还不至于脸红，最多眼红。
@@ -75,14 +90,14 @@ Lua很棒，Lua是巴西人发明的，这些都令我不爽，但是还不至�
 
 下载地址：[http://www.lua.org/](http://www.lua.org/)
 
-8.**SQLite**
+**SQLite**
  
 
 SQLite是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。足够小，大致3万行C代码，250K。
 
  下载地址：http://www.sqlite.org/ 。
 
-9.**UNIX v6**
+**UNIX v6**
  
 
 UNIX V6 的内核源代码包括设备驱动程序在内 约有1 万行，这个数量的源代码，初学者是能够充分理解的。有一种说法是一个人所能理解的代码量上限为1 万行，UNIX V6的内核源代码从数量上看正好在这个范围之内。看到这里，大家是不是也有“如果只有1万行的话没准儿我也能学会”的想法呢？
@@ -91,18 +106,13 @@ UNIX V6 的内核源代码包括设备驱动程序在内 约有1 万行，这个
 
 下载地址：[http://minnie.tuhs.org/cgi-bin/utree.pl?file=V6](http://minnie.tuhs.org/cgi-bin/utree.pl?file=V6)
 
-10.**NETBSD**
+**NETBSD**
 
 
 NetBSD是一个免费的，具有高度移植性的 UNIX-like 操作系统，是现行可移植平台最多的操作系统，可以在许多平台上执行，从 64bit alpha 服务器到手持设备和嵌入式设备。NetBSD计划的口号是：”Of course it runs NetBSD”。它设计简洁，代码规范，拥有众多先进特性，使得它在业界和学术界广受好评。由于简洁的设计和先进的特征，使得它在生产和研究方面，都有卓越的表现，而且它也有受使用者支持的完整的源代码。许多程序都可以很容易地通过NetBSD Packages Collection获得。
 
 下载地址：[http://www.netbsd.org/](http://www.netbsd.org/)
 
-11.**Redis**
-
-Redis 是一个使用 C 语言写成的，开源的 key-value 数据库。Redis支持的操作和数据类型比Memcached要多，现在主要用于缓存，支持主从同步机制，Redis的学习可以参考<<Redis设计与实现>>一书。
-
-下载地址：[http://redis.io/](http://redis.io/)
 
 ## C++ 资源大全 ##
 
