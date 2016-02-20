@@ -18,7 +18,7 @@ body {
     margin-right:auto;
     font-family:MuseoSans,Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",Verdana,sans-serif;
     color:#000000;
-    background-color:#ffffff;
+    background-image: url(/images/bg_body.png);
 }
 h1 {
     font-size: 28px;
