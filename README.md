@@ -35,4 +35,5 @@ http://www.ezlippi.com
 * http://tencentlocation.github.io  
 * http://wtaps.github.io 
 * http://maoshu.cc
+* http://x-carto.com/
 * (你的位置)  
