@@ -1,11 +1,12 @@
 我的个人博客
 ================
 
-####博客地址
+### 博客地址
 
-http://www.ezlippi.com
+Jekyll版本： [ezlippi](ezlippi.github.io)
+Hexo 版本： [www.ezlippi.com](http://www.ezlippi.com)
 
-####使用本项目作为博客模板，仅需如下几步：
+### 使用本项目作为博客模板，仅需如下几步：
 
 1. 首先Fork或Download一份本项目代码。 
 2. 修改_config.yaml及about.md文件，以变更个人信息。 
@@ -17,16 +18,17 @@ http://www.ezlippi.com
 
  *^_^*如果愿意，Star本项目一个吧~ 
 
-####本项目使用了
+### 本项目使用了
+
 1. CNZZ的网站统计服务，官网：http://cnzz.com 
 2. 多说的评论功能，官网:http://duoshuo.com/
 
-####联系方式
+### 联系方式
 
-联系方式：qq(934107508), Email(ouyanglip@gmail.com) 
+联系方式： Email(ouyanglip@gmail.com) 
 
 
-####使用本项目作模板的博客链接
+### 使用本项目作模板的博客链接
 
 * http://www.94geek.com  
 * http://www.haidaoxiaofei.me  
@@ -37,3 +39,8 @@ http://www.ezlippi.com
 * http://maoshu.cc
 * http://x-carto.com/
 * (你的位置)  
+
+## 2016-02-25更新
+
+本博客由Jekyl迁移到Hexo,博客地址[ezlippi](www.ezlippi.com),源码托管在了国内的[Gitcafe](https://gitcafe.com/ezlippi/ezlippi)
+使用Hexo搭建个人博客具体教程参考[Jekyll迁移到Hexo建立个人博客](http://www.ezlippi.com/blog/2016/02/jekyll-to-hexo.html)
