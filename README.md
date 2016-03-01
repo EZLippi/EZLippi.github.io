@@ -3,7 +3,7 @@
 
 ### 博客地址
 
-Jekyll版本： [ezlippi](ezlippi.github.io)
+Jekyll版本： [ezlippi](www.ezlippi.github.io)
 Hexo 版本： [www.ezlippi.com](http://www.ezlippi.com)
 
 ### 使用本项目作为博客模板，仅需如下几步：
