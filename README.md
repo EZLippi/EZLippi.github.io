@@ -2,7 +2,7 @@
 
 Github托管的是以前Jekyll版本的源码，现在博客用Hexo重新搭建
 #### 预览
-Jekyll版本： [ezlippi](EZLippi.github.io)
+Jekyll版本：EZLippi.github.io
 Hexo 版本： [www.ezlippi.com](http://www.ezlippi.com)
 Hexo版本源码：[https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/](https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/)
 
