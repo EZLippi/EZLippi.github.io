@@ -25,11 +25,11 @@ JB :
 
 # presonal config
 domain: http://coolshell.info
-title: Lippi-浮生志
+title: ctqlx.woa
 description: Draw my life with code
 author: Lippi.OuYang
-email: ouyanglip@gmail.com
-github: LippiOuYang
+email: ctqlx@outlook.com
+github: ctqlx
 
 config:
   js_dir:
