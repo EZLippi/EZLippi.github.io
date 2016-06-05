@@ -24,12 +24,12 @@ JB :
   IMAGE_PATH : http://coolshell.info/images
 
 # presonal config
-domain: http://coolshell.info
-title: Lippi-浮生志
+domain: http://alienyan.github.io/EZLippi.github.io.
+title: WuLi-引力幽灵
 description: Draw my life with code
 author: Lippi.OuYang
 email: ouyanglip@gmail.com
-github: LippiOuYang
+github: alienyan
 
 config:
   js_dir:
