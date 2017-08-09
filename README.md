@@ -39,7 +39,7 @@ Github托管的是以前Jekyll版本的源码，现在博客用Hexo重新搭建
 * http://wtaps.github.io 
 * http://maoshu.cc
 * http://x-carto.com/
-* (你的位置)  
+* http://flypeom.site
 
 ## 2016-02-25更新
 
