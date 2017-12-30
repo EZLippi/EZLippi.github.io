@@ -25,11 +25,11 @@ JB :
 
 # presonal config
 domain: http://coolshell.info
-title: Lippi-浮生志
+title: 逐梦者
 description: Draw my life with code
-author: Lippi.OuYang
-email: ouyanglip@gmail.com
-github: LippiOuYang
+author: 志文
+email: zhai.bupt.edu.com
+github: zhiwen12345
 
 config:
   js_dir:
